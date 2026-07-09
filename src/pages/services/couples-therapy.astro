@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Ticker from '../../components/Ticker.astro';
+import Glyph from '../../components/Glyph.astro';
+import NextSteps from '../../components/NextSteps.astro';
+
+const tickerItems = ['Communication', 'Attachment Wounds', 'Resentment', 'Disconnection', 'Premarital', 'Life Transitions', '+ More'];
+
+const whoIWorkWith = [
+  'Couples experiencing communication breakdowns who feel like they’re speaking different languages',
+  'Partners navigating significant life transitions — career changes, becoming parents, empty nesting',
+  'Relationships where one or both partners feel unheard, unseen, or misunderstood',
+  'Couples considering whether to stay together or separate who need clarity and guidance',
+  'Couples wanting preventative maintenance to strengthen an already good relationship',
+  'Partners wanting to deepen intimacy and emotional connection',
+  'High-functioning couples experiencing persistent conflicts over the same issues',
+  'Couples preparing for marriage, seeking premarital counseling to explore attachment histories and expectations',
+];
+
+const process = [
+  { title: 'Creating safety', copy: 'Our initial sessions establish a space where both partners feel safe to express themselves honestly. We identify the patterns in your relationship and what’s happening beneath the surface of your conflicts.', icon: `<circle cx="24" cy="24" r="18" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>` },
+  { title: 'Developing understanding', copy: 'You’ll gain insight into how your individual histories and attachment styles influence your relationship. This understanding often brings compassion where there was previously frustration.', icon: `<circle cx="24" cy="24" r="18" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="11" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>` },
+  { title: 'Cultivating emotional presence', copy: 'Partners learn to attune to each other’s needs with greater sensitivity and responsiveness — a foundation where both feel seen and held, allowing for greater vulnerability and connection.', icon: `<circle cx="18" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/>` },
+  { title: 'Deepening connection', copy: 'As we address the patterns that create distance, many couples find their bond strengthened — a relationship spacious enough to hold the needs of two separate people choosing to journey together.', icon: `<circle cx="18" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>` },
+];
+---
+
+<Layout
+  title="Couples Therapy — Attachment-Based | Nikole Sparks"
+  description="Attachment-based couples therapy in Newport Beach, Fullerton & online in California. Working with the relationship itself — not taking sides."
+  active="/services/"
+  path="/services/couples-therapy/"
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="col">
+      <p class="eyebrow"><a href="/services/">Services</a> / Couples therapy</p>
+      <h1>Reconnect, rebuild, and rediscover <em>your relationship.</em></h1>
+      <p>
+        Attachment-based couples therapy in Newport Beach, Fullerton &amp; online throughout
+        California. I work with the relationship itself — not taking sides.
+      </p>
+      <a class="cta" href="/contact/">Schedule a free consultation →</a>
+    </div>
+    <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
+      <circle cx="180" cy="230" r="140" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="300" cy="230" r="140" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="240" cy="230" r="6" fill="#3B63C4"></circle>
+      <circle cx="180" cy="90" r="7" fill="#C7D64F"></circle>
+    </svg>
+  </section>
+
+  <Ticker items={tickerItems} label="What we work on" />
+
+  <!-- Approach -->
+  <section class="section blue on-color split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
+    <div class="col gap-28">
+      <p class="eyebrow on-color">The approach</p>
+      <h2 class="h2-serif" style="font-size:52px">The client is <em>the relationship.</em></h2>
+      <p class="body">My approach draws on attachment principles, helping you understand how your individual histories influence your current relationship patterns. Rather than taking sides, I work with the couple as a unit. Together, we’ll explore the unconscious patterns creating disconnection, develop more satisfying ways to connect, and build a stronger foundation for intimacy and understanding.</p>
+      <a class="text-link on-color" href="/approach/">My approach →</a>
+    </div>
+    <Glyph name="two-circles" class="hero-figure" />
+  </section>
+
+  <!-- Who I work with -->
+  <section class="section">
+    <div class="stack gap-20" style="margin-bottom:48px">
+      <p class="eyebrow">Who I work with</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:720px; text-wrap:pretty">
+        Couples at every stage — from preparing for marriage to finding each other again.
+      </h2>
+    </div>
+    <div class="ruled-grid cols-2">
+      {whoIWorkWith.map((item, i) => (
+        <div class="ruled-cell">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <span class="copy">{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section sage on-color">
+    <div class="stack gap-20" style="margin-bottom:48px">
+      <p class="eyebrow on-color">The process</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1">How the work unfolds</h2>
+    </div>
+    <div class="process-grid cols-2">
+      {process.map((p, i) => (
+        <div class="process-card">
+          <div class="head">
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <svg viewBox="0 0 48 48" width="34" height="34" fill="none" aria-hidden="true" set:html={p.icon} />
+          </div>
+          <div class="title">{p.title}</div>
+          <p>{p.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <NextSteps
+    heading="Ready to begin? <em>Let’s talk.</em>"
+    copy="I offer a free phone consultation — a chance to ask questions and get a feel for how we might work together. In-person in Newport Beach and Fullerton, or via telehealth throughout California."
+  />
+</Layout>

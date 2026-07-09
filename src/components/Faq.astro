@@ -1,0 +1,32 @@
+---
+// Renders a list of FAQ items as accessible <details>/<summary> disclosures.
+// Each item: { q: string, a: string[] } — `a` is an array of paragraph HTML.
+interface Item {
+  q: string;
+  a: string[];
+}
+interface Props {
+  items: Item[];
+  /** Open the first item by default. */
+  openFirst?: boolean;
+}
+const { items, openFirst = false } = Astro.props;
+---
+
+<div class="faq-list">
+  {
+    items.map((item, i) => (
+      <details class="faq" open={openFirst && i === 0}>
+        <summary>
+          <span>{item.q}</span>
+          <span class="sign" aria-hidden="true">+</span>
+        </summary>
+        <div class="answer">
+          {item.a.map((p) => (
+            <p set:html={p} />
+          ))}
+        </div>
+      </details>
+    ))
+  }
+</div>

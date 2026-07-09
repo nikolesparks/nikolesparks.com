@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../data/site';
+---
+
+<Layout
+  title={`Contact — Free 15-Minute Consultation | ${site.name}`}
+  description="Reach out for a free 15-minute consultation. Depth-oriented therapy in Newport Beach, Fullerton, or online throughout California."
+  active="/contact/"
+  path="/contact/"
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="col gap-28">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s talk about what you’re carrying and what you want next.</h1>
+      <p>
+        I offer a free 15-minute consultation to help you decide whether this feels like the
+        right fit. If you’re looking for depth-oriented therapy in Orange County or online in
+        California, I’d be glad to hear from you.
+      </p>
+      <a class="cta" href={`mailto:${site.email}`}>Email me directly →</a>
+    </div>
+    <div class="contact-card">
+      <div class="detail">
+        <div class="label">Email</div>
+        <a class="value" href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+      <div class="detail">
+        <div class="label">Phone</div>
+        <a class="value" href={site.phoneHref}>{site.phone}</a>
+      </div>
+      <div class="detail">
+        <div class="label">Locations</div>
+        <div style="font-size:16px; line-height:1.6; color:var(--cream-85)">
+          Newport Beach · Fullerton · Online throughout California
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Panels -->
+  <section class="panel-grid">
+    <div class="panel">
+      <p class="eyebrow">Quick note</p>
+      <h2>What to expect from your first outreach</h2>
+      <p class="body">
+        You can reach out with any questions about therapy, fit, availability, or what it
+        might be like to work together. I’ll reply as soon as I can and help you take the next
+        step at your pace.
+      </p>
+      <div class="list">
+        <div>• A brief reply within a few business days</div>
+        <div>• A free 15-minute consultation if it feels like a fit</div>
+        <div>• Clear information about scheduling and logistics</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <p class="eyebrow">Send a note</p>
+      <h2>Start the conversation</h2>
+      <!--
+        Netlify Forms: the `data-netlify` attribute + hidden `form-name` field let
+        Netlify detect and process submissions at deploy time — no server code needed.
+        The honeypot `bot-field` traps spam bots. Submissions are emailed to the
+        practice and stored in the Netlify dashboard (Forms tab).
+      -->
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/contact/success/"
+        class="form"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hp" aria-hidden="true">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
+        <label class="field">
+          Name
+          <input type="text" name="name" autocomplete="name" placeholder="Your name" required />
+        </label>
+        <label class="field">
+          Email
+          <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+        </label>
+        <label class="field">
+          Phone (optional)
+          <input type="tel" name="phone" autocomplete="tel" placeholder="(000) 000-0000" />
+        </label>
+        <label class="field">
+          What would you like to talk about?
+          <textarea name="message" placeholder="Share a bit about what brings you here." required></textarea>
+        </label>
+        <button type="submit">Send message</button>
+        <p style="font-size:12px; line-height:1.5; color:var(--ink-65); margin:0">
+          This form is not a secure or confidential channel — please don’t share sensitive
+          clinical details. For emergencies, call 988 or 911.
+        </p>
+      </form>
+    </div>
+  </section>
+</Layout>

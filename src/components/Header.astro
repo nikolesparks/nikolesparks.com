@@ -1,0 +1,22 @@
+---
+import { site, nav } from '../data/site';
+
+interface Props {
+  active?: string;
+}
+const { active } = Astro.props;
+---
+
+<header class="topbar">
+  <a class="brand" href="/">{site.name}</a>
+  <nav class="nav-links" aria-label="Primary">
+    {
+      nav.map((item) => (
+        <a href={item.href} aria-current={active === item.href ? 'page' : undefined}>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+  <a class="button" href="/contact/">Book a free consult</a>
+</header>
