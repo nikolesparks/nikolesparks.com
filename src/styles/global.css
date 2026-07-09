@@ -103,6 +103,12 @@ img {
 .eyebrow a {
   border-bottom: 1px solid currentColor;
 }
+/* Keep eyebrows a consistent 12px even where a higher-specificity paragraph
+   rule (.hero p, .section-heading p) would otherwise enlarge them. */
+.hero .eyebrow,
+.section-heading .eyebrow {
+  font-size: 12px;
+}
 
 .serif {
   font-family: var(--serif);
