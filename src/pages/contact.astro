@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { site } from '../data/site';
+import { site, offices } from '../data/site';
 ---
 
 <Layout
@@ -9,8 +9,8 @@ import { site } from '../data/site';
   active="/contact/"
   path="/contact/"
 >
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero: headline left, consultation form right -->
+  <section class="hero form-row">
     <div class="col gap-28">
       <p class="eyebrow">Contact</p>
       <h1>Let’s talk about what you’re carrying and what you want next.</h1>
@@ -21,49 +21,14 @@ import { site } from '../data/site';
       </p>
       <a class="cta" href={`mailto:${site.email}`}>Email me directly →</a>
     </div>
-    <div class="contact-card">
-      <div class="detail">
-        <div class="label">Email</div>
-        <a class="value" href={`mailto:${site.email}`}>{site.email}</a>
-      </div>
-      <div class="detail">
-        <div class="label">Phone</div>
-        <a class="value" href={site.phoneHref}>{site.phone}</a>
-      </div>
-      <div class="detail">
-        <div class="label">Locations</div>
-        <div style="font-size:16px; line-height:1.6; color:var(--cream-85)">
-          Newport Beach · Fullerton · Online throughout California
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Panels -->
-  <section class="panel-grid">
-    <div class="panel">
-      <p class="eyebrow">Quick note</p>
-      <h2>What to expect from your first outreach</h2>
-      <p class="body">
-        You can reach out with any questions about therapy, fit, availability, or what it
-        might be like to work together. I’ll reply as soon as I can and help you take the next
-        step at your pace.
-      </p>
-      <div class="list">
-        <div>• A brief reply within a few business days</div>
-        <div>• A free 15-minute consultation if it feels like a fit</div>
-        <div>• Clear information about scheduling and logistics</div>
-      </div>
-    </div>
-
-    <div class="panel">
-      <p class="eyebrow">Send a note</p>
+    <div class="form-card blue">
+      <p class="eyebrow on-color">Schedule a free consultation</p>
       <h2>Start the conversation</h2>
       <!--
-        Netlify Forms: the `data-netlify` attribute + hidden `form-name` field let
-        Netlify detect and process submissions at deploy time — no server code needed.
-        The honeypot `bot-field` traps spam bots. Submissions are emailed to the
-        practice and stored in the Netlify dashboard (Forms tab).
+        Netlify Forms: `data-netlify` + hidden `form-name` let Netlify detect and
+        process submissions at deploy time. The honeypot `bot-field` traps spam.
+        Submissions are emailed to the practice and stored in the Netlify dashboard.
       -->
       <form
         name="contact"
@@ -86,19 +51,78 @@ import { site } from '../data/site';
           <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
         </label>
         <label class="field">
-          Phone (optional)
-          <input type="tel" name="phone" autocomplete="tel" placeholder="(000) 000-0000" />
+          Phone
+          <input type="tel" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required />
+        </label>
+        <label class="field">
+          Preferred location
+          <select name="preferred-location" required>
+            <option value="" disabled selected>Select a location…</option>
+            <option value="Online">Online</option>
+            <option value="Newport Beach">Newport Beach</option>
+            <option value="Fullerton">Fullerton</option>
+          </select>
+        </label>
+        <label class="field">
+          Preferred service
+          <select name="preferred-service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option value="Individual Therapy">Individual Therapy</option>
+            <option value="Couples Therapy">Couples Therapy</option>
+            <option value="Teen Therapy">Teen Therapy</option>
+            <option value="Premarital Counseling">Premarital Counseling</option>
+          </select>
         </label>
         <label class="field">
           What would you like to talk about?
-          <textarea name="message" placeholder="Share a bit about what brings you here." required></textarea>
+          <textarea
+            name="message"
+            placeholder="Please share a little bit about what you're looking for and your schedule availability for a phone call."
+            required></textarea>
         </label>
         <button type="submit">Send message</button>
-        <p style="font-size:12px; line-height:1.5; color:var(--ink-65); margin:0">
+        <p class="note">
           This form is not a secure or confidential channel — please don’t share sensitive
           clinical details. For emergencies, call 988 or 911.
         </p>
       </form>
+    </div>
+  </section>
+
+  <!-- Lower: what to expect + direct contact info (cream) -->
+  <section class="panel-grid">
+    <div class="panel">
+      <p class="eyebrow">Quick note</p>
+      <h2>What to expect from your first outreach</h2>
+      <p class="body">
+        You can reach out with any questions about therapy, fit, availability, or what it
+        might be like to work together. I’ll reply as soon as I can and help you take the next
+        step at your pace.
+      </p>
+      <div class="list">
+        <div>• A brief reply within a few business days</div>
+        <div>• A free 15-minute consultation if it feels like a fit</div>
+        <div>• Clear information about scheduling and logistics</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <p class="eyebrow">Other ways to reach me</p>
+      <h2>Prefer to connect directly?</h2>
+      <div class="detail">
+        <div class="label">Email</div>
+        <a class="value" href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+      <div class="detail">
+        <div class="label">Phone</div>
+        <a class="value" href={site.phoneHref}>{site.phone}</a>
+      </div>
+      <div class="detail">
+        <div class="label">Locations</div>
+        <div class="plain">
+          {offices.map((o) => o.name).join(' · ')} · Online throughout California
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

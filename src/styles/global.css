@@ -936,15 +936,28 @@ p.body {
   text-transform: uppercase;
 }
 .field input,
-.field textarea {
+.field textarea,
+.field select {
   border: 1px solid var(--ink-25);
   background: var(--cream);
   padding: 14px 16px;
   font: 16px/1.4 var(--sans);
   color: var(--ink);
+  width: 100%;
+}
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233E4227' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  padding-right: 40px;
+  cursor: pointer;
 }
 .field input:focus,
-.field textarea:focus {
+.field textarea:focus,
+.field select:focus {
   outline: 2px solid var(--blue);
   outline-offset: 1px;
 }
@@ -970,6 +983,72 @@ p.body {
 .form .hp {
   position: absolute;
   left: -9999px;
+}
+.form .note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-65);
+  margin: 0;
+}
+
+/* ---------- form card (hero contact form) ---------- */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 44px 40px;
+}
+.form-card h2 {
+  font-family: var(--serif);
+  font-size: 32px;
+}
+.form-card.blue {
+  background: var(--blue);
+  color: var(--cream);
+}
+.form-card.blue h2 {
+  color: var(--cream);
+}
+.form-card.blue .field {
+  color: var(--cream);
+}
+.form-card.blue .field input,
+.form-card.blue .field textarea,
+.form-card.blue .field select {
+  border-color: rgba(246, 241, 228, 0.4);
+}
+.form-card.blue .form button {
+  background: var(--cream);
+  color: var(--ink);
+}
+.form-card.blue .form .note {
+  color: var(--cream-80);
+}
+
+/* two-up contact form row: give the form more room */
+.form-row {
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+}
+
+/* ---------- cream contact details (moved-down info) ---------- */
+.panel .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.panel .detail .label {
+  color: var(--blue);
+}
+.panel .detail .value {
+  font-family: var(--serif);
+  font-size: 24px;
+  color: var(--ink);
+}
+.panel .detail .plain {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-85);
 }
 
 /* ---------- pricing packages (Premarital) ---------- */
