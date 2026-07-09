@@ -1,0 +1,27 @@
+---
+import ConsultSteps from './ConsultSteps.astro';
+
+// The recurring "Next steps / free consultation" call-to-action band.
+interface Props {
+  heading: string; // may contain <em> for the accent word
+  copy: string;
+  steps?: string[];
+  eyebrow?: string;
+}
+const {
+  heading,
+  copy,
+  steps,
+  eyebrow = 'Next steps',
+} = Astro.props;
+---
+
+<section class="section blue on-color split c-1-1" aria-labelledby="next-steps-heading">
+  <div class="col gap-28">
+    <p class="eyebrow on-color">{eyebrow}</p>
+    <h2 id="next-steps-heading" class="h2-serif" set:html={heading}></h2>
+    <p class="body">{copy}</p>
+    <a class="cta on-blue" href="/contact/">Schedule a free consultation →</a>
+  </div>
+  <ConsultSteps steps={steps} />
+</section>

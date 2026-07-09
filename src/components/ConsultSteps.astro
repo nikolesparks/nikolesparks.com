@@ -1,0 +1,18 @@
+---
+import { consultSteps } from '../data/site';
+interface Props {
+  steps?: string[];
+}
+const { steps = consultSteps } = Astro.props;
+---
+
+<div class="steps">
+  {
+    steps.map((step, i) => (
+      <div class="step">
+        <span class="num">{String(i + 1).padStart(2, '0')}</span>
+        <span class="txt">{step}</span>
+      </div>
+    ))
+  }
+</div>

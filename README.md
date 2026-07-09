@@ -1,22 +1,78 @@
-# CODING AGENTS: READ THIS FIRST
+# nikolesparks.com
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Marketing website for **Nikole Sparks, AMFT** — depth-oriented psychotherapy in
+Orange County (Newport Beach · Fullerton · online across California).
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+Built with [Astro](https://astro.build) as a fully static site, deployed to
+**Netlify** (free tier) with **Netlify Forms** handling the contact form. No
+recurring hosting cost beyond the domain.
 
-## What you should do — IMPORTANT
+## Local development
 
-**Read `/project/Home.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+```bash
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # outputs static site to dist/
+npm run preview  # preview the production build locally
+```
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+Node 20+ recommended.
 
-## About the design files
+## Project structure
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+```
+src/
+  data/site.ts          Single source of truth: nav, contact info, offices, license
+  styles/global.css     The whole design system (palette, type, layout classes)
+  layouts/Layout.astro  Base HTML shell (head, SEO/OG meta, fonts, header, footer)
+  components/            Reusable building blocks:
+    Header · Footer · Ticker · Portrait · Glyph · Faq · ConsultSteps · NextSteps
+  pages/
+    index.astro                     Home
+    about.astro · approach.astro
+    services/index.astro            Services overview
+    services/individual-therapy.astro
+    services/couples-therapy.astro
+    services/premarital-counseling.astro
+    services/therapy-for-anxiety.astro
+    services/therapy-for-creatives.astro
+    faqs.astro
+    contact.astro · contact/success.astro
+public/                 Static assets served as-is (favicon, robots.txt)
+design-source/          Original Claude Design export (HTML/JS prototypes) — reference only
+```
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+## Design system
 
-## Bundle contents
+- **Palette:** cream `#F6F1E4`, ink/olive-black `#3E4227`, cobalt `#3B63C4`,
+  sage `#707748`, lime-chartreuse `#C7D64F` (CSS variables in `global.css`).
+- **Type:** Instrument Serif (display) · Instrument Sans (body) · IBM Plex Mono
+  (eyebrows, labels, buttons).
+- Content is data-driven where it repeats — edit `src/data/site.ts` to update
+  contact details, navigation, or office addresses everywhere at once.
 
-- `README.md` — this file
-- `/project/` — the `Therapy website redesign` project files (HTML prototypes, assets, components)
+## Editing common things
+
+- **Contact details / addresses / license:** `src/data/site.ts`
+- **Navigation links:** the `nav` array in `src/data/site.ts`
+- **Colors, spacing, shared component styles:** `src/styles/global.css`
+- **Page copy:** the corresponding file in `src/pages/`
+- **Add a real photo:** drop the image in `public/` and pass its path to the
+  `<Portrait src="/your-photo.jpg" alt="…" />` component (see any page that uses
+  `Portrait`). Without `src`, a styled placeholder is shown.
+
+## Contact form (Netlify Forms)
+
+The form on `/contact/` is a standard static `<form data-netlify="true">` with a
+hidden `form-name` field and a honeypot. Netlify detects it at build time; no
+server code is required. Submissions appear in the Netlify dashboard under
+**Forms** and can be emailed to the practice via a form notification. On success
+visitors are redirected to `/contact/success/`.
+
+## Deploying to Netlify
+
+1. Connect this repository to a new Netlify site.
+2. Build settings are read from `netlify.toml` (`npm run build` → publish `dist`).
+3. Point the `nikolesparks.com` domain at Netlify and enable HTTPS.
+4. Under **Forms → Notifications**, add an email notification to
+   `info@nikolesparks.com`.

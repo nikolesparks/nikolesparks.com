@@ -1,0 +1,18 @@
+---
+interface Props {
+  items: string[];
+  label?: string;
+}
+const { items, label = 'Areas of focus' } = Astro.props;
+---
+
+<div class="ticker" aria-label={label}>
+  {
+    items.map((item, i) => (
+      <>
+        <span>{item}</span>
+        {i < items.length - 1 && <span aria-hidden="true">·</span>}
+      </>
+    ))
+  }
+</div>

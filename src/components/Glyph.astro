@@ -1,0 +1,99 @@
+---
+// Named decorative SVG glyphs in the site's line-drawing language.
+// All are aria-hidden. `class` lets callers size/position them.
+interface Props {
+  name:
+    | 'orbit' // rotated ellipses + center — hero
+    | 'concentric' // concentric circles
+    | 'nested-ellipses' // stacked ellipses (cream, on color)
+    | 'radiate' // lines radiating from center (lime)
+    | 'two-circles' // overlapping circles (cream)
+    | 'target-ellipses' // small stacked ellipses (olive) — section aside
+    | 'rings'; // concentric circles cream, on color
+  class?: string;
+}
+const { name, class: className = '' } = Astro.props;
+---
+
+{
+  name === 'orbit' && (
+    <svg class={className} viewBox="0 0 480 520" fill="none" aria-hidden="true">
+      <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(-18 240 260)" />
+      <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(18 240 260)" />
+      <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(54 240 260)" />
+      <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(90 240 260)" />
+      <circle cx="240" cy="260" r="30" stroke="#707748" stroke-width="1" />
+      <circle cx="240" cy="70" r="7" fill="#C7D64F" />
+      <circle cx="404" cy="330" r="7" fill="#3B63C4" />
+    </svg>
+  )
+}
+{
+  name === 'concentric' && (
+    <svg class={className} viewBox="0 0 480 460" fill="none" aria-hidden="true">
+      <circle cx="240" cy="230" r="190" stroke="#3B63C4" stroke-width="1" />
+      <circle cx="240" cy="230" r="146" stroke="#3B63C4" stroke-width="1" />
+      <circle cx="240" cy="230" r="102" stroke="#3B63C4" stroke-width="1" />
+      <circle cx="240" cy="230" r="58" stroke="#3B63C4" stroke-width="1" />
+      <circle cx="240" cy="40" r="7" fill="#C7D64F" />
+      <circle cx="240" cy="230" r="6" fill="#3B63C4" />
+    </svg>
+  )
+}
+{
+  name === 'nested-ellipses' && (
+    <svg class={className} viewBox="0 0 380 320" fill="none" aria-hidden="true">
+      <ellipse cx="190" cy="160" rx="170" ry="30" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="60" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="90" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="120" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="150" stroke="#F6F1E4" stroke-width="1" />
+      <circle cx="190" cy="10" r="6" fill="#C7D64F" />
+    </svg>
+  )
+}
+{
+  name === 'radiate' && (
+    <svg class={className} viewBox="0 0 300 300" fill="none" aria-hidden="true">
+      <line x1="150" y1="150" x2="150" y2="0" stroke="#C7D64F" stroke-width="1" />
+      <line x1="150" y1="150" x2="256" y2="44" stroke="#C7D64F" stroke-width="1" />
+      <line x1="150" y1="150" x2="300" y2="150" stroke="#C7D64F" stroke-width="1" />
+      <line x1="150" y1="150" x2="256" y2="256" stroke="#C7D64F" stroke-width="1" />
+      <line x1="150" y1="150" x2="44" y2="256" stroke="#C7D64F" stroke-width="1" />
+      <line x1="150" y1="150" x2="0" y2="150" stroke="#C7D64F" stroke-width="1" />
+      <line x1="150" y1="150" x2="44" y2="44" stroke="#C7D64F" stroke-width="1" />
+      <circle cx="150" cy="150" r="5" fill="#C7D64F" />
+    </svg>
+  )
+}
+{
+  name === 'two-circles' && (
+    <svg class={className} viewBox="0 0 380 320" fill="none" aria-hidden="true">
+      <circle cx="150" cy="160" r="110" stroke="#F6F1E4" stroke-width="1" />
+      <circle cx="230" cy="160" r="110" stroke="#F6F1E4" stroke-width="1" />
+      <circle cx="190" cy="160" r="6" fill="#C7D64F" />
+    </svg>
+  )
+}
+{
+  name === 'target-ellipses' && (
+    <svg class={className} viewBox="0 0 200 160" fill="none" aria-hidden="true">
+      <ellipse cx="100" cy="80" rx="90" ry="16" stroke="#707748" stroke-width="1" />
+      <ellipse cx="100" cy="72" rx="90" ry="32" stroke="#707748" stroke-width="1" />
+      <ellipse cx="100" cy="64" rx="90" ry="48" stroke="#707748" stroke-width="1" />
+      <circle cx="100" cy="16" r="4" fill="#3B63C4" />
+    </svg>
+  )
+}
+{
+  name === 'rings' && (
+    <svg class={className} viewBox="0 0 380 320" fill="none" aria-hidden="true">
+      <ellipse cx="190" cy="160" rx="170" ry="30" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="60" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="90" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="120" stroke="#F6F1E4" stroke-width="1" />
+      <ellipse cx="190" cy="160" rx="170" ry="150" stroke="#F6F1E4" stroke-width="1" />
+      <circle cx="190" cy="10" r="6" fill="#C7D64F" />
+    </svg>
+  )
+}

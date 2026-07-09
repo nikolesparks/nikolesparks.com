@@ -1,0 +1,57 @@
+---
+import { site, offices } from '../data/site';
+
+interface Props {
+  /** Override the closing headline if desired. */
+  heading?: string;
+}
+const { heading } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="cta-col">
+      {
+        heading ? (
+          <h3 set:html={heading} />
+        ) : (
+          <h3>Ready to stop managing and start <em>understanding?</em></h3>
+        )
+      }
+      <a class="cta on-cream" href="/contact/">Schedule a free consultation →</a>
+    </div>
+
+    <div class="footer-block">
+      <div class="label">Offices</div>
+      {
+        offices.map((office) => (
+          <div>
+            <strong>{office.name}</strong>
+            <br />
+            {office.lines.map((line, i) => (
+              <>
+                {line}
+                {i < office.lines.length - 1 && <br />}
+              </>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="footer-block">
+      <div class="label">Connect</div>
+      <div>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <br />
+        <a href={site.phoneHref}>{site.phone}</a>
+      </div>
+      <div class="muted">In-person and online across California</div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>{site.name} · {site.role}</span>
+    <span>{site.license}</span>
+  </div>
+</footer>

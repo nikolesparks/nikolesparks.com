@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Ticker from '../components/Ticker.astro';
+import Portrait from '../components/Portrait.astro';
+import Glyph from '../components/Glyph.astro';
+import NextSteps from '../components/NextSteps.astro';
+import { site } from '../data/site';
+
+const tickerItems = ['Depth-Oriented', 'Attachment-Based', 'Psychodynamic', 'Relational', 'Warm', 'Collaborative', 'Curious'];
+
+const education = [
+  { icon: `<circle cx="24" cy="24" r="20" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="12" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#3B63C4"/>`, degree: 'M.S. Marriage &amp; Family Therapy', school: 'Fuller Graduate School' },
+  { icon: `<ellipse cx="24" cy="28" rx="19" ry="6" stroke="#3B63C4" stroke-width="1"/><ellipse cx="24" cy="23" rx="19" ry="12" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="9" r="3" fill="#C7D64F"/>`, degree: 'M.A. Spiritual Formation &amp; Soul Care', school: 'Talbot School of Theology' },
+  { icon: `<circle cx="18" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/>`, degree: 'B.F.A. Design', school: 'Biola University' },
+];
+
+const hereBecause = [
+  'Your relationships keep hitting the same walls, and you can’t figure out why',
+  'You’re tired of feeling not good enough, no matter what you achieve',
+  'Anxiety is eating up your peace of mind, even when everything looks “fine” on paper',
+  'You’re a creative facing burnout, cynicism, or feeling lost about your direction',
+  'It’s difficult to connect to or express yourself, your needs, or what you really want',
+  'You and your partner are speaking different languages — or preparing for marriage and want to start well',
+];
+
+const details = [
+  { label: 'Fees', big: '45 mins · $175', copy: 'Standard individual session for ongoing treatment, typically weekly. A limited number of sliding-scale spots are available — please don’t hesitate to ask.' },
+  { label: 'Insurance', big: 'Private pay', copy: 'If your insurance has out-of-network coverage, I can provide a superbill for out-of-pocket reimbursement.' },
+  { label: 'Location', big: 'In-person &amp; online', copy: 'Offices in Newport Beach and Fullerton, or virtually anywhere in California.' },
+];
+
+const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I might help', 'Answer any questions you have', 'See if we’re a good fit'];
+---
+
+<Layout title={`About Nikole Sparks, AMFT — ${site.name}`} active="/about/" path="/about/">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="col">
+      <p class="eyebrow">Meet Nikole Sparks, AMFT</p>
+      <h1>You don’t have to figure it out <em>alone.</em></h1>
+      <p>
+        There is much more to you than you may realize, and being human is both beautiful and
+        messy. As a fellow human and relational therapist, I’m here to accompany you as you
+        move toward living from your most authentic self.
+      </p>
+      <a class="cta" href="/contact/">Schedule a free consultation →</a>
+    </div>
+    <Portrait
+      placeholder="Nikole — portrait"
+      tall
+      accent="tr"
+      caption={`CA AMFT 150080 · ${site.supervisor}`}
+    />
+  </section>
+
+  <Ticker items={tickerItems} label="How I work" />
+
+  <!-- Story -->
+  <section class="section split c-narrow-wide">
+    <div class="col gap-20">
+      <p class="eyebrow">My story</p>
+      <h2 class="h2-serif">Therapy is its own <em>creative process.</em></h2>
+      <Glyph name="target-ellipses" class="mt-16" />
+    </div>
+    <div class="prose" style="gap:24px">
+      <p>I’m an Associate Marriage and Family Therapist specializing in depth-oriented, attachment-based therapy in Orange County. I come to therapy by way of a career as a designer — 15+ years spent helping people uncover their unique point of view and expression. It’s made me a firm believer that therapy is its own creative process: an invitation to slow down, listen deeply to what has shaped you, and make space for what wants to emerge.</p>
+      <p>My practice is grounded in psychodynamic therapy, an evidence-based approach that helps us explore the emotional and relational patterns that shape and guide our lives. Together, we’ll trace these patterns with care — honoring where they come from while creating space for new possibilities.</p>
+      <p>I know firsthand that therapy can be life-changing. My own experience in therapy has shaped not only the way I practice, but the way I understand healing. I deeply respect the courage it takes to share your struggles with another person, and I value building a strong, collaborative relationship at your pace.</p>
+      <p>I typically work with people interested in longer-term (6+ months), in-depth therapy — people who want to meaningfully understand their inner emotional life, why they feel stuck, or why certain feelings and relational patterns keep recurring. I particularly enjoy working with creative professionals, those who struggle with self-expression, and those navigating the intersection of mental health and spirituality — whether integrating faith into the healing process or untangling pain connected to a spiritual background.</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section" style="padding-top:0">
+    <p class="eyebrow" style="margin-bottom:40px">Education</p>
+    <div class="ruled-grid cols-3 feature">
+      {
+        education.map((e) => (
+          <div class="ruled-cell">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" aria-hidden="true" set:html={e.icon} />
+            <span style="font-size:17px; line-height:1.5">
+              <span set:html={e.degree} /><br />
+              <span class="label" style="color:var(--ink-65); text-transform:none">{e.school}</span>
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-block">
+    <Glyph name="rings" class="hero-figure" />
+    <div class="col gap-28">
+      <blockquote>“In all our searching, the only thing we’ve found that makes the emptiness bearable is <em>each other.</em>”</blockquote>
+      <cite>Carl Sagan</cite>
+    </div>
+  </section>
+
+  <!-- You might be here because -->
+  <section class="section">
+    <div class="section-heading">
+      <div class="stack">
+        <p class="eyebrow">You might be here because</p>
+        <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:720px; text-wrap:pretty">
+          Uncovering the roots, so you can live with connection, authenticity, &amp; vitality.
+        </h2>
+      </div>
+    </div>
+    <div class="ruled-grid cols-2">
+      {
+        hereBecause.map((item, i) => (
+          <div class="ruled-cell">
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <span class="copy">{item}</span>
+          </div>
+        ))
+      }
+    </div>
+    <div class="card-row" style="margin-top:48px">
+      <a class="service-card primary" href="/services/individual-therapy/"><span>Individual therapy</span><span aria-hidden="true">→</span></a>
+      <a class="service-card secondary" href="/services/couples-therapy/"><span>Couples therapy</span><span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- Helpful to know -->
+  <section class="section sage on-color relative overflow-clip">
+    <Glyph name="radiate" class="decor" />
+    <div class="stack gap-20" style="margin-bottom:56px; position:relative">
+      <p class="eyebrow on-color">Helpful to know</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1">The practical details</h2>
+    </div>
+    <div class="detail-cards">
+      {
+        details.map((d) => (
+          <div class="detail-card">
+            <div class="label">{d.label}</div>
+            <div class="big" set:html={d.big} />
+            <p>{d.copy}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <NextSteps
+    heading="Getting started is a <em>15-minute conversation.</em>"
+    copy="Starting therapy is vulnerable, and finding the right therapist matters. The free consultation is a low-pressure way to ask questions and get a feel for how I work."
+    steps={gettingStarted}
+  />
+</Layout>

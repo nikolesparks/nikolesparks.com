@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Ticker from '../../components/Ticker.astro';
+import Glyph from '../../components/Glyph.astro';
+import Faq from '../../components/Faq.astro';
+import NextSteps from '../../components/NextSteps.astro';
+
+const tickerItems = ['Communication', 'Conflict & Repair', 'Roles', 'Family Histories', 'Financial Values', 'Intimacy', '+ More'];
+
+const whoFor = [
+  'Dating couples considering engagement who want to use this season wisely',
+  'Engaged couples who want to enter marriage with clarity, intention, and deeper understanding of each other',
+  'Couples from different faith backgrounds, families, or life experiences',
+  'Partners navigating expectations around roles, money, intimacy, conflict, and repair',
+  'Couples who want a structured assessment and meaningful conversation — not a generic course',
+  'Those from complicated family histories who want to understand how that shapes partnership',
+];
+
+const process = [
+  { title: 'The consultation', copy: 'We begin with a free 15-minute conversation so you can ask questions and get a sense of whether working together feels like a good fit.' },
+  { title: 'The assessment', copy: 'Before our first full session, each partner completes the Prepare & Enrich online assessment independently — about 20 minutes each, from home.' },
+  { title: 'Unpacking the results', copy: 'Together we review your Facilitator Report in depth. This is where the real conversation begins — not just what the assessment found, but what it means for you as a couple.' },
+  { title: 'Building skills & understanding', copy: 'Over the remaining sessions, we work through the areas that matter most — communication patterns, family-of-origin stories, expectations about roles, conflict, and repair.' },
+];
+
+const faqs = [
+  { q: 'Do we have to be engaged to start?', a: ['No — you don’t need a ring or a date to benefit from this work. Some couples come in while seriously dating and considering engagement. The Prepare &amp; Enrich assessment tailors its questions to where you are in your relationship, so it works for both dating and engaged couples. If you’re in a committed relationship and thinking about a future together, this is a worthwhile investment at any stage.'] },
+  { q: 'What is the Prepare & Enrich assessment?', a: ['Prepare &amp; Enrich is a research-backed relationship assessment developed by Dr. David Olson. It maps your strengths and growth areas across 12 relationship domains — communication, conflict, finances, family background, intimacy, spirituality, and more. Each partner completes it independently online, and the results become a detailed report we review together. Studies show it reduces the risk of divorce by 31%.'] },
+  { q: 'Do we have to be religious to work with you?', a: ['Not at all. The assessment includes questions about spiritual beliefs because they’re relevant to shared values and meaning-making, but you don’t need a faith background to benefit. I welcome couples from all backgrounds — and if faith is meaningful in your relationship, I’m very comfortable working within that context.'] },
+  { q: 'How many sessions does it take?', a: ['I offer two packages. The Marriage Prep Package includes 8 sessions — enough to review the assessment and focus on the areas most relevant to you. The Complete Premarital Program includes 12 sessions, suited for couples who want to examine the domains more thoroughly. We’ll talk through which fits during your free consultation.'] },
+  { q: 'How is this different from a premarital course?', a: ['Courses and workshops deliver a curriculum — useful, but broadly designed. What I offer is personalized, attachment-informed time grounded in the specific results of your Prepare &amp; Enrich assessment and your particular histories. Rather than a predetermined agenda, we follow what’s most relevant for you as a couple.'] },
+  { q: 'Can we continue as couples therapy clients afterward?', a: ['Absolutely — and many couples do. Premarital counseling is a great foundation, and some couples want to continue the work as they move into the first year of marriage and the changes that come with it.'] },
+];
+---
+
+<Layout
+  title="Premarital Counseling — Prepare & Enrich | Nikole Sparks"
+  description="Attachment-focused premarital counseling built around the Prepare & Enrich assessment. In Newport Beach, Fullerton, or online across California."
+  active="/services/"
+  path="/services/premarital-counseling/"
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="col">
+      <p class="eyebrow"><a href="/services/">Services</a> / Premarital counseling</p>
+      <h1>Build the foundation, so you can <em>build the life.</em></h1>
+      <p>
+        Attachment-focused premarital counseling in Newport Beach, Fullerton &amp; online
+        throughout California — built around the Prepare &amp; Enrich assessment, one of the
+        most respected tools in the field.
+      </p>
+      <a class="cta" href="/contact/">Schedule a free consultation →</a>
+    </div>
+    <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
+      <circle cx="190" cy="230" r="130" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="290" cy="230" r="130" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="240" cy="230" r="180" stroke="#707748" stroke-width="1"></circle>
+      <circle cx="240" cy="50" r="7" fill="#C7D64F"></circle>
+      <circle cx="240" cy="230" r="6" fill="#3B63C4"></circle>
+    </svg>
+  </section>
+
+  <Ticker items={tickerItems} label="What we explore" />
+
+  <!-- What is premarital -->
+  <section class="section blue on-color split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
+    <div class="col gap-28">
+      <p class="eyebrow on-color">What is premarital counseling?</p>
+      <h2 class="h2-serif" style="font-size:52px">The best investment in your marriage is the one you make <em>before it starts.</em></h2>
+      <p class="body">Getting married is one of the most significant commitments you’ll make. Premarital work sets the stage for understanding your partner more deeply — before the pace of life makes that harder to do. We use the Prepare &amp; Enrich assessment as a structured starting point: naming what’s already going well and surfacing the conversations worth having now, before they become harder to have later.</p>
+      <a class="text-link on-color" href="/approach/">My approach →</a>
+    </div>
+    <Glyph name="two-circles" class="hero-figure" />
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section">
+    <div class="stack gap-20" style="margin-bottom:48px">
+      <p class="eyebrow">Who this is for</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:720px; text-wrap:pretty">Deeper than wedding planning.</h2>
+    </div>
+    <div class="ruled-grid cols-2">
+      {whoFor.map((item, i) => (
+        <div class="ruled-cell">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <span class="copy">{item}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section sage on-color">
+    <div class="stack gap-20" style="margin-bottom:48px">
+      <p class="eyebrow on-color">The process</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1">What we’ll explore together</h2>
+    </div>
+    <div class="process-grid cols-2">
+      {process.map((p, i) => (
+        <div class="process-card">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <div class="title">{p.title}</div>
+          <p>{p.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Packages & pricing -->
+  <section class="section">
+    <div class="section-heading">
+      <div class="stack">
+        <p class="eyebrow">Packages &amp; pricing</p>
+        <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:640px; text-wrap:pretty">Two packages, one flat investment.</h2>
+      </div>
+      <p>Both include the Prepare &amp; Enrich assessment and a reduced per-session rate. We’ll discuss which fits during your free consultation.</p>
+    </div>
+    <div class="card-row">
+      <div class="package secondary">
+        <div class="label">8 sessions</div>
+        <div class="title">The Marriage Prep Package</div>
+        <p class="desc">Ideal for engaged couples who feel connected and ready to take the next step — going into marriage with clarity, strong tools, and a shared vision.</p>
+        <div class="includes">
+          <div>Prepare &amp; Enrich online assessment for both partners</div>
+          <div>Complete Facilitator Report review</div>
+          <div>8 sessions, 50 minutes each</div>
+          <div>Tailored focus based on what your relationship most needs</div>
+        </div>
+        <div class="price-wrap">
+          <div class="price">$1,315</div>
+          <div class="price-note">8 sessions at $160 each + assessment</div>
+        </div>
+      </div>
+      <div class="package primary">
+        <div class="label">12 sessions</div>
+        <div class="title">The Complete Premarital Program</div>
+        <p class="desc">Designed for couples who want to go deeper — navigating different backgrounds, or simply giving your relationship the most unhurried preparation possible.</p>
+        <div class="includes">
+          <div>Prepare &amp; Enrich online assessment for both partners</div>
+          <div>Complete Facilitator Report review</div>
+          <div>12 sessions, 50 minutes each</div>
+          <div>Unhurried exploration of your relationship and histories</div>
+        </div>
+        <div class="price-wrap">
+          <div class="price">$1,955</div>
+          <div class="price-note">12 sessions at $160 each + assessment</div>
+        </div>
+      </div>
+    </div>
+    <p class="body" style="max-width:820px; margin-top:32px; font-size:15px; color:var(--ink-75)">
+      All packages are priced as a flat investment, so you know exactly what to expect. Payment
+      plans are available — split into two equal payments with the first due at booking, or equal
+      weekly payments. The Prepare &amp; Enrich assessment is one of the most clinically validated
+      tools in premarital research, used by over 4 million couples worldwide.
+    </p>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section" style="padding-top:0; display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start">
+    <div class="sticky-heading">
+      <p class="eyebrow">Premarital counseling</p>
+      <h2 class="h2-serif">Frequently asked questions</h2>
+      <Glyph name="target-ellipses" class="mt-16" />
+    </div>
+    <Faq items={faqs} />
+  </section>
+
+  <NextSteps
+    heading="Ready to begin? <em>Let’s talk.</em>"
+    copy="I offer a free 15-minute consultation to talk through what you’re hoping to get from premarital counseling, the Prepare & Enrich process, and whether we’re a good fit."
+    steps={[
+      'Discuss what you’re hoping to get from premarital counseling',
+      'Talk about the Prepare & Enrich process',
+      'Answer any questions you have',
+      'See if we’re a good fit',
+    ]}
+  />
+</Layout>
+
+<style>
+  @media (max-width: 820px) {
+    section[style*='grid-template-columns:1fr 1.5fr'] {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+</style>

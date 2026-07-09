@@ -1,0 +1,45 @@
+---
+// A framed portrait slot with an SVG accent. If `src` is provided it renders
+// the image (with the signature sage duotone treatment); otherwise it shows a
+// tasteful labelled placeholder so real photography can be dropped in later.
+interface Props {
+  placeholder: string;
+  src?: string;
+  alt?: string;
+  tall?: boolean;
+  accent?: 'bl' | 'tr';
+  caption?: string;
+}
+const {
+  placeholder,
+  src,
+  alt = '',
+  tall = false,
+  accent = 'bl',
+  caption,
+} = Astro.props;
+---
+
+<div class={`portrait${tall ? ' tall' : ''}`}>
+  <svg
+    class={`accent ${accent}`}
+    viewBox="0 0 240 240"
+    fill="none"
+    aria-hidden="true"
+  >
+    <ellipse cx="120" cy="120" rx="104" ry="42" stroke="#3B63C4" stroke-width="1" transform="rotate(-24 120 120)"></ellipse>
+    <ellipse cx="120" cy="120" rx="104" ry="42" stroke="#3B63C4" stroke-width="1" transform="rotate(24 120 120)"></ellipse>
+    <circle cx="120" cy="120" r="5" fill="#C7D64F"></circle>
+  </svg>
+  <div class="frame">
+    {src ? (
+      <>
+        <img src={src} alt={alt} loading="lazy" />
+        <div class="overlay"></div>
+      </>
+    ) : (
+      <div class="placeholder">{placeholder}</div>
+    )}
+  </div>
+  {caption && <div class="caption">{caption}</div>}
+</div>
