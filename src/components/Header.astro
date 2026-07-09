@@ -7,16 +7,71 @@ interface Props {
 const { active } = Astro.props;
 ---
 
-<header class="topbar">
+<header class="topbar" data-header>
   <a class="brand" href="/">{site.name}</a>
-  <nav class="nav-links" aria-label="Primary">
-    {
-      nav.map((item) => (
-        <a href={item.href} aria-current={active === item.href ? 'page' : undefined}>
-          {item.label}
-        </a>
-      ))
-    }
-  </nav>
-  <a class="button" href="/contact/">Book a free consult</a>
+
+  <button
+    class="nav-toggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="site-menu"
+    data-nav-toggle
+  >
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+
+  <div class="nav-menu" id="site-menu" data-nav-menu>
+    <nav class="nav-links" aria-label="Primary">
+      {
+        nav.map((item) => (
+          <a href={item.href} aria-current={active === item.href ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+    <a class="button" href="/contact/">Book a free consult</a>
+  </div>
 </header>
+
+<script>
+  const header = document.querySelector('[data-header]');
+  const toggle = header?.querySelector('[data-nav-toggle]');
+  const menu = header?.querySelector('[data-nav-menu]');
+
+  if (header && toggle && menu) {
+    const setOpen = (open: boolean) => {
+      header.classList.toggle('nav-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+
+    toggle.addEventListener('click', () => {
+      setOpen(!header.classList.contains('nav-open'));
+    });
+
+    // Close after choosing a destination.
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+
+    // Close on Escape.
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && header.classList.contains('nav-open')) {
+        setOpen(false);
+        (toggle as HTMLElement).focus();
+      }
+    });
+
+    // Close when clicking outside the header.
+    document.addEventListener('click', (e) => {
+      if (
+        header.classList.contains('nav-open') &&
+        !header.contains(e.target as Node)
+      ) {
+        setOpen(false);
+      }
+    });
+  }
+</script>
