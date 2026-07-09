@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#F6F1E4; font-family:'Instrument Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:hover { opacity:.72; }
+    summary::-webkit-details-marker { display:none; }
+    summary { list-style:none; }
+  </style>
+</helmet>
+
+<div data-screen-label="FAQs" style="background:#F6F1E4; color:#3E4227; max-width:1600px; margin:0 auto">
+
+  <!-- nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:26px 64px; border-bottom:1px solid rgba(62,66,39,.25)">
+    <a href="Home.dc.html" style="font-family:'Instrument Serif',serif; font-size:24px; font-style:italic">Nikole Sparks</a>
+    <div style="display:flex; gap:36px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase">
+      <a href="About.dc.html">About</a><a href="Approach.dc.html">Approach</a><a href="Services.dc.html">Services</a><a href="FAQs.dc.html" style="border-bottom:1px solid #3E4227; padding-bottom:3px">FAQs</a><a href="Contact.dc.html">Contact</a>
+    </div>
+    <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; border:1px solid #3E4227; padding:12px 24px">Book a free consult</a>
+  </div>
+
+  <!-- hero -->
+  <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:64px; padding:96px 64px 88px; align-items:center">
+    <div style="display:flex; flex-direction:column; gap:32px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3B63C4">FAQs</div>
+      <h1 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:72px; line-height:1.05; margin:0; text-wrap:pretty">Frequently asked <em style="color:#3B63C4">questions.</em></h1>
+      <p style="font-size:19px; line-height:1.6; margin:0; max-width:560px; color:rgba(62,66,39,.85)">Answers to some of the common questions about working together. Have a question that isn't on here? <a href="mailto:info@nikolesparks.com" style="border-bottom:1px solid #3B63C4; color:#3B63C4">Send me an email</a> or schedule a consultation below.</p>
+      <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; background:#3B63C4; color:#F6F1E4; padding:16px 28px; width:max-content">Schedule a free consultation →</a>
+    </div>
+    <svg viewBox="0 0 480 420" style="width:100%; height:auto" fill="none">
+      <circle cx="240" cy="210" r="170" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="240" cy="210" r="128" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="240" cy="210" r="86" stroke="#707748" stroke-width="1"></circle>
+      <circle cx="240" cy="210" r="44" stroke="#707748" stroke-width="1"></circle>
+      <circle cx="240" cy="40" r="7" fill="#C7D64F"></circle>
+      <circle cx="240" cy="210" r="6" fill="#3B63C4"></circle>
+    </svg>
+  </div>
+
+  <!-- ticker -->
+  <div style="background:#3E4227; padding:16px 64px; display:flex; justify-content:space-between; gap:28px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#F6F1E4; white-space:nowrap; overflow:hidden">
+    <span>Fees</span><span>·</span><span>Insurance</span><span>·</span><span>First Sessions</span><span>·</span><span>Depth Therapy</span><span>·</span><span>Telehealth</span><span>·</span><span>Fit</span><span>·</span><span>Frequency</span>
+  </div>
+
+  <!-- faq list -->
+  <div style="padding:104px 64px; display:grid; grid-template-columns:1fr 1.6fr; gap:80px; align-items:start">
+    <div style="display:flex; flex-direction:column; gap:20px; position:sticky; top:40px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3B63C4">Common questions</div>
+      <h2 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:44px; line-height:1.12; margin:0; text-wrap:pretty">Everything you might want to know before we talk.</h2>
+      <svg viewBox="0 0 200 160" style="width:200px; height:auto; margin-top:16px" fill="none">
+        <ellipse cx="100" cy="80" rx="90" ry="16" stroke="#707748" stroke-width="1"></ellipse>
+        <ellipse cx="100" cy="72" rx="90" ry="32" stroke="#707748" stroke-width="1"></ellipse>
+        <ellipse cx="100" cy="64" rx="90" ry="48" stroke="#707748" stroke-width="1"></ellipse>
+        <circle cx="100" cy="16" r="4" fill="#3B63C4"></circle>
+      </svg>
+    </div>
+    <div style="display:flex; flex-direction:column">
+      <details style="border-top:1px solid rgba(62,66,39,.3)" open>
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>How do I know if therapy is right for me?</span><span style="color:#3B63C4">+</span></summary>
+        <p style="font-size:16px; line-height:1.7; margin:0 0 28px; color:rgba(62,66,39,.85); max-width:680px">If you've been feeling stuck, disconnected, or like you keep running into the same walls no matter what you try, that's often a sign that therapy could help. You don't need to be in crisis to benefit from it. Many of the people I work with are functioning well on the outside but carrying something underneath they can't quite name or shake. If something keeps nagging at you, if your relationships feel harder than they should, or if you're just tired of feeling the way you feel, that's enough of a reason to reach out. I offer a free 15-minute consultation so you can get a sense of whether this feels right before committing to anything.</p>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>What happens in the first therapy session?</span><span style="color:#3B63C4">+</span></summary>
+        <p style="font-size:16px; line-height:1.7; margin:0 0 28px; color:rgba(62,66,39,.85); max-width:680px">Our first session is really just about getting to know each other. I'll ask more about what brings you in, a bit about your history, and what you're hoping for. We'll start to get a feel for how we work together. There's no pressure to share everything at once. My job in those first sessions is to listen carefully and create a space where you feel comfortable enough to share honestly. We'll figure out the pace together.</p>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>What are your fees, and do you accept insurance?</span><span style="color:#3B63C4">+</span></summary>
+        <div style="display:flex; flex-direction:column; gap:16px; padding-bottom:28px">
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">Individual sessions are $175 for a standard 45-50 minute session. I have a limited number of sliding scale spots available, and I encourage you to ask if fee is a barrier to getting started.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">I am currently only accepting private-pay clients. I do accept HSA and FSA cards, and if your plan includes out-of-network mental health benefits (common with many PPO plans), I can provide a monthly superbill you can submit for reimbursement. Many clients receive 50–80% back this way, and I'm happy to help you understand your options.</p>
+        </div>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>How do I know if a therapist is a good fit for me?</span><span style="color:#3B63C4">+</span></summary>
+        <div style="display:flex; flex-direction:column; gap:16px; padding-bottom:28px">
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">The first session is an invitation to begin. There is no script you need to follow, no particular way you need to present yourself. We will start by talking about what brings you in — what has felt difficult, what you are hoping for, and what your experience has been in the past, both in life and in therapy if you have had it before.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">I will also be paying attention to both the content of what you share, and to how you make sense of your experience, what feels easy and what feels harder to say, and what kind of relational space might be most useful for you. My aim is for you to leave the first session feeling heard and with some beginning sense of how I work.</p>
+        </div>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>What is depth therapy?</span><span style="color:#3B63C4">+</span></summary>
+        <div style="display:flex; flex-direction:column; gap:16px; padding-bottom:28px">
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">Depth therapy is an approach to therapy that looks beneath your symptoms to understand what is actually driving them — the unconscious patterns, relational histories, and emotional meanings that shape how you move through the world. Rather than focusing only on managing symptoms or changing behaviors, depth therapy asks: where does this come from? What is this really about? It's a slower, more exploratory kind of work, and it tends to create change that compounds and sticks over time.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">In my practice, depth therapy draws on psychodynamic and attachment-based frameworks. We work together to trace emotional and relational patterns. Seeking to understand where they came from, what purpose they once served, and how they continue to shape your life today. The goal is a more free, authentic, and integrated relationship with yourself.</p>
+        </div>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>How do I know if psychodynamic therapy is right for me?</span><span style="color:#3B63C4">+</span></summary>
+        <div style="display:flex; flex-direction:column; gap:16px; padding-bottom:28px">
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">Psychodynamic therapy is an evidence-based approach that explores how our early relationships and experiences continue to show up in our present-day lives. Research consistently supports its effectiveness for anxiety, depression, relational difficulties, grief, and more.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">Psychodynamic therapy tends to be a strong fit when you want deeper self-understanding. When you are curious about <em>why</em> you feel the way you do, not only <em>how</em> to feel better. It is especially useful when you notice recurring patterns you cannot seem to break: the same relational conflicts, the same anxiety showing up in different situations, the same inner critic no matter how much you achieve.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">It can also be the right fit if you have tried other approaches and found relief in the short term but eventually returned to familiar struggles. Psychodynamic therapy is designed to address root causes, not just surface symptoms; its effects tend to build and deepen over time rather than diminish.</p>
+        </div>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>What is the difference between anxiety therapy and depth therapy?</span><span style="color:#3B63C4">+</span></summary>
+        <div style="display:flex; flex-direction:column; gap:16px; padding-bottom:28px">
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">Anxiety therapy is a broad term that can describe many different approaches: CBT, exposure-based work, skills training, somatic work, and more. All of them aim to reduce anxiety symptoms, and many do that effectively. Depth therapy is not a treatment for anxiety in that same prescriptive sense; it is a <em>way of working</em> that treats anxiety as meaningful rather than as a problem to eliminate.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">In depth-oriented work, anxiety is not treated as a malfunction. It is taken seriously as a signal — something that carries information about your emotional life, your relational patterns, your unresolved experiences. We work to understand what the anxiety is about, what it might be protecting, and how the conditions that gave rise to it can change. For many people, that kind of understanding is what finally shifts the anxiety at a deeper level than coping strategies alone can reach.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">If you are experiencing anxiety that is diffuse, persistent, or tied to patterns of over-responsibility, perfectionism, or not knowing what you actually feel and want, depth therapy may offer something that targeted anxiety treatment does not. The two approaches are not mutually exclusive — but they operate from very different assumptions about what anxiety is and what needs to change.</p>
+        </div>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>How often do I come?</span><span style="color:#3B63C4">+</span></summary>
+        <p style="font-size:16px; line-height:1.7; margin:0 0 28px; color:rgba(62,66,39,.85); max-width:680px">I typically work in an ongoing weekly format. Before we start we will discuss a time that will consistently work for your schedule and keep your appointment time on the same day and time each week. Consistent, regular sessions create the kind of rhythm that allows us to go deeper over time — it's hard to do meaningful work when there's too much space between sessions. As things shift and stabilize, we can reassess frequency together.</p>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>How long does therapy take to work?</span><span style="color:#3B63C4">+</span></summary>
+        <p style="font-size:16px; line-height:1.7; margin:0 0 28px; color:rgba(62,66,39,.85); max-width:680px">The timeline depends on each individual. Many people feel relief fairly early from having a space to think and feel more freely and honestly, and studies have shown that meaningful change begins around six months of consistent psychotherapy.</p>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>Do you offer telehealth therapy, and is it as effective as in-person sessions?</span><span style="color:#3B63C4">+</span></summary>
+        <div style="display:flex; flex-direction:column; gap:16px; padding-bottom:28px">
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">Yes. I offer telehealth sessions throughout California alongside in-person sessions in Newport Beach and Fullerton. For many people, telehealth is not a compromise. It can be the format that makes consistent, deep therapy most possible given work schedules, commutes, life with children, or the logistics of life in Southern California.</p>
+          <p style="font-size:16px; line-height:1.7; margin:0; color:rgba(62,66,39,.85); max-width:680px">The research on telehealth consistently supports its effectiveness for anxiety, depression, trauma, and relationship concerns. The most important factors in therapy outcomes — the quality of the therapeutic relationship, consistency, and trust — are fully available in an online format.</p>
+        </div>
+      </details>
+      <details style="border-top:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3)">
+        <summary style="font-family:'Instrument Serif',serif; font-size:24px; padding:24px 0; cursor:pointer; display:flex; justify-content:space-between; gap:24px"><span>Should I choose in-person therapy in Orange County or telehealth in California?</span><span style="color:#3B63C4">+</span></summary>
+        <p style="font-size:16px; line-height:1.7; margin:0 0 28px; color:rgba(62,66,39,.85); max-width:680px">The clinical approach is the same — depth-oriented, psychodynamic, and attachment-based — regardless of format. The practical and experiential differences are worth considering, though. In-person therapy in Fullerton or Newport Beach can offer a stronger sense of ritual and containment: the act of traveling to a dedicated space, closing the door, and leaving ordinary life temporarily behind. For some people, that physical separation frees them up to be more "in" the work.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- next steps -->
+  <div style="background:#3B63C4; color:#F6F1E4; padding:104px 64px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center">
+    <div style="display:flex; flex-direction:column; gap:28px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#C7D64F">Next steps</div>
+      <h2 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:52px; line-height:1.08; margin:0; text-wrap:pretty">Still have questions? <em>Let's talk.</em></h2>
+      <p style="font-size:17px; line-height:1.65; margin:0; color:rgba(246,241,228,.85)">The free 15-minute consultation is the easiest way to get your questions answered — no pressure, no commitment.</p>
+      <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; background:#F6F1E4; color:#3E4227; padding:16px 28px; width:max-content">Schedule a free consultation →</a>
+    </div>
+    <svg viewBox="0 0 380 320" style="width:100%; height:auto" fill="none">
+      <ellipse cx="190" cy="160" rx="170" ry="30" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <ellipse cx="190" cy="160" rx="170" ry="60" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <ellipse cx="190" cy="160" rx="170" ry="90" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <ellipse cx="190" cy="160" rx="170" ry="120" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <ellipse cx="190" cy="160" rx="170" ry="150" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <circle cx="190" cy="10" r="6" fill="#C7D64F"></circle>
+    </svg>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#3E4227; color:#F6F1E4; padding:88px 64px 48px; display:flex; flex-direction:column; gap:64px">
+    <div style="display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:64px">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:40px; line-height:1.1; margin:0; text-wrap:pretty">Ready to stop managing and start <em style="color:#C7D64F">understanding?</em></h3>
+        <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; background:#F6F1E4; color:#3E4227; padding:15px 26px; width:max-content">Schedule a free consultation →</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; font-size:15px; line-height:1.55">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#C7D64F">Offices</div>
+        <div><strong>Fullerton</strong><br>1619 East Chapman Ave<br>Fullerton, CA 92831</div>
+        <div><strong>Newport Beach</strong><br>1300 Quail Street, Suite 206<br>Newport Beach, CA 92660</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; font-size:15px; line-height:1.55">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#C7D64F">Connect</div>
+        <div>info@nikolesparks.com<br>949.942.5301</div>
+        <div style="color:rgba(246,241,228,.65)">In-person and online across California</div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(246,241,228,.2); padding-top:24px; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:rgba(246,241,228,.5)">
+      <span>Nikole Sparks · Associate Marriage &amp; Family Therapist</span>
+      <span>AMFT no. 150080</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

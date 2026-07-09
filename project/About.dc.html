@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#F6F1E4; font-family:'Instrument Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:hover { opacity:.72; }
+  </style>
+</helmet>
+
+<div data-screen-label="About" style="background:#F6F1E4; color:#3E4227; max-width:1600px; margin:0 auto">
+
+  <!-- nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:26px 64px; border-bottom:1px solid rgba(62,66,39,.25)">
+    <a href="Home.dc.html" style="font-family:'Instrument Serif',serif; font-size:24px; font-style:italic">Nikole Sparks</a>
+    <div style="display:flex; gap:36px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase">
+      <a href="About.dc.html" style="border-bottom:1px solid #3E4227; padding-bottom:3px">About</a><a href="Approach.dc.html">Approach</a><a href="Services.dc.html">Services</a><a href="FAQs.dc.html">FAQs</a><a href="Contact.dc.html">Contact</a>
+    </div>
+    <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; border:1px solid #3E4227; padding:12px 24px">Book a free consult</a>
+  </div>
+
+  <!-- hero -->
+  <div style="display:grid; grid-template-columns:1.15fr 1fr; gap:80px; padding:96px 64px 104px; align-items:center">
+    <div style="display:flex; flex-direction:column; gap:32px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3B63C4">Meet Nikole Sparks, AMFT</div>
+      <h1 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:72px; line-height:1.05; margin:0; text-wrap:pretty">You don't have to figure it out <em style="color:#3B63C4">alone.</em></h1>
+      <p style="font-size:19px; line-height:1.6; margin:0; max-width:560px; color:rgba(62,66,39,.85)">There is much more to you than you may realize, and being human is both beautiful and messy. As a fellow human and relational therapist, I'm here to accompany you as you move toward living from your most authentic self.</p>
+      <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; background:#3B63C4; color:#F6F1E4; padding:16px 28px; width:max-content">Schedule a free consultation →</a>
+    </div>
+    <div style="position:relative; width:100%; height:600px">
+      <svg viewBox="0 0 240 240" style="position:absolute; right:-56px; top:-56px; width:240px; height:240px" fill="none">
+        <ellipse cx="120" cy="120" rx="104" ry="42" stroke="#3B63C4" stroke-width="1" transform="rotate(-24 120 120)"></ellipse>
+        <ellipse cx="120" cy="120" rx="104" ry="42" stroke="#3B63C4" stroke-width="1" transform="rotate(24 120 120)"></ellipse>
+        <circle cx="120" cy="120" r="5" fill="#C7D64F"></circle>
+      </svg>
+      <div style="position:relative; width:100%; height:100%; background:#707748">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="about-portrait" shape="rect" fit="cover" placeholder="Nikole — portrait" hint-size="100%,600px" style="width:100%; height:100%; filter:grayscale(1) contrast(1.08) brightness(1.05)"></x-import>
+        <div style="position:absolute; inset:0; background:#707748; mix-blend-mode:multiply; opacity:.5; pointer-events:none"></div>
+      </div>
+      <div style="position:absolute; left:24px; bottom:24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#F6F1E4; pointer-events:none">CA AMFT 150080 · Supervised by Dr. Michele Willingham, PSY 15849</div>
+    </div>
+  </div>
+
+  <!-- ticker -->
+  <div style="background:#3E4227; padding:16px 64px; display:flex; justify-content:space-between; gap:28px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#F6F1E4; white-space:nowrap; overflow:hidden">
+    <span>Depth-Oriented</span><span>·</span><span>Attachment-Based</span><span>·</span><span>Psychodynamic</span><span>·</span><span>Relational</span><span>·</span><span>Warm</span><span>·</span><span>Collaborative</span><span>·</span><span>Curious</span>
+  </div>
+
+  <!-- story -->
+  <div style="padding:104px 64px; display:grid; grid-template-columns:1fr 1.4fr; gap:80px">
+    <div style="display:flex; flex-direction:column; gap:24px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3B63C4">My story</div>
+      <h2 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:48px; line-height:1.1; margin:0; text-wrap:pretty">Therapy is its own <em>creative process.</em></h2>
+      <svg viewBox="0 0 200 160" style="width:200px; height:auto; margin-top:16px" fill="none">
+        <ellipse cx="100" cy="80" rx="90" ry="16" stroke="#707748" stroke-width="1"></ellipse>
+        <ellipse cx="100" cy="72" rx="90" ry="32" stroke="#707748" stroke-width="1"></ellipse>
+        <ellipse cx="100" cy="64" rx="90" ry="48" stroke="#707748" stroke-width="1"></ellipse>
+        <circle cx="100" cy="16" r="4" fill="#3B63C4"></circle>
+      </svg>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:24px; font-size:17px; line-height:1.7; color:rgba(62,66,39,.85)">
+      <p style="margin:0">I'm an Associate Marriage and Family Therapist specializing in depth-oriented, attachment-based therapy in Orange County. I come to therapy by way of a career as a designer — 15+ years spent helping people uncover their unique point of view and expression. It's made me a firm believer that therapy is its own creative process: an invitation to slow down, listen deeply to what has shaped you, and make space for what wants to emerge.</p>
+      <p style="margin:0">My practice is grounded in psychodynamic therapy, an evidence-based approach that helps us explore the emotional and relational patterns that shape and guide our lives. Together, we'll trace these patterns with care — honoring where they come from while creating space for new possibilities.</p>
+      <p style="margin:0">I know firsthand that therapy can be life-changing. My own experience in therapy has shaped not only the way I practice, but the way I understand healing. I deeply respect the courage it takes to share your struggles with another person, and I value building a strong, collaborative relationship at your pace.</p>
+      <p style="margin:0">I typically work with people interested in longer-term (6+ months), in-depth therapy — people who want to meaningfully understand their inner emotional life, why they feel stuck, or why certain feelings and relational patterns keep recurring. I particularly enjoy working with creative professionals, those who struggle with self-expression, and those navigating the intersection of mental health and spirituality — whether integrating faith into the healing process or untangling pain connected to a spiritual background.</p>
+    </div>
+  </div>
+
+  <!-- education: ruled grid -->
+  <div style="padding:0 64px 104px; display:flex; flex-direction:column; gap:40px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3B63C4">Education</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; border-top:1px solid rgba(62,66,39,.3); border-left:1px solid rgba(62,66,39,.3)">
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:36px; display:flex; flex-direction:column; gap:16px">
+        <svg viewBox="0 0 48 48" style="width:36px; height:36px" fill="none"><circle cx="24" cy="24" r="20" stroke="#3B63C4" stroke-width="1"></circle><circle cx="24" cy="24" r="12" stroke="#3B63C4" stroke-width="1"></circle><circle cx="24" cy="24" r="3" fill="#3B63C4"></circle></svg>
+        <span style="font-size:17px; line-height:1.5">M.S. Marriage &amp; Family Therapy<br><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; color:rgba(62,66,39,.65)">Fuller Graduate School</span></span>
+      </div>
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:36px; display:flex; flex-direction:column; gap:16px">
+        <svg viewBox="0 0 48 48" style="width:36px; height:36px" fill="none"><ellipse cx="24" cy="28" rx="19" ry="6" stroke="#3B63C4" stroke-width="1"></ellipse><ellipse cx="24" cy="23" rx="19" ry="12" stroke="#3B63C4" stroke-width="1"></ellipse><circle cx="24" cy="9" r="3" fill="#C7D64F"></circle></svg>
+        <span style="font-size:17px; line-height:1.5">M.A. Spiritual Formation &amp; Soul Care<br><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; color:rgba(62,66,39,.65)">Talbot School of Theology</span></span>
+      </div>
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:36px; display:flex; flex-direction:column; gap:16px">
+        <svg viewBox="0 0 48 48" style="width:36px; height:36px" fill="none"><circle cx="18" cy="24" r="13" stroke="#3B63C4" stroke-width="1"></circle><circle cx="30" cy="24" r="13" stroke="#3B63C4" stroke-width="1"></circle></svg>
+        <span style="font-size:17px; line-height:1.5">B.F.A. Design<br><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; color:rgba(62,66,39,.65)">Biola University</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- quote block -->
+  <div style="background:#3B63C4; color:#F6F1E4; padding:112px 64px; display:grid; grid-template-columns:280px 1fr; gap:80px; align-items:center">
+    <svg viewBox="0 0 280 240" style="width:100%; height:auto" fill="none">
+      <ellipse cx="140" cy="120" rx="126" ry="24" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <ellipse cx="140" cy="120" rx="126" ry="52" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <ellipse cx="140" cy="120" rx="126" ry="80" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <ellipse cx="140" cy="120" rx="126" ry="108" stroke="#F6F1E4" stroke-width="1"></ellipse>
+      <circle cx="140" cy="12" r="5" fill="#C7D64F"></circle>
+    </svg>
+    <div style="display:flex; flex-direction:column; gap:28px">
+      <blockquote style="font-family:'Instrument Serif',serif; font-size:44px; line-height:1.2; margin:0; text-wrap:pretty">"In all our searching, the only thing we've found that makes the emptiness bearable is <em>each other.</em>"</blockquote>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#C7D64F">Carl Sagan</div>
+    </div>
+  </div>
+
+  <!-- you might be here because -->
+  <div style="padding:104px 64px; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; justify-content:space-between; align-items:end; gap:64px">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3B63C4">You might be here because</div>
+        <h2 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:48px; line-height:1.1; margin:0; max-width:720px; text-wrap:pretty">Uncovering the roots, so you can live with connection, authenticity, &amp; vitality.</h2>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; border-top:1px solid rgba(62,66,39,.3); border-left:1px solid rgba(62,66,39,.3)">
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:32px 36px; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">01</span><span style="font-size:17px; line-height:1.5">Your relationships keep hitting the same walls, and you can't figure out why</span></div>
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:32px 36px; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">02</span><span style="font-size:17px; line-height:1.5">You're tired of feeling not good enough, no matter what you achieve</span></div>
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:32px 36px; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">03</span><span style="font-size:17px; line-height:1.5">Anxiety is eating up your peace of mind, even when everything looks "fine" on paper</span></div>
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:32px 36px; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">04</span><span style="font-size:17px; line-height:1.5">You're a creative facing burnout, cynicism, or feeling lost about your direction</span></div>
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:32px 36px; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">05</span><span style="font-size:17px; line-height:1.5">It's difficult to connect to or express yourself, your needs, or what you really want</span></div>
+      <div style="border-right:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:32px 36px; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">06</span><span style="font-size:17px; line-height:1.5">You and your partner are speaking different languages — or preparing for marriage and want to start well</span></div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px">
+      <a href="Services.dc.html" style="display:flex; justify-content:space-between; align-items:center; background:#3B63C4; color:#F6F1E4; padding:32px 36px; font-family:'Instrument Serif',serif; font-size:28px"><span>Individual therapy</span><span>→</span></a>
+      <a href="Services.dc.html" style="display:flex; justify-content:space-between; align-items:center; background:#F6F1E4; color:#3E4227; border:1px solid rgba(62,66,39,.4); padding:32px 36px; font-family:'Instrument Serif',serif; font-size:28px"><span>Couples therapy</span><span>→</span></a>
+    </div>
+  </div>
+
+  <!-- helpful to know: olive block -->
+  <div style="background:#707748; color:#F6F1E4; padding:104px 64px; display:flex; flex-direction:column; gap:56px; position:relative; overflow:hidden">
+    <svg viewBox="0 0 300 300" style="position:absolute; right:-60px; top:-60px; width:300px; height:300px; opacity:.5" fill="none">
+      <line x1="150" y1="150" x2="150" y2="0" stroke="#C7D64F" stroke-width="1"></line>
+      <line x1="150" y1="150" x2="256" y2="44" stroke="#C7D64F" stroke-width="1"></line>
+      <line x1="150" y1="150" x2="300" y2="150" stroke="#C7D64F" stroke-width="1"></line>
+      <line x1="150" y1="150" x2="256" y2="256" stroke="#C7D64F" stroke-width="1"></line>
+      <line x1="150" y1="150" x2="44" y2="256" stroke="#C7D64F" stroke-width="1"></line>
+      <line x1="150" y1="150" x2="0" y2="150" stroke="#C7D64F" stroke-width="1"></line>
+      <line x1="150" y1="150" x2="44" y2="44" stroke="#C7D64F" stroke-width="1"></line>
+      <circle cx="150" cy="150" r="5" fill="#C7D64F"></circle>
+    </svg>
+    <div style="display:flex; flex-direction:column; gap:20px; position:relative">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#C7D64F">Helpful to know</div>
+      <h2 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:48px; line-height:1.1; margin:0">The practical details</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; position:relative">
+      <div style="display:flex; flex-direction:column; gap:16px; border-top:1px solid rgba(246,241,228,.35); padding-top:24px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#C7D64F">Fees</div>
+        <div style="font-family:'Instrument Serif',serif; font-size:30px">45 mins · $175</div>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:rgba(246,241,228,.8)">Standard individual session for ongoing treatment, typically weekly. A limited number of sliding-scale spots are available — please don't hesitate to ask.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; border-top:1px solid rgba(246,241,228,.35); padding-top:24px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#C7D64F">Insurance</div>
+        <div style="font-family:'Instrument Serif',serif; font-size:30px">Private pay</div>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:rgba(246,241,228,.8)">If your insurance has out-of-network coverage, I can provide a superbill for out-of-pocket reimbursement.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; border-top:1px solid rgba(246,241,228,.35); padding-top:24px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#C7D64F">Location</div>
+        <div style="font-family:'Instrument Serif',serif; font-size:30px">In-person &amp; online</div>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:rgba(246,241,228,.8)">Offices in Newport Beach and Fullerton, or virtually anywhere in California.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- getting started -->
+  <div style="padding:104px 64px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center">
+    <div style="display:flex; flex-direction:column; gap:28px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#3B63C4">Next steps</div>
+      <h2 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:52px; line-height:1.08; margin:0; text-wrap:pretty">Getting started is a <em>15-minute conversation.</em></h2>
+      <p style="font-size:17px; line-height:1.65; margin:0; color:rgba(62,66,39,.85)">Starting therapy is vulnerable, and finding the right therapist matters. The free consultation is a low-pressure way to ask questions and get a feel for how I work.</p>
+      <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; background:#3B63C4; color:#F6F1E4; padding:16px 28px; width:max-content">Schedule a free consultation →</a>
+    </div>
+    <div style="display:flex; flex-direction:column">
+      <div style="border-top:1px solid rgba(62,66,39,.3); padding:22px 0; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">01</span><span style="font-size:17px; line-height:1.5">Discuss what brings you to therapy</span></div>
+      <div style="border-top:1px solid rgba(62,66,39,.3); padding:22px 0; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">02</span><span style="font-size:17px; line-height:1.5">Talk about how I might help</span></div>
+      <div style="border-top:1px solid rgba(62,66,39,.3); padding:22px 0; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">03</span><span style="font-size:17px; line-height:1.5">Answer any questions you have</span></div>
+      <div style="border-top:1px solid rgba(62,66,39,.3); border-bottom:1px solid rgba(62,66,39,.3); padding:22px 0; display:flex; gap:20px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#3B63C4">04</span><span style="font-size:17px; line-height:1.5">See if we're a good fit</span></div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#3E4227; color:#F6F1E4; padding:88px 64px 48px; display:flex; flex-direction:column; gap:64px; position:relative; overflow:hidden">
+    <div style="display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:64px; position:relative">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="font-family:'Instrument Serif',serif; font-weight:400; font-size:40px; line-height:1.1; margin:0; text-wrap:pretty">Ready to stop managing and start <em style="color:#C7D64F">understanding?</em></h3>
+        <a href="Contact.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; background:#F6F1E4; color:#3E4227; padding:15px 26px; width:max-content">Schedule a free consultation →</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; font-size:15px; line-height:1.55">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#C7D64F">Offices</div>
+        <div><strong>Fullerton</strong><br>1619 East Chapman Ave<br>Fullerton, CA 92831</div>
+        <div><strong>Newport Beach</strong><br>1300 Quail Street, Suite 206<br>Newport Beach, CA 92660</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; font-size:15px; line-height:1.55">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#C7D64F">Connect</div>
+        <div>info@nikolesparks.com<br>949.942.5301</div>
+        <div style="color:rgba(246,241,228,.65)">In-person and online across California</div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(246,241,228,.2); padding-top:24px; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:rgba(246,241,228,.5); position:relative">
+      <span>Nikole Sparks · Associate Marriage &amp; Family Therapist</span>
+      <span>AMFT no. 150080</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
