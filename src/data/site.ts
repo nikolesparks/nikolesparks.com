@@ -15,10 +15,24 @@ export const site = {
   phoneHref: 'tel:9499425301',
 };
 
-export const nav = [
+interface NavItem {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+}
+
+export const nav: NavItem[] = [
   { label: 'About', href: '/about/' },
   { label: 'Approach', href: '/approach/' },
-  { label: 'Services', href: '/services/' },
+  {
+    label: 'Services',
+    href: '/services/',
+    children: [
+      { label: 'Individual Therapy', href: '/services/individual-therapy/' },
+      { label: 'Couples Therapy', href: '/services/couples-therapy/' },
+      { label: 'Premarital Counseling', href: '/services/premarital-counseling/' },
+    ],
+  },
   { label: 'FAQs', href: '/faqs/' },
   { label: 'Contact', href: '/contact/' },
 ];
