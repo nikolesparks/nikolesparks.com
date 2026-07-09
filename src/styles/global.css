@@ -1043,6 +1043,17 @@ p.body {
   color: var(--ink-65);
   margin: 0;
 }
+/* pair two fields side by side; stack on narrow screens */
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 520px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ---------- form card (hero contact form) ---------- */
 .form-card {

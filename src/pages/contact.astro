@@ -46,33 +46,37 @@ import { site, offices } from '../data/site';
           Name
           <input type="text" name="name" autocomplete="name" placeholder="Your name" required />
         </label>
-        <label class="field">
-          Email
-          <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
-        </label>
-        <label class="field">
-          Phone
-          <input type="tel" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required />
-        </label>
-        <label class="field">
-          Preferred location
-          <select name="preferred-location" required>
-            <option value="" disabled selected>Select a location…</option>
-            <option value="Online">Online</option>
-            <option value="Newport Beach">Newport Beach</option>
-            <option value="Fullerton">Fullerton</option>
-          </select>
-        </label>
-        <label class="field">
-          Preferred service
-          <select name="preferred-service" required>
-            <option value="" disabled selected>Select a service…</option>
-            <option value="Individual Therapy">Individual Therapy</option>
-            <option value="Couples Therapy">Couples Therapy</option>
-            <option value="Teen Therapy">Teen Therapy</option>
-            <option value="Premarital Counseling">Premarital Counseling</option>
-          </select>
-        </label>
+        <div class="field-row">
+          <label class="field">
+            Email
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+          </label>
+          <label class="field">
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required />
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            Preferred location
+            <select name="preferred-location" required>
+              <option value="" disabled selected>Select a location…</option>
+              <option value="Online">Online</option>
+              <option value="Newport Beach">Newport Beach</option>
+              <option value="Fullerton">Fullerton</option>
+            </select>
+          </label>
+          <label class="field">
+            Preferred service
+            <select name="preferred-service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="Individual Therapy">Individual Therapy</option>
+              <option value="Couples Therapy">Couples Therapy</option>
+              <option value="Teen Therapy">Teen Therapy</option>
+              <option value="Premarital Counseling">Premarital Counseling</option>
+            </select>
+          </label>
+        </div>
         <label class="field">
           What would you like to talk about?
           <textarea
