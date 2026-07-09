@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+  <helmet>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cream: #F6F1E4;
+        --ink: #3E4227;
+        --blue: #3B63C4;
+        --sage: #707748;
+        --lime: #C7D64F;
+      }
+      * { box-sizing: border-box; }
+      body { margin:0; background:var(--cream); color:var(--ink); font-family:'Instrument Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+      a { color:inherit; text-decoration:none; }
+      a:hover { opacity:.72; }
+      .page { max-width:1600px; margin:0 auto; background:var(--cream); }
+      .topbar { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:26px 64px; border-bottom:1px solid rgba(62,66,39,.25); }
+      .brand { font-family:'Instrument Serif',serif; font-size:24px; font-style:italic; white-space:nowrap; }
+      .nav-links { display:flex; gap:36px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
+      .button { display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--ink); padding:12px 24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
+      .hero { display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; padding:96px 64px 104px; align-items:center; }
+      .eyebrow { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--blue); }
+      h1, h2, h3 { margin:0; font-weight:400; }
+      .hero h1 { font-family:'Instrument Serif',serif; font-size:clamp(3rem, 5vw, 4.5rem); line-height:1.04; max-width:700px; }
+      .hero p, .copy { font-size:18px; line-height:1.65; margin:0; color:rgba(62,66,39,.85); }
+      .cta { display:inline-flex; width:max-content; padding:16px 28px; background:var(--blue); color:var(--cream); font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; }
+      .card { background:var(--ink); color:var(--cream); padding:40px; display:flex; flex-direction:column; gap:24px; }
+      .detail { display:flex; flex-direction:column; gap:8px; }
+      .detail .label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
+      .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:36px; padding:0 64px 104px; }
+      .panel { border:1px solid rgba(62,66,39,.3); padding:36px; display:flex; flex-direction:column; gap:18px; background:rgba(246,241,228,.55); }
+      .panel h2 { font-family:'Instrument Serif',serif; font-size:32px; }
+      .panel form { display:flex; flex-direction:column; gap:16px; }
+      .field { display:flex; flex-direction:column; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; }
+      input, textarea { border:1px solid rgba(62,66,39,.25); background:var(--cream); padding:14px 16px; font:16px/1.4 'Instrument Sans',sans-serif; color:var(--ink); }
+      textarea { min-height:140px; resize:vertical; }
+      button { border:none; background:var(--blue); color:var(--cream); padding:14px 20px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
+      .footer { padding:88px 64px 48px; background:var(--ink); color:var(--cream); display:flex; flex-direction:column; gap:64px; }
+      .footer-grid { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:64px; }
+      .footer h3 { font-family:'Instrument Serif',serif; font-size:40px; line-height:1.1; margin:0; }
+      .footer h3 em { color:var(--lime); font-style:normal; }
+      .footer .label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
+      .footer-bottom { border-top:1px solid rgba(246,241,228,.2); padding-top:24px; display:flex; justify-content:space-between; gap:24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:rgba(246,241,228,.5); }
+      @media (max-width: 960px) { .hero, .contact-grid, .footer-grid { grid-template-columns:1fr; } .topbar { flex-wrap:wrap; } .nav-links { order:3; width:100%; justify-content:center; flex-wrap:wrap; } }
+      @media (max-width: 640px) { .hero, .contact-grid, .footer, .topbar { padding-left:24px; padding-right:24px; } .card { padding:28px; } .panel { padding:24px; } }
+    </style>
+  </helmet>
+
+  <div class="page" data-screen-label="Contact">
+    <header class="topbar">
+      <a class="brand" href="Home.dc.html">Nikole Sparks</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="About.dc.html">About</a>
+        <a href="Approach.dc.html">Approach</a>
+        <a href="Services.dc.html">Services</a>
+        <a href="FAQs.dc.html">FAQs</a>
+        <a href="Contact.dc.html" style="border-bottom:1px solid #3E4227; padding-bottom:3px">Contact</a>
+      </nav>
+      <a class="button" href="Contact.dc.html">Book a free consult</a>
+    </header>
+
+    <section class="hero">
+      <div style="display:flex; flex-direction:column; gap:28px">
+        <div class="eyebrow">Contact</div>
+        <h1>Let’s talk about what you’re carrying and what you want next.</h1>
+        <p>I offer a free 15-minute consultation to help you decide whether this feels like the right fit. If you’re looking for depth-oriented therapy in Orange County or online in California, I’d be glad to hear from you.</p>
+        <a class="cta" href="mailto:info@nikolesparks.com">Email me directly →</a>
+      </div>
+      <div class="card">
+        <div class="detail">
+          <div class="label">Email</div>
+          <a href="mailto:info@nikolesparks.com" style="font-size:24px; font-family:'Instrument Serif',serif">info@nikolesparks.com</a>
+        </div>
+        <div class="detail">
+          <div class="label">Phone</div>
+          <a href="tel:9499425301" style="font-size:24px; font-family:'Instrument Serif',serif">949.942.5301</a>
+        </div>
+        <div class="detail">
+          <div class="label">Locations</div>
+          <div class="copy">Newport Beach · Fullerton · Online throughout California</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-grid">
+      <div class="panel">
+        <div class="eyebrow">Quick note</div>
+        <h2>What to expect from your first outreach</h2>
+        <p class="copy">You can reach out with any questions about therapy, fit, availability, or what it might be like to work together. I’ll reply as soon as I can and help you take the next step at your pace.</p>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px">
+          <div style="border-top:1px solid rgba(62,66,39,.3); padding-top:12px">• A brief reply within a few business days</div>
+          <div style="border-top:1px solid rgba(62,66,39,.3); padding-top:12px">• A free 15-minute consultation if it feels like a fit</div>
+          <div style="border-top:1px solid rgba(62,66,39,.3); padding-top:12px">• Clear information about scheduling and logistics</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Send a note</div>
+        <h2>Start the conversation</h2>
+        <form action="mailto:info@nikolesparks.com" method="post" enctype="text/plain">
+          <label class="field">Name<input type="text" name="name" placeholder="Your name"></label>
+          <label class="field">Email<input type="email" name="email" placeholder="you@example.com"></label>
+          <label class="field">What would you like to talk about?<textarea name="message" placeholder="Share a bit about what brings you here."></textarea></label>
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div style="display:flex; flex-direction:column; gap:20px">
+          <h3>Ready to stop managing and start <em>understanding?</em></h3>
+          <a class="cta" href="mailto:info@nikolesparks.com" style="background:var(--cream); color:var(--ink)">Email to schedule →</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px; font-size:15px; line-height:1.55">
+          <div class="label">Offices</div>
+          <div><strong>Fullerton</strong><br>1619 East Chapman Ave<br>Fullerton, CA 92831</div>
+          <div><strong>Newport Beach</strong><br>1300 Quail Street, Suite 206<br>Newport Beach, CA 92660</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px; font-size:15px; line-height:1.55">
+          <div class="label">Connect</div>
+          <div>info@nikolesparks.com<br>949.942.5301</div>
+          <div style="color:rgba(246,241,228,.65)">In-person and online across California</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Nikole Sparks · Associate Marriage &amp; Family Therapist</span>
+        <span>AMFT no. 150080</span>
+      </div>
+    </footer>
+  </div>
+</x-dc>
+</body>
+</html>

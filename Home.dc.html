@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+  <helmet>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cream: #F6F1E4;
+        --ink: #3E4227;
+        --blue: #3B63C4;
+        --sage: #707748;
+        --lime: #C7D64F;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: 'Instrument Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; text-decoration: none; }
+      a:hover { opacity: 0.72; }
+
+      .page {
+        max-width: 1600px;
+        margin: 0 auto;
+        background: var(--cream);
+        color: var(--ink);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 26px 64px;
+        border-bottom: 1px solid rgba(62, 66, 39, 0.25);
+      }
+
+      .brand {
+        font-family: 'Instrument Serif', serif;
+        font-size: 24px;
+        font-style: italic;
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 36px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border: 1px solid var(--ink);
+        padding: 12px 24px;
+        white-space: nowrap;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 64px;
+        align-items: center;
+        padding: 96px 64px 104px;
+      }
+
+      .eyebrow {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--blue);
+      }
+
+      h1, h2, h3 {
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .hero h1 {
+        font-family: 'Instrument Serif', serif;
+        font-size: clamp(3rem, 5vw, 4.875rem);
+        line-height: 1.04;
+        max-width: 760px;
+        text-wrap: pretty;
+      }
+
+      .hero p, .content-copy, .section-copy {
+        font-size: 19px;
+        line-height: 1.6;
+        margin: 0;
+        color: rgba(62, 66, 39, 0.85);
+      }
+
+      .hero .cta,
+      .footer .cta {
+        display: inline-flex;
+        align-items: center;
+        width: max-content;
+        padding: 16px 28px;
+        background: var(--blue);
+        color: var(--cream);
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ticker {
+        display: flex;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 16px 64px;
+        background: var(--ink);
+        color: var(--cream);
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .section {
+        padding: 88px 64px;
+        border-bottom: 1px solid rgba(62, 66, 39, 0.25);
+      }
+
+      .section-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 48px;
+      }
+
+      .glyph-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .glyph-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 64px;
+        margin-bottom: 48px;
+      }
+
+      .section-heading h2 {
+        font-family: 'Instrument Serif', serif;
+        font-size: 48px;
+        line-height: 1.1;
+        max-width: 640px;
+      }
+
+      .section-heading p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 420px;
+        color: rgba(62, 66, 39, 0.75);
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid rgba(62, 66, 39, 0.3);
+        border-left: 1px solid rgba(62, 66, 39, 0.3);
+      }
+
+      .feature-card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 36px;
+        border-right: 1px solid rgba(62, 66, 39, 0.3);
+        border-bottom: 1px solid rgba(62, 66, 39, 0.3);
+      }
+
+      .feature-card .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .feature-card .meta span {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        color: var(--blue);
+      }
+
+      .feature-card .copy {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .approach {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 80px;
+        align-items: center;
+        padding: 112px 64px;
+        background: var(--blue);
+        color: var(--cream);
+      }
+
+      .approach .eyebrow {
+        color: var(--lime);
+      }
+
+      .approach h2 {
+        font-family: 'Instrument Serif', serif;
+        font-size: 52px;
+        line-height: 1.08;
+        max-width: 640px;
+      }
+
+      .approach p {
+        font-size: 17px;
+        line-height: 1.65;
+        margin: 0;
+        max-width: 640px;
+        color: rgba(246, 241, 228, 0.85);
+      }
+
+      .approach-link {
+        display: inline-flex;
+        width: max-content;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--cream);
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .about {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 80px;
+        align-items: center;
+        padding: 104px 64px;
+      }
+
+      .photo-frame {
+        position: relative;
+        width: 100%;
+        height: 520px;
+      }
+
+      .photo-frame .accent {
+        position: absolute;
+        left: -64px;
+        bottom: -64px;
+        width: 240px;
+        height: 240px;
+      }
+
+      .photo-frame .image-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--sage);
+      }
+
+      .photo-frame .image-wrap .overlay {
+        position: absolute;
+        inset: 0;
+        background: var(--sage);
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .about-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+
+      .about-copy h2 {
+        font-family: 'Instrument Serif', serif;
+        font-size: 52px;
+        line-height: 1.1;
+      }
+
+      .about-copy .credentials {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(62, 66, 39, 0.6);
+      }
+
+      .about-copy p {
+        font-size: 17px;
+        line-height: 1.65;
+        margin: 0;
+        color: rgba(62, 66, 39, 0.85);
+      }
+
+      .about-link {
+        display: inline-flex;
+        width: max-content;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--ink);
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .services {
+        position: relative;
+        overflow: hidden;
+        padding: 104px 64px;
+        background: var(--sage);
+        color: var(--cream);
+      }
+
+      .services .decor {
+        position: absolute;
+        right: -60px;
+        top: -60px;
+        width: 300px;
+        height: 300px;
+        opacity: 0.5;
+      }
+
+      .services-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+        align-items: end;
+        position: relative;
+      }
+
+      .services-top h2 {
+        font-family: 'Instrument Serif', serif;
+        font-size: 48px;
+        line-height: 1.1;
+      }
+
+      .services-top p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        color: rgba(246, 241, 228, 0.75);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+        position: relative;
+        margin-top: 56px;
+      }
+
+      .services-block {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .services-block .label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(246, 241, 228, 0.6);
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        padding: 9px 16px;
+        border: 1px solid rgba(246, 241, 228, 0.4);
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .services-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        position: relative;
+        margin-top: 36px;
+      }
+
+      .service-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 36px;
+        font-family: 'Instrument Serif', serif;
+        font-size: 28px;
+      }
+
+      .service-card.primary {
+        background: var(--blue);
+        color: var(--cream);
+      }
+
+      .service-card.secondary {
+        background: var(--cream);
+        color: var(--ink);
+      }
+
+      .footer {
+        position: relative;
+        overflow: hidden;
+        padding: 88px 64px 48px;
+        background: var(--ink);
+        color: var(--cream);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 64px;
+        position: relative;
+      }
+
+      .footer h3 {
+        font-family: 'Instrument Serif', serif;
+        font-size: 40px;
+        line-height: 1.1;
+        max-width: 560px;
+      }
+
+      .footer h3 em {
+        color: var(--lime);
+        font-style: normal;
+      }
+
+      .footer .cta {
+        background: var(--cream);
+        color: var(--ink);
+      }
+
+      .footer-block {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .footer-block .label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--lime);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding-top: 24px;
+        margin-top: 64px;
+        border-top: 1px solid rgba(246, 241, 228, 0.2);
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(246, 241, 228, 0.5);
+      }
+
+      @media (max-width: 1100px) {
+        .hero, .about, .approach, .services-top, .services-grid, .footer-grid, .section-grid-4 {
+          grid-template-columns: 1fr;
+        }
+
+        .hero, .about, .approach, .services, .footer {
+          padding-left: 32px;
+          padding-right: 32px;
+        }
+
+        .topbar {
+          padding: 24px 32px;
+          flex-wrap: wrap;
+        }
+
+        .nav-links {
+          order: 3;
+          width: 100%;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .about .photo-frame {
+          height: 420px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .hero, .section, .approach, .about, .services, .footer {
+          padding: 48px 24px;
+        }
+
+        .topbar {
+          padding: 20px 24px;
+        }
+
+        .ticker {
+          padding: 16px 24px;
+          flex-wrap: wrap;
+        }
+
+        .section-heading, .services-top, .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .feature-grid, .services-links {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </helmet>
+
+  <div class="page" data-screen-label="Home">
+    <header class="topbar">
+      <a class="brand" href="Home.dc.html">Nikole Sparks</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="About.dc.html">About</a>
+        <a href="Approach.dc.html">Approach</a>
+        <a href="Services.dc.html">Services</a>
+        <a href="FAQs.dc.html">FAQs</a>
+        <a href="Contact.dc.html">Contact</a>
+      </nav>
+      <a class="button" href="Contact.dc.html">Book a free consult</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div style="display:flex; flex-direction:column; gap:32px">
+          <div class="eyebrow">Depth Therapy — Newport Beach · Fullerton · Online CA</div>
+          <h1>Underneath the noise, there’s a version of you <em style="color:#3B63C4; font-style:normal">waiting to be known.</em></h1>
+          <p>Depth-oriented therapy for people who look fine on paper — and know something is still off. We uncover the roots of anxiety, relationship patterns, and disconnection, so you can stop managing and start living.</p>
+          <a class="cta" href="Contact.dc.html">Schedule a free consultation →</a>
+        </div>
+        <svg viewBox="0 0 480 520" style="width:100%; height:auto" fill="none" aria-hidden="true">
+          <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(-18 240 260)"></ellipse>
+          <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(18 240 260)"></ellipse>
+          <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(54 240 260)"></ellipse>
+          <ellipse cx="240" cy="260" rx="200" ry="80" stroke="#3B63C4" stroke-width="1" transform="rotate(90 240 260)"></ellipse>
+          <circle cx="240" cy="260" r="30" stroke="#707748" stroke-width="1"></circle>
+          <circle cx="240" cy="70" r="7" fill="#C7D64F"></circle>
+          <circle cx="404" cy="330" r="7" fill="#3B63C4"></circle>
+        </svg>
+      </section>
+
+      <div class="ticker" aria-label="Areas of focus">
+        <span>Anxiety</span><span>·</span><span>Identity</span><span>·</span><span>Relationships</span><span>·</span><span>Attachment</span><span>·</span><span>Life Transitions</span><span>·</span><span>Self-Expression</span><span>·</span><span>Grief &amp; Loss</span><span>·</span><span>Shame</span>
+      </div>
+
+      <section class="section" aria-labelledby="glyph-heading">
+        <div class="eyebrow" id="glyph-heading" style="text-align:center; margin-bottom:32px">What the work moves toward</div>
+        <div class="section-grid-4">
+          <div class="glyph-card">
+            <svg viewBox="0 0 120 120" style="width:96px; height:96px" fill="none" aria-hidden="true">
+              <circle cx="60" cy="60" r="50" stroke="#707748" stroke-width="1"></circle>
+              <circle cx="60" cy="60" r="34" stroke="#707748" stroke-width="1"></circle>
+              <circle cx="60" cy="60" r="18" stroke="#707748" stroke-width="1"></circle>
+              <circle cx="60" cy="60" r="4" fill="#3B63C4"></circle>
+            </svg>
+            <span class="glyph-label">Depth</span>
+          </div>
+          <div class="glyph-card">
+            <svg viewBox="0 0 120 120" style="width:96px; height:96px" fill="none" aria-hidden="true">
+              <circle cx="60" cy="60" r="48" stroke="#707748" stroke-width="1"></circle>
+              <line x1="60" y1="12" x2="60" y2="108" stroke="#707748" stroke-width="1"></line>
+              <line x1="12" y1="60" x2="108" y2="60" stroke="#707748" stroke-width="1"></line>
+              <line x1="26" y1="26" x2="94" y2="94" stroke="#707748" stroke-width="1"></line>
+              <line x1="94" y1="26" x2="26" y2="94" stroke="#707748" stroke-width="1"></line>
+              <circle cx="60" cy="60" r="4" fill="#C7D64F"></circle>
+            </svg>
+            <span class="glyph-label">Clarity</span>
+          </div>
+          <div class="glyph-card">
+            <svg viewBox="0 0 120 120" style="width:96px; height:96px" fill="none" aria-hidden="true">
+              <circle cx="44" cy="60" r="34" stroke="#707748" stroke-width="1"></circle>
+              <circle cx="76" cy="60" r="34" stroke="#707748" stroke-width="1"></circle>
+              <circle cx="60" cy="60" r="4" fill="#3B63C4"></circle>
+            </svg>
+            <span class="glyph-label">Connection</span>
+          </div>
+          <div class="glyph-card">
+            <svg viewBox="0 0 120 120" style="width:96px; height:96px" fill="none" aria-hidden="true">
+              <ellipse cx="60" cy="72" rx="50" ry="12" stroke="#707748" stroke-width="1"></ellipse>
+              <ellipse cx="60" cy="62" rx="50" ry="22" stroke="#707748" stroke-width="1"></ellipse>
+              <ellipse cx="60" cy="52" rx="50" ry="32" stroke="#707748" stroke-width="1"></ellipse>
+              <circle cx="60" cy="20" r="4" fill="#C7D64F"></circle>
+            </svg>
+            <span class="glyph-label">Freedom</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="sound-familiar">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Sound familiar?</div>
+            <h2 id="sound-familiar">Doing fine by every measure. Still, something’s off.</h2>
+          </div>
+          <p>The people I work with are thoughtful, capable, and self-aware enough to know that “managing” isn’t the same as living.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="meta"><span>01</span><svg viewBox="0 0 48 48" style="width:36px; height:36px" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="20" stroke="#3B63C4" stroke-width="1"></circle><circle cx="24" cy="24" r="12" stroke="#3B63C4" stroke-width="1"></circle><circle cx="24" cy="24" r="3" fill="#3B63C4"></circle></svg></div>
+            <div class="copy">Anxiety hums in the background, no matter what you accomplish.</div>
+          </article>
+          <article class="feature-card">
+            <div class="meta"><span>02</span><svg viewBox="0 0 48 48" style="width:36px; height:36px" fill="none" aria-hidden="true"><circle cx="18" cy="24" r="13" stroke="#3B63C4" stroke-width="1"></circle><circle cx="30" cy="24" r="13" stroke="#3B63C4" stroke-width="1"></circle></svg></div>
+            <div class="copy">Relationships keep hitting the same wall, no matter how much you talk it through.</div>
+          </article>
+          <article class="feature-card">
+            <div class="meta"><span>03</span><svg viewBox="0 0 48 48" style="width:36px; height:36px" fill="none" aria-hidden="true"><line x1="8" y1="40" x2="40" y2="8" stroke="#3B63C4" stroke-width="1"></line><line x1="8" y1="30" x2="30" y2="8" stroke="#3B63C4" stroke-width="1"></line><line x1="18" y1="40" x2="40" y2="18" stroke="#3B63C4" stroke-width="1"></line><circle cx="40" cy="8" r="3" fill="#3B63C4"></circle></svg></div>
+            <div class="copy">Career success feels hollow — you’re questioning what actually matters.</div>
+          </article>
+          <article class="feature-card">
+            <div class="meta"><span>04</span><svg viewBox="0 0 48 48" style="width:36px; height:36px" fill="none" aria-hidden="true"><ellipse cx="24" cy="24" rx="19" ry="8" stroke="#3B63C4" stroke-width="1" transform="rotate(-24 24 24)"></ellipse><ellipse cx="24" cy="24" rx="19" ry="8" stroke="#3B63C4" stroke-width="1" transform="rotate(24 24 24)"></ellipse></svg></div>
+            <div class="copy">A disconnection from yourself that’s hard to name, and harder to ignore.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach" aria-labelledby="approach-title">
+        <div style="display:flex; flex-direction:column; gap:28px">
+          <div class="eyebrow">The approach</div>
+          <h2 id="approach-title">We won’t just manage the problem. We’ll get curious about <em style="font-style:normal; color:#C7D64F">where it came from.</em></h2>
+          <p>Depth work means slowing down and asking why. Where do these patterns come from? What are you living out that you never consciously chose? The understanding you build here isn’t a tool you set aside after a few months — it becomes part of how you know yourself.</p>
+          <a class="approach-link" href="Approach.dc.html">How I work →</a>
+        </div>
+        <svg viewBox="0 0 380 320" style="width:100%; height:auto" fill="none" aria-hidden="true">
+          <ellipse cx="190" cy="160" rx="170" ry="30" stroke="#F6F1E4" stroke-width="1"></ellipse>
+          <ellipse cx="190" cy="160" rx="170" ry="60" stroke="#F6F1E4" stroke-width="1"></ellipse>
+          <ellipse cx="190" cy="160" rx="170" ry="90" stroke="#F6F1E4" stroke-width="1"></ellipse>
+          <ellipse cx="190" cy="160" rx="170" ry="120" stroke="#F6F1E4" stroke-width="1"></ellipse>
+          <ellipse cx="190" cy="160" rx="170" ry="150" stroke="#F6F1E4" stroke-width="1"></ellipse>
+          <circle cx="190" cy="10" r="6" fill="#C7D64F"></circle>
+        </svg>
+      </section>
+
+      <section class="about" aria-labelledby="about-title">
+        <div class="photo-frame">
+          <svg class="accent" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+            <ellipse cx="120" cy="120" rx="104" ry="42" stroke="#3B63C4" stroke-width="1" transform="rotate(-24 120 120)"></ellipse>
+            <ellipse cx="120" cy="120" rx="104" ry="42" stroke="#3B63C4" stroke-width="1" transform="rotate(24 120 120)"></ellipse>
+            <circle cx="120" cy="120" r="5" fill="#C7D64F"></circle>
+          </svg>
+          <div class="image-wrap">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="about-2b" shape="rect" fit="cover" placeholder="Nikole — candid photo" hint-size="100%,520px" style="width:100%; height:100%; filter:grayscale(1) contrast(1.08) brightness(1.05)"></x-import>
+            <div class="overlay"></div>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="eyebrow">About</div>
+          <h2 id="about-title">Hi, I’m <em style="font-style:normal; color:#3B63C4">Nikole.</em></h2>
+          <div class="credentials">AMFT 150080 · Supervised by Dr. Michele Willingham, PSY 15849</div>
+          <p>I believe getting to know yourself — really know yourself — is one of the most worthwhile things you’ll ever do. Not the version of you that shows up for everyone else, but the one shaped by your history, your relationships, your story so far.</p>
+          <p>My approach is warm, collaborative, and engaged. Together we’ll make connections, find out what healing looks like for you, and build a deeper relationship to yourself and what truly matters.</p>
+          <a class="about-link" href="About.dc.html">About Nikole →</a>
+        </div>
+      </section>
+
+      <section class="services" aria-labelledby="services-title">
+        <svg class="decor" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+          <line x1="150" y1="150" x2="150" y2="0" stroke="#C7D64F" stroke-width="1"></line>
+          <line x1="150" y1="150" x2="256" y2="44" stroke="#C7D64F" stroke-width="1"></line>
+          <line x1="150" y1="150" x2="300" y2="150" stroke="#C7D64F" stroke-width="1"></line>
+          <line x1="150" y1="150" x2="256" y2="256" stroke="#C7D64F" stroke-width="1"></line>
+          <line x1="150" y1="150" x2="44" y2="256" stroke="#C7D64F" stroke-width="1"></line>
+          <line x1="150" y1="150" x2="0" y2="150" stroke="#C7D64F" stroke-width="1"></line>
+          <line x1="150" y1="150" x2="44" y2="44" stroke="#C7D64F" stroke-width="1"></line>
+          <circle cx="150" cy="150" r="5" fill="#C7D64F"></circle>
+        </svg>
+
+        <div class="services-top">
+          <div>
+            <div class="eyebrow">Services</div>
+            <h2 id="services-title">Areas of focus</h2>
+          </div>
+          <p>For adults and teens seeking a deeper understanding of themselves and their emotional lives. In-person in Newport Beach and Fullerton, or online throughout California.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="services-block">
+            <div class="label">Who I see</div>
+            <div class="pill-row">
+              <span class="pill">Young Adults</span>
+              <span class="pill">Professionals</span>
+              <span class="pill">Creatives</span>
+              <span class="pill">Grad Students</span>
+              <span class="pill">Couples</span>
+              <span class="pill">Teens</span>
+            </div>
+          </div>
+          <div class="services-block">
+            <div class="label">What we work on</div>
+            <div class="pill-row">
+              <span class="pill">Anxiety</span>
+              <span class="pill">Identity</span>
+              <span class="pill">Attachment</span>
+              <span class="pill">Trauma</span>
+              <span class="pill">Shame</span>
+              <span class="pill">Grief &amp; Loss</span>
+              <span class="pill">Life Transitions</span>
+              <span class="pill">Relationships</span>
+              <span class="pill">Religious Issues</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-links">
+          <a class="service-card primary" href="Services.dc.html"><span>Individual therapy</span><span>→</span></a>
+          <a class="service-card secondary" href="Services.dc.html"><span>Couples therapy</span><span>→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div style="display:flex; flex-direction:column; gap:20px">
+          <h3>Ready to stop managing and start <em>understanding?</em></h3>
+          <a class="cta" href="Contact.dc.html">Schedule a free consultation →</a>
+        </div>
+        <div class="footer-block">
+          <div class="label">Offices</div>
+          <div><strong>Fullerton</strong><br>1619 East Chapman Ave<br>Fullerton, CA 92831</div>
+          <div><strong>Newport Beach</strong><br>1300 Quail Street, Suite 206<br>Newport Beach, CA 92660</div>
+        </div>
+        <div class="footer-block">
+          <div class="label">Connect</div>
+          <div>info@nikolesparks.com<br>949.942.5301</div>
+          <div style="color:rgba(246,241,228,0.65)">In-person and online across California</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Nikole Sparks · Associate Marriage &amp; Family Therapist</span>
+        <span>AMFT no. 150080</span>
+      </div>
+    </footer>
+  </div>
+</x-dc>
+</body>
+</html>
