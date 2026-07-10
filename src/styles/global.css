@@ -300,6 +300,77 @@ img {
   border-bottom-color: var(--cream);
 }
 
+/* ---------- dynamic button hover: color wipe + arrow slide ---------- */
+.arw {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+/* the arrow expands to the right on hover of any interactive parent */
+a:hover .arw,
+button:hover .arw {
+  transform: translateX(6px);
+}
+
+/* Solid/outline buttons get a left-to-right fill wipe on hover, with the
+   text color swapping to the incoming background color. */
+.cta,
+.button,
+.form button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.35s ease;
+}
+.cta::before,
+.button::before,
+.form button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.cta:hover,
+.button:hover,
+.form button:hover {
+  opacity: 1; /* override the global a:hover fade */
+}
+.cta:hover::before,
+.button:hover::before,
+.form button:hover::before {
+  transform: scaleX(1);
+}
+
+/* blue-filled buttons -> cream wipe, blue text */
+.cta::before,
+.form button::before {
+  background: var(--cream);
+}
+.cta:hover,
+.form button:hover {
+  color: var(--blue);
+}
+/* cream-filled buttons -> ink wipe, cream text */
+.cta.on-blue::before,
+.cta.on-cream::before,
+.form-card.blue .form button::before {
+  background: var(--ink);
+}
+.cta.on-blue:hover,
+.cta.on-cream:hover,
+.form-card.blue .form button:hover {
+  color: var(--cream);
+}
+/* outline nav button -> ink wipe, cream text */
+.button::before {
+  background: var(--ink);
+}
+.button:hover {
+  color: var(--cream);
+}
+
 /* ---------- hero ---------- */
 .hero {
   display: grid;
