@@ -1,11 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Ticker from '../../components/Ticker.astro';
 import Glyph from '../../components/Glyph.astro';
 import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
-
-const tickerItems = ['Communication', 'Conflict & Repair', 'Roles', 'Family Histories', 'Financial Values', 'Intimacy', '+ More'];
 
 const whoFor = [
   'Dating couples considering engagement who want to use this season wisely',
@@ -39,38 +36,40 @@ const faqs = [
   active="/services/"
   path="/services/premarital-counseling/"
 >
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero (sage) -->
+  <section class="hero sage on-color">
     <div class="col">
-      <p class="eyebrow"><a href="/services/">Services</a> / Premarital counseling</p>
+      <p class="eyebrow on-color"><a href="/services/">Services</a> / Premarital counseling</p>
       <h1>Build the foundation, so you can <em>build the life.</em></h1>
       <p>
         Attachment-focused premarital counseling in Newport Beach, Fullerton &amp; online
         throughout California — built around the Prepare &amp; Enrich assessment, one of the
         most respected tools in the field.
       </p>
-      <a class="cta" href="/contact/">Schedule a free consultation →</a>
+      <a class="cta on-blue" href="/contact/">Schedule a free consultation →</a>
     </div>
     <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
-      <circle cx="190" cy="230" r="130" stroke="#3B63C4" stroke-width="1"></circle>
-      <circle cx="290" cy="230" r="130" stroke="#3B63C4" stroke-width="1"></circle>
-      <circle cx="240" cy="230" r="180" stroke="#707748" stroke-width="1"></circle>
+      <circle cx="190" cy="230" r="130" stroke="#F6F1E4" stroke-width="1"></circle>
+      <circle cx="290" cy="230" r="130" stroke="#F6F1E4" stroke-width="1"></circle>
+      <circle cx="240" cy="230" r="180" stroke="#F6F1E4" stroke-width="1"></circle>
       <circle cx="240" cy="50" r="7" fill="#C7D64F"></circle>
-      <circle cx="240" cy="230" r="6" fill="#3B63C4"></circle>
+      <circle cx="240" cy="230" r="6" fill="#F6F1E4"></circle>
     </svg>
   </section>
 
-  <Ticker items={tickerItems} label="What we explore" />
-
-  <!-- What is premarital -->
-  <section class="section blue on-color split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
+  <!-- What is premarital (cream) -->
+  <section class="section split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
     <div class="col gap-28">
-      <p class="eyebrow on-color">What is premarital counseling?</p>
+      <p class="eyebrow">What is premarital counseling?</p>
       <h2 class="h2-serif" style="font-size:52px">The best investment in your marriage is the one you make <em>before it starts.</em></h2>
       <p class="body">Getting married is one of the most significant commitments you’ll make. Premarital work sets the stage for understanding your partner more deeply — before the pace of life makes that harder to do. We use the Prepare &amp; Enrich assessment as a structured starting point: naming what’s already going well and surfacing the conversations worth having now, before they become harder to have later.</p>
-      <a class="text-link on-color" href="/approach/">My approach →</a>
+      <a class="text-link" href="/approach/">My approach →</a>
     </div>
-    <Glyph name="two-circles" class="hero-figure" />
+    <svg class="hero-figure" viewBox="0 0 380 320" fill="none" aria-hidden="true">
+      <circle cx="150" cy="160" r="110" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="230" cy="160" r="110" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="190" cy="160" r="6" fill="#C7D64F"></circle>
+    </svg>
   </section>
 
   <!-- Who this is for -->
