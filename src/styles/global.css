@@ -338,6 +338,25 @@ em.accent {
   height: auto;
 }
 
+/* colored hero variants */
+.hero.blue {
+  background: var(--blue);
+}
+.hero.sage {
+  background: var(--sage);
+}
+.hero.on-color {
+  color: var(--cream);
+}
+.hero.on-color p,
+.hero.on-color .lead {
+  color: var(--cream-85);
+}
+.hero.on-color h1 em,
+.hero.on-color em.accent {
+  color: var(--lime);
+}
+
 /* ---------- ticker ---------- */
 .ticker {
   display: flex;

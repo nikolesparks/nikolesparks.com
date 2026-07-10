@@ -1,11 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Ticker from '../../components/Ticker.astro';
 import Glyph from '../../components/Glyph.astro';
 import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
-
-const tickerItems = ['Anxiety', 'Depression', 'Identity', 'Self-Esteem', 'Trauma', 'Attachment', 'Shame', 'Grief & Loss', '+ More'];
 
 const whoIWorkWith = [
   'High-functioning people managing daily responsibilities while battling persistent emptiness, heaviness, or feeling underwater',
@@ -42,32 +39,30 @@ const faqs = [
   active="/services/"
   path="/services/individual-therapy/"
 >
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero (blue) -->
+  <section class="hero blue on-color">
     <div class="col">
-      <p class="eyebrow"><a href="/services/">Services</a> / Individual therapy</p>
+      <p class="eyebrow on-color"><a href="/services/">Services</a> / Individual therapy</p>
       <h1>Reimagine your relationship <em>with yourself.</em></h1>
       <p>
         Individual therapy in Newport Beach, Fullerton &amp; online throughout California.
         Weekly, open-ended depth work — no worksheets, no scripts, just careful attention to
         what’s underneath.
       </p>
-      <a class="cta" href="/contact/">Schedule a free consultation →</a>
-    </div>
-    <Glyph name="concentric" class="hero-figure" />
-  </section>
-
-  <Ticker items={tickerItems} label="What we work on" />
-
-  <!-- Approach -->
-  <section class="section blue on-color split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
-    <div class="col gap-28">
-      <p class="eyebrow on-color">The approach</p>
-      <h2 class="h2-serif" style="font-size:52px">Psychodynamic &amp; <em>attachment-based.</em></h2>
-      <p class="body">Understanding our past helps illuminate our present. We’ll gently explore how your early relationships have influenced who you are today, uncover patterns that might be holding you back, understand the “why” behind your feelings, and work to transform your relationships in ways that feel more fulfilling.</p>
-      <a class="text-link on-color" href="/approach/">My approach →</a>
+      <a class="cta on-blue" href="/contact/">Schedule a free consultation →</a>
     </div>
     <Glyph name="nested-ellipses" class="hero-figure" />
+  </section>
+
+  <!-- Approach (cream) -->
+  <section class="section split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
+    <div class="col gap-28">
+      <p class="eyebrow">The approach</p>
+      <h2 class="h2-serif" style="font-size:52px">Psychodynamic &amp; <em>attachment-based.</em></h2>
+      <p class="body">Understanding our past helps illuminate our present. We’ll gently explore how your early relationships have influenced who you are today, uncover patterns that might be holding you back, understand the “why” behind your feelings, and work to transform your relationships in ways that feel more fulfilling.</p>
+      <a class="text-link" href="/approach/">My approach →</a>
+    </div>
+    <Glyph name="concentric" class="hero-figure" />
   </section>
 
   <!-- Who I work with -->

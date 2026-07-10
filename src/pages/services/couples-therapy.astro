@@ -1,10 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Ticker from '../../components/Ticker.astro';
-import Glyph from '../../components/Glyph.astro';
 import NextSteps from '../../components/NextSteps.astro';
-
-const tickerItems = ['Communication', 'Attachment Wounds', 'Resentment', 'Disconnection', 'Premarital', 'Life Transitions', '+ More'];
 
 const whoIWorkWith = [
   'Couples experiencing communication breakdowns who feel like they’re speaking different languages',
@@ -31,36 +27,38 @@ const process = [
   active="/services/"
   path="/services/couples-therapy/"
 >
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero (sage) -->
+  <section class="hero sage on-color">
     <div class="col">
-      <p class="eyebrow"><a href="/services/">Services</a> / Couples therapy</p>
+      <p class="eyebrow on-color"><a href="/services/">Services</a> / Couples therapy</p>
       <h1>Reconnect, rebuild, and rediscover <em>your relationship.</em></h1>
       <p>
         Attachment-based couples therapy in Newport Beach, Fullerton &amp; online throughout
         California. I work with the relationship itself — not taking sides.
       </p>
-      <a class="cta" href="/contact/">Schedule a free consultation →</a>
+      <a class="cta on-blue" href="/contact/">Schedule a free consultation →</a>
     </div>
     <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
-      <circle cx="180" cy="230" r="140" stroke="#3B63C4" stroke-width="1"></circle>
-      <circle cx="300" cy="230" r="140" stroke="#3B63C4" stroke-width="1"></circle>
-      <circle cx="240" cy="230" r="6" fill="#3B63C4"></circle>
+      <circle cx="180" cy="230" r="140" stroke="#F6F1E4" stroke-width="1"></circle>
+      <circle cx="300" cy="230" r="140" stroke="#F6F1E4" stroke-width="1"></circle>
+      <circle cx="240" cy="230" r="6" fill="#F6F1E4"></circle>
       <circle cx="180" cy="90" r="7" fill="#C7D64F"></circle>
     </svg>
   </section>
 
-  <Ticker items={tickerItems} label="What we work on" />
-
-  <!-- Approach -->
-  <section class="section blue on-color split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
+  <!-- Approach (cream) -->
+  <section class="section split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
     <div class="col gap-28">
-      <p class="eyebrow on-color">The approach</p>
+      <p class="eyebrow">The approach</p>
       <h2 class="h2-serif" style="font-size:52px">The client is <em>the relationship.</em></h2>
       <p class="body">My approach draws on attachment principles, helping you understand how your individual histories influence your current relationship patterns. Rather than taking sides, I work with the couple as a unit. Together, we’ll explore the unconscious patterns creating disconnection, develop more satisfying ways to connect, and build a stronger foundation for intimacy and understanding.</p>
-      <a class="text-link on-color" href="/approach/">My approach →</a>
+      <a class="text-link" href="/approach/">My approach →</a>
     </div>
-    <Glyph name="two-circles" class="hero-figure" />
+    <svg class="hero-figure" viewBox="0 0 380 320" fill="none" aria-hidden="true">
+      <circle cx="150" cy="160" r="110" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="230" cy="160" r="110" stroke="#3B63C4" stroke-width="1"></circle>
+      <circle cx="190" cy="160" r="6" fill="#C7D64F"></circle>
+    </svg>
   </section>
 
   <!-- Who I work with -->
