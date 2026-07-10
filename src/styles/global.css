@@ -411,6 +411,11 @@ button:hover .arw {
 .on-color .service-card.secondary:hover {
   color: var(--ink);
 }
+/* The solid (cream) primary card on green wipes to ink — its text must flip to
+   cream on hover. This selector needs to out-specify the rest-state color rule. */
+.on-color .service-card.primary:hover {
+  color: var(--cream);
+}
 
 /* Footer CTA: wipe to lime (instead of ink), keeping ink text */
 .footer .cta::before {
