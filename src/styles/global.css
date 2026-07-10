@@ -371,6 +371,55 @@ button:hover .arw {
   color: var(--cream);
 }
 
+/* Service / big cards (the "Areas of focus" + Services page tiles) also wipe. */
+.service-card,
+.big-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.35s ease, border-color 0.35s ease;
+}
+.service-card::before,
+.big-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  background: var(--ink); /* default: ink wipe, cream text */
+}
+.service-card:hover,
+.big-card:hover {
+  opacity: 1;
+  color: var(--cream);
+}
+.service-card:hover::before,
+.big-card:hover::before {
+  transform: scaleX(1);
+}
+/* the secondary "Explore" link color also flips to cream on hover */
+.big-card.secondary:hover .more,
+.service-card:hover .more {
+  color: var(--cream);
+}
+/* On a colored (green) section, the outlined secondary card wipes to cream/ink */
+.on-color .service-card.secondary::before {
+  background: var(--cream);
+}
+.on-color .service-card.secondary:hover {
+  color: var(--ink);
+}
+
+/* Footer CTA: wipe to lime (instead of ink), keeping ink text */
+.footer .cta::before {
+  background: var(--lime);
+}
+.footer .cta:hover {
+  color: var(--ink);
+}
+
 
 /* ---------- hero ---------- */
 .hero {
