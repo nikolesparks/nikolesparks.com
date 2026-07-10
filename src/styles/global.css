@@ -607,6 +607,17 @@ p.body {
   color: var(--ink);
   border: 1px solid var(--ink-30);
 }
+/* On a colored section (e.g. the sage "Areas of focus"), the primary card is
+   solid cream and the secondary is a cream outline. */
+.on-color .service-card.primary {
+  background: var(--cream);
+  color: var(--ink);
+}
+.on-color .service-card.secondary {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid var(--cream-35);
+}
 
 /* larger feature service cards (Services page) */
 .big-card {
