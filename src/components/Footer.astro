@@ -1,12 +1,11 @@
 ---
 import { site, offices } from '../data/site';
-import { footerHeading } from '../data/content';
 
 interface Props {
   /** Override the closing headline if desired. */
   heading?: string;
 }
-const { heading = footerHeading } = Astro.props;
+const { heading } = Astro.props;
 ---
 
 <footer class="footer">

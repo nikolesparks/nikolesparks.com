@@ -4,36 +4,63 @@ import Ticker from '../components/Ticker.astro';
 import Glyph from '../components/Glyph.astro';
 import Faq from '../components/Faq.astro';
 import NextSteps from '../components/NextSteps.astro';
-import { content } from '../data/content';
 
-const c = content.faqs;
+const tickerItems = ['Fees', 'Insurance', 'First Sessions', 'Depth Therapy', 'Telehealth', 'Fit', 'Frequency'];
+
+const faqs = [
+  { q: 'How do I know if therapy is right for me?', a: ['If you’ve been feeling stuck, disconnected, or like you keep running into the same walls no matter what you try, that’s often a sign that therapy could help. You don’t need to be in crisis to benefit from it. Many of the people I work with are functioning well on the outside but carrying something underneath they can’t quite name or shake. If something keeps nagging at you, if your relationships feel harder than they should, or if you’re just tired of feeling the way you feel, that’s enough of a reason to reach out. I offer a free 15-minute consultation so you can get a sense of whether this feels right before committing to anything.'] },
+  { q: 'What happens in the first therapy session?', a: ['Our first session is really just about getting to know each other. I’ll ask more about what brings you in, a bit about your history, and what you’re hoping for. We’ll start to get a feel for how we work together. There’s no pressure to share everything at once. My job in those first sessions is to listen carefully and create a space where you feel comfortable enough to share honestly. We’ll figure out the pace together.'] },
+  { q: 'What are your fees, and do you accept insurance?', a: ['Individual sessions are $175 for a standard 45-50 minute session. I have a limited number of sliding scale spots available, and I encourage you to ask if fee is a barrier to getting started.', 'I am currently only accepting private-pay clients. I do accept HSA and FSA cards, and if your plan includes out-of-network mental health benefits (common with many PPO plans), I can provide a monthly superbill you can submit for reimbursement. Many clients receive 50–80% back this way, and I’m happy to help you understand your options.'] },
+  { q: 'How do I know if a therapist is a good fit for me?', a: ['The first session is an invitation to begin. There is no script you need to follow, no particular way you need to present yourself. We will start by talking about what brings you in — what has felt difficult, what you are hoping for, and what your experience has been in the past, both in life and in therapy if you have had it before.', 'I will also be paying attention to both the content of what you share, and to how you make sense of your experience, what feels easy and what feels harder to say, and what kind of relational space might be most useful for you. My aim is for you to leave the first session feeling heard and with some beginning sense of how I work.'] },
+  { q: 'What is depth therapy?', a: ['Depth therapy is an approach to therapy that looks beneath your symptoms to understand what is actually driving them — the unconscious patterns, relational histories, and emotional meanings that shape how you move through the world. Rather than focusing only on managing symptoms or changing behaviors, depth therapy asks: where does this come from? What is this really about? It’s a slower, more exploratory kind of work, and it tends to create change that compounds and sticks over time.', 'In my practice, depth therapy draws on psychodynamic and attachment-based frameworks. We work together to trace emotional and relational patterns. Seeking to understand where they came from, what purpose they once served, and how they continue to shape your life today. The goal is a more free, authentic, and integrated relationship with yourself.'] },
+  { q: 'How do I know if psychodynamic therapy is right for me?', a: ['Psychodynamic therapy is an evidence-based approach that explores how our early relationships and experiences continue to show up in our present-day lives. Research consistently supports its effectiveness for anxiety, depression, relational difficulties, grief, and more.', 'Psychodynamic therapy tends to be a strong fit when you want deeper self-understanding. When you are curious about <em>why</em> you feel the way you do, not only <em>how</em> to feel better. It is especially useful when you notice recurring patterns you cannot seem to break: the same relational conflicts, the same anxiety showing up in different situations, the same inner critic no matter how much you achieve.', 'It can also be the right fit if you have tried other approaches and found relief in the short term but eventually returned to familiar struggles. Psychodynamic therapy is designed to address root causes, not just surface symptoms; its effects tend to build and deepen over time rather than diminish.'] },
+  { q: 'What is the difference between anxiety therapy and depth therapy?', a: ['Anxiety therapy is a broad term that can describe many different approaches: CBT, exposure-based work, skills training, somatic work, and more. All of them aim to reduce anxiety symptoms, and many do that effectively. Depth therapy is not a treatment for anxiety in that same prescriptive sense; it is a <em>way of working</em> that treats anxiety as meaningful rather than as a problem to eliminate.', 'In depth-oriented work, anxiety is not treated as a malfunction. It is taken seriously as a signal — something that carries information about your emotional life, your relational patterns, your unresolved experiences. We work to understand what the anxiety is about, what it might be protecting, and how the conditions that gave rise to it can change. For many people, that kind of understanding is what finally shifts the anxiety at a deeper level than coping strategies alone can reach.', 'If you are experiencing anxiety that is diffuse, persistent, or tied to patterns of over-responsibility, perfectionism, or not knowing what you actually feel and want, depth therapy may offer something that targeted anxiety treatment does not. The two approaches are not mutually exclusive — but they operate from very different assumptions about what anxiety is and what needs to change.'] },
+  { q: 'How often do I come?', a: ['I typically work in an ongoing weekly format. Before we start we will discuss a time that will consistently work for your schedule and keep your appointment time on the same day and time each week. Consistent, regular sessions create the kind of rhythm that allows us to go deeper over time — it’s hard to do meaningful work when there’s too much space between sessions. As things shift and stabilize, we can reassess frequency together.'] },
+  { q: 'How long does therapy take to work?', a: ['The timeline depends on each individual. Many people feel relief fairly early from having a space to think and feel more freely and honestly, and studies have shown that meaningful change begins around six months of consistent psychotherapy.'] },
+  { q: 'Do you offer telehealth therapy, and is it as effective as in-person sessions?', a: ['Yes. I offer telehealth sessions throughout California alongside in-person sessions in Newport Beach and Fullerton. For many people, telehealth is not a compromise. It can be the format that makes consistent, deep therapy most possible given work schedules, commutes, life with children, or the logistics of life in Southern California.', 'The research on telehealth consistently supports its effectiveness for anxiety, depression, trauma, and relationship concerns. The most important factors in therapy outcomes — the quality of the therapeutic relationship, consistency, and trust — are fully available in an online format.'] },
+  { q: 'Should I choose in-person therapy in Orange County or telehealth in California?', a: ['The clinical approach is the same — depth-oriented, psychodynamic, and attachment-based — regardless of format. The practical and experiential differences are worth considering, though. In-person therapy in Fullerton or Newport Beach can offer a stronger sense of ritual and containment: the act of traveling to a dedicated space, closing the door, and leaving ordinary life temporarily behind. For some people, that physical separation frees them up to be more “in” the work.'] },
+];
 ---
 
-<Layout title={c.metaTitle} description={c.metaDescription} active="/faqs/" path="/faqs/">
+<Layout
+  title="FAQs — Fees, Insurance, Telehealth & More | Nikole Sparks"
+  description="Answers to common questions about depth therapy, fees, insurance, first sessions, telehealth, and how to know if we're a good fit."
+  active="/faqs/"
+  path="/faqs/"
+>
   <!-- Hero -->
   <section class="hero">
     <div class="col">
-      <p class="eyebrow">{c.hero.eyebrow}</p>
-      <h1 set:html={c.hero.heading}></h1>
-      <p set:html={c.hero.lead}></p>
+      <p class="eyebrow">FAQs</p>
+      <h1>Frequently asked <em>questions.</em></h1>
+      <p>
+        Answers to some of the common questions about working together. Have a question that
+        isn’t on here? <a href="mailto:info@nikolesparks.com" style="border-bottom:1px solid var(--blue); color:var(--blue)">Send me an email</a>
+        or schedule a consultation below.
+      </p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
     <Glyph name="concentric" class="hero-figure" />
   </section>
 
-  <Ticker items={c.ticker} label="Topics" />
+  <Ticker items={tickerItems} label="Topics" />
 
   <!-- FAQ list -->
   <section class="section" style="display:grid; grid-template-columns:1fr 1.6fr; gap:80px; align-items:start">
     <div class="sticky-heading">
-      <p class="eyebrow">{c.listEyebrow}</p>
-      <h2 class="serif" style="font-size:44px; line-height:1.12; text-wrap:pretty">{c.listHeading}</h2>
+      <p class="eyebrow">Common questions</p>
+      <h2 class="serif" style="font-size:44px; line-height:1.12; text-wrap:pretty">
+        Everything you might want to know before we talk.
+      </h2>
       <Glyph name="target-ellipses" class="mt-16" />
     </div>
-    <Faq items={c.faqs} openFirst />
+    <Faq items={faqs} openFirst />
   </section>
 
-  <NextSteps heading={c.next.heading} copy={c.next.copy} />
+  <NextSteps
+    heading="Still have questions? <em>Let’s talk.</em>"
+    copy="The free 15-minute consultation is the easiest way to get your questions answered — no pressure, no commitment."
+  />
 </Layout>
 
 <style>

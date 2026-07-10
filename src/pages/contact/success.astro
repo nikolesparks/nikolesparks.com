@@ -2,21 +2,24 @@
 import Layout from '../../layouts/Layout.astro';
 import Glyph from '../../components/Glyph.astro';
 import { site } from '../../data/site';
-import { content } from '../../data/content';
-
-const c = content.success;
-const leadHtml = c.lead
-  .replace('{email}', `<a href="mailto:${site.email}" style="border-bottom:1px solid var(--blue); color:var(--blue)">${site.email}</a>`)
-  .replace('{phone}', site.phone);
 ---
 
-<Layout title={c.metaTitle} description="Thank you for reaching out." path="/contact/success/">
+<Layout
+  title={`Message received — ${site.name}`}
+  description="Thank you for reaching out."
+  path="/contact/success/"
+>
   <section class="hero">
     <div class="col gap-28">
-      <p class="eyebrow">{c.eyebrow}</p>
-      <h1 set:html={c.heading}></h1>
-      <p set:html={leadHtml}></p>
-      <a class="cta" href="/">{c.back} <span class="arw">→</span></a>
+      <p class="eyebrow">Message received</p>
+      <h1>Thank you for reaching <em>out.</em></h1>
+      <p>
+        Your note has come through, and I’ll reply as soon as I can — usually within a few
+        business days. If it’s time-sensitive, feel free to email me directly at
+        <a href={`mailto:${site.email}`} style="border-bottom:1px solid var(--blue); color:var(--blue)">{site.email}</a>
+        or call {site.phone}.
+      </p>
+      <a class="cta" href="/">Back to home <span class="arw">→</span></a>
     </div>
     <Glyph name="nested-ellipses" class="hero-figure" />
   </section>

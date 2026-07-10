@@ -3,63 +3,69 @@ import Layout from '../../layouts/Layout.astro';
 import Ticker from '../../components/Ticker.astro';
 import Glyph from '../../components/Glyph.astro';
 import NextSteps from '../../components/NextSteps.astro';
-import { content } from '../../data/content';
 
-const c = content.services;
-const coreIcons = [
-  `<circle cx="24" cy="24" r="20" stroke="#F6F1E4" stroke-width="1"/><circle cx="24" cy="24" r="12" stroke="#F6F1E4" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#C7D64F"/>`,
-  `<circle cx="18" cy="24" r="13" stroke="#3E4227" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#3E4227" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#3B63C4"/>`,
+const tickerItems = ['Individuals', 'Couples', 'Teens', 'Creatives', 'Premarital', 'In-Person', 'Online CA'];
+
+const specialties = [
+  { href: '/services/premarital-counseling/', title: 'Premarital counseling', desc: 'Explore your attachment histories and expectations before beginning a lifelong commitment.' },
+  { href: '/services/therapy-for-anxiety/', title: 'Therapy for anxiety', desc: 'Not just symptom management — understanding what your anxiety is responding to and protecting.' },
+  { href: '/services/therapy-for-creatives/', title: 'Therapy for creatives', desc: 'For burnout, dry spells, and lost direction — from a therapist who spent 15+ years as a designer.' },
 ];
 ---
 
 <Layout
-  title={c.metaTitle}
-  description={c.metaDescription}
+  title="Services — Therapy in Newport Beach, Fullerton & Online | Nikole Sparks"
+  description="Depth-oriented therapy for adults, teens, and couples. Individual therapy, couples therapy, premarital counseling, and specialty care for anxiety and creatives."
   active="/services/"
   path="/services/"
 >
   <!-- Hero -->
   <section class="hero">
     <div class="col">
-      <p class="eyebrow">{c.hero.eyebrow}</p>
-      <h1 set:html={c.hero.heading}></h1>
-      <p>{c.hero.lead}</p>
+      <p class="eyebrow">Services — Newport Beach · Fullerton · Online CA</p>
+      <h1>How we can <em>work together.</em></h1>
+      <p>
+        Depth-oriented therapy for adults, teens, and couples. Every service starts the same
+        way — with a free 15-minute consultation to see if we’re a good fit.
+      </p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
     <Glyph name="concentric" class="hero-figure" />
   </section>
 
-  <Ticker items={c.ticker} label="Who I serve" />
+  <Ticker items={tickerItems} label="Who I serve" />
 
   <!-- Core services -->
   <section class="section">
     <div class="stack gap-20" style="margin-bottom:48px">
-      <p class="eyebrow">{c.coreEyebrow}</p>
-      <h2 class="serif" style="font-size:48px; line-height:1.1">{c.coreHeading}</h2>
+      <p class="eyebrow">Core services</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1">Two ways in</h2>
     </div>
     <div class="card-row">
-      {
-        c.core.map((s, i) => (
-          <a class={`big-card ${i === 0 ? 'primary' : 'secondary'}`} href={s.href}>
-            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" aria-hidden="true" set:html={coreIcons[i]} />
-            <span class="title">{s.title}</span>
-            <span class="desc">{s.desc}</span>
-            <span class="more">Explore <span class="arw">→</span></span>
-          </a>
-        ))
-      }
+      <a class="big-card primary" href="/services/individual-therapy/">
+        <svg viewBox="0 0 48 48" width="44" height="44" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="20" stroke="#F6F1E4" stroke-width="1"/><circle cx="24" cy="24" r="12" stroke="#F6F1E4" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#C7D64F"/></svg>
+        <span class="title">Individual therapy</span>
+        <span class="desc">Reimagine your relationship with yourself. Weekly, open-ended depth work on anxiety, identity, shame, grief, and the patterns underneath them.</span>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </a>
+      <a class="big-card secondary" href="/services/couples-therapy/">
+        <svg viewBox="0 0 48 48" width="44" height="44" fill="none" aria-hidden="true"><circle cx="18" cy="24" r="13" stroke="#3E4227" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#3E4227" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#3B63C4"/></svg>
+        <span class="title">Couples therapy</span>
+        <span class="desc">Reconnect, rebuild, and rediscover your relationship. Attachment-based work with the relationship itself — not taking sides.</span>
+        <span class="more">Explore <span class="arw">→</span></span>
+      </a>
     </div>
   </section>
 
   <!-- Specialties -->
   <section class="section sage on-color">
     <div class="stack gap-20" style="margin-bottom:48px">
-      <p class="eyebrow on-color">{c.specialtiesEyebrow}</p>
-      <h2 class="serif" style="font-size:48px; line-height:1.1">{c.specialtiesHeading}</h2>
+      <p class="eyebrow on-color">Specialties</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1">Focused areas of care</h2>
     </div>
     <div class="link-grid cols-3">
       {
-        c.specialties.map((s, i) => (
+        specialties.map((s, i) => (
           <a class="link-cell" href={s.href}>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
             <span class="title">{s.title}</span>
@@ -71,5 +77,8 @@ const coreIcons = [
     </div>
   </section>
 
-  <NextSteps heading={c.next.heading} copy={c.next.copy} />
+  <NextSteps
+    heading="Not sure which fits? <em>Let’s talk.</em>"
+    copy="The free 15-minute consultation is the easiest way to find the right starting point. No pressure, no commitment — just a conversation."
+  />
 </Layout>

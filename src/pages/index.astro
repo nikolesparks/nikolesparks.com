@@ -5,45 +5,69 @@ import Portrait from '../components/Portrait.astro';
 import Glyph from '../components/Glyph.astro';
 import Illustration from '../components/Illustration.astro';
 import { site } from '../data/site';
-import { content } from '../data/content';
 
-const c = content.home;
-
-// SVG glyphs stay in the page; labels come from content.
-const glyphSvgs = [
-  `<circle cx="60" cy="60" r="50" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="34" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="18" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="4" fill="#3B63C4"/>`,
-  `<circle cx="60" cy="60" r="48" stroke="#707748" stroke-width="1"/><line x1="60" y1="12" x2="60" y2="108" stroke="#707748" stroke-width="1"/><line x1="12" y1="60" x2="108" y2="60" stroke="#707748" stroke-width="1"/><line x1="26" y1="26" x2="94" y2="94" stroke="#707748" stroke-width="1"/><line x1="94" y1="26" x2="26" y2="94" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="4" fill="#C7D64F"/>`,
-  `<circle cx="44" cy="60" r="34" stroke="#707748" stroke-width="1"/><circle cx="76" cy="60" r="34" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="4" fill="#3B63C4"/>`,
-  `<ellipse cx="60" cy="72" rx="50" ry="12" stroke="#707748" stroke-width="1"/><ellipse cx="60" cy="62" rx="50" ry="22" stroke="#707748" stroke-width="1"/><ellipse cx="60" cy="52" rx="50" ry="32" stroke="#707748" stroke-width="1"/><circle cx="60" cy="20" r="4" fill="#C7D64F"/>`,
+const focusAreas = [
+  'Anxiety', 'Identity', 'Relationships', 'Attachment',
+  'Life Transitions', 'Self-Expression', 'Grief & Loss', 'Shame',
 ];
-const soundIllus = ['anxiety', 'relationships', 'success', 'disconnection'] as const;
+
+const glyphs = [
+  {
+    label: 'Depth',
+    svg: `<circle cx="60" cy="60" r="50" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="34" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="18" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="4" fill="#3B63C4"/>`,
+  },
+  {
+    label: 'Clarity',
+    svg: `<circle cx="60" cy="60" r="48" stroke="#707748" stroke-width="1"/><line x1="60" y1="12" x2="60" y2="108" stroke="#707748" stroke-width="1"/><line x1="12" y1="60" x2="108" y2="60" stroke="#707748" stroke-width="1"/><line x1="26" y1="26" x2="94" y2="94" stroke="#707748" stroke-width="1"/><line x1="94" y1="26" x2="26" y2="94" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="4" fill="#C7D64F"/>`,
+  },
+  {
+    label: 'Connection',
+    svg: `<circle cx="44" cy="60" r="34" stroke="#707748" stroke-width="1"/><circle cx="76" cy="60" r="34" stroke="#707748" stroke-width="1"/><circle cx="60" cy="60" r="4" fill="#3B63C4"/>`,
+  },
+  {
+    label: 'Freedom',
+    svg: `<ellipse cx="60" cy="72" rx="50" ry="12" stroke="#707748" stroke-width="1"/><ellipse cx="60" cy="62" rx="50" ry="22" stroke="#707748" stroke-width="1"/><ellipse cx="60" cy="52" rx="50" ry="32" stroke="#707748" stroke-width="1"/><circle cx="60" cy="20" r="4" fill="#C7D64F"/>`,
+  },
+];
+
+const soundFamiliar = [
+  { illus: 'anxiety', copy: 'Anxiety hums in the background, no matter what you accomplish.' },
+  { illus: 'relationships', copy: 'Relationships keep hitting the same wall, no matter how much you talk it through.' },
+  { illus: 'success', copy: 'Career success feels hollow — you’re questioning what actually matters.' },
+  { illus: 'disconnection', copy: 'A disconnection from yourself that’s hard to name, and harder to ignore.' },
+] as const;
+
+const whoISee = ['Young Adults', 'Professionals', 'Creatives', 'Grad Students', 'Couples', 'Teens'];
+const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Grief & Loss', 'Life Transitions', 'Relationships', 'Religious Issues'];
 ---
 
 <Layout active="/" path="/">
   <!-- Hero -->
   <section class="hero">
     <div class="col">
-      <p class="eyebrow">{c.hero.eyebrow}</p>
-      <h1 set:html={c.hero.heading}></h1>
-      <p>{c.hero.lead}</p>
+      <p class="eyebrow">Depth Therapy — Newport Beach · Fullerton · Online CA</p>
+      <h1>Underneath the noise, there’s a version of you <em>waiting to be known.</em></h1>
+      <p>
+        I help people uncover the roots of their anxiety, emotional disconnection, & relationship struggles so they can move through life with deeper connection, authenticity, & creativity.
+      </p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
     <Glyph name="orbit" class="hero-figure" />
   </section>
 
-  <Ticker items={c.ticker} label="Areas of focus" />
+  <Ticker items={focusAreas} label="Areas of focus" />
 
   <!-- What the work moves toward -->
   <section class="section tight" aria-labelledby="glyph-heading">
     <p class="eyebrow" id="glyph-heading" style="text-align:center; margin-bottom:32px">
-      {c.movesTowardEyebrow}
+      What the work moves toward
     </p>
     <div class="grid-4">
       {
-        c.glyphLabels.map((label, i) => (
+        glyphs.map((g) => (
           <div class="glyph-card">
-            <svg viewBox="0 0 120 120" width="96" height="96" fill="none" aria-hidden="true" set:html={glyphSvgs[i]} />
-            <span class="label">{label}</span>
+            <svg viewBox="0 0 120 120" width="96" height="96" fill="none" aria-hidden="true" set:html={g.svg} />
+            <span class="label">{g.label}</span>
           </div>
         ))
       }
@@ -54,22 +78,25 @@ const soundIllus = ['anxiety', 'relationships', 'success', 'disconnection'] as c
   <section class="section tight" aria-labelledby="sound-familiar">
     <div class="section-heading">
       <div class="stack">
-        <p class="eyebrow">{c.soundFamiliar.eyebrow}</p>
+        <p class="eyebrow">Sound familiar?</p>
         <h2 id="sound-familiar" class="serif" style="font-size:48px; line-height:1.1; max-width:640px">
-          {c.soundFamiliar.heading}
+          Doing fine by every measure. Still, something’s off.
         </h2>
       </div>
-      <p>{c.soundFamiliar.aside}</p>
+      <p>
+        The people I work with are thoughtful, capable, and self-aware enough to know that
+        “managing” isn’t the same as living.
+      </p>
     </div>
     <div class="ruled-grid cols-2 feature">
       {
-        c.soundFamiliar.cards.map((copy, i) => (
+        soundFamiliar.map((item, i) => (
           <article class="ruled-cell">
             <div class="meta">
               <span class="num">{String(i + 1).padStart(2, '0')}</span>
-              <Illustration name={soundIllus[i]} size="52px" />
+              <Illustration name={item.illus} size="52px" />
             </div>
-            <div class="copy">{copy}</div>
+            <div class="copy">{item.copy}</div>
           </article>
         ))
       }
@@ -79,10 +106,18 @@ const soundIllus = ['anxiety', 'relationships', 'success', 'disconnection'] as c
   <!-- Approach -->
   <section class="section blue on-color split c-narrow-wide" aria-labelledby="approach-title" style="align-items:center">
     <div class="col gap-28">
-      <p class="eyebrow on-color">{c.approach.eyebrow}</p>
-      <h2 id="approach-title" class="h2-serif" style="font-size:52px" set:html={c.approach.heading}></h2>
-      <p class="body">{c.approach.body}</p>
-      <a class="text-link on-color" href="/approach/">{c.approach.link} <span class="arw">→</span></a>
+      <p class="eyebrow on-color">The approach</p>
+      <h2 id="approach-title" class="h2-serif" style="font-size:52px">
+        We won’t just manage the problem. We’ll get curious about
+        <em>where it came from.</em>
+      </h2>
+      <p class="body">
+        Depth work means slowing down and asking why. Where do these patterns come from?
+        What are you living out that you never consciously chose? The understanding you build
+        here isn’t a tool you set aside after a few months — it becomes part of how you know
+        yourself.
+      </p>
+      <a class="text-link on-color" href="/approach/">How I work <span class="arw">→</span></a>
     </div>
     <Glyph name="nested-ellipses" class="hero-figure" />
   </section>
@@ -91,11 +126,22 @@ const soundIllus = ['anxiety', 'relationships', 'success', 'disconnection'] as c
   <section class="section split c-media" aria-labelledby="about-title">
     <Portrait placeholder="Nikole — candid photo" accent="bl" />
     <div class="col">
-      <p class="eyebrow">{c.aboutPreview.eyebrow}</p>
-      <h2 id="about-title" class="serif" style="font-size:52px; line-height:1.1" set:html={c.aboutPreview.heading}></h2>
+      <p class="eyebrow">About</p>
+      <h2 id="about-title" class="serif" style="font-size:52px; line-height:1.1">
+        Hi, I’m <em class="accent">Nikole.</em>
+      </h2>
       <p class="label" style="color:var(--ink-65)">{site.supervisor.replace('Supervised by', 'AMFT 150080 · Supervised by')}</p>
-      {c.aboutPreview.paras.map((p) => <p class="body">{p}</p>)}
-      <a class="text-link" href="/about/">{c.aboutPreview.link} <span class="arw">→</span></a>
+      <p class="body">
+        I believe getting to know yourself — really know yourself — is one of the most
+        worthwhile things you’ll ever do. Not the version of you that shows up for everyone
+        else, but the one shaped by your history, your relationships, your story so far.
+      </p>
+      <p class="body">
+        My approach is warm, collaborative, and engaged. Together we’ll make connections,
+        find out what healing looks like for you, and build a deeper relationship to yourself
+        and what truly matters.
+      </p>
+      <a class="text-link" href="/about/">About Nikole <span class="arw">→</span></a>
     </div>
   </section>
 
@@ -104,20 +150,23 @@ const soundIllus = ['anxiety', 'relationships', 'success', 'disconnection'] as c
     <Glyph name="radiate" class="decor" />
     <div class="section-heading">
       <div class="stack">
-        <p class="eyebrow on-color">{c.services.eyebrow}</p>
-        <h2 id="services-title" class="serif" style="font-size:48px; line-height:1.1">{c.services.heading}</h2>
+        <p class="eyebrow on-color">Services</p>
+        <h2 id="services-title" class="serif" style="font-size:48px; line-height:1.1">Areas of focus</h2>
       </div>
-      <p>{c.services.intro}</p>
+      <p>
+        For adults and teens seeking a deeper understanding of themselves and their emotional
+        lives. In-person in Newport Beach and Fullerton, or online throughout California.
+      </p>
     </div>
 
     <div class="split c-1-1" style="align-items:start; gap:72px; margin-bottom:36px">
       <div class="pill-block">
         <div class="label">Who I see</div>
-        <div class="pill-row">{c.services.whoISee.map((p) => <span class="pill">{p}</span>)}</div>
+        <div class="pill-row">{whoISee.map((p) => <span class="pill">{p}</span>)}</div>
       </div>
       <div class="pill-block">
         <div class="label">What we work on</div>
-        <div class="pill-row">{c.services.whatWeWork.map((p) => <span class="pill">{p}</span>)}</div>
+        <div class="pill-row">{whatWeWork.map((p) => <span class="pill">{p}</span>)}</div>
       </div>
     </div>
 
