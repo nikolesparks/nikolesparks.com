@@ -343,14 +343,14 @@ button:hover .arw {
   transform: scaleX(1);
 }
 
-/* blue-filled buttons -> cream wipe, blue text */
+/* blue-filled buttons -> ink wipe, cream text */
 .cta::before,
 .form button::before {
-  background: var(--cream);
+  background: var(--ink);
 }
 .cta:hover,
 .form button:hover {
-  color: var(--blue);
+  color: var(--cream);
 }
 /* cream-filled buttons -> ink wipe, cream text */
 .cta.on-blue::before,
