@@ -4,6 +4,7 @@ import Ticker from '../components/Ticker.astro';
 import Illustration from '../components/Illustration.astro';
 import Faq from '../components/Faq.astro';
 import NextSteps from '../components/NextSteps.astro';
+import { faqPage } from '../data/schema';
 
 const tickerItems = ['Fees', 'Insurance', 'First Sessions', 'Depth Therapy', 'Telehealth', 'Fit', 'Frequency'];
 
@@ -23,10 +24,11 @@ const faqs = [
 ---
 
 <Layout
-  title="FAQs — Fees, Insurance, Telehealth & More | Nikole Sparks"
-  description="Answers to common questions about depth therapy, fees, insurance, first sessions, telehealth, and how to know if we're a good fit."
+  title="Therapy FAQs | Depth-Oriented Therapist in Newport Beach & Orange County"
+  description="Common questions about depth therapy answered — fees, insurance, first sessions, and what psychodynamic therapy is. In-person in Newport Beach and Fullerton; telehealth across California."
   active="/faqs/"
   path="/faqs/"
+  schema={[faqPage(faqs, { id: 'https://nikolesparks.com/faqs#faq', url: 'https://nikolesparks.com/faqs' })]}
 >
   <!-- Hero -->
   <section class="hero">
