@@ -337,6 +337,10 @@ em.accent {
   width: 100%;
   height: auto;
 }
+.hero-illustration {
+  display: block;
+  margin: 0 auto;
+}
 
 /* colored hero variants */
 .hero.blue {

@@ -1,0 +1,35 @@
+---
+import { illustrations } from '../data/illustrations';
+
+// A named line illustration from the brand icon set (viewBox 0 0 120 120).
+// Strokes inherit `color` (default cobalt); the lime accent is fixed.
+interface Props {
+  name: keyof typeof illustrations;
+  /** rendered size, e.g. "320px" or "clamp(200px, 32vw, 360px)" */
+  size?: string;
+  /** stroke color for the line work */
+  color?: string;
+  class?: string;
+}
+const {
+  name,
+  size = '320px',
+  color = 'var(--blue)',
+  class: className = '',
+} = Astro.props;
+
+const item = illustrations[name];
+if (!item) {
+  throw new Error(`Illustration "${String(name)}" not found`);
+}
+---
+
+<svg
+  class={`illustration ${className}`}
+  viewBox="0 0 120 120"
+  fill="none"
+  role="img"
+  aria-label={item.label}
+  style={`width:${size}; height:auto; max-width:100%; color:${color}`}
+  set:html={item.svg}
+></svg>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Ticker from '../components/Ticker.astro';
 import Portrait from '../components/Portrait.astro';
 import Glyph from '../components/Glyph.astro';
+import Illustration from '../components/Illustration.astro';
 import NextSteps from '../components/NextSteps.astro';
 
 const tickerItems = ['Psychodynamic', 'Attachment-Based', 'Depth-Oriented', 'Evidence-Based', 'Relational', 'Collaborative'];
@@ -29,7 +30,7 @@ const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Se
       </p>
       <a class="cta" href="/contact/">Schedule a free consultation →</a>
     </div>
-    <Glyph name="orbit" class="hero-figure" />
+    <Illustration name="depth" size="clamp(240px, 34vw, 380px)" class="hero-illustration" />
   </section>
 
   <Ticker items={tickerItems} label="Modalities" />
