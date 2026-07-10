@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Glyph from '../../components/Glyph.astro';
+import Illustration from '../../components/Illustration.astro';
 import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
 
@@ -108,7 +109,7 @@ const faqs = [
     <div class="sticky-heading">
       <p class="eyebrow">Individual therapy</p>
       <h2 class="h2-serif">Frequently asked questions</h2>
-      <Glyph name="target-ellipses" class="mt-16" />
+      <Illustration name="questions-full" size="240px" class="mt-16" />
     </div>
     <Faq items={faqs} />
   </section>

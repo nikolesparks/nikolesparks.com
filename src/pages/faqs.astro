@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Ticker from '../components/Ticker.astro';
-import Glyph from '../components/Glyph.astro';
+import Illustration from '../components/Illustration.astro';
 import Faq from '../components/Faq.astro';
 import NextSteps from '../components/NextSteps.astro';
 
@@ -40,7 +40,7 @@ const faqs = [
       </p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
-    <Glyph name="concentric" class="hero-figure" />
+    <Illustration name="questions-full" class="hero-figure" size="100%" />
   </section>
 
   <Ticker items={tickerItems} label="Topics" />
@@ -52,7 +52,6 @@ const faqs = [
       <h2 class="serif" style="font-size:44px; line-height:1.12; text-wrap:pretty">
         Everything you might want to know before we talk.
       </h2>
-      <Glyph name="target-ellipses" class="mt-16" />
     </div>
     <Faq items={faqs} openFirst />
   </section>
