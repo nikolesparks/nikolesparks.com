@@ -4,64 +4,23 @@ import Ticker from '../../components/Ticker.astro';
 import Glyph from '../../components/Glyph.astro';
 import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
+import { content } from '../../data/content';
 
-const tickerItems = ['Worry', 'Overthinking', 'Perfectionism', 'Imposter Feelings', 'Restlessness', 'Avoidance', 'Bracing'];
-
-const looksLike = [
-  'A persistent hum of worry you can’t quite turn off',
-  'Difficulty trusting what is good: relationships, praise, moments of rest and peace',
-  'A strong need for control or routine that makes spontaneity feel impossible',
-  'High standards and relentless achievement driven more by fear of failure than genuine desire',
-  'Overthinking decisions or replaying conversations afterward',
-  'Difficulty relaxing, even when nothing is actually wrong',
-  'Procrastination, avoidance, or staying very busy to outrun a feeling',
-  'Feeling like an imposter, waiting to be found out',
-];
-
-const whoIWorkWith = [
-  'High-achieving people who carry anxiety quietly beneath a composed, functional exterior',
-  'People whose anxiety lives in the body: muscle tension, shallow breathing, difficulty sleeping, a sense of bracing',
-  'Creatives and professionals whose anxiety has taken the shape of perfectionism, procrastination, or creative block',
-  'Those who have tried to logic or manage their way through anxiety, only to find it keeps returning',
-  'People who have always been “the anxious one” and have begun to wonder whether that is actually changeable',
-  'People who overanalyze relationships, worry about being too much, or brace for disapproval',
-  'People navigating life transitions that have stirred up deep uncertainty: new careers, moves, marriage, parenthood, grad school',
-  'Those who grew up where anxiety was the weather: constant, unpredictable, requiring vigilance just to feel safe',
-];
-
-const process = [
-  { title: 'Getting oriented', copy: 'In early sessions we get to know you — not just the anxiety, but your relationships, your history, when it shows up, and what your life has looked like around it.', icon: `<circle cx="24" cy="24" r="18" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>` },
-  { title: 'Going deeper', copy: 'As we build trust, we explore what’s underneath — the patterns, stories, and relational histories that may be quietly running the show. This is where the most meaningful work happens.', icon: `<circle cx="24" cy="24" r="18" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="11" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>` },
-  { title: 'Noticing change', copy: 'Over time, anxiety becomes less in charge. You respond rather than react, sit with uncertainty without bracing, and stay in contact with what you actually want underneath the worry.', icon: `<ellipse cx="24" cy="28" rx="19" ry="6" stroke="#C7D64F" stroke-width="1"/><ellipse cx="24" cy="23" rx="19" ry="12" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="9" r="3" fill="#C7D64F"/>` },
-];
-
-const faqs = [
-  { q: 'Can therapy actually help with anxiety?', a: ['Yes, and the research supports this. Psychodynamic therapy has a solid evidence base for treating anxiety, and it tends to produce changes that hold — because it addresses the underlying patterns rather than just the surface symptoms. What helps depends on what’s driving your anxiety, which is one of the things we’d explore together.'] },
-  { q: 'What if my anxiety isn’t "bad enough" for therapy?', a: ['Anxiety doesn’t have to be debilitating to be worth addressing. If it’s affecting your relationships, your work, your ability to rest, or the life you want to pursue — that’s enough. A lot of people wait until anxiety has gotten very loud before seeking help. You don’t have to wait.'] },
-  { q: 'Is psychodynamic anxiety therapy different from CBT?', a: ['CBT works by identifying and changing anxious thought patterns and behaviors in the present — useful, especially for specific, well-defined triggers. Psychodynamic therapy works differently: rather than managing anxiety at the surface, it explores the underlying emotional patterns, relational histories, and character structure generating it. For people whose anxiety keeps returning despite coping strategies, depth-oriented work often reaches something CBT does not.'] },
-  { q: 'Will we talk about my past?', a: ['Often, yes — though not in a way that feels disconnected from your present life. Attachment-based therapy is interested in how early experiences shaped the patterns you’re living out now. For many people, understanding where their anxiety was formed, and what it was originally responding to, is what finally makes change possible. We always follow your pace and readiness.'] },
-  { q: 'How long does anxiety therapy take?', a: ['That depends on the depth and roots of the anxiety. I typically work with people in longer-term therapy of at least six months, because lasting change takes time. Some people notice significant shifts within a few months; for others the work unfolds more gradually. How you’re feeling about the work is an ongoing, collaborative conversation between us.'] },
-  { q: 'Do you offer online anxiety therapy in California?', a: ['Yes. I offer telehealth sessions for anyone located in California through a secure video platform. Online anxiety therapy works very similarly to in-person sessions, and many clients find it equally valuable.'] },
+const c = content.anxiety;
+const processIcons = [
+  `<circle cx="24" cy="24" r="18" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>`,
+  `<circle cx="24" cy="24" r="18" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="11" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>`,
+  `<ellipse cx="24" cy="28" rx="19" ry="6" stroke="#C7D64F" stroke-width="1"/><ellipse cx="24" cy="23" rx="19" ry="12" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="9" r="3" fill="#C7D64F"/>`,
 ];
 ---
 
-<Layout
-  title="Therapy for Anxiety — Depth-Oriented | Nikole Sparks"
-  description="Depth-oriented, psychodynamic therapy for anxiety in Newport Beach, Fullerton & online in California. Understand what your anxiety is really about."
-  active="/services/"
-  path="/services/therapy-for-anxiety/"
->
+<Layout title={c.metaTitle} description={c.metaDescription} active="/services/" path="/services/therapy-for-anxiety/">
   <!-- Hero -->
   <section class="hero">
     <div class="col">
-      <p class="eyebrow"><a href="/services/">Services</a> / Therapy for anxiety</p>
-      <h1>Your anxiety is trying to <em>tell you something.</em></h1>
-      <p>
-        Anxiety is exhausting to live with — especially when you can’t figure out what it’s
-        actually about. It shows up uninvited, doesn’t respond to logic, and makes everything
-        feel more uncertain. But anxiety is a signal. And signals, when we learn to read them,
-        have something worth hearing.
-      </p>
+      <p class="eyebrow"><a href="/services/">Services</a> / {c.hero.crumb}</p>
+      <h1 set:html={c.hero.heading}></h1>
+      <p set:html={c.hero.lead}></p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
     <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
@@ -75,41 +34,34 @@ const faqs = [
     </svg>
   </section>
 
-  <Ticker items={tickerItems} label="How anxiety shows up" />
+  <Ticker items={c.ticker} label="How anxiety shows up" />
 
   <!-- What anxiety can look like -->
   <section class="section">
     <div class="section-heading">
       <div class="stack">
-        <p class="eyebrow">What anxiety can look like</p>
-        <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:640px; text-wrap:pretty">
-          Anxiety doesn’t always announce itself as anxiety.
-        </h2>
+        <p class="eyebrow">{c.looks.eyebrow}</p>
+        <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:640px; text-wrap:pretty">{c.looks.heading}</h2>
       </div>
-      <p>For many people it isn’t the dramatic, acute kind. It’s quieter and more pervasive.</p>
+      <p>{c.looks.aside}</p>
     </div>
     <div class="ruled-grid cols-2">
-      {looksLike.map((item, i) => (
+      {c.looks.items.map((item, i) => (
         <div class="ruled-cell">
           <span class="num">{String(i + 1).padStart(2, '0')}</span>
           <span class="copy">{item}</span>
         </div>
       ))}
     </div>
-    <p class="body" style="max-width:720px; margin-top:32px">
-      Many of the people I work with have been anxious for so long that it feels like just who
-      they are. It doesn’t have to be. Anxiety is a pattern that developed for reasons — and
-      those reasons are worth understanding.
-    </p>
+    <p class="body" style="max-width:720px; margin-top:32px">{c.looks.footnote}</p>
   </section>
 
   <!-- How I work with anxiety -->
   <section class="section blue on-color split c-narrow-wide" style="align-items:center; grid-template-columns:1fr 380px">
     <div class="col gap-28">
-      <p class="eyebrow on-color">How I work with anxiety</p>
-      <h2 class="h2-serif" style="font-size:52px">Curiosity, <em>not urgency.</em></h2>
-      <p class="body">My work draws on psychodynamic and attachment-based principles, where anxiety is understood to have a specific relationship to underlying feeling. When a genuine emotion begins to rise — particularly one that has been historically dangerous to experience — anxiety is what intercepts it. Rather than focusing on coping skills or thought restructuring, we go a layer deeper: what is your anxiety signaling, how did early relational experiences shape your nervous system’s sense of what is safe, and what feelings might be living just out of awareness.</p>
-      <p class="body">Beneath anxiety, there is almost always something else — grief that never found a place to land, anger that felt too dangerous to express, longing that carries an old memory of loss. The goal isn’t to make you someone who never feels anxious. It’s to develop a different relationship with anxiety — one where you can hear what it’s trying to say, rather than just trying to make it stop.</p>
+      <p class="eyebrow on-color">{c.how.eyebrow}</p>
+      <h2 class="h2-serif" style="font-size:52px" set:html={c.how.heading}></h2>
+      {c.how.paras.map((p) => <p class="body">{p}</p>)}
       <a class="text-link on-color" href="/approach/">My approach <span class="arw">→</span></a>
     </div>
     <Glyph name="nested-ellipses" class="hero-figure" />
@@ -118,13 +70,11 @@ const faqs = [
   <!-- Who I work with -->
   <section class="section">
     <div class="stack gap-20" style="margin-bottom:48px">
-      <p class="eyebrow">Who I work with</p>
-      <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:720px; text-wrap:pretty">
-        Anxious quietly, beneath a composed exterior.
-      </h2>
+      <p class="eyebrow">{c.whoEyebrow}</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:720px; text-wrap:pretty">{c.whoHeading}</h2>
     </div>
     <div class="ruled-grid cols-2">
-      {whoIWorkWith.map((item, i) => (
+      {c.who.map((item, i) => (
         <div class="ruled-cell">
           <span class="num">{String(i + 1).padStart(2, '0')}</span>
           <span class="copy">{item}</span>
@@ -136,15 +86,15 @@ const faqs = [
   <!-- What to expect -->
   <section class="section sage on-color">
     <div class="stack gap-20" style="margin-bottom:48px">
-      <p class="eyebrow on-color">What to expect</p>
-      <h2 class="serif" style="font-size:48px; line-height:1.1">Our work together</h2>
+      <p class="eyebrow on-color">{c.expectEyebrow}</p>
+      <h2 class="serif" style="font-size:48px; line-height:1.1">{c.expectHeading}</h2>
     </div>
     <div class="process-grid cols-3">
-      {process.map((p, i) => (
+      {c.process.map((p, i) => (
         <div class="process-card">
           <div class="head">
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
-            <svg viewBox="0 0 48 48" width="34" height="34" fill="none" aria-hidden="true" set:html={p.icon} />
+            <svg viewBox="0 0 48 48" width="34" height="34" fill="none" aria-hidden="true" set:html={processIcons[i]} />
           </div>
           <div class="title">{p.title}</div>
           <p>{p.copy}</p>
@@ -156,17 +106,14 @@ const faqs = [
   <!-- FAQs -->
   <section class="section" style="display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start">
     <div class="sticky-heading">
-      <p class="eyebrow">Anxiety therapy</p>
+      <p class="eyebrow">{c.faqEyebrow}</p>
       <h2 class="h2-serif">Frequently asked questions</h2>
       <Glyph name="target-ellipses" class="mt-16" />
     </div>
-    <Faq items={faqs} />
+    <Faq items={c.faqs} />
   </section>
 
-  <NextSteps
-    heading="Anxiety doesn’t have to <em>run the show.</em>"
-    copy="If you’re ready to understand what yours is really about, I’d be glad to hear from you. Free 15-minute consultation — no pressure, no commitment. In-person in Newport Beach and Fullerton, or online throughout California."
-  />
+  <NextSteps heading={c.next.heading} copy={c.next.copy} />
 </Layout>
 
 <style>

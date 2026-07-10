@@ -1,30 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { site, offices } from '../data/site';
+import { content } from '../data/content';
+
+const c = content.contact;
+const f = c.form;
 ---
 
-<Layout
-  title={`Contact — Free 15-Minute Consultation | ${site.name}`}
-  description="Reach out for a free 15-minute consultation. Depth-oriented therapy in Newport Beach, Fullerton, or online throughout California."
-  active="/contact/"
-  path="/contact/"
->
+<Layout title={c.metaTitle} description={c.metaDescription} active="/contact/" path="/contact/">
   <!-- Hero: headline left, consultation form right -->
   <section class="hero form-row">
     <div class="col gap-28">
-      <p class="eyebrow">Contact</p>
-      <h1>Let’s talk about what you’re carrying and what you want next.</h1>
-      <p>
-        I offer a free 15-minute consultation to help you decide whether this feels like the
-        right fit. If you’re looking for depth-oriented therapy in Orange County or online in
-        California, I’d be glad to hear from you.
-      </p>
+      <p class="eyebrow">{c.hero.eyebrow}</p>
+      <h1>{c.hero.heading}</h1>
+      <p>{c.hero.lead}</p>
       <a class="cta" href={`mailto:${site.email}`}>Email me directly <span class="arw">→</span></a>
     </div>
 
     <div class="form-card blue">
-      <p class="eyebrow on-color">Schedule a free consultation</p>
-      <h2>Start the conversation</h2>
+      <p class="eyebrow on-color">{f.eyebrow}</p>
+      <h2>{f.heading}</h2>
       <!--
         Netlify Forms: `data-netlify` + hidden `form-name` let Netlify detect and
         process submissions at deploy time. The honeypot `bot-field` traps spam.
@@ -58,37 +53,26 @@ import { site, offices } from '../data/site';
         </div>
         <div class="field-row">
           <label class="field">
-            Preferred location
+            {f.locationLabel}
             <select name="preferred-location" required>
               <option value="" disabled selected>Select a location…</option>
-              <option value="Online">Online</option>
-              <option value="Newport Beach">Newport Beach</option>
-              <option value="Fullerton">Fullerton</option>
+              {f.locations.map((o) => <option value={o}>{o}</option>)}
             </select>
           </label>
           <label class="field">
-            Preferred service
+            {f.serviceLabel}
             <select name="preferred-service" required>
               <option value="" disabled selected>Select a service…</option>
-              <option value="Individual Therapy">Individual Therapy</option>
-              <option value="Couples Therapy">Couples Therapy</option>
-              <option value="Teen Therapy">Teen Therapy</option>
-              <option value="Premarital Counseling">Premarital Counseling</option>
+              {f.services.map((o) => <option value={o}>{o}</option>)}
             </select>
           </label>
         </div>
         <label class="field">
-          What would you like to talk about?
-          <textarea
-            name="message"
-            placeholder="Please share a little bit about what you're looking for and your schedule availability for a phone call."
-            required></textarea>
+          {f.messageLabel}
+          <textarea name="message" placeholder={f.messagePlaceholder} required></textarea>
         </label>
         <button type="submit">Send message</button>
-        <p class="note">
-          This form is not a secure or confidential channel — please don’t share sensitive
-          clinical details. For emergencies, call 988 or 911.
-        </p>
+        <p class="note">{f.note}</p>
       </form>
     </div>
   </section>
@@ -96,23 +80,17 @@ import { site, offices } from '../data/site';
   <!-- Lower: what to expect + direct contact info (cream) -->
   <section class="panel-grid">
     <div class="panel">
-      <p class="eyebrow">Quick note</p>
-      <h2>What to expect from your first outreach</h2>
-      <p class="body">
-        You can reach out with any questions about therapy, fit, availability, or what it
-        might be like to work together. I’ll reply as soon as I can and help you take the next
-        step at your pace.
-      </p>
+      <p class="eyebrow">{c.expect.eyebrow}</p>
+      <h2>{c.expect.heading}</h2>
+      <p class="body">{c.expect.body}</p>
       <div class="list">
-        <div>• A brief reply within a few business days</div>
-        <div>• A free 15-minute consultation if it feels like a fit</div>
-        <div>• Clear information about scheduling and logistics</div>
+        {c.expect.list.map((item) => <div>• {item}</div>)}
       </div>
     </div>
 
     <div class="panel">
-      <p class="eyebrow">Other ways to reach me</p>
-      <h2>Prefer to connect directly?</h2>
+      <p class="eyebrow">{c.direct.eyebrow}</p>
+      <h2>{c.direct.heading}</h2>
       <div class="detail">
         <div class="label">Email</div>
         <a class="value" href={`mailto:${site.email}`}>{site.email}</a>

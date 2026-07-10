@@ -5,48 +5,39 @@ import Portrait from '../components/Portrait.astro';
 import Glyph from '../components/Glyph.astro';
 import Illustration from '../components/Illustration.astro';
 import NextSteps from '../components/NextSteps.astro';
+import { content } from '../data/content';
 
-const tickerItems = ['Psychodynamic', 'Attachment-Based', 'Depth-Oriented', 'Relational', 'Collaborative'];
-
-const whoIWorkWith = ['Teens', 'Young Adults', 'Adults', 'Creatives', 'Professionals', 'Grad Students', 'Couples', 'Groups'];
-const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Self-Expression', 'Attachment', 'Trauma', 'Shame', 'Grief & Loss', 'Life Transitions', 'Relationship Issues'];
+const c = content.approach;
 ---
 
 <Layout
-  title="My Approach — Depth-Oriented Psychotherapy | Nikole Sparks"
-  description="Psychodynamic, attachment-based, depth-oriented therapy. Explore your past, own your present, build your future."
+  title={c.metaTitle}
+  description={c.metaDescription}
   active="/approach/"
   path="/approach/"
 >
   <!-- Hero -->
   <section class="hero">
     <div class="col">
-      <p class="eyebrow">Effective, depth-oriented psychotherapy</p>
-      <h1>Explore your past. <br>Own your present. <br><em>Build your future.</em></h1>
-      <p>
-        We all carry stories that shape how we think, feel, and connect. Deep change happens
-        when we honor the full range of our lived experiences and make sense of the narratives
-        shaping our lives.
-      </p>
+      <p class="eyebrow">{c.hero.eyebrow}</p>
+      <h1 set:html={c.hero.heading}></h1>
+      <p>{c.hero.lead}</p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
     <Illustration name="depth" size="clamp(240px, 34vw, 380px)" class="hero-illustration" />
   </section>
 
-  <Ticker items={tickerItems} label="Modalities" />
+  <Ticker items={c.ticker} label="Modalities" />
 
   <!-- Philosophy -->
   <section class="section split c-narrow-wide">
     <div class="col gap-20">
-      <p class="eyebrow">MY APPROACH</p>
-      <h2 class="h2-serif">Connecting deeper,<br><em>living freer.</em></h2>
+      <p class="eyebrow">{c.philosophy.eyebrow}</p>
+      <h2 class="h2-serif" set:html={c.philosophy.heading}></h2>
       <Glyph name="target-ellipses" class="mt-16" />
     </div>
     <div class="prose prose-15" style="gap:24px;">
-      <p>We are shaped by the relationships, experiences, and stories that surround us. Some of these stories bring connection and belonging while others leave imprints of pain, shame, or self-doubt. Over time, we develop ways of being with ourselves and others that often reflect our early experiences. Some of these patterns serve us well. Others leave us feeling stuck, disconnected, or unsure of how to move forward. Many of these ways of relating operate outside our awareness, quietly shaping our relationship to ourselves and others in ways we can’t quite grasp. This is where therapy can help.</p>
-      <p>Psychodynamic therapy offers a pathway to work through persistent challenges with anxiety, depression, intimacy and closeness, unprocessed loss, patterns of self-sabotage, emotional expression, and beyond.</p>
-      <p>Many of the people I work with come to therapy looking for answers to the deep questions about why they’re struggling, or when their best attempts to change on their own aren’t working. While tools can be helpful, they don’t always get to the heart of what’s really going on. My work focuses on meaningful, lasting change. Once you get the deep, personalized support you need to heal and change, everything else changes, too. Using a psychodynamic, depth-oriented approach, we look to understand the “why” behind your feelings and behaviors. Together, we’ll explore how your foundational experiences have shaped your relationships and begin the work of creating new pathways for confidence, connection, and growth.</p>
-      <p>The goal is to help you notice the patterns that may be holding you back, understand how they affect your relationships and choices, and free you to inhabit your life in a way that feels truer to who you are and the life you want. By connecting more deeply with your story, your emotions, and the people around you, you can begin to live with a greater sense of freedom, authenticity, and meaning.</p>
+      {c.philosophy.paras.map((p) => <p>{p}</p>)}
     </div>
   </section>
 
@@ -54,8 +45,8 @@ const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Se
   <section class="quote-block">
     <Glyph name="rings" class="hero-figure" />
     <div class="col gap-28">
-      <blockquote>"Not until we are lost do we begin to <em>understand</em> ourselves."</blockquote>
-      <cite>Henry David Thoreau</cite>
+      <blockquote set:html={c.quote.text}></blockquote>
+      <cite>{c.quote.cite}</cite>
     </div>
   </section>
 
@@ -63,19 +54,19 @@ const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Se
   <section class="section sage on-color">
     <div class="section-heading">
       <div class="stack">
-        <p class="eyebrow on-color">Services</p>
-        <h2 class="serif" style="font-size:48px; line-height:1.1">Areas of focus</h2>
+        <p class="eyebrow on-color">{c.areas.eyebrow}</p>
+        <h2 class="serif" style="font-size:48px; line-height:1.1">{c.areas.heading}</h2>
       </div>
-      <p>I work with adults and teens who are seeking a deeper understanding of themselves and their emotional lives.</p>
+      <p>{c.areas.intro}</p>
     </div>
     <div class="split c-1-1" style="align-items:start; gap:72px; margin-bottom:56px">
       <div class="pill-block">
         <div class="label">Who I work with</div>
-        <div class="pill-row">{whoIWorkWith.map((p) => <span class="pill">{p}</span>)}</div>
+        <div class="pill-row">{c.areas.whoIWorkWith.map((p) => <span class="pill">{p}</span>)}</div>
       </div>
       <div class="pill-block">
         <div class="label">What I treat</div>
-        <div class="pill-row">{whatITreat.map((p) => <span class="pill">{p}</span>)}</div>
+        <div class="pill-row">{c.areas.whatITreat.map((p) => <span class="pill">{p}</span>)}</div>
       </div>
     </div>
     <div class="card-row">
@@ -88,16 +79,12 @@ const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Se
   <section class="section split c-media">
     <Portrait placeholder="Office or session photo" accent="bl" />
     <div class="col">
-      <p class="eyebrow">What to expect</p>
-      <h2 class="h2-serif">Our work <em>together.</em></h2>
-      <p class="body">Healing unfolds in its own time. Our work together will honor this natural rhythm, building trust and welcoming all parts of your experience. I approach each person with highly personalized support — working under the fundamental belief that everyone is unique, and that healing occurs within the context of a safe, genuine, and empathic therapeutic relationship.</p>
-      <p class="body">We’ll meet regularly to create a space where both the spoken and unspoken aspects of your experience can be understood with curiosity and care. Our work is collaborative, working together to get to know and understand you, and helping you create connections and discover new possibilities. This is slow, intentional work. It is not about rushing or powering through, but about making room — for reflection, for growth, for a deeper sense of self-compassion that honors the complexity of who you are.</p>
-      <a class="text-link" href="/about/">About Nikole <span class="arw">→</span></a>
+      <p class="eyebrow">{c.whatToExpect.eyebrow}</p>
+      <h2 class="h2-serif" set:html={c.whatToExpect.heading}></h2>
+      {c.whatToExpect.paras.map((p) => <p class="body">{p}</p>)}
+      <a class="text-link" href="/about/">{c.whatToExpect.link} <span class="arw">→</span></a>
     </div>
   </section>
 
-  <NextSteps
-    heading="Getting <em>started.</em>"
-    copy="If what you’ve read sounds interesting to you, I invite you to reach out. I offer a free 15-minute consultation to give you a chance to ask questions and get a feel for how we might work together."
-  />
+  <NextSteps heading={c.next.heading} copy={c.next.copy} />
 </Layout>
