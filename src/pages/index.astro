@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Ticker from '../components/Ticker.astro';
 import Portrait from '../components/Portrait.astro';
 import Glyph from '../components/Glyph.astro';
+import Illustration from '../components/Illustration.astro';
 import { site } from '../data/site';
 
 const focusAreas = [
@@ -30,11 +31,11 @@ const glyphs = [
 ];
 
 const soundFamiliar = [
-  { icon: `<circle cx="24" cy="24" r="20" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="12" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#3B63C4"/>`, copy: 'Anxiety hums in the background, no matter what you accomplish.' },
-  { icon: `<circle cx="18" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/>`, copy: 'Relationships keep hitting the same wall, no matter how much you talk it through.' },
-  { icon: `<line x1="8" y1="40" x2="40" y2="8" stroke="#3B63C4" stroke-width="1"/><line x1="8" y1="30" x2="30" y2="8" stroke="#3B63C4" stroke-width="1"/><line x1="18" y1="40" x2="40" y2="18" stroke="#3B63C4" stroke-width="1"/><circle cx="40" cy="8" r="3" fill="#3B63C4"/>`, copy: 'Career success feels hollow — you’re questioning what actually matters.' },
-  { icon: `<ellipse cx="24" cy="24" rx="19" ry="8" stroke="#3B63C4" stroke-width="1" transform="rotate(-24 24 24)"/><ellipse cx="24" cy="24" rx="19" ry="8" stroke="#3B63C4" stroke-width="1" transform="rotate(24 24 24)"/>`, copy: 'A disconnection from yourself that’s hard to name, and harder to ignore.' },
-];
+  { illus: 'anxiety', copy: 'Anxiety hums in the background, no matter what you accomplish.' },
+  { illus: 'relationships', copy: 'Relationships keep hitting the same wall, no matter how much you talk it through.' },
+  { illus: 'success', copy: 'Career success feels hollow — you’re questioning what actually matters.' },
+  { illus: 'disconnection', copy: 'A disconnection from yourself that’s hard to name, and harder to ignore.' },
+] as const;
 
 const whoISee = ['Young Adults', 'Professionals', 'Creatives', 'Grad Students', 'Couples', 'Teens'];
 const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Grief & Loss', 'Life Transitions', 'Relationships', 'Religious Issues'];
@@ -95,7 +96,7 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
           <article class="ruled-cell">
             <div class="meta">
               <span class="num">{String(i + 1).padStart(2, '0')}</span>
-              <svg viewBox="0 0 48 48" width="36" height="36" fill="none" aria-hidden="true" set:html={item.icon} />
+              <Illustration name={item.illus} size="52px" />
             </div>
             <div class="copy">{item.copy}</div>
           </article>
