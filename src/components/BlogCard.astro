@@ -1,0 +1,32 @@
+---
+// One post in the /blog/ grid. `entry` is a CollectionEntry<'blog'>.
+import { readTime } from '../data/blog';
+
+interface Props {
+  entry: {
+    slug: string;
+    body: string;
+    data: { title: string; excerpt: string; category: string };
+  };
+}
+const { entry } = Astro.props;
+
+// A small distinct glyph per category, echoing the line-art icon language
+// used throughout the site without reusing any single page's exact icon.
+const icons: Record<string, string> = {
+  Anxiety: `<circle cx="24" cy="24" r="18" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="9" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="2.5" fill="#C7D64F"/>`,
+  Relationships: `<circle cx="18" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/>`,
+  'Self-Awareness': `<circle cx="24" cy="24" r="19" stroke="#3B63C4" stroke-width="1"/><line x1="24" y1="8" x2="24" y2="40" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#C7D64F"/>`,
+  Creativity: `<path d="M24,42 C10,42 6,27 16,21 C27,14 40,22 37,33 C34,44 18,46 12,37" stroke="#3B63C4" stroke-width="1"/>`,
+  'Life Transitions': `<ellipse cx="24" cy="27" rx="18" ry="6" stroke="#3B63C4" stroke-width="1"/><ellipse cx="24" cy="22" rx="18" ry="11" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="9" r="3" fill="#C7D64F"/>`,
+};
+const icon = icons[entry.data.category] ?? icons.Anxiety;
+---
+
+<a class="blog-card" href={`/blog/${entry.slug}/`} data-category={entry.data.category}>
+  <svg viewBox="0 0 48 48" width="36" height="36" fill="none" aria-hidden="true" set:html={icon} />
+  <div class="meta">{entry.data.category} · {readTime(entry.body)}</div>
+  <span class="title">{entry.data.title}</span>
+  <p class="desc">{entry.data.excerpt}</p>
+  <span class="more">Read the post <span class="arw">→</span></span>
+</a>

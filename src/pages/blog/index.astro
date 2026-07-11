@@ -1,0 +1,113 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Ticker from '../../components/Ticker.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { blogCategories } from '../../content/config';
+
+const tickerItems = ['Anxiety', 'Relationships', 'Identity', 'Attachment', 'Creativity', 'Grief & Loss', 'Self-Awareness'];
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const featured = posts.find((p) => p.data.featured) ?? posts[0];
+const rest = posts.filter((p) => p.slug !== featured?.slug);
+---
+
+<Layout
+  title="Blog | Notes on the Work — Nikole Sparks, AMFT"
+  description="Reflections on anxiety, relationships, and the quieter work of knowing yourself — from a depth-oriented, psychodynamic therapist in Newport Beach & Fullerton, CA."
+  active="/blog/"
+  path="/blog/"
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="col">
+      <p class="eyebrow">Notes on the work</p>
+      <h1>Reading between the <em>sessions.</em></h1>
+      <p>
+        Reflections on anxiety, relationships, and the quieter work of knowing yourself —
+        written from the same depth-oriented lens I bring to the therapy room.
+      </p>
+    </div>
+    <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
+      <ellipse cx="240" cy="230" rx="200" ry="70" stroke="#3B63C4" stroke-width="1" transform="rotate(-14 240 230)"></ellipse>
+      <ellipse cx="240" cy="230" rx="200" ry="70" stroke="#3B63C4" stroke-width="1" transform="rotate(14 240 230)"></ellipse>
+      <ellipse cx="240" cy="230" rx="200" ry="70" stroke="#3B63C4" stroke-width="1" transform="rotate(42 240 230)"></ellipse>
+      <circle cx="240" cy="230" r="24" stroke="#707748" stroke-width="1"></circle>
+      <circle cx="424" cy="180" r="6" fill="#C7D64F"></circle>
+    </svg>
+  </section>
+
+  <Ticker items={tickerItems} label="Topics" />
+
+  {
+    featured && (
+      <>
+        <!-- Category filter -->
+        <section class="section tight" style="padding-bottom:0">
+          <div class="blog-filters" data-blog-filters>
+            <button type="button" class="blog-filter active" data-filter="all">All posts</button>
+            {blogCategories.map((c) => (
+              <button type="button" class="blog-filter" data-filter={c}>{c}</button>
+            ))}
+          </div>
+        </section>
+
+        <!-- Featured post -->
+        <section class="section tight">
+          <a class="blog-featured" href={`/blog/${featured.slug}/`} data-category={featured.data.category}>
+            <div class="media">
+              <div class="placeholder">Featured post image</div>
+            </div>
+            <div class="content">
+              <div class="meta">Featured · {featured.data.category}</div>
+              <h2>{featured.data.title}</h2>
+              <p>{featured.data.excerpt}</p>
+              <span class="more">Read the post <span class="arw">→</span></span>
+            </div>
+          </a>
+        </section>
+      </>
+    )
+  }
+
+  <!-- Post grid -->
+  <section class="section">
+    <p class="eyebrow" style="margin-bottom:32px">Recent posts</p>
+    <div class="blog-grid" data-blog-grid>
+      {rest.map((post) => <BlogCard entry={post} />)}
+    </div>
+    {
+      rest.length === 0 && (
+        <p class="body">More posts are on the way — check back soon.</p>
+      )
+    }
+  </section>
+</Layout>
+
+<script>
+  const filters = document.querySelector('[data-blog-filters]');
+  const grid = document.querySelector('[data-blog-grid]');
+  const featured = document.querySelector('.blog-featured');
+
+  filters?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
+    if (!btn) return;
+
+    filters.querySelectorAll('[data-filter]').forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    const cards = grid?.querySelectorAll<HTMLElement>('[data-category]') ?? [];
+    cards.forEach((card) => {
+      card.style.display = filter === 'all' || card.dataset.category === filter ? '' : 'none';
+    });
+
+    if (featured instanceof HTMLElement) {
+      const show = filter === 'all' || featured.dataset.category === filter;
+      featured.closest('section')!.style.display = show ? '' : 'none';
+    }
+  });
+</script>
