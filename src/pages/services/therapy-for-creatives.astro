@@ -3,7 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import Ticker from '../../components/Ticker.astro';
 import Portrait from '../../components/Portrait.astro';
 import Glyph from '../../components/Glyph.astro';
+import Illustration from '../../components/Illustration.astro';
+import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
+import { creativesTherapyService, faqPage } from '../../data/schema';
 
 const tickerItems = ['Burnout', 'Imposter Syndrome', 'Perfectionism', 'Creative Blocks', 'Performance Anxiety', 'Self-Doubt'];
 
@@ -23,15 +26,45 @@ const togetherWeWill = [
 const steps = [
   { title: 'Initial consultation', copy: 'Reach out for a free consultation — share what brings you in and see if I’m the right fit for your needs.' },
   { title: 'Scheduling', copy: 'We’ll find a consistent time that works with your schedule — evening appointments are available for those with work commitments.' },
-  { title: 'Begin sessions', copy: 'Choose telehealth or in-person visits in Newport Beach. We’ll design a plan that supports your goals and fosters progress.' },
+  { title: 'Begin sessions', copy: 'Choose telehealth or in-person visits in Newport Beach or Fullerton. We’ll design a plan that supports your goals and fosters progress.' },
+];
+
+const faqs = [
+  {
+    q: 'Do you specialize in therapy for creative professionals?',
+    a: ['Yes. I spent over a decade working as a designer before becoming a therapist, so I am not approaching creative struggles from the outside looking in. I understand what it feels like to have your livelihood, identity, and sense of worth all tied up in your work. Issues like imposter syndrome, burnout, perfectionism, and the fear of being found out are real, and they deserve more than generic advice. This is a space where that complexity gets taken seriously.'],
+  },
+  {
+    q: "What's the difference between burnout and depression? How do I know which one I'm dealing with?",
+    a: ["Burnout and depression share a lot of surface features: exhaustion, disconnection, loss of motivation. But they have different roots, and the distinction matters for how we work together. Burnout typically emerges from a sustained mismatch between you and your environment, whether that's your workload, your values, recognition, or sense of control. Depression tends to run deeper and more pervasively into your sense of self. Often, the two coexist. Rather than chasing a label, our work focuses on understanding what's actually happening for you, which usually gets us further anyway."],
+  },
+  {
+    q: "I'm still functioning well and I'm not in crisis. Is therapy still for me?",
+    a: ["Absolutely. A lot of the people I work with are high-functioning by every external measure. They're showing up, delivering, meeting expectations, and running on empty at the same time. Therapy is not reserved for crisis. It's for anyone who wants to understand why they feel the way they feel, and who's ready to do something about it before it compounds."],
+  },
+  {
+    q: 'Do you work with clients remotely, or do I need to come in person?',
+    a: ['Both options are available. I see clients in person in Newport Beach and Fullerton, and via telehealth throughout California. A lot of creatives prefer telehealth for the flexibility, especially with irregular hours or a project-based schedule. We can figure out what works best for you during the consultation.'],
+  },
+  {
+    q: 'How long does therapy typically take?',
+    a: ["There's no honest single answer to this, and I'd be skeptical of anyone who gives you one. Psychodynamic work is intentionally open-ended. It's not built around a fixed number of sessions or a protocol to complete. That said, most people start noticing real shifts within a few months of consistent work. Some stay longer because they find value in the ongoing depth of it. We revisit this together as we go."],
+  },
 ];
 ---
 
 <Layout
-  title="Therapy for Creatives — Designer-Turned-Therapist | Nikole Sparks"
-  description="Depth therapy for burnout, imposter syndrome, perfectionism, and creative blocks — from a therapist who spent 15+ years as a designer."
+  title="Creative Burnout & Imposter Syndrome Therapy | Newport Beach"
+  description="Depth therapy for burnout, imposter syndrome & creative blocks in Newport Beach, CA — from a therapist who spent 15+ years as a designer."
   active="/services/"
   path="/services/therapy-for-creatives/"
+  schema={[
+    creativesTherapyService,
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services/therapy-for-creatives#faq',
+      url: 'https://nikolesparks.com/services/therapy-for-creatives',
+    }),
+  ]}
 >
   <!-- Hero -->
   <section class="hero">
@@ -101,6 +134,7 @@ const steps = [
       <p class="eyebrow on-color">My approach — psychodynamic therapy</p>
       <h2 class="serif" style="font-size:48px; line-height:1.1; text-wrap:pretty">Taking a depth approach to therapy.</h2>
       <p class="body">Instead of advice, homework, or “just try this,” psychodynamic therapy offers something deeper — a chance to understand what’s actually going on beneath the surface of your creative, emotional life. The things that happened earlier in life, especially the ones we’re not fully aware of, influence how we think, feel, and act now. The goal is to notice those patterns, understand how they’re playing out, and free you up to live in a creative, generative way that reflects your truest self.</p>
+      <p class="body">This work often overlaps with <a href="/services/individual-therapy/" style="color:var(--cream); border-bottom:1px solid var(--cream-35)">individual therapy</a>. Browse all <a href="/services/" style="color:var(--cream); border-bottom:1px solid var(--cream-35)">services</a>.</p>
       <a class="text-link on-color" href="/approach/">My approach <span class="arw">→</span></a>
     </div>
     <div class="steps">
@@ -131,8 +165,27 @@ const steps = [
     </div>
   </section>
 
+  <!-- FAQs -->
+  <section class="section" style="display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start">
+    <div class="sticky-heading">
+      <p class="eyebrow">Therapy for creatives</p>
+      <h2 class="h2-serif">Frequently asked questions</h2>
+      <Illustration name="questions-full" size="240px" class="mt-16" />
+    </div>
+    <Faq items={faqs} />
+  </section>
+
   <NextSteps
     heading="Ready to begin? <em>Let’s talk.</em>"
-    copy="If what you’ve read sounds interesting, I invite you to reach out. I offer a free 15-minute consultation — in-person in Newport Beach, or telehealth throughout California."
+    copy="If what you’ve read sounds interesting, I invite you to reach out. I offer a free 15-minute consultation — in-person in Newport Beach or Fullerton, or telehealth throughout California."
   />
 </Layout>
+
+<style>
+  @media (max-width: 820px) {
+    section[style*='grid-template-columns:1fr 1.5fr'] {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+</style>
