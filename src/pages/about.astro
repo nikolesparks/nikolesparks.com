@@ -8,10 +8,14 @@ import { site } from '../data/site';
 
 const tickerItems = ['Depth-Oriented', 'Attachment-Based', 'Psychodynamic', 'Relational', 'Warm', 'Collaborative', 'Curious'];
 
+// One shared, unique glyph for every degree — a line-art graduation cap.
+// Deliberately outside the circle/ellipse motif used for therapy concepts.
+const eduIcon = `<path d="M24 10 L43 18 L24 26 L5 18 Z" stroke="#3B63C4" stroke-width="1" stroke-linejoin="round"/><path d="M14 21.4 V29 Q24 34.5 34 29 V21.4" stroke="#3B63C4" stroke-width="1"/><line x1="43" y1="18" x2="43" y2="31" stroke="#3B63C4" stroke-width="1"/><circle cx="43" cy="32.5" r="2" fill="#C7D64F"/><circle cx="24" cy="18" r="1.6" fill="#3B63C4"/>`;
+
 const education = [
-  { icon: `<circle cx="24" cy="24" r="20" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="12" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="#3B63C4"/>`, degree: 'M.S. Marriage &amp; Family Therapy', school: 'Fuller Graduate School' },
-  { icon: `<ellipse cx="24" cy="28" rx="19" ry="6" stroke="#3B63C4" stroke-width="1"/><ellipse cx="24" cy="23" rx="19" ry="12" stroke="#3B63C4" stroke-width="1"/><circle cx="24" cy="9" r="3" fill="#C7D64F"/>`, degree: 'M.A. Spiritual Formation &amp; Soul Care', school: 'Talbot School of Theology' },
-  { icon: `<circle cx="18" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#3B63C4" stroke-width="1"/>`, degree: 'B.F.A. Design', school: 'Biola University' },
+  { degree: 'M.S. Marriage &amp; Family Therapy', school: 'Fuller Graduate School' },
+  { degree: 'M.A. Spiritual Formation &amp; Soul Care', school: 'Talbot School of Theology' },
+  { degree: 'B.F.A. Design', school: 'Biola University' },
 ];
 
 const hereBecause = [
@@ -82,7 +86,7 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
       {
         education.map((e) => (
           <div class="ruled-cell">
-            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" aria-hidden="true" set:html={e.icon} />
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" aria-hidden="true" set:html={eduIcon} />
             <span style="font-size:17px; line-height:1.5">
               <span set:html={e.degree} /><br />
               <span class="label" style="color:var(--ink-65); text-transform:none">{e.school}</span>
