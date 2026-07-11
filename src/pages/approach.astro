@@ -84,10 +84,10 @@ const frameworks = [
       </div>
       <p>Psychodynamic therapy draws on several interconnected frameworks, each one a different lens for understanding why we struggle and how lasting change happens.</p>
     </div>
-    <div class="ruled-grid cols-2" style="margin-bottom:56px">
+    <div class="ruled-grid cols-2 frameworks" style="margin-bottom:56px">
       {frameworks.map((f) => (
         <div class="ruled-cell">
-          <div class="label" style="font-weight:600; margin-bottom:12px">{f.name}</div>
+          <div class="label framework-name">{f.name}</div>
           <p style="color:inherit">{f.copy}</p>
         </div>
       ))}
@@ -118,3 +118,17 @@ const frameworks = [
     copy="If what you’ve read sounds interesting to you, I invite you to reach out. I offer a free 15-minute consultation to give you a chance to ask questions and get a feel for how we might work together."
   />
 </Layout>
+
+<style>
+  /* Framework cells stack the title above the copy (rather than the shared
+     row layout) and color the title with the lime accent. */
+  .frameworks .ruled-cell {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .framework-name {
+    color: var(--lime);
+    font-weight: 600;
+  }
+</style>
