@@ -1452,12 +1452,15 @@ p.body {
   .split.c-media,
   .quote-block,
   .footer-grid,
-  .grid-4,
   .detail-cards,
   .process-grid.cols-3,
   .link-grid.cols-3,
   .ruled-grid.cols-3 {
     grid-template-columns: 1fr;
+  }
+  /* "What the work moves toward" icons stay 2-up on tablet and mobile. */
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .portrait,
   .portrait.tall {
