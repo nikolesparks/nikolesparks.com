@@ -8,13 +8,29 @@ import NextSteps from '../components/NextSteps.astro';
 
 const tickerItems = ['Psychodynamic', 'Attachment-Based', 'Depth-Oriented', 'Relational', 'Collaborative'];
 
-const whoIWorkWith = ['Teens', 'Young Adults', 'Adults', 'Creatives', 'Professionals', 'Grad Students', 'Couples', 'Groups'];
-const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Self-Expression', 'Attachment', 'Trauma', 'Shame', 'Grief & Loss', 'Life Transitions', 'Relationship Issues'];
+const frameworks = [
+  {
+    name: 'Psychodynamic',
+    copy: 'We explore what lives beneath the surface: the patterns, defenses, and relational dynamics that operate outside awareness and shape your inner life.',
+  },
+  {
+    name: 'Attachment-Based',
+    copy: 'Your earliest relationships left a blueprint. We look at how that blueprint shows up in how you connect, trust, and protect yourself today.',
+  },
+  {
+    name: 'Relational',
+    copy: 'Therapy itself is a relationship. What unfolds between us becomes a live window into the patterns we are working to understand and change together.',
+  },
+  {
+    name: 'Depth-Oriented',
+    copy: 'Rather than managing symptoms, we stay curious about what the symptom is protecting. The work goes deeper, and so do the results.',
+  },
+];
 ---
 
 <Layout
-  title="Psychodynamic Depth Therapy Approach | Newport Beach, Fullerton & Orange County, CA"
-  description="Build a more connected and congruent life. Experience tailored, evidence-based, depth therapy that honors your full story and produces lasting change. Psychodynamic therapy for individuals, couples, and teens in Orange County, CA & online in California."
+  title="Psychodynamic Therapy Approach | Newport Beach & Fullerton"
+  description="Psychodynamic, attachment-based therapy in Newport Beach & Fullerton, CA. Understand the 'why' behind your patterns — for lasting change, not quick fixes."
   active="/approach/"
   path="/approach/"
 >
@@ -59,29 +75,30 @@ const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Se
     </div>
   </section>
 
-  <!-- Areas of focus -->
+  <!-- How I work -->
   <section class="section sage on-color">
     <div class="section-heading">
       <div class="stack">
-        <p class="eyebrow on-color">Services</p>
-        <h2 class="serif" style="font-size:48px; line-height:1.1">Areas of focus</h2>
+        <p class="eyebrow on-color">HOW I WORK</p>
+        <h2 class="serif" style="font-size:48px; line-height:1.1">The theory behind the practice.</h2>
       </div>
-      <p>I work with adults and teens who are seeking a deeper understanding of themselves and their emotional lives.</p>
+      <p>Psychodynamic therapy draws on several interconnected frameworks, each one a different lens for understanding why we struggle and how lasting change happens.</p>
     </div>
-    <div class="split c-1-1" style="align-items:start; gap:72px; margin-bottom:56px">
-      <div class="pill-block">
-        <div class="label">Who I work with</div>
-        <div class="pill-row">{whoIWorkWith.map((p) => <span class="pill">{p}</span>)}</div>
-      </div>
-      <div class="pill-block">
-        <div class="label">What I treat</div>
-        <div class="pill-row">{whatITreat.map((p) => <span class="pill">{p}</span>)}</div>
-      </div>
+    <div class="ruled-grid cols-2 frameworks" style="margin-bottom:56px">
+      {frameworks.map((f) => (
+        <div class="ruled-cell">
+          <div class="label framework-name">{f.name}</div>
+          <p style="color:inherit">{f.copy}</p>
+        </div>
+      ))}
     </div>
     <div class="card-row">
       <a class="service-card primary" href="/services/individual-therapy/"><span>Individual therapy</span><span class="arw" aria-hidden="true">→</span></a>
       <a class="service-card secondary" href="/services/couples-therapy/"><span>Couples therapy</span><span class="arw" aria-hidden="true">→</span></a>
     </div>
+    <p style="margin-top:28px">
+      Specialty care: <a class="text-link on-color" href="/services/premarital-counseling/">Premarital counseling</a>, <a class="text-link on-color" href="/services/therapy-for-anxiety/">Therapy for anxiety</a>, and <a class="text-link on-color" href="/services/therapy-for-creatives/">Therapy for creatives</a>.
+    </p>
   </section>
 
   <!-- What to expect -->
@@ -101,3 +118,17 @@ const whatITreat = ['Depression', 'Anxiety', 'Religious Issues', 'Identity', 'Se
     copy="If what you’ve read sounds interesting to you, I invite you to reach out. I offer a free 15-minute consultation to give you a chance to ask questions and get a feel for how we might work together."
   />
 </Layout>
+
+<style>
+  /* Framework cells stack the title above the copy (rather than the shared
+     row layout) and color the title with the lime accent. */
+  .frameworks .ruled-cell {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .framework-name {
+    color: var(--lime);
+    font-weight: 600;
+  }
+</style>
