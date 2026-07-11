@@ -404,6 +404,11 @@ button:hover .arw {
 .service-card:hover .more {
   color: var(--cream);
 }
+/* On a plain (cream) section the outlined secondary card wipes to ink, so its
+   ink rest-state text must flip to cream — this out-specifies .service-card.secondary. */
+.service-card.secondary:hover {
+  color: var(--cream);
+}
 /* On a colored (green) section, the outlined secondary card wipes to cream/ink */
 .on-color .service-card.secondary::before {
   background: var(--cream);
@@ -1452,12 +1457,15 @@ p.body {
   .split.c-media,
   .quote-block,
   .footer-grid,
-  .grid-4,
   .detail-cards,
   .process-grid.cols-3,
   .link-grid.cols-3,
   .ruled-grid.cols-3 {
     grid-template-columns: 1fr;
+  }
+  /* "What the work moves toward" icons stay 2-up on tablet and mobile. */
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .portrait,
   .portrait.tall {
