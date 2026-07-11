@@ -81,5 +81,25 @@ const jsonLd = pageGraph(...schema);
       </main>
       <Footer />
     </div>
+
+    <!-- Netlify Identity invite/recovery links land on the site root, not
+         /admin/. Only load the (otherwise unused) widget when one of those
+         tokens is actually present, so regular visitors pay no cost. -->
+    <script is:inline>
+      if (/[#&](confirmation|invite|recovery|email_change)_token=/.test(location.hash)) {
+        const s = document.createElement('script');
+        s.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+        s.onload = () => {
+          window.netlifyIdentity?.on('init', (user) => {
+            if (!user) {
+              window.netlifyIdentity.on('login', () => {
+                document.location.href = '/admin/';
+              });
+            }
+          });
+        };
+        document.body.appendChild(s);
+      }
+    </script>
   </body>
 </html>

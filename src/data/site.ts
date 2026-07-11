@@ -33,6 +33,7 @@ export const nav: NavItem[] = [
       { label: 'Premarital Counseling', href: '/services/premarital-counseling/' },
     ],
   },
+  { label: 'Blog', href: '/blog/' },
   { label: 'FAQs', href: '/faqs/' },
   { label: 'Contact', href: '/contact/' },
 ];

@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Requires "Identity" + "Git Gateway" enabled in the Netlify dashboard
+# (Site settings → Identity, and Site settings → Identity → Services →
+# Git Gateway). See the setup notes in the PR description.
+site_url: https://nikolesparks.com
+
+media_folder: "public/blog-images"
+public_folder: "/blog-images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    summary: "{{title}} — {{category}} — {{date}}"
+    sortable_fields: ["date", "title", "category"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Excerpt",
+          name: "excerpt",
+          widget: "text",
+          hint: "1–2 sentences shown on the blog listing page and in search/social previews.",
+        }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Anxiety", "Relationships", "Self-Awareness", "Creativity", "Life Transitions"],
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          picker_utc: true,
+        }
+      - { label: "Author", name: "author", widget: "string", default: "Nikole Sparks, AMFT" }
+      - {
+          label: "Cover Image",
+          name: "coverImage",
+          widget: "image",
+          required: false,
+          hint: "Shown at the top of the post. Leave blank to show a placeholder.",
+        }
+      - {
+          label: "Feature this post",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+          hint: "Shows large at the top of the blog page. Only feature one post at a time — the site always picks your most recent featured post if more than one is checked.",
+        }
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          default: false,
+          hint: "Draft posts are saved to GitHub but hidden from the live site until unchecked.",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
