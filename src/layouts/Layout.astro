@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
+import { pageGraph } from '../data/schema';
 
 interface Props {
   title?: string;
@@ -11,6 +12,10 @@ interface Props {
   active?: string;
   /** Path for the canonical/OG url, defaults to Astro.url.pathname. */
   path?: string;
+  /** Absolute or root-relative social share image. */
+  ogImage?: string;
+  /** Extra JSON-LD nodes (Service, FAQPage) merged into the site-wide graph. */
+  schema?: object[];
 }
 
 const {
@@ -18,9 +23,16 @@ const {
   description = site.description,
   active,
   path = Astro.url.pathname,
+  ogImage = '/nikole-sharecard.jpg',
+  schema = [],
 } = Astro.props;
 
 const canonical = new URL(path, site.url).href;
+const ogImageUrl = new URL(ogImage, site.url).href;
+
+// The practice + person entities are injected on every page; pages may append
+// Service / FAQPage nodes via the `schema` prop.
+const jsonLd = pageGraph(...schema);
 ---
 
 <!doctype html>
@@ -39,7 +51,16 @@ const canonical = new URL(path, site.url).href;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

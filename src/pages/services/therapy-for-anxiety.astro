@@ -5,6 +5,7 @@ import Glyph from '../../components/Glyph.astro';
 import Illustration from '../../components/Illustration.astro';
 import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
+import { faqPage } from '../../data/schema';
 
 const tickerItems = ['Worry', 'Overthinking', 'Perfectionism', 'Imposter Feelings', 'Restlessness', 'Avoidance', 'Bracing'];
 
@@ -51,6 +52,12 @@ const faqs = [
   description="Depth-oriented, psychodynamic therapy for anxiety in Newport Beach, Fullerton & online in California. Understand what your anxiety is really about."
   active="/services/"
   path="/services/therapy-for-anxiety/"
+  schema={[
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services/therapy-for-anxiety#faq',
+      url: 'https://nikolesparks.com/services/therapy-for-anxiety',
+    }),
+  ]}
 >
   <!-- Hero -->
   <section class="hero">

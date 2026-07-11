@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Illustration from '../../components/Illustration.astro';
 import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
+import { faqPage } from '../../data/schema';
 
 const whoFor = [
   'Dating couples considering engagement who want to use this season wisely',
@@ -35,6 +36,12 @@ const faqs = [
   description="Attachment-focused premarital counseling built around the Prepare & Enrich assessment. In Newport Beach, Fullerton, or online across California."
   active="/services/"
   path="/services/premarital-counseling/"
+  schema={[
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services/premarital-counseling#faq',
+      url: 'https://nikolesparks.com/services/premarital-counseling',
+    }),
+  ]}
 >
   <!-- Hero (sage) -->
   <section class="hero sage on-color">

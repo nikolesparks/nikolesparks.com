@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import NextSteps from '../../components/NextSteps.astro';
+import { couplesTherapyService } from '../../data/schema';
 
 const whoIWorkWith = [
   'Couples experiencing communication breakdowns who feel like they’re speaking different languages',
@@ -22,10 +23,11 @@ const process = [
 ---
 
 <Layout
-  title="Couples Therapy — Attachment-Based | Nikole Sparks"
-  description="Attachment-based couples therapy in Newport Beach, Fullerton & online in California. Working with the relationship itself — not taking sides."
+  title="Attachment-Based Couples Therapy in Newport Beach, CA | Couples"
+  description="Move from disconnection to connection with compassionate, attachment-based couples counseling. Offering affordable couples therapy to communicate better, work through conflict, and heal relationship patterns. Located in Orange County & online in CA."
   active="/services/"
   path="/services/couples-therapy/"
+  schema={[couplesTherapyService]}
 >
   <!-- Hero (sage) -->
   <section class="hero sage on-color">

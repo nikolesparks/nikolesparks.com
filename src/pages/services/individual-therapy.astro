@@ -4,6 +4,7 @@ import Glyph from '../../components/Glyph.astro';
 import Illustration from '../../components/Illustration.astro';
 import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
+import { individualTherapyService, faqPage } from '../../data/schema';
 
 const whoIWorkWith = [
   'High-functioning people managing daily responsibilities while battling persistent emptiness, heaviness, or feeling underwater',
@@ -35,10 +36,17 @@ const faqs = [
 ---
 
 <Layout
-  title="Individual Therapy — Newport Beach, Fullerton & Online | Nikole Sparks"
-  description="Weekly, open-ended depth therapy for adults and teens. Psychodynamic and attachment-based work on anxiety, identity, shame, grief, and more."
+  title="Individual Therapy in Newport Beach, Fullerton & Orange County | Nikole Sparks, AMFT"
+  description="Depth-oriented, attachment-based individual therapy in Newport Beach, Fullerton, and online in CA. Work through anxiety, trauma, identity, and relationship patterns with Nikole Sparks, AMFT."
   active="/services/"
   path="/services/individual-therapy/"
+  schema={[
+    individualTherapyService,
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services/individual-therapy#faq',
+      url: 'https://nikolesparks.com/services/individual-therapy',
+    }),
+  ]}
 >
   <!-- Hero (blue) -->
   <section class="hero blue on-color">
