@@ -1030,6 +1030,9 @@ p.body {
   text-transform: uppercase;
   color: var(--lime);
   font-style: normal;
+  /* Line up with the blockquote's text column (0.5em of its 44px font),
+     not the hanging quote mark's outer edge. */
+  margin-left: 22px;
 }
 
 /* ---------- practical details cards (About) ---------- */
@@ -1619,6 +1622,9 @@ p.body {
   }
   .quote-block blockquote {
     font-size: 32px;
+  }
+  .quote-block cite {
+    margin-left: 16px;
   }
   .portrait .accent {
     width: 160px;
