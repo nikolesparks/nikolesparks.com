@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Illustration from '../../components/Illustration.astro';
 import NextSteps from '../../components/NextSteps.astro';
 import { couplesTherapyService } from '../../data/schema';
 
@@ -40,12 +41,7 @@ const process = [
       </p>
       <a class="cta on-blue" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
-    <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
-      <circle cx="180" cy="230" r="140" stroke="#F6F1E4" stroke-width="1"></circle>
-      <circle cx="300" cy="230" r="140" stroke="#F6F1E4" stroke-width="1"></circle>
-      <circle cx="240" cy="230" r="6" fill="#F6F1E4"></circle>
-      <circle cx="180" cy="90" r="7" fill="#C7D64F"></circle>
-    </svg>
+    <Illustration name="connection-full" size="clamp(380px, 44vw, 520px)" color="var(--cream)" class="hero-figure" />
   </section>
 
   <!-- Approach (cream) -->

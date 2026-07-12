@@ -482,6 +482,16 @@ em.accent {
   display: block;
   margin: 0 auto;
 }
+/* Full-scene illustrations used as hero art read a touch thin at this
+   scale — bump every stroke by 0.5px. Scoped to .illustration so it doesn't
+   touch the raw hand-drawn hero SVGs elsewhere on the site. Must target the
+   child shapes directly: each one carries its own stroke-width="1"
+   presentation attribute, which isn't overridden by a rule on an ancestor
+   (inheritance only applies when the element has no specified value of
+   its own). */
+.illustration.hero-figure :is(circle, ellipse, line, path) {
+  stroke-width: 1.5;
+}
 
 /* colored hero variants */
 .hero.blue {
