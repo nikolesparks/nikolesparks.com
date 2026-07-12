@@ -49,6 +49,10 @@ export const illustrations: Record<string, { label: string; svg: string; viewBox
   // Same shape as 'insight', redrawn on the 0 0 480 480 grid so its stroke
   // reads at the same visual weight as the full-illustration set when sized large.
   'insight-full': { label: "Insight", viewBox: '0 0 480 480', svg: `<circle cx="240" cy="240" r="64" stroke="currentColor" stroke-width="1"></circle> <line x1="240" y1="96" x2="240" y2="40" stroke="currentColor" stroke-width="1"></line> <line x1="240" y1="384" x2="240" y2="440" stroke="currentColor" stroke-width="1"></line> <line x1="96" y1="240" x2="40" y2="240" stroke="currentColor" stroke-width="1"></line> <line x1="384" y1="240" x2="440" y2="240" stroke="currentColor" stroke-width="1"></line> <line x1="140" y1="140" x2="100" y2="100" stroke="currentColor" stroke-width="1"></line> <line x1="340" y1="140" x2="380" y2="100" stroke="currentColor" stroke-width="1"></line> <line x1="140" y1="340" x2="100" y2="380" stroke="currentColor" stroke-width="1"></line> <line x1="340" y1="340" x2="380" y2="380" stroke="currentColor" stroke-width="1"></line> <circle cx="240" cy="240" r="6" fill="#C7D64F"></circle>` },
+
+  // Same shape as 'relationships', redrawn on the 0 0 480 440 grid so its
+  // stroke reads at full-illustration weight (matches 'insight-full').
+  'relationships-full': { label: "Relationships", viewBox: '0 0 480 440', svg: `<circle cx="240" cy="160" r="104" stroke="currentColor" stroke-width="1"></circle> <circle cx="160" cy="312" r="104" stroke="currentColor" stroke-width="1"></circle> <circle cx="320" cy="312" r="104" stroke="currentColor" stroke-width="1"></circle> <circle cx="240" cy="260" r="6" fill="#C7D64F"></circle>` },
 };
 
 export type IllustrationName = keyof typeof illustrations;
