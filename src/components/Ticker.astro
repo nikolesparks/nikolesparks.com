@@ -2,11 +2,12 @@
 interface Props {
   items: string[];
   label?: string;
+  variant?: 'ink' | 'blue';
 }
-const { items, label = 'Areas of focus' } = Astro.props;
+const { items, label = 'Areas of focus', variant = 'ink' } = Astro.props;
 ---
 
-<div class="ticker" aria-label={label}>
+<div class={`ticker${variant === 'blue' ? ' blue' : ''}`} aria-label={label}>
   {
     items.map((item, i) => (
       <>

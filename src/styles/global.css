@@ -300,15 +300,25 @@ img {
   border-bottom-color: var(--cream);
 }
 
+/* Smaller inline links that read as part of body copy rather than a
+   standalone button — the lime accent + underline signal "clickable"
+   against the site's darker on-color section backgrounds (sage/blue/ink). */
+.inline-link {
+  color: var(--lime);
+  border-bottom: 1px solid var(--lime);
+  font-weight: 500;
+}
+
 /* ---------- dynamic button hover: color wipe + arrow slide ---------- */
 .arw {
   display: inline-block;
+  margin-left: 10px;
   transition: transform 0.3s ease;
 }
 /* the arrow expands to the right on hover of any interactive parent */
 a:hover .arw,
 button:hover .arw {
-  transform: translateX(6px);
+  transform: translateX(10px);
 }
 
 /* Solid/outline buttons get a left-to-right fill wipe on hover, with the
@@ -507,6 +517,9 @@ em.accent {
   white-space: nowrap;
   overflow: hidden;
 }
+.ticker.blue {
+  background: var(--blue);
+}
 
 /* ---------- generic section ---------- */
 .section {
@@ -592,6 +605,9 @@ em.accent {
   display: flex;
   flex-direction: column;
   gap: 26px;
+}
+.prose {
+  gap: 36px;
 }
 .prose p {
   font-size: 17px;
@@ -999,6 +1015,10 @@ p.body {
   line-height: 1.2;
   margin: 0;
   text-wrap: pretty;
+  /* Hanging punctuation: pull the opening quote mark left of the text
+     column so the body copy — not the glyph — sets the left edge. */
+  padding-left: 0.5em;
+  text-indent: -0.5em;
 }
 .quote-block blockquote em {
   color: inherit;
@@ -1832,6 +1852,9 @@ p.body {
   border-bottom: 1px solid var(--ink-30);
   color: var(--ink);
   text-wrap: pretty;
+  /* Hanging punctuation, matching .quote-block blockquote elsewhere. */
+  padding-left: 0.5em;
+  text-indent: -0.5em;
 }
 .article-body a {
   color: var(--blue);

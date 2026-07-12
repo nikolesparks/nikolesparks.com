@@ -1,12 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Ticker from '../components/Ticker.astro';
 import Portrait from '../components/Portrait.astro';
 import Glyph from '../components/Glyph.astro';
 import Illustration from '../components/Illustration.astro';
 import NextSteps from '../components/NextSteps.astro';
-
-const tickerItems = ['Psychodynamic', 'Attachment-Based', 'Depth-Oriented', 'Relational', 'Collaborative'];
 
 const frameworks = [
   {
@@ -49,8 +46,6 @@ const frameworks = [
     <Illustration name="depth-approach" size="clamp(240px, 34vw, 380px)" class="hero-illustration" />
   </section>
 
-  <Ticker items={tickerItems} label="Modalities" />
-
   <!-- Philosophy -->
   <section class="section split c-narrow-wide">
     <div class="col gap-20">
@@ -58,7 +53,7 @@ const frameworks = [
       <h2 class="h2-serif">Connecting deeper,<br><em>living freer.</em></h2>
       <Glyph name="target-ellipses" class="mt-16" />
     </div>
-    <div class="prose prose-15" style="gap:24px;">
+    <div class="prose prose-15">
       <p>We are shaped by the relationships, experiences, and stories that surround us. Some of these stories bring connection and belonging while others leave imprints of pain, shame, or self-doubt. Over time, we develop ways of being with ourselves and others that often reflect our early experiences. Some of these patterns serve us well. Others leave us feeling stuck, disconnected, or unsure of how to move forward. Many of these ways of relating operate outside our awareness, quietly shaping our relationship to ourselves and others in ways we can’t quite grasp. This is where therapy can help.</p>
       <p>Psychodynamic therapy offers a pathway to work through persistent challenges with anxiety, depression, intimacy and closeness, unprocessed loss, patterns of self-sabotage, emotional expression, and beyond.</p>
       <p>Many of the people I work with come to therapy looking for answers to the deep questions about why they’re struggling, or when their best attempts to change on their own aren’t working. While tools can be helpful, they don’t always get to the heart of what’s really going on. My work focuses on meaningful, lasting change. Once you get the deep, personalized support you need to heal and change, everything else changes, too. Using a psychodynamic, depth-oriented approach, we look to understand the “why” behind your feelings and behaviors. Together, we’ll explore how your foundational experiences have shaped your relationships and begin the work of creating new pathways for confidence, connection, and growth.</p>
@@ -96,8 +91,8 @@ const frameworks = [
       <a class="service-card primary" href="/services/individual-therapy/"><span>Individual therapy</span><span class="arw" aria-hidden="true">→</span></a>
       <a class="service-card secondary" href="/services/couples-therapy/"><span>Couples therapy</span><span class="arw" aria-hidden="true">→</span></a>
     </div>
-    <p style="margin-top:28px">
-      Specialty care: <a class="text-link on-color" href="/services/premarital-counseling/">Premarital counseling</a>, <a class="text-link on-color" href="/services/therapy-for-anxiety/">Therapy for anxiety</a>, and <a class="text-link on-color" href="/services/therapy-for-creatives/">Therapy for creatives</a>.
+    <p style="margin-top:28px; font-size:15px">
+      Specialty care: <a class="inline-link" href="/services/premarital-counseling/">Premarital counseling</a>, <a class="inline-link" href="/services/therapy-for-anxiety/">Therapy for anxiety</a>, and <a class="inline-link" href="/services/therapy-for-creatives/">Therapy for creatives</a>.
     </p>
   </section>
 
