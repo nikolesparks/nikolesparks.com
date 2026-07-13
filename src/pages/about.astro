@@ -53,10 +53,13 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
     <Portrait
+      src="/mikole-home_2@2x.jpg"
+      alt="Nikole Sparks"
       placeholder="Nikole — portrait"
       tall
       accent="tr"
       caption={`CA AMFT 150080 · ${site.supervisor}`}
+      class="hero-portrait"
     />
   </section>
 
@@ -156,3 +159,13 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
     steps={gettingStarted}
   />
 </Layout>
+
+<style>
+  /* The source photo has a visible black film-frame border inset from the
+     edge — scale it up so that border lines up with the container edge
+     instead of leaving a sliver of background showing outside it. */
+  :global(.hero-portrait .frame img) {
+    transform: scale(1.16);
+    transform-origin: center 38%;
+  }
+</style>
