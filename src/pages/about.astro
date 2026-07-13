@@ -14,6 +14,7 @@ const education = [
   { degree: 'M.S. Marriage &amp; Family Therapy', school: 'Fuller Graduate School' },
   { degree: 'M.A. Spiritual Formation &amp; Soul Care', school: 'Talbot School of Theology' },
   { degree: 'B.F.A. Design', school: 'Biola University' },
+  { degree: 'Certificate in Psychoanalytic Psychotherapy', school: 'Newport Psychoanalytic Institute', status: 'In-process' },
 ];
 
 const hereBecause = [
@@ -83,13 +84,15 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
   <section class="section" style="padding-top:0">
     <h2 class="eyebrow" style="margin-bottom:16px">Education</h2>
     <p style="font-size:14px; color:var(--ink-65); margin:0 0 40px">Nikole Sparks is an Associate Marriage and Family Therapist (AMFT 150080) based in Newport Beach and Fullerton, California.</p>
-    <div class="ruled-grid cols-3 feature">
+    <div class="ruled-grid cols-2 feature">
       {
         education.map((e) => (
           <div class="ruled-cell">
             <svg viewBox="0 0 48 48" width="36" height="36" fill="none" aria-hidden="true" set:html={eduIcon} />
             <span style="font-size:17px; line-height:1.5">
-              <span set:html={e.degree} /><br />
+              <span set:html={e.degree} />
+              {e.status && <span class="label" style="color:var(--blue); margin-left:8px">{e.status}</span>}
+              <br />
               <span class="label" style="color:var(--ink-65); text-transform:none">{e.school}</span>
             </span>
           </div>
