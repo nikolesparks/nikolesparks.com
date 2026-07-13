@@ -31,12 +31,12 @@ const glyphs = [
 ];
 
 const soundFamiliar = [
-  { illus: 'anxiety', copy: 'Anxiety hums in the background, no matter what you accomplish.' },
-  { illus: 'relationships', copy: 'Relationships, romantic or otherwise, keep hitting the same wall.' },
-  { illus: 'success', copy: 'Career success feels hollow. You’re questioning what actually matters.' },
-  { illus: 'emotional-intimacy', copy: 'It’s difficult to connect the way you’re craving, or to express yourself, your needs, or what you really want.' },
-  { illus: 'insight', copy: 'Past experiences still shape you in ways you can’t quite see clearly.' },
-  { illus: 'disconnection', copy: 'You feel a disconnection from yourself that’s hard to name.' },
+  { copy: 'Anxiety hums in the background, no matter what you accomplish.' },
+  { copy: 'Relationships, romantic or otherwise, keep hitting the same wall.' },
+  { copy: 'Career success feels hollow. You’re questioning what actually matters.' },
+  { copy: 'It’s difficult to connect the way you’re craving, or to express yourself, your needs, or what you really want.' },
+  { copy: 'Past experiences still shape you in ways you can’t quite see clearly.' },
+  { copy: 'You feel a disconnection from yourself that’s hard to name.' },
 ] as const;
 
 const whoISee = ['Teens', 'Young Adults', 'Grad Students', 'Adults', 'Creatives', 'Professionals', 'Ministry Leaders', 'Couples'];
@@ -104,7 +104,6 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
           <article class="ruled-cell">
             <div class="meta">
               <span class="num">{String(i + 1).padStart(2, '0')}</span>
-              <Illustration name={item.illus} size="52px" />
             </div>
             <div class="copy">{item.copy}</div>
           </article>

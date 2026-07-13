@@ -554,7 +554,7 @@ em.accent {
 .section-heading {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: start;
   gap: 64px;
   margin-bottom: 48px;
 }
