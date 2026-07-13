@@ -32,13 +32,15 @@ const glyphs = [
 
 const soundFamiliar = [
   { illus: 'anxiety', copy: 'Anxiety hums in the background, no matter what you accomplish.' },
-  { illus: 'relationships', copy: 'Relationships keep hitting the same wall, no matter how much you talk it through.' },
-  { illus: 'success', copy: 'Career success feels hollow — you’re questioning what actually matters.' },
-  { illus: 'disconnection', copy: 'A disconnection from yourself that’s hard to name, and harder to ignore.' },
+  { illus: 'relationships', copy: 'Relationships, romantic or otherwise, keep hitting the same wall.' },
+  { illus: 'success', copy: 'Career success feels hollow. You’re questioning what actually matters.' },
+  { illus: 'emotional-intimacy', copy: 'It’s difficult to connect the way you’re craving, or to express yourself, your needs, or what you really want.' },
+  { illus: 'insight', copy: 'Past experiences still shape you in ways you can’t quite see clearly.' },
+  { illus: 'disconnection', copy: 'You feel a disconnection from yourself that’s hard to name.' },
 ] as const;
 
-const whoISee = ['Young Adults', 'Professionals', 'Creatives', 'Grad Students', 'Couples', 'Teens'];
-const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Grief & Loss', 'Life Transitions', 'Relationships', 'Religious Issues'];
+const whoISee = ['Teens', 'Young Adults', 'Grad Students', 'Adults', 'Creatives', 'Professionals', 'Ministry Leaders', 'Couples'];
+const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Grief & Loss', 'Life Transitions', 'Relationships', 'Religious Issues', 'Depression', 'Self-expression'];
 ---
 
 <Layout
@@ -53,7 +55,7 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
       <p class="eyebrow">Therapist — Newport Beach · Fullerton · Online throughout CA</p>
       <h1>Underneath the noise, there’s a version of you <em>waiting to be known.</em></h1>
       <p>
-        I offer individual and couples therapy in Newport Beach and Fullerton, with telehealth throughout California, helping people uncover the roots of their anxiety, emotional disconnection, and relationship struggles so they can move through life with deeper connection, authenticity, and creativity.
+        I help people uncover the roots of their anxiety, emotional disconnection, and relationship struggles so they can move through life with deeper connection, authenticity, and creativity. I offer individual and couples therapy in Newport Beach and Fullerton, and telehealth throughout California.
       </p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
@@ -83,16 +85,19 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
   <section class="section tight" aria-labelledby="sound-familiar">
     <div class="section-heading">
       <div class="stack">
-        <p class="eyebrow">Sound familiar?</p>
         <h2 id="sound-familiar" class="serif" style="font-size:48px; line-height:1.1; max-width:640px">
-          Doing fine by every measure. Still, something’s off.
+          Doing fine by most measures. Still, something feels off.
         </h2>
       </div>
       <p>
-        The people I work with are thoughtful, capable, and self-aware enough to know that
-        “managing” isn’t the same as living.
+        You’re managing. You’re showing up. From the outside, things probably look fine, maybe
+        even good. But underneath, something’s been off for a while. The same patterns keep
+        showing up, no matter how many times you talk it through with yourself. You want
+        something more. Many of the people I work with come to therapy when their best attempts
+        to change on their own aren’t working.
       </p>
     </div>
+    <p class="eyebrow" style="margin-bottom:20px">Sound familiar?</p>
     <div class="ruled-grid cols-2 feature">
       {
         soundFamiliar.map((item, i) => (
@@ -113,14 +118,16 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
     <div class="col gap-28">
       <p class="eyebrow on-color">The approach</p>
       <h2 id="approach-title" class="h2-serif" style="font-size:52px">
-        We won’t just manage the problem. We’ll get curious about
+        We won’t just talk about the problem. We’ll get curious about
         <em>where it came from.</em>
       </h2>
       <p class="body">
-        Depth work means slowing down and asking why. Where do these patterns come from?
-        What are you living out that you never consciously chose? The understanding you build
-        here isn’t a tool you set aside after a few months — it becomes part of how you know
-        yourself.
+        The work we do together is depth-oriented, which means we’re not just looking at what’s
+        happening on the surface. We slow down and look at why. Where do these feelings and
+        patterns come from? What do your reactions actually mean? What are you living out that
+        you didn’t consciously choose? The goal is to help you notice the patterns that may be
+        holding you back, understand how they affect your relationships and choices, and free
+        you to inhabit your life in a way that feels truer to who you are and the life you want.
       </p>
       <a class="text-link on-color" href="/approach/">How I work <span class="arw">→</span></a>
     </div>
@@ -137,14 +144,16 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
       </h2>
       <p class="label" style="color:var(--ink-65)">{site.supervisor.replace('Supervised by', 'AMFT 150080 · Supervised by')}</p>
       <p class="body">
-        I believe getting to know yourself — really know yourself — is one of the most
-        worthwhile things you’ll ever do. Not the version of you that shows up for everyone
-        else, but the one shaped by your history, your relationships, your story so far.
+        I believe getting to know yourself, really know yourself, is one of the most worthwhile
+        things you’ll ever do. By connecting more deeply with your story, your emotions, and
+        the people around you, you can begin to live with a greater sense of authenticity,
+        freedom, and meaning.
       </p>
       <p class="body">
-        My approach is warm, collaborative, and engaged. Together we’ll make connections,
-        find out what healing looks like for you, and build a deeper relationship to yourself
-        and what truly matters.
+        My approach is warm, collaborative, and engaged. I value spending the time it takes to
+        really get to know you, and to help you get to know yourself. Together, we’ll make
+        connections, find out what healing looks like for you, and build a deeper relationship
+        to yourself and what truly matters.
       </p>
       <a class="text-link" href="/about/">About Nikole <span class="arw">→</span></a>
     </div>
@@ -156,17 +165,17 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
     <div class="section-heading">
       <div class="stack">
         <p class="eyebrow on-color">Services</p>
-        <h2 id="services-title" class="serif" style="font-size:48px; line-height:1.1">Areas of Focus — Newport Beach &amp; Fullerton, CA</h2>
+        <h2 id="services-title" class="serif" style="font-size:48px; line-height:1.1">Where We’ll Focus</h2>
       </div>
       <p>
         For adults and teens seeking a deeper understanding of themselves and their emotional
-        lives. In-person in Newport Beach and Fullerton, or online throughout California.
+        lives, in person in Newport Beach and Fullerton, or online throughout California.
       </p>
     </div>
 
     <div class="split c-1-1" style="align-items:start; gap:72px; margin-bottom:36px">
       <div class="pill-block">
-        <div class="label">Who I see</div>
+        <div class="label">Who I work with</div>
         <div class="pill-row">{whoISee.map((p) => <span class="pill">{p}</span>)}</div>
       </div>
       <div class="pill-block">
@@ -180,7 +189,7 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
       <a class="service-card secondary" href="/services/couples-therapy/"><span>Couples therapy</span><span class="arw" aria-hidden="true">→</span></a>
     </div>
     <p style="margin-top:28px; font-size:15px">
-      Also offering <a class="inline-link" href="/services/premarital-counseling/">Premarital counseling</a>. New here? Start with the <a class="inline-link" href="/faqs/">FAQs</a>.
+      Also offering <a class="inline-link" href="/services/premarital-counseling/">premarital counseling</a>. New here? Start with the <a class="inline-link" href="/faqs/">FAQs</a>.
     </p>
   </section>
 </Layout>
