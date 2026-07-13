@@ -10,6 +10,7 @@ interface Props {
   accent?: 'bl' | 'tr';
   caption?: string;
   class?: string;
+  duotone?: boolean;
 }
 const {
   placeholder,
@@ -19,6 +20,7 @@ const {
   accent = 'bl',
   caption,
   class: className,
+  duotone = true,
 } = Astro.props;
 ---
 
@@ -36,8 +38,8 @@ const {
   <div class="frame">
     {src ? (
       <>
-        <img src={src} alt={alt} loading="lazy" />
-        <div class="overlay"></div>
+        <img src={src} alt={alt} loading="lazy" class={duotone ? '' : 'no-duotone'} />
+        {duotone && <div class="overlay"></div>}
       </>
     ) : (
       <div class="placeholder">{placeholder}</div>

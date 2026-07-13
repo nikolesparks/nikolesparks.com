@@ -973,6 +973,9 @@ p.body {
   object-fit: cover;
   filter: grayscale(1) contrast(1.08) brightness(1.05);
 }
+.portrait .frame img.no-duotone {
+  filter: none;
+}
 .portrait .frame .overlay {
   position: absolute;
   inset: 0;
