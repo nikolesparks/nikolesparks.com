@@ -554,7 +554,7 @@ em.accent {
 .section-heading {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: start;
   gap: 64px;
   margin-bottom: 48px;
 }
@@ -576,6 +576,16 @@ em.accent {
   margin: 0;
   max-width: 420px;
   color: var(--ink-75);
+}
+@media (min-width: 821px) {
+  /* Offset the body copy so its top lines up with the headline, not the
+     eyebrow above it (eyebrow line-height + stack gap). */
+  .section-heading .stack .eyebrow {
+    line-height: 1;
+  }
+  .section-heading > p {
+    margin-top: 32px;
+  }
 }
 .on-color .section-heading p {
   color: var(--cream-80);

@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Portrait from '../components/Portrait.astro';
 import Illustration from '../components/Illustration.astro';
 import NextSteps from '../components/NextSteps.astro';
+import Ticker from '../components/Ticker.astro';
+
+const approachTags = ['Psychodynamic', 'Attachment-Based', 'Relational', 'Depth-Oriented', 'Collaborative'];
 
 const frameworks = [
   {
@@ -45,6 +48,8 @@ const frameworks = [
     <Illustration name="depth-approach" size="clamp(380px, 44vw, 520px)" class="hero-figure hero-illustration" />
   </section>
 
+  <Ticker items={approachTags} label="Approach" variant="blue" />
+
   <!-- Philosophy -->
   <section class="section split c-narrow-wide">
     <div class="col gap-20">
@@ -52,7 +57,7 @@ const frameworks = [
       <h2 class="h2-serif">Connecting deeper,<br><em>living freer.</em></h2>
       <Illustration name="expansion-full" size="260px" color="var(--blue)" class="hero-figure mt-16" />
     </div>
-    <div class="prose prose-15">
+    <div class="prose prose-15" style="gap:48px">
       <p>We are shaped by the relationships, experiences, and stories that surround us. Some of these stories bring connection and belonging while others leave imprints of pain, shame, or self-doubt. Over time, we develop ways of being with ourselves and others that often reflect our early experiences. Some of these patterns serve us well. Others leave us feeling stuck, disconnected, or unsure of how to move forward. Many of these ways of relating operate outside our awareness, quietly shaping our relationship to ourselves and others in ways we can’t quite grasp. This is where therapy can help.</p>
       <p>Psychodynamic therapy offers a pathway to work through persistent challenges with anxiety, depression, intimacy and closeness, unprocessed loss, patterns of self-sabotage, emotional expression, and beyond.</p>
       <p>Many of the people I work with come to therapy looking for answers to the deep questions about why they’re struggling, or when their best attempts to change on their own aren’t working. While tools can be helpful, they don’t always get to the heart of what’s really going on. My work focuses on meaningful, lasting change. Once you get the deep, personalized support you need to heal and change, everything else changes, too. Using a psychodynamic, depth-oriented approach, we look to understand the “why” behind your feelings and behaviors. Together, we’ll explore how your foundational experiences have shaped your relationships and begin the work of creating new pathways for confidence, connection, and growth.</p>
@@ -74,9 +79,9 @@ const frameworks = [
     <div class="section-heading">
       <div class="stack">
         <p class="eyebrow on-color">HOW I WORK</p>
-        <h2 class="serif" style="font-size:48px; line-height:1.1">The theory behind the practice.</h2>
+        <h2 class="serif" style="font-size:48px; line-height:1.1">What shapes how I work with you.</h2>
       </div>
-      <p>Psychodynamic therapy draws on several interconnected frameworks, each one a different lens for understanding why we struggle and how lasting change happens.</p>
+      <p>I work from a psychodynamic framework. Psychodynamic therapy highlights the ways we relate that operate outside our awareness, shaping our relationships with ourselves and others in ways we can’t quite grasp. The goal is to help you notice the patterns that may be holding you back, understand how they affect your relationships and choices, and free you to inhabit your life in a way that feels truer to who you are and the life you want.</p>
     </div>
     <div class="ruled-grid cols-2 frameworks" style="margin-bottom:56px">
       {frameworks.map((f) => (
@@ -91,7 +96,7 @@ const frameworks = [
       <a class="service-card secondary" href="/services/couples-therapy/"><span>Couples therapy</span><span class="arw" aria-hidden="true">→</span></a>
     </div>
     <p style="margin-top:28px; font-size:15px">
-      Specialty care: <a class="inline-link" href="/services/premarital-counseling/">Premarital counseling</a>, <a class="inline-link" href="/services/therapy-for-anxiety/">Therapy for anxiety</a>, and <a class="inline-link" href="/services/therapy-for-creatives/">Therapy for creatives</a>.
+      Specialty care: <a class="inline-link" href="/services/premarital-counseling/">premarital counseling</a>, <a class="inline-link" href="/services/therapy-for-anxiety/">therapy for anxiety</a>, and <a class="inline-link" href="/services/therapy-for-creatives/">therapy for creatives</a>.
     </p>
   </section>
 
@@ -101,8 +106,8 @@ const frameworks = [
     <div class="col">
       <p class="eyebrow">What to expect</p>
       <h2 class="h2-serif">Our work <em>together.</em></h2>
-      <p class="body">Healing unfolds in its own time. Our work together will honor this natural rhythm, building trust and welcoming all parts of your experience. I approach each person with highly personalized support — working under the fundamental belief that everyone is unique, and that healing occurs within the context of a safe, genuine, and empathic therapeutic relationship.</p>
-      <p class="body">We’ll meet regularly to create a space where both the spoken and unspoken aspects of your experience can be understood with curiosity and care. Our work is collaborative, working together to get to know and understand you, and helping you create connections and discover new possibilities. This is slow, intentional work. It is not about rushing or powering through, but about making room — for reflection, for growth, for a deeper sense of self-compassion that honors the complexity of who you are.</p>
+      <p class="body">Healing unfolds in its own time. Our work together will honor that rhythm, building trust and welcoming all parts of your experience. I meet each person with highly personalized support, working from the belief that everyone is unique and that healing happens within a safe, genuine, and empathic therapeutic relationship.</p>
+      <p class="body">We’ll meet regularly to create a space where both the spoken and unspoken parts of your experience can be understood with curiosity and care. Our work is collaborative: we work together to get to know and understand you, create connections, and discover new possibilities. This is slow, intentional work. It’s about making room for reflection, for growth, and for a deeper sense of self-compassion that honors the complexity of who you are.</p>
       <a class="text-link" href="/about/">About Nikole <span class="arw">→</span></a>
     </div>
   </section>
