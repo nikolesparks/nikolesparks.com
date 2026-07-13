@@ -621,6 +621,9 @@ em.accent {
 .split.c-media {
   grid-template-columns: 420px 1fr;
 }
+.split.c-wide-narrow {
+  grid-template-columns: 1fr 380px;
+}
 .split .col {
   display: flex;
   flex-direction: column;
@@ -1501,6 +1504,7 @@ p.body {
   .split.c-1-1,
   .split.c-narrow-wide,
   .split.c-media,
+  .split.c-wide-narrow,
   .quote-block,
   .footer-grid,
   .detail-cards,
