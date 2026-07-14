@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Illustration from '../../components/Illustration.astro';
+import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
-import { couplesTherapyService } from '../../data/schema';
+import { couplesTherapyService, faqPage } from '../../data/schema';
 
 const whoIWorkWith = [
   'Couples experiencing communication breakdowns who feel like they’re speaking different languages',
@@ -21,6 +22,15 @@ const process = [
   { title: 'Learning to Show Up for Each Other', copy: 'As things progress, you’ll both get better at noticing what the other actually needs, and responding to it. That builds a foundation where you can both feel seen, which makes more vulnerability and closeness possible.', icon: `<circle cx="18" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/>` },
   { title: 'Deepening connection', copy: 'As we address the patterns that create distance, many couples find their bond strengthened, and a relationship spacious enough to hold the needs of two separate people choosing to journey together.', icon: `<circle cx="18" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/><circle cx="30" cy="24" r="13" stroke="#C7D64F" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#C7D64F"/>` },
 ];
+
+const faqs = [
+  { q: 'What does couples therapy with you actually look like?', a: ['Sessions are 50 minutes, and unlike individual work, both of you are in the room together from the start. I’m not there to referee or take sides. My attention is on the relationship itself: the pattern the two of you keep landing in, and what it might be protecting each of you from. Early sessions are mostly about understanding how you got here. Over time, we slow down the moments that usually spiral, so you can both stay present with what’s actually happening between you.'] },
+  { q: 'Do you take sides in couples therapy?', a: ['No. My role is to hold the relationship as the client, not either partner individually. That means I’m listening for the pattern the two of you create together rather than deciding who’s right in a given disagreement. Most couples find this a relief. It gets you both out of a courtroom dynamic and into a shared curiosity about what’s actually happening between you.'] },
+  { q: 'What if we’re not sure our relationship can be saved?', a: ['That uncertainty is a completely reasonable place to start from. Some couples come in already committed to staying together and want tools to do it well. Others are genuinely unsure and want clarity before making a bigger decision. Either way, I can help you get a clearer picture of what’s happening in your relationship and what your options actually are, without pushing you toward one outcome or another.'] },
+  { q: 'What’s the difference between couples therapy and premarital counseling?', a: ['Premarital counseling is built around the <a href="/services/premarital-counseling/">Prepare &amp; Enrich assessment</a> and designed for couples preparing for marriage. It tends to be shorter and more structured, with a shared curriculum for both of you. Couples therapy is ongoing and open-ended, and it’s for relationships at any stage, married or not, that want to work through what’s already showing up. Many couples move from one into the other, and either is a reasonable place to begin.'] },
+  { q: 'What if my partner is hesitant about therapy?', a: ['That’s common, and it doesn’t mean the work can’t happen. Sometimes one partner is more ready than the other, and that gap is itself something worth understanding together. I’m happy to talk with the more hesitant partner directly, answer their questions, and let them get a feel for how I work before committing to anything.'] },
+  { q: 'Do you offer couples therapy online?', a: ['Yes. I see couples in person in Newport Beach and Fullerton, and via telehealth throughout California. For couples juggling different schedules or locations, telehealth often makes consistency easier, and the quality of the work translates well to a video format.'] },
+];
 ---
 
 <Layout
@@ -28,7 +38,13 @@ const process = [
   description="Attachment-based couples therapy in Newport Beach & Fullerton, CA (telehealth statewide). Work through conflict, disconnection & communication patterns."
   active="/services/"
   path="/services/couples-therapy/"
-  schema={[couplesTherapyService]}
+  schema={[
+    couplesTherapyService,
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services/couples-therapy#faq',
+      url: 'https://nikolesparks.com/services/couples-therapy',
+    }),
+  ]}
 >
   <!-- Hero (sage) -->
   <section class="hero sage on-color">
@@ -98,8 +114,27 @@ const process = [
     </div>
   </section>
 
+  <!-- FAQs -->
+  <section class="section" style="display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start">
+    <div class="sticky-heading">
+      <p class="eyebrow">Couples therapy</p>
+      <h2 class="h2-serif">Frequently asked questions</h2>
+      <Illustration name="questions-full" size="240px" class="mt-16" />
+    </div>
+    <Faq items={faqs} />
+  </section>
+
   <NextSteps
     heading="Ready to begin? <em>Let’s talk.</em>"
     copy="I offer a free phone consultation — a chance to ask questions and get a feel for how we might work together. In-person in Newport Beach and Fullerton, or via telehealth throughout California."
   />
 </Layout>
+
+<style>
+  @media (max-width: 820px) {
+    section[style*='grid-template-columns:1fr 1.5fr'] {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+</style>

@@ -2,7 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Ticker from '../../components/Ticker.astro';
 import Illustration from '../../components/Illustration.astro';
+import Faq from '../../components/Faq.astro';
 import NextSteps from '../../components/NextSteps.astro';
+import { faqPage } from '../../data/schema';
 
 const tickerItems = ['Individuals', 'Couples', 'Teens', 'Creatives', 'Premarital', 'In-Person', 'Online CA'];
 
@@ -11,6 +13,13 @@ const specialties = [
   { href: '/services/therapy-for-anxiety/', title: 'Therapy for anxiety', desc: 'Get to know what your anxiety is responding to and protecting by listening to what it’s trying to tell you.' },
   { href: '/services/therapy-for-creatives/', title: 'Therapy for creatives', desc: 'Navigate burnout, dry spells, and lost direction by understanding the emotional undercurrents beneath them.' },
 ];
+
+const faqs = [
+  { q: 'How do I know if individual or couples therapy is the right place to start?', a: ['If what’s on your mind is mostly about you, your patterns, your history, your inner world, individual therapy is usually the better starting point. If the friction lives mainly between you and a partner, couples therapy lets us work with the relationship directly. Some people do both, at different times or even in the same season. If you’re not sure, the free consultation is a good place to talk it through.'] },
+  { q: 'Do you accept insurance?', a: ['I’m currently a private-pay practice. Many of my clients use out-of-network benefits through their PPO plans, and I provide a monthly superbill you can submit for reimbursement; many receive 50 to 80 percent back this way. I also accept HSA and FSA cards.'] },
+  { q: 'What age groups do you work with?', a: ['I work with adult individuals, couples, and teens. Each has its own rhythm. Teens are seen without a parent present in the room, though I stay in communication with parents in a way that respects the teen’s privacy and developmental stage.'] },
+  { q: 'How do I get started?', a: ['Every service begins the same way: a free 15-minute consultation, in person or by phone, so we can talk about what’s bringing you in and get a sense of whether working together feels right. From there, we’ll find a rhythm and format, in-person in Newport Beach or Fullerton, or telehealth anywhere in California, that fits your life.'] },
+];
 ---
 
 <Layout
@@ -18,6 +27,12 @@ const specialties = [
   description="Individual, couples & premarital therapy in Newport Beach & Fullerton, CA, plus specialty care for anxiety and creatives. Telehealth statewide."
   active="/services/"
   path="/services/"
+  schema={[
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services#faq',
+      url: 'https://nikolesparks.com/services',
+    }),
+  ]}
 >
   <!-- Hero -->
   <section class="hero">
@@ -81,8 +96,27 @@ const specialties = [
     </div>
   </section>
 
+  <!-- FAQs -->
+  <section class="section" style="display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start">
+    <div class="sticky-heading">
+      <p class="eyebrow">Services</p>
+      <h2 class="h2-serif">Frequently asked questions</h2>
+      <Illustration name="questions-full" size="240px" class="mt-16" />
+    </div>
+    <Faq items={faqs} />
+  </section>
+
   <NextSteps
     heading="Not sure where to start? <em>Let’s figure it out together.</em>"
     copy="The free 15-minute consultation is the easiest way to find the right starting point. No pressure, no commitment, just a conversation."
   />
 </Layout>
+
+<style>
+  @media (max-width: 820px) {
+    section[style*='grid-template-columns:1fr 1.5fr'] {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+</style>
