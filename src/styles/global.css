@@ -809,9 +809,27 @@ p.body {
   background: var(--cream);
   color: var(--ink);
   border: 1px solid var(--ink-30);
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+/* This card uses a plain background-color crossfade instead of the shared
+   left-to-right wipe (see .big-card::before above): with a spatial wipe,
+   the title/desc snap to their hover color instantly while the background
+   sweep is still catching up, leaving text unreadable against not-yet-swept
+   background for most of the animation. A uniform fade keeps text and
+   background changing together everywhere on the card, not just at the
+   sweep's leading edge. */
+.big-card.secondary::before {
+  content: none;
 }
 .big-card.secondary:hover {
+  background: var(--ink);
   color: var(--cream);
+  border-color: var(--ink);
+}
+.big-card.secondary .title,
+.big-card.secondary .desc,
+.big-card.secondary .more {
+  transition: color 0.35s ease;
 }
 .big-card .title {
   font-family: var(--serif);
