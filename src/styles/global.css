@@ -571,10 +571,11 @@ em.accent {
   text-wrap: pretty;
 }
 .section-heading p {
+  flex: 1;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
-  max-width: 420px;
+  max-width: 560px;
   color: var(--ink-75);
 }
 @media (min-width: 821px) {
