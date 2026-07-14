@@ -597,6 +597,13 @@ em.accent {
   line-height: 1.1;
   text-wrap: pretty;
 }
+/* A handful of headlines run larger than the 48px default — this class keeps
+   them at 52px on desktop while still participating in the mobile shrink
+   rule below, instead of an inline font-size that a media query can't touch. */
+.h2-lg {
+  font-size: 52px;
+  line-height: 1.1;
+}
 .h2-serif em {
   font-style: normal;
   color: var(--blue);
@@ -1676,8 +1683,9 @@ p.body {
     font-size: clamp(2.5rem, 10vw, 3.25rem);
   }
   .h2-serif,
+  .h2-lg,
   .section-heading h2 {
-    font-size: 34px;
+    font-size: 38px;
   }
   .quote-block blockquote {
     font-size: 32px;
