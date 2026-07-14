@@ -630,6 +630,8 @@ em.accent {
   gap: 26px;
 }
 .prose {
+  display: flex;
+  flex-direction: column;
   gap: 36px;
 }
 .prose p {
