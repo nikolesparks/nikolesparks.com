@@ -11,10 +11,10 @@ import { site } from '../data/site';
 const eduIcon = `<path d="M24 10 L43 18 L24 26 L5 18 Z" stroke="#3B63C4" stroke-width="1" stroke-linejoin="round"/><path d="M14 21.4 V29 Q24 34.5 34 29 V21.4" stroke="#3B63C4" stroke-width="1"/><line x1="43" y1="18" x2="43" y2="31" stroke="#3B63C4" stroke-width="1"/><circle cx="43" cy="32.5" r="2" fill="#C7D64F"/><circle cx="24" cy="18" r="1.6" fill="#3B63C4"/>`;
 
 const education = [
+  { degree: 'Certificate in Psychoanalytic Psychotherapy', school: 'Newport Psychoanalytic Institute', status: 'In-process' },
   { degree: 'M.S. Marriage &amp; Family Therapy', school: 'Fuller Graduate School' },
   { degree: 'M.A. Spiritual Formation &amp; Soul Care', school: 'Talbot School of Theology' },
   { degree: 'B.F.A. Design', school: 'Biola University' },
-  { degree: 'Certificate in Psychoanalytic Psychotherapy', school: 'Newport Psychoanalytic Institute', status: 'In-process' },
 ];
 
 const hereBecause = [
@@ -59,7 +59,8 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
       placeholder="Nikole — portrait"
       tall
       accent="tr"
-      caption={`CA AMFT 150080 · ${site.supervisor}`}
+      duotone={false}
+      caption={`${site.supervisor}<br />CA AMFT 150080`}
       class="hero-portrait"
     />
   </section>
@@ -83,7 +84,6 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
   <!-- Education -->
   <section class="section" style="padding-top:0">
     <h2 class="eyebrow" style="margin-bottom:16px">Education</h2>
-    <p style="font-size:14px; color:var(--ink-65); margin:0 0 40px">Nikole Sparks is an Associate Marriage and Family Therapist (AMFT 150080) based in Newport Beach and Fullerton, California.</p>
     <div class="ruled-grid cols-2 feature">
       {
         education.map((e) => (
@@ -99,6 +99,7 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
         ))
       }
     </div>
+    <p style="font-size:14px; color:var(--ink-65); margin:24px 0 0">Nikole Sparks is an Associate Marriage and Family Therapist (AMFT 150080) based in Newport Beach and Fullerton, California.</p>
   </section>
 
   <!-- Quote -->
@@ -115,7 +116,7 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
     <div class="section-heading">
       <div class="stack">
         <h2 class="serif" style="font-size:48px; line-height:1.1; max-width:720px; text-wrap:pretty">
-          Uncovering the roots, so you can live with connection, authenticity, &amp; vitality.
+          A place to pause, reflect, and find a new way forward.
         </h2>
       </div>
     </div>
