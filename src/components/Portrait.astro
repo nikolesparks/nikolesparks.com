@@ -45,5 +45,5 @@ const {
       <div class="placeholder">{placeholder}</div>
     )}
   </div>
-  {caption && <div class="caption">{caption}</div>}
+  {caption && <div class="caption" set:html={caption}></div>}
 </div>
