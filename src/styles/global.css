@@ -552,16 +552,16 @@ em.accent {
   color: var(--cream);
 }
 .section-heading {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: start;
-  gap: 64px;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 }
 .section-heading .stack {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-right: 48px;
 }
 .section-heading h2 {
   font-family: var(--serif);
@@ -574,7 +574,7 @@ em.accent {
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
-  max-width: 420px;
+  padding-left: 48px;
   color: var(--ink-75);
 }
 @media (min-width: 821px) {
@@ -1537,9 +1537,14 @@ p.body {
     grid-template-columns: 1fr;
   }
   .section-heading {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: flex-start;
     gap: 20px;
+  }
+  .section-heading .stack,
+  .section-heading p {
+    padding-right: 0;
+    padding-left: 0;
   }
   .sticky-heading {
     position: static;
