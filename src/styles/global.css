@@ -810,6 +810,9 @@ p.body {
   color: var(--ink);
   border: 1px solid var(--ink-30);
 }
+.big-card.secondary:hover {
+  color: var(--cream);
+}
 .big-card .title {
   font-family: var(--serif);
   font-size: 36px;
@@ -823,6 +826,9 @@ p.body {
 }
 .big-card.secondary .desc {
   color: var(--ink-85);
+}
+.big-card.secondary:hover .desc {
+  color: var(--cream-85);
 }
 .big-card .more {
   font-family: var(--mono);
