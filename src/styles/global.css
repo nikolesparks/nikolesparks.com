@@ -632,7 +632,7 @@ em.accent {
 .prose {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 22px;
 }
 .prose p {
   font-size: 17px;
