@@ -59,6 +59,7 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
       placeholder="Nikole — portrait"
       tall
       accent="tr"
+      duotone={false}
       caption={`${site.supervisor}<br />CA AMFT 150080`}
       class="hero-portrait"
     />
@@ -162,13 +163,3 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
     steps={gettingStarted}
   />
 </Layout>
-
-<style>
-  /* The source photo has a visible black film-frame border inset from the
-     edge — scale it up so that border lines up with the container edge
-     instead of leaving a sliver of background showing outside it. */
-  :global(.hero-portrait .frame img) {
-    transform: scale(1.16);
-    transform-origin: center 38%;
-  }
-</style>
