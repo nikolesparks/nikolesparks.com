@@ -1718,13 +1718,23 @@ p.body {
   }
 }
 
-/* prose size on small screens */
+/* body copy size on small screens — keep all reading text scaling down
+   consistently on mobile (matches the -1px step used by .prose). */
 @media (max-width: 760px) {
   .prose p {
     font-size: 16px;
   }
   .prose-15 p {
     font-size: 14px;
+  }
+  p.body,
+  .ruled-cell .copy,
+  .steps .txt {
+    font-size: 16px;
+  }
+  .section-heading p,
+  .faq .answer p {
+    font-size: 15px;
   }
 }
 
