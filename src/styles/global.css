@@ -468,7 +468,7 @@ em.accent {
 }
 .hero p,
 .lead {
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.6;
   margin: 0;
   max-width: 560px;
@@ -1585,6 +1585,10 @@ p.body {
 @media (max-width: 760px) {
   :root {
     --pad-x: 24px;
+  }
+  .hero p,
+  .lead {
+    font-size: 15px;
   }
   .section,
   .section.tight {
