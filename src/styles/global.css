@@ -468,7 +468,7 @@ em.accent {
 }
 .hero p,
 .lead {
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.6;
   margin: 0;
   max-width: 560px;
@@ -596,6 +596,13 @@ em.accent {
   font-size: 48px;
   line-height: 1.1;
   text-wrap: pretty;
+}
+/* A handful of headlines run larger than the 48px default — this class keeps
+   them at 52px on desktop while still participating in the mobile shrink
+   rule below, instead of an inline font-size that a media query can't touch. */
+.h2-lg {
+  font-size: 52px;
+  line-height: 1.1;
 }
 .h2-serif em {
   font-style: normal;
@@ -1579,6 +1586,10 @@ p.body {
   :root {
     --pad-x: 24px;
   }
+  .hero p,
+  .lead {
+    font-size: 15px;
+  }
   .section,
   .section.tight {
     padding: 64px var(--pad-x);
@@ -1676,8 +1687,9 @@ p.body {
     font-size: clamp(2.5rem, 10vw, 3.25rem);
   }
   .h2-serif,
+  .h2-lg,
   .section-heading h2 {
-    font-size: 34px;
+    font-size: 38px;
   }
   .quote-block blockquote {
     font-size: 32px;
@@ -1706,13 +1718,23 @@ p.body {
   }
 }
 
-/* prose size on small screens */
+/* body copy size on small screens — keep all reading text scaling down
+   consistently on mobile (matches the -1px step used by .prose). */
 @media (max-width: 760px) {
   .prose p {
     font-size: 16px;
   }
   .prose-15 p {
     font-size: 14px;
+  }
+  p.body,
+  .ruled-cell .copy,
+  .steps .txt {
+    font-size: 16px;
+  }
+  .section-heading p,
+  .faq .answer p {
+    font-size: 15px;
   }
 }
 
