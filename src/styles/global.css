@@ -570,7 +570,7 @@ em.accent {
   max-width: 720px;
   text-wrap: pretty;
 }
-.section-heading p {
+.section-heading > p {
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -587,7 +587,7 @@ em.accent {
     margin-top: 32px;
   }
 }
-.on-color .section-heading p {
+.on-color .section-heading > p {
   color: var(--cream-80);
 }
 
@@ -1573,7 +1573,7 @@ p.body {
     gap: 20px;
   }
   .section-heading .stack,
-  .section-heading p {
+  .section-heading > p {
     padding-right: 0;
     padding-left: 0;
   }
@@ -1732,7 +1732,7 @@ p.body {
   .steps .txt {
     font-size: 16px;
   }
-  .section-heading p,
+  .section-heading > p,
   .faq .answer p {
     font-size: 15px;
   }
