@@ -54,7 +54,7 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
     <Portrait
-      src="/nikole-sparks-amft--website-@2x.jpg"
+      src="/nikole_sparks-mft-website.jpg"
       alt="Nikole Sparks"
       placeholder="Nikole — portrait"
       tall
@@ -162,3 +162,11 @@ const gettingStarted = ['Discuss what brings you to therapy', 'Talk about how I 
     steps={gettingStarted}
   />
 </Layout>
+
+<style>
+  /* The hero frame crops ~40px top & bottom; shift the crop toward the top so
+     the top of the head isn't clipped. */
+  :global(.hero-portrait .frame img) {
+    object-position: center 20%;
+  }
+</style>
