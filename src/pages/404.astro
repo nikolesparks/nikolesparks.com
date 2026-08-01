@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Glyph from '../components/Glyph.astro';
+import { site } from '../data/site';
+---
+
+<Layout
+  title={`Page not found — ${site.name}`}
+  description="This page could not be found."
+  path="/404/"
+>
+  <section class="hero">
+    <div class="col gap-28">
+      <p class="eyebrow">Error 404</p>
+      <h1>This page couldn’t <em>be found.</em></h1>
+      <p>
+        The link may be broken, or the page may have moved. Nothing’s wrong on your end — let’s
+        get you back on track.
+      </p>
+      <a class="cta" href="/">Back to home <span class="arw">→</span></a>
+      <p class="body" style="margin-top:8px">
+        Or head to <a href="/services/" style="border-bottom:1px solid var(--blue); color:var(--blue)">services</a>,
+        <a href="/about/" style="border-bottom:1px solid var(--blue); color:var(--blue)">about</a>, or
+        <a href="/contact/" style="border-bottom:1px solid var(--blue); color:var(--blue)">get in touch</a>.
+      </p>
+    </div>
+    <Glyph name="nested-ellipses" class="hero-figure" />
+  </section>
+</Layout>
