@@ -1081,7 +1081,8 @@ p.body {
   text-indent: -0.5em;
 }
 .quote-block blockquote em {
-  color: inherit;
+  font-style: italic;
+  color: var(--lime);
 }
 .quote-block cite {
   font-family: var(--mono);
