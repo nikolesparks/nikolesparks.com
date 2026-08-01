@@ -59,7 +59,7 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
       </p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
-    <Illustration name="anxiety-full" size="clamp(380px, 44vw, 520px)" color="var(--blue)" class="hero-figure" />
+    <img src="/home.svg" alt="" class="hero-figure hero-home-art" width="373" height="426" />
   </section>
 
   <Ticker items={focusAreas} label="Areas of focus" />
@@ -192,3 +192,14 @@ const whatWeWork = ['Anxiety', 'Identity', 'Attachment', 'Trauma', 'Shame', 'Gri
     </p>
   </section>
 </Layout>
+
+<style>
+  /* Portrait-orientation hero art — size by width and center in the column,
+     overriding the generic .hero-figure { width:100% } used by inline SVGs. */
+  img.hero-home-art {
+    width: clamp(300px, 38vw, 440px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+</style>
