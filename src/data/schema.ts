@@ -311,6 +311,42 @@ export function faqPage(
   };
 }
 
+// A single blog article. Author and publisher link by @id to the site-wide
+// Person and practice entities, so Google attributes the writing to Nikole's
+// credentialed identity rather than an anonymous byline. `image` falls back to
+// the brand share card when a post has no cover image yet.
+export function blogPosting(opts: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+  category?: string;
+}) {
+  const image = opts.image
+    ? opts.image.startsWith('http')
+      ? opts.image
+      : `${site.url}${opts.image}`
+    : shareCard;
+
+  return {
+    '@type': 'BlogPosting',
+    '@id': `${opts.url}#article`,
+    headline: opts.title,
+    description: opts.description,
+    url: opts.url,
+    mainEntityOfPage: opts.url,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified ?? opts.datePublished,
+    author: { '@id': personId },
+    publisher: { '@id': practiceId },
+    image,
+    ...(opts.category ? { articleSection: opts.category } : {}),
+    inLanguage: 'en-US',
+  };
+}
+
 // Wrap page-specific nodes into a single graph alongside the site-wide
 // practice + person entities.
 export function pageGraph(...nodes: object[]) {
