@@ -45,7 +45,7 @@ const frameworks = [
       </p>
       <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
-    <Illustration name="depth-approach" size="clamp(380px, 44vw, 520px)" class="hero-figure hero-illustration" />
+    <img src="/approach.svg" alt="Abstract illustration of nested ellipses and circles forming a sphere, representing depth-oriented psychotherapy" class="hero-figure approach-hero-art" width="248" height="341" />
   </section>
 
   <Ticker items={approachTags} label="Approach" variant="blue" />
@@ -101,7 +101,7 @@ const frameworks = [
 
   <!-- What to expect -->
   <section class="section split c-media">
-    <Portrait src="/office-photo.jpeg" alt="Nikole's therapy office" placeholder="Office or session photo" accent="bl" />
+    <Portrait src="/office-photo.jpeg" alt="Nikole's therapy office" placeholder="Office or session photo" />
     <div class="col">
       <p class="eyebrow">What to expect</p>
       <h2 class="h2-serif">Our work <em>together.</em></h2>
@@ -118,6 +118,13 @@ const frameworks = [
 </Layout>
 
 <style>
+  /* Portrait-orientation hero art — size by width and center in the column. */
+  img.approach-hero-art {
+    width: clamp(260px, 32vw, 380px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
   /* Framework cells stack the title above the copy (rather than the shared
      row layout) and color the title with the lime accent. */
   .frameworks .ruled-cell {

@@ -991,21 +991,6 @@ p.body {
 .portrait.tall {
   height: 600px;
 }
-.portrait .accent {
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  z-index: 2;
-  pointer-events: none;
-}
-.portrait .accent.bl {
-  left: -64px;
-  bottom: -64px;
-}
-.portrait .accent.tr {
-  right: -56px;
-  top: -56px;
-}
 .portrait .frame {
   position: relative;
   width: 100%;
@@ -1697,18 +1682,6 @@ p.body {
   }
   .quote-block cite {
     margin-left: 16px;
-  }
-  .portrait .accent {
-    width: 160px;
-    height: 160px;
-  }
-  .portrait .accent.bl {
-    left: -24px;
-    bottom: -24px;
-  }
-  .portrait .accent.tr {
-    right: -24px;
-    top: -24px;
   }
 }
 
