@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { readTime } from '../../data/blog';
+import { site } from '../../data/site';
+import { blogPosting } from '../../data/schema';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -13,6 +15,16 @@ const { Content } = await render(post);
 
 const date = post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
+const postUrl = `${site.url}/blog/${post.slug}/`;
+const articleSchema = blogPosting({
+  title: post.data.title,
+  description: post.data.excerpt,
+  url: postUrl,
+  datePublished: post.data.date.toISOString(),
+  image: post.data.coverImage,
+  category: post.data.category,
+});
+
 const others = all.filter((p) => p.slug !== post.slug).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const sameCategory = others.filter((p) => p.data.category === post.data.category);
 const keepReading = [...sameCategory, ...others.filter((p) => !sameCategory.includes(p))].slice(0, 2);
@@ -23,6 +35,7 @@ const keepReading = [...sameCategory, ...others.filter((p) => !sameCategory.incl
   description={post.data.excerpt}
   active="/blog/"
   path={`/blog/${post.slug}/`}
+  schema={[articleSchema]}
 >
   <!-- Breadcrumb -->
   <div class="section tight" style="padding-bottom:0">
