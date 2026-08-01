@@ -1,18 +1,18 @@
 <svg width="373" height="426" viewBox="0 0 373 426" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M284.824 386.439C255.897 370.122 223.262 353.062 193.594 287.05" stroke="#3B63C4" stroke-width="1.5" stroke-dasharray="3 5"/>
-<path d="M87.5274 386.439C116.454 370.122 149.089 353.062 178.758 287.05" stroke="#3B63C4" stroke-width="1.5" stroke-dasharray="3 5"/>
-<ellipse cx="153.534" cy="25.9599" rx="153.534" ry="25.9599" transform="matrix(1 0 0 -1 32.6406 110.523)" stroke="#3B63C4" stroke-width="1.5"/>
+<path d="M283.75 386.75C254.823 370.432 223.418 353.762 193.75 287.75" stroke="#3B63C4" stroke-width="1.5" stroke-dasharray="3 5"/>
+<path d="M86.25 387.25C115.177 370.932 148.082 353.762 177.75 287.75" stroke="#3B63C4" stroke-width="1.5" stroke-dasharray="3 5"/>
 <ellipse cx="153.534" cy="25.9599" rx="153.534" ry="25.9599" transform="matrix(1 0 0 -1 32.6406 313.01)" stroke="#3B63C4" stroke-width="1.5"/>
 <path d="M186.181 425C222.608 425 255.567 422.346 279.403 418.061C291.327 415.917 300.931 413.371 307.536 410.563C310.842 409.158 313.355 407.706 315.028 406.235C316.705 404.762 317.455 403.35 317.455 402.016C317.455 400.681 316.706 399.269 315.028 397.795C313.355 396.325 310.842 394.872 307.536 393.467C300.931 390.659 291.327 388.114 279.403 385.971C255.567 381.686 222.608 379.03 186.181 379.03C149.754 379.03 116.794 381.686 92.958 385.971C81.0342 388.114 71.4304 390.659 64.8252 393.467C61.5199 394.872 59.0076 396.325 57.334 397.795C55.6567 399.269 54.9062 400.681 54.9062 402.016C54.9064 403.35 55.6568 404.762 57.334 406.235C59.0076 407.706 61.5198 409.159 64.8252 410.563C71.4304 413.371 81.0341 415.917 92.958 418.061C116.794 422.346 149.754 425 186.181 425Z" fill="url(#paint0_linear_89_421)" stroke="#3B63C4" stroke-width="1.5"/>
-<ellipse cx="8.15881" cy="1.48342" rx="8.15881" ry="1.48342" transform="matrix(1 0 0 -1 178.016 288.533)" fill="#C7D64F" stroke="#3B63C4" stroke-width="1.5"/>
-<ellipse cx="8.15881" cy="1.48342" rx="8.15881" ry="1.48342" transform="matrix(1 0 0 -1 178.016 186.178)" fill="#C7D64F" stroke="#3B63C4" stroke-width="1.5"/>
-<path d="M185.75 402.75L185.75 313.75" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 5"/>
-<path d="M185.75 184.75L185.75 110.75" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 5"/>
-<ellipse cx="8.15881" cy="1.48342" rx="8.15881" ry="1.48342" transform="matrix(1 0 0 -1 178.016 86.7881)" fill="#C7D64F" stroke="#3B63C4" stroke-width="1.5"/>
-<path d="M185.75 286.75L185.75 219.75" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 5"/>
-<path d="M185.75 85.75L185.75 0.749997" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 5"/>
+<ellipse cx="9" cy="2" rx="9" ry="2" transform="matrix(1 0 0 -1 176.75 289.75)" fill="#C7D64F"/>
+<ellipse cx="9" cy="2" rx="9" ry="2" transform="matrix(1 0 0 -1 176.75 186.75)" fill="#C7D64F"/>
+<path d="M185.75 402.75L185.75 313.75" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 4"/>
+<ellipse cx="9" cy="2" rx="9" ry="2" transform="matrix(1 0 0 -1 176.75 87.75)" fill="#C7D64F"/>
 <ellipse cx="185.428" cy="32.6353" rx="185.428" ry="32.6353" transform="matrix(1 0 0 -1 0.75 218.812)" stroke="#3B63C4" stroke-width="1.5"/>
-<circle cx="185.428" cy="185.428" r="185.428" transform="matrix(1 0 0 -1 0.75 371.605)" stroke="#707748" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 5"/>
+<path d="M185.75 286.75L185.75 218.75" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 5"/>
+<path d="M185.75 184.75L185.75 110.75" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 5"/>
+<path d="M185.75 85.75L185.75 0.749997" stroke="#707748" stroke-width="1.5" stroke-dasharray="3 5"/>
+<ellipse cx="153.534" cy="25.9599" rx="153.534" ry="25.9599" transform="matrix(1 0 0 -1 32.6406 110.523)" stroke="#3B63C4" stroke-width="1.5"/>
+<circle cx="185" cy="185" r="185" transform="matrix(1 0 0 -1 0.75 370.75)" stroke="#707748" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 6"/>
 <defs>
 <linearGradient id="paint0_linear_89_421" x1="185.75" y1="384.75" x2="185.75" y2="422.75" gradientUnits="userSpaceOnUse">
 <stop stop-color="#C7D64F" stop-opacity="0"/>
