@@ -660,6 +660,13 @@ p.body {
   margin: 0;
   color: var(--ink-85);
 }
+/* Cap body copy in the split layouts to a comfortable reading measure. The
+   wide text column (1fr next to a fixed illustration) otherwise stretches
+   lines uncomfortably long on large screens. Narrower columns fall under this
+   width already, so this only reins in the wide ones. */
+.split .col p.body {
+  max-width: 620px;
+}
 
 /* ---------- glyph cards row (Home) ---------- */
 .grid-4 {
