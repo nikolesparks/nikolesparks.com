@@ -57,7 +57,7 @@ const faqs = [
       </p>
       <a class="cta on-blue" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
     </div>
-    <Illustration name="couples-full" size="clamp(380px, 44vw, 520px)" color="var(--cream)" class="hero-figure" />
+    <img src="/premarital-counseling.svg" alt="Abstract illustration of two circles joined within a larger circle, representing two people building a shared life in premarital counseling" class="hero-figure premarital-hero-art" width="362" height="362" />
   </section>
 
   <!-- What is premarital (cream) -->
@@ -181,6 +181,13 @@ const faqs = [
 </Layout>
 
 <style>
+  /* Square hero art — size by width and center in the column. */
+  img.premarital-hero-art {
+    width: clamp(340px, 42vw, 480px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
   @media (max-width: 820px) {
     section[style*='grid-template-columns:1fr 1.5fr'] {
       grid-template-columns: 1fr !important;
