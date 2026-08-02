@@ -629,7 +629,10 @@ em.accent {
   grid-template-columns: 420px 1fr;
 }
 .split.c-wide-narrow {
-  grid-template-columns: 1fr 380px;
+  /* Illustration column grows on wide screens so the art stays balanced
+     against the (now width-capped) body copy, and eases off on mid-size
+     screens to keep the text column from getting cramped. */
+  grid-template-columns: 1fr clamp(320px, 32vw, 460px);
 }
 .split .col {
   display: flex;
