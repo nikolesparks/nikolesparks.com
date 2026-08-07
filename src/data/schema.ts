@@ -267,6 +267,21 @@ export const anxietyTherapyService = {
   audience: { '@type': 'Audience', audienceType: 'Adults' },
 };
 
+export const faithIntegratedTherapyService = {
+  '@type': 'Service',
+  '@id': 'https://nikolesparks.com/services/faith-integrated-therapy#service',
+  name: 'Faith-Integrated Therapy',
+  alternateName: 'Faith-Integrated & Christian Therapy',
+  description:
+    'Depth-oriented therapy that takes your spiritual life seriously as material — for meaning, vocation, discernment, and faith that has gone quiet. Newport Beach and Fullerton, and online throughout California.',
+  url: 'https://nikolesparks.com/services/faith-integrated-therapy',
+  serviceType: 'Faith-Integrated Therapy',
+  provider: { '@id': practiceId },
+  areaServed: serviceAreaServed,
+  availableChannel: officeChannels,
+  audience: { '@type': 'Audience', audienceType: 'Adults' },
+};
+
 export const creativesTherapyService = {
   '@type': 'Service',
   '@id': 'https://nikolesparks.com/services/therapy-for-creatives#service',
