@@ -8,6 +8,7 @@ export const blogCategories = [
   'Self-Awareness',
   'Creativity',
   'Life Transitions',
+  'Faith and Religion',
 ] as const;
 
 const blog = defineCollection({
