@@ -492,6 +492,13 @@ em.accent {
 .illustration.hero-figure :is(circle, ellipse, line, path) {
   stroke-width: 1.5;
 }
+/* Hero-section component illustrations are lightened to a ~1.25px visual weight
+   (these render in a 480-unit viewBox at ~520px, so 1.15 ≈ 1.25px on screen).
+   Same specificity as the rule above but placed after, so it wins inside heroes
+   only — non-hero .illustration.hero-figure art keeps the 1.5 weight. */
+.hero .illustration :is(circle, ellipse, line, path) {
+  stroke-width: 1.15;
+}
 
 /* colored hero variants */
 .hero.blue {
