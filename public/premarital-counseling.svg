@@ -1,8 +1,8 @@
 <svg width="362" height="362" viewBox="0 0 362 362" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="181" cy="181" r="180.25" stroke="#F6F1E4" stroke-width="1.5"/>
-<circle cx="183.5" cy="94.5" r="86.75" transform="rotate(90 183.5 94.5)" stroke="#F6F1E4" stroke-width="1.5"/>
-<circle cx="183.5" cy="268.555" r="86.75" transform="rotate(90 183.5 268.555)" stroke="#F6F1E4" stroke-width="1.5"/>
-<path d="M183.054 94.0547L183.055 268.5" stroke="#F6F1E4" stroke-opacity="0.5"/>
+<circle cx="181" cy="181" r="180.25" stroke="#F6F1E4" stroke-width="0.94"/>
+<circle cx="183.5" cy="94.5" r="86.75" transform="rotate(90 183.5 94.5)" stroke="#F6F1E4" stroke-width="0.94"/>
+<circle cx="183.5" cy="268.555" r="86.75" transform="rotate(90 183.5 268.555)" stroke="#F6F1E4" stroke-width="0.94"/>
+<path d="M183.054 94.0547L183.055 268.5" stroke="#F6F1E4" stroke-opacity="0.5" stroke-width="0.94"/>
 <circle cx="183" cy="93.0547" r="6" transform="rotate(90 183 93.0547)" fill="#3B63C4"/>
 <circle cx="183" cy="182" r="10" transform="rotate(90 183 182)" fill="#C7D64F"/>
 <circle cx="183" cy="268.055" r="6" transform="rotate(90 183 268.055)" fill="#3B63C4"/>
