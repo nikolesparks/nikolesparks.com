@@ -35,7 +35,7 @@ collections:
           label: "Category",
           name: "category",
           widget: "select",
-          options: ["Anxiety", "Relationships", "Self-Awareness", "Creativity", "Life Transitions", "Faith and Religion"],
+          options: ["Anxiety", "Relationships", "Self-Awareness", "Creativity", "Life Transitions", "Faith & Spirituality"],
         }
       - {
           label: "Date",
