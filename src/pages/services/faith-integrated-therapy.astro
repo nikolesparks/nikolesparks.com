@@ -1,0 +1,226 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Ticker from '../../components/Ticker.astro';
+import Portrait from '../../components/Portrait.astro';
+import Glyph from '../../components/Glyph.astro';
+import Illustration from '../../components/Illustration.astro';
+import Faq from '../../components/Faq.astro';
+import NextSteps from '../../components/NextSteps.astro';
+import { faithIntegratedTherapyService, faqPage } from '../../data/schema';
+
+const tickerItems = ['Meaning', 'Vocation', 'Discernment', 'Calling', 'Spiritual Dryness', 'Ministry', 'Faith & Doubt'];
+
+const whoThisIsFor = [
+  {
+    title: 'When certainty gives way to complexity',
+    copy: 'You hold your faith deeply while finding that life no longer fits neatly into the answers you once had. The questions are not a rejection of faith; they may be an invitation to engage more honestly with the life you are actually living.',
+  },
+  {
+    title: 'A relationship that has become difficult',
+    copy: 'Something important has shifted in a marriage, family, friendship, or church community, and you feel hurt, disappointed, or unsure how to be honest without abandoning the values that matter to you. Love, forgiveness, boundaries, and responsibility have become more complicated than they first appeared.',
+  },
+  {
+    title: 'When longing and obligation collide',
+    copy: 'You feel pulled between what you want and what you think you should want. You want space to think carefully about what matters, what you fear, and what a faithful path might actually look like. Therapy can offer a private place to speak more freely as you discern.',
+  },
+  {
+    title: 'When you carry more than others see',
+    copy: 'You may be in a position of leadership, competent and dependable in the roles you hold, while privately feeling overwhelmed, resentful, or unsure. Something in you knows the current way of living isn’t working, even if you cannot yet name what needs to change.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Are you a Christian therapist?',
+    a: ['My training includes an M.A. in Spiritual Formation and Soul Care from Talbot School of Theology, so the Christian tradition is familiar territory and you will not need to translate it for me. I work with people across and outside that tradition. What matters clinically is that your spiritual life is real to you and belongs in the room, not that we hold the same positions.'],
+  },
+  {
+    q: 'Will we pray together in session?',
+    a: ['No. Some practices do this and it can be meaningful for the right person with the right clinician. It is not part of my work. Prayer inside a therapeutic relationship introduces an authority dynamic into a room where we are often examining exactly that, and I would rather keep the hour clear for a different kind of attention.'],
+  },
+  {
+    q: 'How is this different from spiritual direction?',
+    a: ['Spiritual direction attends to your relationship with God and treats that relationship as the subject. Therapy attends to you: your history, your patterns, and the reasons you are the particular person having that relationship in the way you are. Many people find the two work well alongside each other, and I am glad to work with someone who already has a director.'],
+  },
+  {
+    q: 'My faith has gone flat and I do not know if that is a spiritual problem or depression. Which is it?',
+    a: ['Sometimes both, and the distinction is worth taking time over rather than settling quickly. Spiritual dryness has a long history in the contemplative tradition and is not in itself a clinical condition. Depression is, and it can also present as a loss of meaning that looks spiritual from the inside. Part of early work is getting a careful look at what is actually going on rather than assuming.'],
+  },
+  {
+    q: 'Do you work with pastors and people in vocational ministry?',
+    a: ['Yes. When work, faith, community, and income all sit in the same place, there is often nowhere to say the honest thing. Sessions are confidential and are not shared with your church, your board, or your denomination.'],
+  },
+  {
+    q: 'What if part of my spiritual history is painful rather than sustaining?',
+    a: ['That is common and it belongs here too. Faith is rarely all one thing. If the harder material turns out to be the larger part of the picture, you may find the page on <a href="/services/religious-trauma-therapy/">religious trauma therapy</a> is closer to where you are, and either way we can work with both.'],
+  },
+  {
+    q: 'Do you take insurance?',
+    a: ['I am a private-pay practice. Many clients use out-of-network benefits through a PPO plan, and I provide a monthly superbill you can submit for reimbursement. I also accept HSA and FSA cards.'],
+  },
+];
+---
+
+<Layout
+  title="Faith-Integrated & Christian Therapy | Newport Beach, CA"
+  description="Depth therapy that takes your spiritual life seriously. For meaning, vocation, discernment, and faith that has gone quiet. Newport Beach, Fullerton, and telehealth across California."
+  active="/services/"
+  path="/services/faith-integrated-therapy/"
+  schema={[
+    faithIntegratedTherapyService,
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services/faith-integrated-therapy#faq',
+      url: 'https://nikolesparks.com/services/faith-integrated-therapy',
+    }),
+  ]}
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="col">
+      <p class="eyebrow"><a href="/services/">Services</a> / Faith-integrated therapy</p>
+      <h1>Your spiritual life is not <em>a separate appointment.</em></h1>
+      <p>
+        What would it feel like to have your faith understood as part of the whole picture? For
+        many people, their faith is the ground from which they understand love, suffering,
+        purpose, responsibility, forgiveness, and belonging. It informs the choices they make,
+        the relationships they tend, and the life they hope to live. I offer depth-oriented,
+        faith-integrated therapy in Newport Beach and Fullerton, and by telehealth throughout
+        California.
+      </p>
+      <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
+    </div>
+    <svg class="hero-figure faith-hero-art" viewBox="0 0 370 370" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concentric rings expanding from a single point, illustrating a life understood as a whole rather than in separate parts">
+      <circle cx="185" cy="185" r="184.375" fill="url(#faith-hero-grad)" stroke="#3B63C4" stroke-width="1.25"/>
+      <path d="M185 306.937C236.062 306.937 282.275 310.5 315.709 316.255C332.431 319.133 345.926 322.555 355.227 326.34C359.879 328.233 363.446 330.204 365.839 332.217C368.237 334.235 369.375 336.222 369.375 338.156C369.375 340.09 368.237 342.078 365.839 344.096C363.446 346.109 359.879 348.078 355.227 349.972C345.926 353.757 332.431 357.179 315.709 360.058C282.275 365.813 236.062 369.375 185 369.375C133.938 369.375 87.7248 365.813 54.291 360.058C37.5691 357.179 24.0737 353.757 14.7734 349.972C10.1209 348.078 6.55413 346.109 4.16113 344.096C1.76265 342.078 0.625182 340.09 0.625 338.156C0.625 336.222 1.7625 334.235 4.16113 332.217C6.55413 330.204 10.1207 328.233 14.7734 326.34C24.0737 322.555 37.5692 319.133 54.291 316.255C87.7248 310.5 133.938 306.937 185 306.937Z" stroke="#3B63C4" stroke-width="1.25"/>
+      <path d="M185 241.731C236.035 241.731 282.213 248.938 315.609 260.572C332.31 266.39 345.781 273.304 355.064 280.95C364.352 288.599 369.375 296.916 369.375 305.553C369.375 314.189 364.352 322.507 355.064 330.156C345.781 337.802 332.31 344.715 315.609 350.533C282.213 362.167 236.035 369.375 185 369.375C133.965 369.375 87.787 362.167 54.3906 350.533C37.6897 344.715 24.2188 337.802 14.9355 330.156C5.64801 322.507 0.625 314.189 0.625 305.553C0.625169 296.916 5.6482 288.599 14.9355 280.95C24.2188 273.304 37.6896 266.39 54.3906 260.572C87.787 248.938 133.965 241.731 185 241.731Z" stroke="#3B63C4" stroke-width="1.25"/>
+      <path d="M185 182.592C236.009 182.592 282.158 193.1 315.531 210.061C348.94 227.039 369.375 250.38 369.375 275.983C369.375 301.586 348.939 324.927 315.531 341.905C282.158 358.866 236.009 369.375 185 369.375C133.991 369.375 87.8424 358.866 54.4688 341.905C21.0606 324.927 0.62511 301.586 0.625 275.983C0.625 250.38 21.0605 227.039 54.4688 210.061C87.8424 193.1 133.991 182.592 185 182.592Z" stroke="#3B63C4" stroke-width="1.25"/>
+      <path d="M185 124.97C235.981 124.97 282.106 138.69 315.469 160.841C348.836 182.994 369.375 213.53 369.375 247.173C369.375 280.816 348.836 311.35 315.469 333.504C282.106 355.654 235.981 369.375 185 369.375C134.019 369.375 87.8937 355.654 54.5312 333.504C21.1643 311.35 0.625106 280.816 0.625 247.173C0.625 213.53 21.1642 182.994 54.5312 160.841C87.8936 138.69 134.019 124.97 185 124.97Z" stroke="#3B63C4" stroke-width="1.25"/>
+      <path d="M185 67.3467C286.949 67.3467 369.375 135.069 369.375 218.361C369.375 301.654 286.949 369.375 185 369.375C83.0507 369.375 0.625201 301.654 0.625 218.361C0.625 135.069 83.0505 67.3467 185 67.3467Z" stroke="#3B63C4" stroke-width="1.25"/>
+      <defs>
+        <linearGradient id="faith-hero-grad" x1="184.397" y1="319.574" x2="184.396" y2="23.3835" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#C7D64F"/>
+          <stop offset="1" stop-color="#C7D64F" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </section>
+
+  <Ticker items={tickerItems} label="Where faith and life meet" />
+
+  <!-- The premise -->
+  <section class="section split c-wide-narrow" style="align-items:center">
+    <div class="col gap-28">
+      <p class="eyebrow">The premise</p>
+      <h2 class="h2-serif h2-lg">An invitation to bring <em>your faith</em> into the room.</h2>
+      <p class="body">The questions that bring people to therapy often have a deeper shape beneath them. What does it mean to be faithful when the path forward is unclear? How do you make sense of relationships that have left you hurt, disappointed, or unsure of what love asks of you now? What do you do with regret, resentment, longing, or the ache of not knowing how to move forward from here?</p>
+      <p class="body">These are not questions with generic answers. They are part of what it means to live a life before God, alongside other people, with all the complexity, limitation, and hope that entails.</p>
+      <p class="body">Our work can offer a place to slow down and listen closely to what is happening beneath the surface. Together, we can make room for your experience in its fullness: the things that hurt, the patterns that have shaped you, the relationships that matter, and the faith through which you understand your life.</p>
+    </div>
+    <Illustration name="integration-full" size="clamp(300px, 32vw, 420px)" color="var(--blue)" class="hero-figure premise-figure" />
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section sage on-color">
+    <div class="stack gap-20" style="margin-bottom:48px">
+      <p class="eyebrow on-color">Who I work with</p>
+      <h2 class="h2-serif" style="max-width:760px">This is for people whose spiritual life is <em>load-bearing.</em></h2>
+    </div>
+    <div class="process-grid cols-2">
+      {whoThisIsFor.map((c, i) => (
+        <div class="process-card">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <div class="title">{c.title}</div>
+          <p>{c.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- What the work looks like -->
+  <section class="section split c-narrow-wide">
+    <div class="col gap-20">
+      <p class="eyebrow">The work</p>
+      <h2 class="h2-serif"><em>Attention,</em> not advice.</h2>
+    </div>
+    <div class="prose prose-15">
+      <p class="body">There are some questions no one else can answer for you. Questions of love, responsibility, loss, calling, and what faithfulness asks in a particular season of life are not solved by receiving the right advice. Therapy can offer another kind of space: one where we slow down enough to notice what is happening beneath the surface. Your faith is invited and present in the room because it is already part of how you make meaning, carry responsibility, and imagine a way forward.</p>
+      <p class="body">Often, the work begins with something small. A resentment you have brushed aside. A fear that appears whenever you disappoint someone. A recurring sense of obligation, or the realization that it has become difficult to tell the difference between love, fear, guilt, and duty. Sometimes it means looking more closely at a relationship, a decision, a sense of loneliness, or a role you have held for so long that you no longer know where it ends and you begin.</p>
+      <p class="body">Depth work does not rush toward a conclusion. It gives us time to understand what is beneath the first explanation. As we do, distinctions often become clearer: between generosity and overextension, anxiety that confirms what you already fear and the fear that can arise when healing asks something new of you, love and obligation, forgiveness and avoiding what is painful to face.</p>
+      <p class="body">The hope is not that therapy will provide certainty where life does not. It is that, through careful attention, you may become freer to discern, to love, to receive your own life more honestly, and to respond with greater sturdiness and integrity to what is in front of you.</p>
+      <p class="body">More on <a href="/approach/" style="color:var(--blue); border-bottom:1px solid var(--blue)">how I work</a>.</p>
+    </div>
+  </section>
+
+  <!-- Therapy and spiritual direction -->
+  <section class="section blue on-color split c-wide-narrow">
+    <div class="col gap-28">
+      <p class="eyebrow on-color">Therapy &amp; spiritual direction</p>
+      <h2 class="h2-serif h2-lg">Related, and <em>not the same.</em></h2>
+      <p class="body">If you already have a spiritual director, that relationship and this one can run alongside each other without conflict. They are asking different questions.</p>
+      <p class="body">Spiritual direction attends to your relationship with God and treats that relationship as the subject. Therapy attends to you: your history, your patterns, the reasons you are the particular person having that relationship in the particular way you are having it. When a director notices that you cannot receive something, direction can name it. Therapy can go looking for where you learned not to receive things, which is usually somewhere with a name and an address.</p>
+      <p class="body">Plenty of people find that the two together do something neither does alone. There is more on this in <a href="/blog/therapy-and-spiritual-direction/" style="color:var(--cream); border-bottom:1px solid var(--cream-35)">therapy and spiritual direction are not the same thing</a>.</p>
+    </div>
+    <Glyph name="nested-ellipses" class="hero-figure" />
+  </section>
+
+  <!-- Background -->
+  <section class="section split c-media">
+    <Portrait src="/nikole_sparks-mft-website.jpg" alt="Nikole Sparks" placeholder="Nikole — candid photo" />
+    <div class="col">
+      <p class="eyebrow">Background</p>
+      <h2 class="serif h2-lg">Why I work <em class="accent">this way.</em></h2>
+      <p class="body">I hold an M.A. in Spiritual Formation and Soul Care from Talbot School of Theology. That is not a credential I mention to establish agreement with you about anything in particular. It means the vocabulary is not foreign, the tradition is not exotic to me, and you will not spend sessions explaining your world before we can get to the thing you came in for.</p>
+      <p class="body">I am also in postgraduate psychoanalytic training at the Newport Psychoanalytic Institute, which is where the depth orientation comes from.</p>
+      <p class="body">Those two together are the reason I can take your faith seriously as real and still be curious about what formed it. Holding only the clinical side, a therapist tends to hear spiritual material and translate it into something else. Holding only the theological side, the instinct is to reassure. Neither leaves much room to actually look.</p>
+      <p class="body">You do not need to share my beliefs for this to work, and I will not ask you what they are as a condition of anything.</p>
+      <a class="text-link" href="/about/">About Nikole <span class="arw">→</span></a>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section" style="display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start">
+    <div class="sticky-heading">
+      <p class="eyebrow">Faith-integrated therapy</p>
+      <h2 class="h2-serif">Frequently asked questions</h2>
+      <Illustration name="questions-full" size="240px" class="mt-16" />
+    </div>
+    <Faq items={faqs} />
+  </section>
+
+  <!-- The bridge to religious trauma therapy -->
+  <section class="section sage on-color">
+    <div class="col gap-20" style="max-width:760px">
+      <p class="eyebrow on-color">A companion path</p>
+      <h2 class="h2-serif">If what you are carrying is <em>heavier than this.</em></h2>
+      <p class="body">Faith is rarely all one thing. Some of what you were given sustains you and some of it may have cost you something, and those can be true in the same person on the same Sunday.</p>
+      <p class="body">If the harder part is the larger part right now, <a href="/services/religious-trauma-therapy/" style="color:var(--cream); border-bottom:1px solid var(--cream-35)">therapy for religious trauma</a> is where that work is described. It is the same practice and the same clinician. You do not need to have sorted out which page you belong on before you call, and most people do not arrive knowing.</p>
+    </div>
+  </section>
+
+  <NextSteps
+    heading="Bring the whole thing. <em>Let’s talk.</em>"
+    copy="The free 15-minute consultation is a conversation, not an intake. In-person in Newport Beach and Fullerton, or telehealth throughout California."
+  />
+</Layout>
+
+<style>
+  /* Size the custom hero SVG by width and center it in the hero column,
+     overriding the generic .hero-figure { width:100% } used by inline art. */
+  svg.faith-hero-art {
+    width: clamp(300px, 40vw, 460px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  /* Center the premise illustration within its narrow column so it sits
+     balanced rather than hugging the left edge. */
+  .premise-figure {
+    justify-self: center;
+  }
+  @media (max-width: 820px) {
+    section[style*='grid-template-columns:1fr 1.5fr'] {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+</style>
