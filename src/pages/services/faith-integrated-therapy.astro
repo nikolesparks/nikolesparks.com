@@ -21,7 +21,7 @@ const whoThisIsFor = [
   },
   {
     title: 'When longing and obligation collide',
-    copy: 'You feel pulled between what you want and what you believe you should want. You want space to think carefully about what matters, what you fear, and what a faithful path might actually look like.',
+    copy: 'You feel pulled between what you want and what you think you should want. You want space to think carefully about what matters, what you fear, and what a faithful path might actually look like. Therapy can offer a private place to speak more freely as you discern.',
   },
   {
     title: 'When you carry more than others see',
@@ -120,17 +120,17 @@ const faqs = [
   </section>
 
   <!-- Who this is for -->
-  <section class="section">
+  <section class="section sage on-color">
     <div class="stack gap-20" style="margin-bottom:48px">
-      <p class="eyebrow">Who I work with</p>
+      <p class="eyebrow on-color">Who I work with</p>
       <h2 class="h2-serif" style="max-width:760px">This is for people whose spiritual life is <em>load-bearing.</em></h2>
     </div>
     <div class="process-grid cols-2">
       {whoThisIsFor.map((c, i) => (
-        <div class="process-card" style="border-top-color:var(--ink-30)">
-          <span class="num" style="color:var(--blue)">{String(i + 1).padStart(2, '0')}</span>
+        <div class="process-card">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
           <div class="title">{c.title}</div>
-          <p style="color:var(--ink-85)">{c.copy}</p>
+          <p>{c.copy}</p>
         </div>
       ))}
     </div>
