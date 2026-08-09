@@ -1,11 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import Ticker from '../../components/Ticker.astro';
 import BlogCard from '../../components/BlogCard.astro';
 import { blogCategories } from '../../content/config';
-
-const tickerItems = ['Anxiety', 'Relationships', 'Identity', 'Attachment', 'Creativity', 'Grief & Loss', 'Self-Awareness'];
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -24,23 +21,34 @@ const rest = posts.filter((p) => p.slug !== featured?.slug);
   <!-- Hero -->
   <section class="hero">
     <div class="col">
-      <p class="eyebrow">Notes on the work</p>
-      <h1>Reading between the <em>sessions.</em></h1>
+      <p class="eyebrow">Field notes</p>
+      <h1>Things worth <em>slowing down for.</em></h1>
       <p>
-        Reflections on anxiety, relationships, and the quieter work of knowing yourself —
-        written from the same depth-oriented lens I bring to the therapy room.
+        Writing on anxiety, relationships, faith, and the ongoing work of understanding yourself.
       </p>
     </div>
-    <svg class="hero-figure" viewBox="0 0 480 460" fill="none" aria-hidden="true">
-      <ellipse cx="240" cy="230" rx="200" ry="70" stroke="#3B63C4" stroke-width="1" transform="rotate(-14 240 230)"></ellipse>
-      <ellipse cx="240" cy="230" rx="200" ry="70" stroke="#3B63C4" stroke-width="1" transform="rotate(14 240 230)"></ellipse>
-      <ellipse cx="240" cy="230" rx="200" ry="70" stroke="#3B63C4" stroke-width="1" transform="rotate(42 240 230)"></ellipse>
-      <circle cx="240" cy="230" r="24" stroke="#707748" stroke-width="1"></circle>
-      <circle cx="424" cy="180" r="6" fill="#C7D64F"></circle>
+    <svg class="hero-figure" viewBox="0 0 420 420" fill="none" role="img" aria-label="A cluster of overlapping circles meeting at a single point, suggesting distinct threads of a life converging">
+      <circle cx="210.001" cy="77.4468" r="76.6968" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="210.001" cy="342.553" r="76.6968" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="77.4468" cy="77.4468" r="76.6968" transform="matrix(-1 0 0 1 420 134.042)" fill="url(#paint0_linear_91_524)" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="77.4468" cy="77.4468" r="76.6968" transform="matrix(-1 0 0 1 382.766 38.7236)" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="114.681" cy="303.83" r="76.6968" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="77.4468" cy="77.4468" r="76.6968" transform="matrix(-1 0 0 1 382.766 226.383)" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="77.4468" cy="211.489" r="76.6968" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="114.681" cy="116.17" r="76.6968" fill="url(#paint1_linear_91_524)" stroke="#3B63C4" stroke-width="1.5"/>
+      <circle cx="210" cy="210" r="16" fill="#C7D64F"/>
+      <defs>
+        <linearGradient id="paint0_linear_91_524" x1="151.17" y1="77.4468" x2="17.8723" y2="77.4468" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#C7D64F"/>
+          <stop offset="1" stop-color="#C7D64F" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_91_524" x1="188.405" y1="116.17" x2="55.1067" y2="116.17" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#C7D64F"/>
+          <stop offset="1" stop-color="#C7D64F" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
     </svg>
   </section>
-
-  <Ticker items={tickerItems} label="Topics" />
 
   {
     featured && (
