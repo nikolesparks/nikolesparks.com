@@ -111,21 +111,21 @@ const faqs = [
   </section>
 
   <!-- Who this is for -->
-  <section class="section">
+  <section class="section sage on-color">
     <div class="stack gap-20" style="margin-bottom:48px">
-      <p class="eyebrow">Who I work with</p>
+      <p class="eyebrow on-color">Who I work with</p>
       <h2 class="h2-serif" style="max-width:760px">Whether you stayed, left, or are still figuring out <em>what remains.</em></h2>
     </div>
     <div class="process-grid cols-2">
       {whoThisIsFor.map((c, i) => (
-        <div class="process-card" style="border-top-color:var(--ink-30)">
-          <span class="num" style="color:var(--blue)">{String(i + 1).padStart(2, '0')}</span>
+        <div class="process-card">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
           <div class="title">{c.title}</div>
-          {c.copy.map((para) => <p style="color:var(--ink-85)">{para}</p>)}
+          {c.copy.map((para) => <p>{para}</p>)}
         </div>
       ))}
     </div>
-    <p class="body" style="max-width:640px; margin-top:36px; color:var(--ink-75)">You do not have to know exactly where you stand before we begin. Many people hold more than one of these experiences at once.</p>
+    <p class="serif" style="max-width:900px; margin-top:64px; font-style:italic; font-size:clamp(22px, 2.6vw, 30px); line-height:1.45; color:var(--cream)">You do not have to know exactly where you stand before we begin. Many people hold more than one of these experiences at once.</p>
   </section>
 
   <!-- What the work looks like -->
