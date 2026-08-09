@@ -11,12 +11,18 @@ const tickerItems = ['Deconstruction', 'Leaving the Church', 'Purity Culture', '
 
 const whoThisIsFor = [
   {
-    title: 'You are still in it',
-    copy: 'You have not left. You may not want to. And something is wrong in a way you cannot name to anyone there. There is a tightness you feel on Sunday mornings you cannot trace to anything. There is a version of God you carry who is mostly disappointed in you, and he sounds like someone specific. There are things you were taught about your body, your anger, or your worth that do not hold up anymore, and no one around you seems to be asking about it. You have wondered whether a therapist would understand any of this, or would quietly file your faith under the problem.',
+    title: 'You are trying to remain, honestly',
+    copy: [
+      'Your faith or religious community may still matter deeply to you, even as some part of your experience has become difficult to hold. You may be wrestling with teachings, expectations, relationships, or a sense of shame and fear that no longer aligns with what you believe. You may be trying to hold onto what is meaningful while needing to be honest about what has hurt.',
+      'Therapy can help you take those experiences seriously without assuming your faith is the problem or asking you to defend it. Together, we can make room for what you value, what has been painful, and what’s emerging.',
+    ],
   },
   {
-    title: 'You left, and it did not leave',
-    copy: 'You are out. It has been months or years. On paper you have moved on, and by most measures your life works. And it still runs underneath things. The guilt shows up on schedule with no doctrine attached to it. You flinch at certain language. You are grieving people who are still alive, or a community that felt like home, or a version of God you cannot get back and did not expect to miss. Sometimes you are angry in a way that feels out of proportion, and sometimes you feel nothing at all about something that shaped your entire childhood.',
+    title: 'You left, but it is still with you',
+    copy: [
+      'You may have stepped away from a church, a community, or a way of believing that once organized much of your life. From the outside, it may appear that you have moved on. But you notice that you carry guilt that does not quite fit the life you are living now, or grieve a sense of home, belonging, and certainty that was lost along with what you needed to leave.',
+      'Leaving does not make the loss uncomplicated. You may miss people, rituals, belonging, or parts of faith that once felt meaningful, while also carrying anger, relief, grief, or confusion about what happened. Therapy can help you understand what remains and decide what you want to carry forward.',
+    ],
   },
 ];
 
@@ -108,18 +114,18 @@ const faqs = [
   <section class="section">
     <div class="stack gap-20" style="margin-bottom:48px">
       <p class="eyebrow">Who I work with</p>
-      <h2 class="h2-serif" style="max-width:760px">Two people usually find this page. <em>Both belong here.</em></h2>
+      <h2 class="h2-serif" style="max-width:760px">Whether you stayed, left, or are still figuring out <em>what remains.</em></h2>
     </div>
     <div class="process-grid cols-2">
       {whoThisIsFor.map((c, i) => (
         <div class="process-card" style="border-top-color:var(--ink-30)">
           <span class="num" style="color:var(--blue)">{String(i + 1).padStart(2, '0')}</span>
           <div class="title">{c.title}</div>
-          <p style="color:var(--ink-85)">{c.copy}</p>
+          {c.copy.map((para) => <p style="color:var(--ink-85)">{para}</p>)}
         </div>
       ))}
     </div>
-    <p class="body" style="max-width:640px; margin-top:36px; color:var(--ink-75)">You do not have to know which one you are before we start. Many people are both, on different days.</p>
+    <p class="body" style="max-width:640px; margin-top:36px; color:var(--ink-75)">You do not have to know exactly where you stand before we begin. Many people hold more than one of these experiences at once.</p>
   </section>
 
   <!-- What the work looks like -->
