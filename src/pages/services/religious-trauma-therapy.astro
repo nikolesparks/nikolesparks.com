@@ -1,0 +1,226 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Ticker from '../../components/Ticker.astro';
+import Portrait from '../../components/Portrait.astro';
+import Illustration from '../../components/Illustration.astro';
+import Faq from '../../components/Faq.astro';
+import NextSteps from '../../components/NextSteps.astro';
+import { religiousTraumaTherapyService, faqPage } from '../../data/schema';
+
+const tickerItems = ['Religious Wounds', 'Church Hurt', 'Shame & Belonging', 'Spiritual Abuse', 'Purity Culture', 'Deconstruction'];
+
+const whoThisIsFor = [
+  {
+    title: 'You are trying to remain, honestly',
+    copy: [
+      'Your faith or religious community may still matter deeply to you, even as some part of your experience has become difficult to hold. You may be wrestling with teachings, expectations, relationships, or a sense of shame and fear that no longer aligns with what you believe. You may be trying to hold onto what is meaningful while needing to be honest about what has hurt.',
+      'Therapy can help you take those experiences seriously without assuming your faith is the problem or asking you to defend it. Together, we can make room for what you value, what has been painful, and what’s emerging.',
+    ],
+  },
+  {
+    title: 'You left, but it is still with you',
+    copy: [
+      'You may have stepped away from a church, a community, or a way of believing that once organized much of your life. From the outside, it may appear that you have moved on. But you notice that you carry guilt that does not quite fit the life you are living now, or grieve a sense of home, belonging, and certainty that was lost along with what you needed to leave.',
+      'Leaving does not make the loss uncomplicated. You may miss people, rituals, belonging, or parts of faith that once felt meaningful, while also carrying anger, relief, grief, or confusion about what happened. Therapy can help you understand what remains and decide what you want to carry forward.',
+    ],
+  },
+];
+
+
+const faqs = [
+  {
+    q: 'Will you try to talk me out of my faith, or back into it?',
+    a: ['Neither. I do not have an outcome I am steering you toward. My work is to help you understand what your religious history did to you and what it is still doing, and to give you room to reach your own conclusions about what you want to keep.'],
+  },
+  {
+    q: 'Is religious trauma a real thing?',
+    a: ['Religious trauma is not a formal diagnosis in the DSM. That does not mean the experience is not real or that it does not have lasting effects. What people describe under that name is usually a mix of things clinicians do recognize: early relational injury, chronic shame, anxiety tied to authority and surveillance, complicated grief, and identity that had to be built around what was permitted. We work with what is actually there rather than with the label.'],
+  },
+  {
+    q: 'I am still going to church and things are mostly fine. Is that enough of a reason to come in?',
+    a: ['Yes. Most of the people I see are functioning well by any external measure. You do not need a crisis or a dramatic story to justify looking at this. Persistent unease that you cannot explain is a good enough reason.'],
+  },
+  {
+    q: 'I left years ago. Why is it still affecting me?',
+    a: ['Because what you left was not only a set of beliefs. It was the framework your earliest ideas about love, safety, authority, and your own worth were built inside. Leaving changes your position on the beliefs. It does not automatically dismantle the structure they were attached to, which is why the guilt, the flinching, and the grief often outlast the belief itself by years.'],
+  },
+  {
+    q: 'Do you work with pastors, ministry staff, and people in vocational ministry?',
+    a: ['Yes. When your work, your faith, your social world, and your income all sit in the same place, there is often nowhere safe to say the true thing. Therapy can be that place. Sessions are confidential and are not shared with your church, your board, or your denomination.'],
+  },
+  {
+    q: 'Can we do this over telehealth?',
+    a: ['Yes. I see clients in person in Newport Beach and Fullerton, and by telehealth anywhere in California. Telehealth is often the better fit for this particular work, especially if you live in a small faith community and privacy matters to you.'],
+  },
+  {
+    q: 'Do you take insurance?',
+    a: ['I am a private-pay practice. Many clients use out-of-network benefits through a PPO plan, and I provide a monthly superbill you can submit for reimbursement. I also accept HSA and FSA cards. You can read more on the <a href="/faqs/">FAQs page</a>.'],
+  },
+];
+---
+
+<Layout
+  title="Religious Trauma & Deconstruction Therapy | Newport Beach"
+  description="Depth therapy for religious trauma, deconstruction, and a religious past that still shapes the present. Newport Beach, Fullerton, and CA telehealth."
+  active="/services/"
+  path="/services/religious-trauma-therapy/"
+  schema={[
+    religiousTraumaTherapyService,
+    faqPage(faqs, {
+      id: 'https://nikolesparks.com/services/religious-trauma-therapy#faq',
+      url: 'https://nikolesparks.com/services/religious-trauma-therapy',
+    }),
+  ]}
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="col">
+      <p class="eyebrow"><a href="/services/">Services</a> / Religious trauma</p>
+      <h1>When faith and pain have become <em>difficult to separate.</em></h1>
+      <p>
+        Something you were taught, asked to carry, or made to believe about yourself still has a
+        hold on you. It may be shame that comes up when you disappoint someone, anxiety around
+        making your own choices, difficulty trusting your instincts, or a sense you never quite
+        measure up. You may still hold your faith close. You may have stepped away. Whatever your
+        relationship to faith looks like, your experience is welcome here.
+      </p>
+      <a class="cta" href="/contact/">Schedule a free consultation <span class="arw">→</span></a>
+    </div>
+    <!-- PLACEHOLDER hero illustration: swap for the custom SVG when provided. -->
+    <svg class="hero-figure rt-hero-art" viewBox="114 58 272 296" fill="none" style="color:var(--blue)" role="img" aria-label="A bloom of overlapping petals radiating from a single point, suggesting growth and flourishing">
+      <ellipse cx="318.0" cy="200.0" rx="40" ry="15" stroke="currentColor" stroke-width="1" opacity="0.70" transform="rotate(34.0 318.0 200.0)"></ellipse>
+      <ellipse cx="317.6" cy="244.8" rx="48" ry="15" stroke="currentColor" stroke-width="1" opacity="0.73" transform="rotate(64.0 317.6 244.8)"></ellipse>
+      <ellipse cx="287.9" cy="282.9" rx="40" ry="15" stroke="currentColor" stroke-width="1" opacity="0.76" transform="rotate(94.0 287.9 282.9)"></ellipse>
+      <ellipse cx="240.0" cy="293.5" rx="48" ry="15" stroke="currentColor" stroke-width="1" opacity="0.79" transform="rotate(124.0 240.0 293.5)"></ellipse>
+      <ellipse cx="198.0" cy="272.8" rx="40" ry="15" stroke="currentColor" stroke-width="1" opacity="0.82" transform="rotate(154.0 198.0 272.8)"></ellipse>
+      <ellipse cx="177.9" cy="235.8" rx="48" ry="15" stroke="currentColor" stroke-width="1" opacity="0.85" transform="rotate(184.0 177.9 235.8)"></ellipse>
+      <ellipse cx="177.7" cy="200.0" rx="40" ry="15" stroke="currentColor" stroke-width="1" opacity="0.88" transform="rotate(214.0 177.7 200.0)"></ellipse>
+      <ellipse cx="187.8" cy="169.8" rx="48" ry="15" stroke="currentColor" stroke-width="1" opacity="0.91" transform="rotate(244.0 187.8 169.8)"></ellipse>
+      <ellipse cx="206.7" cy="142.3" rx="40" ry="15" stroke="currentColor" stroke-width="1" opacity="0.94" transform="rotate(274.0 206.7 142.3)"></ellipse>
+      <ellipse cx="240.0" cy="121.7" rx="48" ry="15" stroke="currentColor" stroke-width="1" opacity="0.97" transform="rotate(304.0 240.0 121.7)"></ellipse>
+      <ellipse cx="284.9" cy="122.2" rx="40" ry="15" stroke="currentColor" stroke-width="1" opacity="1" transform="rotate(334.0 284.9 122.2)"></ellipse>
+      <ellipse cx="323.0" cy="152.1" rx="48" ry="15" stroke="currentColor" stroke-width="1" opacity="1" transform="rotate(364.0 323.0 152.1)"></ellipse>
+      <circle cx="240" cy="200" r="6" fill="#C7D64F"></circle>
+    </svg>
+  </section>
+
+  <Ticker items={tickerItems} label="What we work with" />
+
+  <!-- The premise -->
+  <section class="section split c-wide-narrow" style="align-items:center">
+    <div class="col gap-28">
+      <p class="eyebrow">The premise</p>
+      <h2 class="h2-serif h2-lg">The past does not stay in the past simply because you have <em>moved on.</em></h2>
+      <p class="body">Most people who bring spiritual hurt into therapy have already tried to sort it out on their own, usually for a long time. They have read the books. They have had the late conversations with a friend. They have prayed about it, or stopped praying about it, and neither one settled it. You may have changed your mind about what you believe, moved away from the people or places that hurt you, or built a life that looks very different from the one you grew up in. Yet certain moments may still bring a familiar fear, shame, or sense of being watched. You may find yourself reacting to authority, conflict, desire, or disappointment in ways that feel larger than the present moment.</p>
+      <p class="body">This is not a sign that you have failed to move on. It reflects how deeply formative religious experiences can be, especially when they were tied to belonging, love, family, safety, or the fear of losing them.</p>
+      <p class="body">Therapy can offer a place to look at these experiences without pressure to preserve, reject, explain, or resolve them. Rather than asking you to take a position, we work to understand what these experiences asked of you, what they cost, and how they may still be shaping your relationships, choices, and life now.</p>
+    </div>
+    <svg class="premise-figure rt-premise-art" viewBox="-38 -38 521 498" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nested arcs rising from a row of points, suggesting experiences that branch and connect across a life">
+      <path d="M25.125 208.955H24.375L25.8729 209.011L25.125 208.955ZM262.048 208.955L261.298 208.948V208.955H262.048ZM184.869 208.955H185.619V208.936L185.618 208.916L184.869 208.955ZM104.32 208.955H105.07V208.918L105.066 208.88L104.32 208.955ZM419.466 292.28C419.759 292.573 420.234 292.573 420.527 292.28L425.3 287.507C425.593 287.214 425.593 286.74 425.3 286.447C425.007 286.154 424.532 286.154 424.239 286.447L419.997 290.689L415.754 286.447C415.461 286.154 414.986 286.154 414.693 286.447C414.401 286.74 414.401 287.214 414.693 287.507L419.466 292.28ZM25.125 208.955H25.875C25.875 174.317 31.9698 122.373 50.2262 79.1186C68.4864 35.8551 98.8033 1.5 147.176 1.5V0.75V0C97.9083 0 67.1995 35.0467 48.8443 78.5353C30.4854 122.033 24.375 174.191 24.375 208.955H25.125ZM147.176 0.75V1.5C195.535 1.5 224.213 35.8365 240.758 79.0948C257.3 122.348 261.605 174.293 261.298 208.948L262.048 208.955L262.798 208.962C263.106 174.215 258.795 122.058 242.159 78.559C225.524 35.0652 196.459 0 147.176 0V0.75ZM25.125 208.955L25.874 208.994C27.0677 185.716 32.531 150.811 45.0192 121.751C57.5248 92.6511 76.9336 69.7051 105.894 69.7051V68.9551V68.2051C75.983 68.2051 56.2038 91.9258 43.6411 121.159C31.0608 150.433 25.5754 185.527 24.376 208.917L25.125 208.955ZM105.894 68.9551V69.7051C134.848 69.7051 153.805 92.6426 165.861 121.742C177.899 150.801 182.916 185.708 184.12 208.994L184.869 208.955L185.618 208.916C184.409 185.535 179.374 150.442 167.246 121.168C155.136 91.9344 135.812 68.2051 105.894 68.2051V68.9551ZM25.125 208.955L25.8729 209.011C26.7666 197.096 29.8066 179.232 36.0031 164.372C42.2293 149.441 51.4764 137.91 64.6122 137.91V137.16V136.41C50.4659 136.41 40.8668 148.811 34.6187 163.795C28.3409 178.849 25.2783 196.883 24.3771 208.899L25.125 208.955ZM64.6122 137.16V137.91C77.7452 137.91 86.8986 149.461 93.1067 164.408C99.2846 179.282 102.381 197.149 103.574 209.03L104.32 208.955L105.066 208.88C103.866 196.927 100.749 178.897 94.492 163.832C88.265 148.84 78.7612 136.41 64.6122 136.41V137.16ZM224.356 420.75V421.5C251.858 421.5 272.99 414.622 289.201 403.418C305.408 392.218 316.648 376.729 324.43 359.586C339.982 325.325 341.772 284.349 341.772 257.417H341.022H340.272C340.272 284.33 338.473 325.021 323.064 358.966C315.365 375.925 304.281 391.173 288.348 402.184C272.421 413.192 251.597 420 224.356 420V420.75ZM341.022 257.417H341.772V207.16H341.022H340.272V257.417H341.022ZM341.022 207.16H341.772C341.772 194.628 343.118 177.243 348.897 163.019C351.783 155.914 355.76 149.638 361.188 145.142C366.604 140.656 373.501 137.91 382.305 137.91V137.16V136.41C373.159 136.41 365.922 139.273 360.232 143.987C354.554 148.689 350.454 155.202 347.507 162.455C341.619 176.949 340.272 194.565 340.272 207.16H341.022ZM382.305 137.16V137.91C391.091 137.91 397.749 140.868 402.824 145.643C407.917 150.435 411.454 157.094 413.9 164.542C418.794 179.448 419.247 197.288 419.247 208.955H419.997H420.747C420.747 197.289 420.302 179.231 415.325 164.074C412.834 156.489 409.192 149.575 403.852 144.551C398.495 139.51 391.467 136.41 382.305 136.41V137.16ZM184.869 208.955H184.119V257.417H184.869H185.619V208.955H184.869ZM184.869 257.417H184.119C184.119 269.116 185.385 286.279 191.006 300.544C193.818 307.682 197.738 314.139 203.175 318.815C208.627 323.503 215.571 326.372 224.356 326.372V325.622V324.872C215.93 324.872 209.332 322.132 204.153 317.677C198.959 313.211 195.158 306.991 192.402 299.994C186.884 285.991 185.619 269.051 185.619 257.417H184.869ZM224.356 325.622V326.372C233.141 326.372 239.978 323.502 245.265 318.807C250.537 314.125 254.23 307.663 256.815 300.525C261.983 286.26 262.798 269.097 262.798 257.417H262.048H261.298C261.298 269.07 260.478 286.009 255.405 300.014C252.871 307.01 249.292 313.224 244.269 317.685C239.262 322.132 232.781 324.872 224.356 324.872V325.622ZM262.048 257.417H262.798V208.955H262.048H261.298V257.417H262.048ZM104.32 208.955H103.57V257.417H104.32H105.07V208.955H104.32ZM104.32 257.417H103.57C103.57 293.35 108.002 334.337 125.313 366.363C133.975 382.389 145.868 396.183 162.051 405.967C178.234 415.752 198.664 421.5 224.356 421.5V420.75V420C198.894 420 178.742 414.306 162.827 404.684C146.912 395.061 135.19 381.483 126.632 365.65C109.502 333.958 105.07 293.278 105.07 257.417H104.32ZM419.997 208.955H419.247V291.75H419.997H420.747V208.955H419.997Z" fill="#3B63C4"/>
+      <circle cx="25" cy="231.75" r="25" fill="#C7D64F"/>
+      <circle cx="104" cy="231.75" r="25" fill="#C7D64F"/>
+      <circle cx="183" cy="231.75" r="25" fill="#C7D64F"/>
+      <circle cx="262" cy="231.75" r="25" fill="#C7D64F"/>
+      <circle cx="341" cy="231.75" r="25" fill="#C7D64F"/>
+      <circle cx="420" cy="231.75" r="25" fill="#C7D64F"/>
+    </svg>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section sage on-color">
+    <div class="stack gap-20" style="margin-bottom:48px">
+      <p class="eyebrow on-color">Who I work with</p>
+      <h2 class="h2-serif" style="max-width:760px">Whether you stayed, left, or are still figuring out <em>what remains.</em></h2>
+    </div>
+    <div class="process-grid cols-2">
+      {whoThisIsFor.map((c, i) => (
+        <div class="process-card">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <div class="title">{c.title}</div>
+          {c.copy.map((para) => <p>{para}</p>)}
+        </div>
+      ))}
+    </div>
+    <p class="serif" style="max-width:900px; margin-top:64px; font-style:italic; font-size:clamp(22px, 2.6vw, 30px); line-height:1.45; color:var(--cream)">You do not have to know exactly where you stand before we begin. Many people hold more than one of these experiences at once.</p>
+  </section>
+
+  <!-- What the work looks like -->
+  <section class="section split c-narrow-wide">
+    <div class="col gap-20">
+      <p class="eyebrow">The work</p>
+      <h2 class="h2-serif">The question is not only what you were taught, <em>but what it came to mean.</em></h2>
+    </div>
+    <div class="prose prose-15">
+      <p class="body">The same words can take on very different meanings depending on who spoke them, when you heard them, and what was at stake in believing them. A teaching about obedience, forgiveness, purity, sacrifice, or submission may have become intertwined with love, approval, safety, or the fear of losing them.</p>
+      <p class="body">This is why simply revisiting beliefs often does not resolve their impact. Rather than debating whether a belief was right or wrong in the abstract, we pay attention to how it was lived and received in your particular life. Part of this work is to understand what you learned to do with your feelings, needs, anger, body, and wanting in order to remain connected to the people and communities that mattered to you.</p>
+      <p class="body">There is no prescribed conclusion in this work. You may remain deeply connected to your faith, find your relationship to it changing, step away, or simply live with questions that do not need immediate resolution. The work is to help you understand what has shaped you and live with greater freedom, honesty, and connection to what matters most to you.</p>
+      <p class="body">More on <a href="/approach/" style="color:var(--blue); border-bottom:1px solid var(--blue)">how I work</a>.</p>
+    </div>
+  </section>
+
+  <!-- Training and background -->
+  <section class="section ink on-color split c-media">
+    <Portrait src="/nikole_sparks-mft-website.jpg" alt="Nikole Sparks" placeholder="Nikole — candid photo" />
+    <div class="col">
+      <p class="eyebrow on-color">Background</p>
+      <h2 class="h2-serif h2-lg">Faith and its impact can <em>both be taken seriously.</em></h2>
+      <p class="body">Religious hurt or trauma is not just a category. It often involves a language, community, set of practices, and way of making meaning that have mattered deeply. You do not have to spend our sessions translating the theological language, meaning, or questions that have shaped your life.</p>
+      <p class="body">My background includes a master’s degree in Spiritual Formation and Soul Care from Talbot School of Theology, training in spiritual direction, and ongoing postgraduate psychoanalytic training at the Newport Psychoanalytic Institute. Together, these inform a way of working that is theologically literate and psychologically attentive.</p>
+      <p class="body">That combination allows us to take both faith and its impact seriously. You do not need to defend what was meaningful to you, minimize what hurt, or arrive having decided what you believe now. We can begin with your story and make room for its complexity.</p>
+      <a class="text-link on-color" href="/about/">About Nikole <span class="arw">→</span></a>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section" style="display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start">
+    <div class="sticky-heading">
+      <p class="eyebrow">Religious trauma</p>
+      <h2 class="h2-serif">Frequently asked questions</h2>
+      <Illustration name="questions-full" size="240px" class="mt-16" />
+    </div>
+    <Faq items={faqs} />
+  </section>
+
+  <!-- The bridge to faith-integrated therapy -->
+  <section class="section sage on-color">
+    <div class="stack gap-20" style="max-width:760px">
+      <p class="eyebrow on-color">A companion path</p>
+      <h2 class="h2-serif">If faith is still the thing <em>that holds.</em></h2>
+      <p class="body">Religion is rarely all one thing. Some of what you were given may have cost you and some of it may still be carrying you, and those can be true in the same person on the same Sunday.</p>
+      <p class="body">If the sustaining part is the larger part right now, and what you are looking for is therapy that takes your spiritual life seriously rather than therapy about what went wrong in it, <a href="/services/faith-integrated-therapy/" style="color:var(--cream); border-bottom:1px solid var(--cream-35)">faith-integrated therapy</a> describes that work. It is the same practice and the same clinician. You do not need to have sorted out which page you belong on before you call, and most people do not arrive knowing.</p>
+    </div>
+  </section>
+
+  <NextSteps
+    heading="Ready to stop carrying this alone? <em>Let’s talk.</em>"
+    copy="The free 15-minute consultation is a conversation, not an intake. You can tell me as much or as little of the history as you want to. In-person in Newport Beach and Fullerton, or telehealth throughout California."
+  />
+</Layout>
+
+<style>
+  /* Center the premise illustration within its narrow column so it sits
+     balanced rather than hugging the left edge. */
+  .premise-figure {
+    justify-self: center;
+    align-self: start;
+  }
+  /* Custom inline premise SVG: sized to match the other premise
+     illustrations across the site. */
+  .rt-premise-art {
+    width: clamp(280px, 32vw, 400px);
+    height: auto;
+    display: block;
+  }
+  /* Hero flourishing SVG: the source art has heavy internal padding, so the
+     viewBox is cropped to the bloom to fill the hero column. The stroke is set
+     thin so it renders at the site's ~1.25px hero line weight at that crop. */
+  .rt-hero-art ellipse {
+    stroke-width: 0.7;
+  }
+  @media (max-width: 820px) {
+    section[style*='grid-template-columns:1fr 1.5fr'] {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+</style>
