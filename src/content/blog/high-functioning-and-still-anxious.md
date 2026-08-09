@@ -5,62 +5,48 @@ category: Anxiety
 date: 2026-06-24
 ---
 
-Many people I see for anxiety are, by outward measures, doing well.
+You are, by every visible measure, fine. The job holds. The calendar is full, mostly of things you agreed to. You're the one people call when something goes sideways, and you're good at it, and underneath all of it there's a low steady hum that has never once let up.
 
-The job is solid. The calendar is full. They are often the person other people rely on. From the outside, they look composed, competent, and steady. Often almost no one in their life would guess how much tension they are carrying privately.
+Nobody would guess. That's most of what makes it tiring.
 
-Underneath all of that, there is often a low hum that never fully clears, no matter how much gets accomplished.
+## The crisis that never comes
 
-## Why this version is easy to postpone
+Anxiety that interrupts a life announces itself. The panic attack in the parking structure, the deadline that finally gets missed, the morning you can't make yourself leave the house: a crisis is obvious, people respond to it, and you end up getting help.
 
-When anxiety disrupts life visibly, it tends to create a crisis. A panic attack, a missed deadline, a breakdown in the car, something unmistakable. A crisis usually pushes people to seek help.
+This other kind doesn't do that. It produces an ordinary Tuesday, and then another Tuesday very much like it, and a private suspicion that this is simply what being an adult feels like and everyone else has already made their peace with it. Since nothing has visibly broken, complaining starts to seem a little indulgent.
 
-High-functioning anxiety often does not create that kind of moment. It creates an ordinary Tuesday that feels like the Tuesday before it, and a private suspicion that this is probably just adulthood. Because the life looks intact from the outside, people often tell themselves it would be indulgent to complain.
+So you wait. Often for years. Some version of "I know this isn't a real problem, but" opens more first sessions than almost anything else I hear.
 
-So they wait. Often for a long time. One of the most common opening lines in therapy is some version of, "I know this is not a real problem, but..."
+It's a real problem. Nobody can see it. That doesn't make it any smaller, and it does make it lonelier.
 
-It is a real problem. Invisible suffering is not smaller. It is often just lonelier.
+## The part that worked
 
-## Achievement as a solution that partly works
+If you learned early that being good, being useful, being impressive was how you held your place, then achievement isn't a habit you picked up somewhere. It's an answer to a question that mattered enormously at the time. It worked, too. Each accomplishment brings relief, and relief feels like resolution, which is why it can take a long time to notice that the relief keeps expiring.
 
-Part of what makes this difficult is that the strategy often has worked.
+Whatever has to be earned again next week isn't rest. It's upkeep.
 
-If you learned early that being good, useful, capable, or impressive was how you secured your place, achievement does not feel like a random habit. It feels like an answer to a deeply important question. Each accomplishment brings relief for a while, which makes it feel like resolution.
-
-But anything that has to be earned over and over is not really rest. It is maintenance. Over time, the interval between refills often shrinks, while the amount of accomplishment needed to create relief grows.
-
-People often notice this when a milestone they expected to feel meaningful barely changes anything. The promotion comes. The degree is finished. The long project finally lands. Relief lasts a few days, and then the baseline returns. As discouraging as that can feel, it is often the first clear evidence that the strategy has limits.
+People usually notice this around a milestone. The promotion arrives, or the degree, or the project that took two years, and the feeling everyone promised lasts about four days before the old baseline settles back in. That's discouraging to sit with. It's also the first hard evidence that the strategy has a limit.
 
 ## What it costs
 
-Holding that shield in place takes energy, and the cost often shows up in recognizable ways.
+Holding all of it in place takes energy, and the cost shows up in places that don't look like anxiety at all.
 
-**Rest becomes difficult.** Not just busyness, but difficulty tolerating unstructured time.
+Rest gets difficult, not from busyness but because unstructured time is hard to sit inside. Praise doesn't land, and neither does help, and neither, sometimes, does love, since letting any of it through would contradict the arrangement by which worth is earned. You're present with the people you care about in every visible way while some part of your attention hangs back, watching how you're doing. And you start to lose track of what you want. When a life has been organized so long around what's required, that question gets hard to answer.
 
-**Receiving becomes harder.** Praise, love, and help do not always land, because taking them in would challenge the idea that worth must be continuously earned.
+## The work itself
 
-**Relationships get what is left over.** You may be present in all the visible ways while still devoting part of your attention to ongoing self-monitoring.
+I don't start by trying to take achievement away from anyone. It's holding something up, and you can't pull it out before you know what.
 
-**Desire gets quieter.** When so much of life has been organized around what is required, it can become genuinely hard to know what you want.
+So we get curious instead. What would you feel on the seventh day of doing nothing at all. Where did these terms get set, and who set them. What happened in your house when you failed, or disappointed somebody, or were simply unremarkable for a while. Those questions go somewhere more useful than another round of optimization.
 
-## What the work involves
+The pattern tends to turn up in the room, too. You'll catch yourself wanting to be a good client, bracing for the evaluation, filling a silence before it has time to get long. All of that is worth noticing. It's the pattern arriving somewhere we can both look at it while it's happening, instead of reconstructing it afterward.
 
-Therapy does not start by trying to take achievement away. For many people, it is load-bearing.
+What changes over time usually isn't ambition. Most people stay ambitious. What changes is that ambition stops having to stand between you and a feeling you've been outrunning since you were young enough that outrunning it made sense.
 
-Instead, we get curious about what it is holding up. What would you feel if you stopped for a week. Where did the terms get set. What happened in your home when you failed, disappointed someone, or were simply ordinary. Those questions usually lead closer to the mechanism than another attempt at optimization.
+## If you've been putting this off
 
-In depth-oriented work, the pattern often shows up in the room as well. You may notice yourself wanting to be a good client, bracing for evaluation, or filling silence quickly. That is not a distraction from the work. It is often the work arriving in real time.
+You don't need a visible crisis to take this seriously, and the absence of one isn't evidence that everything's fine.
 
-Over time, what usually shifts is not ambition itself. Many people remain ambitious. What changes is that ambition no longer has to function as the thing standing between you and a feeling you have been outrunning for years.
-
-## If you have been putting this off
-
-You do not need a visible crisis to justify taking your anxiety seriously, and the absence of one is not evidence that everything is fine.
-
-There is more on the underlying mechanism in [why "just relax" never works](/blog/why-just-relax-never-works/).
+There's more on where this kind of anxiety comes from in [why "just relax" never works](/blog/why-just-relax-never-works/).
 
 I offer depth-oriented [therapy for anxiety](/services/therapy-for-anxiety/) in Newport Beach and Fullerton, and by telehealth throughout California.
-
-The free 15-minute consultation is a conversation, not an intake.
-
-[Schedule a free consultation →](/contact/)

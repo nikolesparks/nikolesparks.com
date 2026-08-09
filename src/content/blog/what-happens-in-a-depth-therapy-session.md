@@ -1,85 +1,77 @@
 ---
 title: "What Actually Happens in a Depth Therapy Session"
-excerpt: "No worksheets, no homework, no agenda set in advance. A look at what a depth-oriented therapy session is actually like, and why it works the way it does."
+excerpt: "No worksheets, no homework, no agenda set in advance. What a depth-oriented session is actually like, and why it works the way it does."
 category: Self-Awareness
-date: 2026-09-07
-draft: true
+date: 2026-08-09
+draft: false
 ---
 
-People ask this before they book, and they are usually asking something more specific than the question sounds.
+People ask before they book what a session is actually like, and they're usually asking something more specific than the question sounds.
 
-They want to know whether there will be silence they have to fill. Whether they are supposed to arrive with a topic. Whether I will be evaluating them. Whether it will feel like a conversation or like a procedure. Mostly, they want to know whether they will somehow be bad at therapy.
+They want to know whether there'll be silence they have to fill. Whether they're supposed to arrive with a topic. Whether I'm evaluating them. Whether it'll feel like a conversation or like a procedure. Mostly they want to know whether they'll be bad at it.
 
-You cannot really be bad at it. But that is not a very satisfying answer, so here is the shape of what a session is actually like.
+You can't be bad at it. That's not a satisfying answer, so here's the actual shape of the thing.
 
 ## The first few minutes
 
-You come in, sit down, and I ask something open. Often it is simply where you want to start, or what has been on your mind.
+You come in, you sit down, and I ask something open. Usually just where you want to start, or what's been on your mind.
 
-Some people arrive with an agenda: something happened this week, they have been thinking about it, and they want to get into it. Some arrive with nothing and say so, sometimes apologetically. Both are fine. In fact, the second can be more useful than people expect. What you reach for when you have not planned anything often brings us closer to what is actually going on.
+Some people arrive with an agenda: something happened this week, they've been thinking about it, they want to get into it. Some arrive with nothing and say so, sometimes apologetically. Both are fine, and the second is more useful than people expect. What you reach for when you haven't planned anything is frequently the most direct route to whatever is actually going on.
 
-There is no ritual at the beginning of each session, no scaling question, and no review of weekly assignments. Structured approaches can be deeply helpful in the right kind of work. In depth therapy, leaving more room in the hour helps us notice what emerges before it gets organized into the explanations you already know.
+There's no ritual at the top of the hour and no structure set in advance, because a structure would decide what we look at before we got there, and deciding in advance is exactly what's been keeping the material out of reach.
 
 ## The middle, which is most of it
 
 We talk, and I follow.
 
-That sounds passive, but it is not. I am listening to several things at once: what you are saying, how you are saying it, what you moved away from, what changed in the room when you got near something, and what you qualified immediately after saying it. Those last details often carry more information than people expect.
+That sounds passive and it isn't. I'm tracking several things at once: what you're saying, how you're saying it, what you moved away from, what changed in the room when you got close to something, what you qualified immediately after saying it. The last two carry a lot of the information.
 
-So you may notice that I ask about something that seems incidental. You mention in passing that your sister called and then move on to the work situation you came in to discuss, and I ask about your sister. Not because she is necessarily the topic, but because something happened in your voice and it is worth knowing what.
+So you may notice that I ask about things that seem incidental. You mention in passing that your sister called, and then you move on to the work thing you came in to discuss, and I ask about your sister. Not because your sister is the topic. Because something happened in your voice, and it's worth knowing what.
 
-You may also notice that I do not rush to resolve things. If you describe a situation and pause, expecting advice or a strategy, sometimes what I offer instead is a question about the pause. That is not withholding. You may already have insight, skills, and thoughtful ways of coping. Sometimes what is needed is not another strategy, but more room to understand why a familiar pattern continues despite what you already know.
+You may also notice that I don't rush to resolve things. If you describe a situation and pause expecting a strategy, what you get instead is sometimes a question about the pause. I'm not withholding when that happens. A strategy delivered right there would close an inquiry that had only just gotten interesting, and you already have plenty of strategies. If they were the missing piece, you wouldn't be here.
 
-## What we do with the past
+## The past, when it comes up
 
-Not in the caricatured way people often imagine. It is not an archaeological dig where we start at birth and move forward in order.
+It isn't an archaeological dig. We don't start at birth and work forward.
 
-The past comes up because it is still active in the present. You describe a conflict with your boss, and there is a familiarity to the way you responded that neither of us can quite place at first. We stay with it. Eventually it begins to belong somewhere, often somewhere earlier than the current moment. Once that happens, the conflict in front of you is no longer the whole story.
+The past comes up because it's presently active. You describe a conflict with your boss, and there's a familiarity in how you responded that neither of us can place at first. We stay with it. Eventually it turns out to belong somewhere, usually somewhere early. Once that's visible, the conflict with your boss becomes a different situation than it was, because you're no longer the only variable in it.
 
-The point is not discovery for its own sake. Insight alone is often less transformative than people hope. The point is that when a pattern becomes visible while it is happening, even briefly, a small gap opens where there used to be an automatic sequence. That gap is where change begins.
+The discovery isn't the point. Insight by itself tends to be less useful than people hope. What matters is that once a pattern is visible while it's happening, a small gap opens where there used to be an automatic sequence, and the gap is where things change. It opens slowly.
 
-## What happens between us
+## The room itself
 
-One part of depth therapy that people are often not prepared for is that the relationship itself becomes part of the material.
+The part people are least prepared for is that the relationship becomes material.
 
-You may have reactions to me. You may find yourself wanting my approval, bracing for judgment, feeling irritated by something small, or worrying after a session that you talked too much. Those reactions are not noise around the work. They are often the same patterns that appear elsewhere in your life, showing up in a room where we can actually look at them together rather than only reconstructing them afterward from a story.
+You'll have reactions to me. You'll find yourself wanting my approval, or bracing for judgment, or irritated about something small, or worrying afterward that you talked too much. Those reactions aren't noise around the work. They're usually the same patterns you have everywhere else, arriving in a room where we can look at them together while they're happening rather than reconstructing them from a story afterward.
 
-This is why I may ask what it was like to say something to me. Not to make the moment awkward, but because your answer can tell us something important about how it feels to be known, disappointed, dependent, or uncertain in a relationship.
+That's why I'll sometimes ask what it was like to say a particular thing to me. Not to make it awkward. Your answer is usually the most direct information available.
 
-It also means that saying the uncomfortable thing about therapy, to me, is welcome rather than a problem. Many people have learned to protect the person in the authority position from their honest reaction. Noticing that training as it happens can be meaningful work.
+It also means that saying the uncomfortable thing about the therapy, to the therapist, is welcome. Most people were trained somewhere to protect whoever holds the authority position from their honest reaction. Watching that training operate is useful work.
 
 ## Silence
 
-There will be some. It is not a test.
+There'll be some. It isn't a test.
 
-Sometimes silence means you are thinking and I do not want to interrupt that. Sometimes it means something landed and needs a moment. Sometimes it is uncomfortable, and that discomfort itself can be worth understanding, especially for people whose earlier experiences taught them that silence with another person was never neutral.
+Sometimes silence means you're thinking and I'm not going to interrupt. Sometimes something just landed and needs a moment. Sometimes it's uncomfortable, and the discomfort is worth being curious about, because for a lot of people silence with another person was never neutral growing up.
 
-If it feels unbearable, you can say so. That, too, belongs in the room.
+If it's unbearable, say so. That's a legitimate thing to bring in, and we'll talk about it.
 
-## Why it is open-ended
+## No fixed number of sessions
 
-Depth work does not come in a fixed number of sessions, and I do not offer one, because the patterns we are trying to understand do not show up on a strict schedule. They tend to emerge when there is enough continuity and enough safety for them to risk appearing.
+Depth work doesn't come in a set number of sessions and I don't offer one, because the patterns we're after don't appear on a schedule. They show up once there's been enough continuity, and enough safety, for them to risk it, and that timeline is different for everyone.
 
-Weekly is the usual rhythm. Less often than that can make it difficult for anything to build, and much of each session ends up going to catching up rather than the work itself.
+Weekly is the usual rhythm. Less often than weekly makes it hard for anything to build, and more of each hour goes to catching up than to the work.
 
-Some people work this way for a year. Some for several. Some come in for a defined season around something specific and stop when something important has shifted. There is no failure in stopping, and there is no requirement to arrive somewhere dramatic in order for the work to have mattered.
+Some people work this way for a year. Some for several. Some come in for a defined season around something specific and stop when it's moved. There's no failure state in stopping, and no requirement to have arrived anywhere in particular.
 
-## What it is not
+## Who this is for
 
-It is not primarily advice. It is not a curriculum. There is no homework, no worksheets, and no set of skills we move through in order.
+There's no homework and no worksheets, and I don't teach a sequence of skills.
 
-That is not a criticism of structured therapy, which helps many people and is often exactly the right tool. This is simply a different kind of work for a different kind of problem. Depth therapy is often most helpful when you already understand the pattern intellectually, have already tried to change it deliberately, and still find yourself pulled back into it. That gap between knowing and changing is often where this work begins.
+What this is built for is the situation where you already understand the pattern, and you've already tried to change it on purpose, and it keeps happening anyway. That distance between knowing and changing is the specific thing depth work addresses, and it's why so many of the people I see are capable, reflective people who have already done a great deal of work on themselves.
 
-## If you are considering it
+## If you're considering it
 
-One of the most common things people say after a few months is that they did not expect to end up talking about what they ended up talking about. That is usually a good sign rather than a detour.
+The most common thing I hear after a few months is that people didn't expect to end up talking about what they ended up talking about. That's a good sign.
 
-I offer depth-oriented [individual therapy](/services/individual-therapy/) and [couples therapy](/services/couples-therapy/) in Newport Beach and Fullerton, and by telehealth throughout California. [My approach](/approach/) offers more on the thinking behind the work.
-
-The free 15-minute consultation is a conversation, not an intake, and it is a reasonable place to ask whatever this article did not answer.
-
-[Schedule a free consultation →](/contact/)
-
----
-
-*Nikole Sparks · Associate Marriage & Family Therapist Supervised by Dr. Michele Willingham, PSY 15849 AMFT no. 150080*
+I offer depth-oriented [individual therapy](/services/individual-therapy/) and [couples therapy](/services/couples-therapy/) in Newport Beach and Fullerton, and by telehealth throughout California. [My approach](/approach/) has more on the thinking behind it.

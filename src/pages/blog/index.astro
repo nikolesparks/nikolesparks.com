@@ -10,6 +10,11 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 
 const featured = posts.find((p) => p.data.featured) ?? posts[0];
 const rest = posts.filter((p) => p.slug !== featured?.slug);
+
+// Only show category filters that have at least one published post; empty
+// filters (e.g. Faith & Spirituality before its posts publish) are hidden.
+const usedCategories = new Set(posts.map((p) => p.data.category));
+const activeCategories = blogCategories.filter((c) => usedCategories.has(c));
 ---
 
 <Layout
@@ -57,7 +62,7 @@ const rest = posts.filter((p) => p.slug !== featured?.slug);
         <section class="section tight" style="padding-bottom:0">
           <div class="blog-filters" data-blog-filters>
             <button type="button" class="blog-filter active" data-filter="all">All posts</button>
-            {blogCategories.map((c) => (
+            {activeCategories.map((c) => (
               <button type="button" class="blog-filter" data-filter={c}>{c}</button>
             ))}
           </div>
@@ -89,7 +94,7 @@ const rest = posts.filter((p) => p.slug !== featured?.slug);
     </div>
     {
       rest.length === 0 && (
-        <p class="body">More posts are on the way — check back soon.</p>
+        <p class="body">More posts are on the way, check back soon.</p>
       )
     }
   </section>
