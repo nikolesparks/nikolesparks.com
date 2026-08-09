@@ -141,6 +141,29 @@ const faqs = [
     <div class="col gap-20">
       <p class="eyebrow">The work</p>
       <h2 class="h2-serif"><em>Attention,</em> not advice.</h2>
+      <svg class="work-figure" viewBox="0 0 263 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A network of linked circles radiating from a central point, suggesting how separate parts of a life connect">
+        <circle cx="107.559" cy="130.08" r="63.9172" transform="rotate(180 107.559 130.08)" stroke="#3B63C4"/>
+        <circle cx="38" cy="242" r="37.5" transform="rotate(180 38 242)" stroke="#3B63C4"/>
+        <circle cx="119" cy="38" r="37.5" transform="rotate(180 119 38)" fill="url(#paint0_linear_91_508)" stroke="#3B63C4"/>
+        <circle cx="243" cy="132" r="19.5" transform="rotate(180 243 132)" stroke="#3B63C4"/>
+        <circle cx="48" cy="132" r="19.5" transform="rotate(180 48 132)" fill="url(#paint1_linear_91_508)" stroke="#3B63C4"/>
+        <circle cx="155" cy="212" r="19.5" transform="rotate(180 155 212)" stroke="#3B63C4"/>
+        <line x1="58.5713" y1="210.743" x2="107.132" y2="129.822" stroke="#3B63C4"/>
+        <line x1="107.058" y1="130.022" x2="113.503" y2="74.9424" stroke="#3B63C4"/>
+        <line x1="67.0703" y1="131.42" x2="223.512" y2="131.42" stroke="#3B63C4"/>
+        <line x1="145.782" y1="194.754" x2="107.132" y2="130.337" stroke="#3B63C4"/>
+        <circle cx="107" cy="131" r="8" transform="rotate(180 107 131)" fill="#C7D64F"/>
+        <defs>
+          <linearGradient id="paint0_linear_91_508" x1="124.5" y1="1.5" x2="123.5" y2="8" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#C7D64F"/>
+            <stop offset="1" stop-color="#C7D64F" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="paint1_linear_91_508" x1="52.5" y1="132" x2="32.6154" y2="132" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#C7D64F" stop-opacity="0"/>
+            <stop offset="1" stop-color="#C7D64F"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
     <div class="prose prose-15">
       <p class="body">There are some questions no one else can answer for you. Questions of love, responsibility, loss, calling, and what faithfulness asks in a particular season of life are not solved by receiving the right advice. Therapy can offer another kind of space: one where we slow down enough to notice what is happening beneath the surface. Your faith is invited and present in the room because it is already part of how you make meaning, carry responsibility, and imagine a way forward.</p>
@@ -214,6 +237,13 @@ const faqs = [
   .premise-figure {
     justify-self: center;
     align-self: start;
+  }
+  /* Small linked-circles figure under the short "The work" heading, filling
+     the empty space in the narrow column. */
+  .work-figure {
+    width: clamp(200px, 22vw, 250px);
+    height: auto;
+    margin-top: 28px;
   }
   @media (max-width: 820px) {
     section[style*='grid-template-columns:1fr 1.5fr'] {
