@@ -1912,6 +1912,14 @@ p.body {
   line-height: 1.75;
   color: var(--ink-85);
 }
+/* Markdown paragraphs and lists keep their default UA block margins, which do
+   not collapse inside a flex column and stack on top of the 28px gap, doubling
+   the space between paragraphs. Reset them so the flex gap is the only spacer. */
+.article-body p,
+.article-body ul,
+.article-body ol {
+  margin: 0;
+}
 .article-body h2 {
   font-family: var(--serif);
   font-weight: 400;
