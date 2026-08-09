@@ -1,61 +1,57 @@
 ---
 title: "Why \"Just Relax\" Never Works"
-excerpt: "Anxiety is rarely just a glitch to override. It is often a signal, and understanding what it protects is the beginning of real change."
+excerpt: "Anxiety is rarely a glitch to override. It's usually a signal, and understanding what it protects is where change starts."
 category: Anxiety
 date: 2026-07-02
 featured: true
 ---
 
-Almost everyone who comes to therapy for anxiety has already tried to relax.
+By the time anxiety brings someone into therapy, they've usually already tried to relax. The breathing app is on the phone. The walks happened. There was a stretch of decent sleep, and a morning routine, and a month where things genuinely seemed to be improving.
 
-They have done the breathing exercises, downloaded the app, taken the walks, tried the routines. Many of those things can help temporarily, and some are genuinely useful. But when they do not last, people often conclude that the failure must be theirs. They were not consistent enough. They were not disciplined enough. Something is wrong with them.
+When it comes back, most people conclude the failure is theirs. Not consistent enough. Not disciplined enough. Something wrong at the root.
 
-That is often not what is happening. More often, the anxiety is doing a job, and anything that ignores that job usually has limited reach.
+That's rarely what's going on. The anxiety is doing a job, and anything that ignores the job tends to have a short reach.
 
-## Anxiety is often information
+## Anxiety is usually about something
 
-It is easy to treat anxiety like static that needs to be muted so the real signal can come through.
+It's tempting to treat anxiety as static: noise to mute so the real signal can come through.
 
-But anxiety is often not random. It may be pointing toward an old fear that never settled, a boundary that keeps getting crossed, a situation you have not fully named, or a version of you that learned long ago that vigilance was what kept things safe.
+But it's not random. It points at things. An old fear that never settled. A boundary getting crossed on a schedule. A situation you haven't let yourself name. Or a version of you who worked out long ago that watching carefully was what kept everyone safe.
 
-When the signal gets quieted without being understood, it often returns somewhere else. That is one reason anxiety can seem to migrate. It is about work, then health, then relationships, then something else. The content changes, but the underlying mechanism remains.
+Quiet the signal without understanding it and it tends to come back somewhere else. That's part of why anxiety seems to migrate. It's about work, then it's about your health, then it's about your relationship, then something else entirely. The subject keeps changing. What sits underneath it doesn't.
 
-## What anxiety was originally for
+## Where it started
 
-Many anxious patterns began as sensible adaptations to real conditions.
+Most anxious patterns began as sensible responses to real conditions.
 
-If you grew up in a house where moods changed without warning, scanning the room was a skill. If love or approval depended on performance, vigilance about whether you were doing enough made a certain kind of sense. Those were not irrational responses. They were ways of staying organized in environments where the stakes felt real.
+If you grew up in a house where the mood could turn without warning, reading the room was a skill worth having. If approval depended on performance, then checking whether you'd done enough made a certain sense. These weren't irrational. They were ways of staying organized somewhere the stakes felt high.
 
-The problem is that adaptations like these do not come with expiration dates. They get installed early, they work, and they continue long after the original situation has changed.
+The trouble is that adaptations don't expire. They get installed early, they work, and they keep running long after the house you learned them in stopped existing.
 
-Seen that way, "just relax" is not a very fair request. It asks some protective part of you to stand down without addressing what it once had to guard against.
+Seen that way, "just relax" isn't a fair request. It asks a protective part of you to stand down without saying a word about what it was protecting you from.
 
-## Why insight alone may not be enough
+## When understanding isn't enough
 
-Some people arrive already understanding the origin story very well.
+Some people arrive knowing the origin story cold.
 
-They can tell you exactly where the vigilance came from. They know the family pattern. They recognize the trigger. And still, the anxiety keeps arriving with the same force. That can be deeply frustrating and can make people doubt whether therapy will help.
+They can name the family pattern, identify the trigger, trace the whole line back. And the anxiety still shows up with its original force, which is discouraging enough to make people wonder whether therapy can do anything at all.
 
-The reason is that the pattern is not stored only as information. It is stored as a reflex, and reflexes tend to move faster than insight. By the time the reflective part of you comes online, the sequence may already be underway.
+The reason is that the pattern isn't only stored as information. It's stored as a reflex, and reflexes move faster than insight. By the time the thinking part of you arrives, the sequence has already started.
 
-That is why change often has to become more experiential and relational. The pattern has to show up somewhere it can be noticed while it is happening, not only reconstructed afterward. There is more on that process in [insight isn't the finish line](/blog/insight-isnt-the-finish-line/).
+So the work has to become experiential, and relational, and slower than it sounds. The pattern has to show up somewhere it can be caught while it's happening rather than reconstructed later. There's more on that in [insight isn't the finish line](/blog/insight-isnt-the-finish-line/).
 
-## What we do instead
+## A different question
 
-Instead of asking only how to make anxiety stop, we begin asking what it is protecting and whether that protection is still necessary.
+Instead of asking only how to make the anxiety stop, we start asking what it's protecting and whether that protection is still needed.
 
-That can sound gentle, but it is often uncomfortable, because it means turning toward the thing rather than organizing your whole life around staying ahead of it. We look at when the anxiety spikes, what came just before it, what happens in the body, and what feeling might rush in if the vigilance were not doing its usual work.
+That sounds gentle. It usually isn't comfortable, since it means turning toward the thing instead of organizing your life around staying ahead of it. We look at when it spikes, what happened in the ten minutes before, what the body does, and what feeling might come rushing in if the vigilance ever took an afternoon off.
 
-Often the first shift is not that anxiety disappears. It is that you begin to recognize it as it arrives rather than discovering it only after it has taken over. That gap can be small, but it matters.
+The first shift is usually not disappearance but recognition. You start to catch the anxiety on its way in, instead of discovering it after it's arrived. The gap is small at first, and it's where everything else begins.
 
-## If this sounds familiar
+## If you recognize this
 
-You do not need your anxiety to be severe or externally visible to justify taking it seriously.
+Your anxiety doesn't have to be severe, or visible to anyone else, to be worth taking seriously.
 
-Many people I work with are functioning well by outward measures, which can make anxiety especially easy to postpone. There is more on that in [high-functioning and still anxious](/blog/high-functioning-and-still-anxious/).
+Plenty of the people I work with are functioning well by every outward measure, which makes it easy to postpone. There's more on that in [high-functioning and still anxious](/blog/high-functioning-and-still-anxious/).
 
-I offer depth-oriented [therapy for anxiety](/services/therapy-for-anxiety/) in Newport Beach and Fullerton, and by telehealth throughout California.
-
-The free 15-minute consultation is a conversation, not an intake.
-
-[Schedule a free consultation →](/contact/)
+I work with anxiety in depth-oriented [therapy for anxiety](/services/therapy-for-anxiety/) at my Newport Beach and Fullerton offices, and by telehealth throughout California.
