@@ -93,7 +93,7 @@ const faqs = [
   <Ticker items={tickerItems} label="What we work with" />
 
   <!-- The premise -->
-  <section class="section split c-wide-narrow">
+  <section class="section split c-wide-narrow" style="align-items:center">
     <div class="col gap-28">
       <p class="eyebrow">The premise</p>
       <h2 class="h2-serif h2-lg">The past does not stay in the past simply because you have <em>moved on.</em></h2>
@@ -101,7 +101,7 @@ const faqs = [
       <p class="body">This is not a sign that you have failed to move on. It reflects how deeply formative early religious experiences can be, especially when they were tied to family, belonging, love, safety, or the fear of losing them.</p>
       <p class="body">Therapy can offer a place to look at these experiences without pressure to preserve, reject, explain, or resolve them. Rather than asking you to take a position, we work to understand what these experiences asked of you, what they cost, and how they may still be shaping your relationships, choices, and life now.</p>
     </div>
-    <Illustration name="transformation-full" size="clamp(300px, 32vw, 420px)" color="var(--blue)" class="hero-figure" />
+    <Illustration name="transformation-full" size="clamp(300px, 32vw, 420px)" color="var(--blue)" class="hero-figure premise-figure" />
   </section>
 
   <!-- Who this is for -->
@@ -191,6 +191,11 @@ const faqs = [
 </Layout>
 
 <style>
+  /* Center the premise illustration within its narrow column so it sits
+     balanced rather than hugging the left edge. */
+  .premise-figure {
+    justify-self: center;
+  }
   /* Related reading — two-column list of serif links on the cream background. */
   .reading-list {
     list-style: none;
