@@ -288,7 +288,7 @@ export const faithIntegratedTherapyService = {
   name: 'Faith-Integrated Therapy',
   alternateName: 'Faith-Integrated & Christian Therapy',
   description:
-    'Depth-oriented therapy that takes your spiritual life seriously as material — for meaning, vocation, discernment, and faith that has gone quiet. Newport Beach and Fullerton, and online throughout California.',
+    'Depth-oriented therapy that takes your spiritual life seriously as material: for meaning, vocation, discernment, and faith that has gone quiet. Newport Beach and Fullerton, and online throughout California.',
   url: 'https://nikolesparks.com/services/faith-integrated-therapy',
   serviceType: 'Faith-Integrated Therapy',
   provider: { '@id': practiceId },
