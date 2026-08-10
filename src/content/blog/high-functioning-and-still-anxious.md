@@ -23,9 +23,9 @@ It's a real problem. Nobody can see it. That doesn't make it any smaller, and it
 
 If you learned early that being good, being useful, being impressive was how you held your place, then achievement isn't a habit you picked up somewhere. It's an answer to a question that mattered enormously at the time. It worked, too. Each accomplishment brings relief, and relief feels like resolution, which is why it can take a long time to notice that the relief keeps expiring.
 
-Whatever has to be earned again next week isn't rest. It's upkeep.
+Rest that has to be earned again next week isn't quite rest. It's closer to upkeep.
 
-People usually notice this around a milestone. The promotion arrives, or the degree, or the project that took two years, and the feeling everyone promised lasts about four days before the old baseline settles back in. That's discouraging to sit with. It's also the first hard evidence that the strategy has a limit.
+People usually notice this around a milestone. The promotion arrives, or the degree, or the project that took two years, and the feeling everyone promised lasts about four days before the old baseline settles back in. That's discouraging to sit with. It may also be the moment it becomes possible to ask whether the arrangement can keep doing what you've been asking of it.
 
 ## What it costs
 
