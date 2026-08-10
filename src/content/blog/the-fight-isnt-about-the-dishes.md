@@ -5,7 +5,7 @@ category: Relationships
 date: 2026-06-17
 ---
 
-Most couples have one fight they keep having. The dishes. The tone. Being late. How long it takes to answer a text. The subject varies and the shape doesn't: same opening move, same middle, same ending, and both of you could perform the other one's lines from memory.
+Most couples have one fight they keep having. The dishes. The tone. Being late. How long it takes to answer a text. The subject varies and the shape doesn't: same opening move, same middle, same ending, and you both know how it goes before it starts.
 
 That it keeps coming back is the useful part. A disagreement that's actually about dishes gets solved by a schedule. One that returns after the schedule was already working is about something else, and until that something else gets named, each of you keeps concluding that the other isn't really trying.
 
@@ -19,7 +19,7 @@ Am I going to be left alone with this. Arguments about chores and logistics are 
 
 Is it safe to need something from you. Some people learned early that needing was dangerous, or humiliating, or expensive. In adulthood the need comes out sideways: as criticism, as distance, as resentment.
 
-Am I about to be made the problem. One partner hears any complaint as a verdict on their character, because that's how conflict worked where they grew up. They defend fast. The defense reads as indifference. The complaint sharpens.
+Am I about to be made the problem. One partner hears any complaint as a verdict on their character, because that's how conflict worked where they grew up. So they defend themselves quickly, and the defending reads as indifference, and the complaint gets sharper.
 
 Neither of you is only responding to what's being said. You're both responding to what it means, and those meanings were assigned long before you met.
 

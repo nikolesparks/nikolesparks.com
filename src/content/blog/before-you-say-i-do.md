@@ -11,7 +11,7 @@ What tends to get missed is less concrete and, in my experience, more predictive
 
 ## One: what conflict means to each of you
 
-Not how you fight now, but what each of you learned conflict is.
+This is less about how you fight now and more about what each of you learned conflict is.
 
 In one house, raised voices meant weather that would pass, and everything would be normal again by dinner. In another, raised voices meant something was breaking. Two people carrying those histories can be inside the same argument having entirely different experiences: one of you having a disagreement, the other bracing for the end of something.
 
@@ -29,11 +29,11 @@ It's much easier to talk about what closeness means before five years of accumul
 
 ## Three: what you expect the other to already know
 
-This one does the most damage, because it happens almost entirely below the level of speech.
+In my experience this one causes the most trouble, because it happens almost entirely below the level of speech.
 
 Everyone brings assumptions about what a partner does. What happens when one of you gets sick. How much birthdays matter. Whether your family automatically becomes my obligation. Whether one person tracks the emotional weather for both of you. Most of these were absorbed long before they were ever examined, which is why they feel less like preferences and more like facts about how life works.
 
-When your partner misses an expectation you never said out loud, it rarely registers as a difference in background. It lands as evidence about their character. They don't care. They're selfish. They should have known. That's the interpretation that hardens.
+When your partner misses an expectation you never said out loud, it rarely registers as a difference in background. It lands as evidence about their character. They don't care. They're selfish. They should have known. That's usually the interpretation that hardens over time.
 
 Talking about the assumptions beforehand doesn't remove the differences. It turns them into differences in history rather than proof that something is wrong with the person you're marrying.
 
@@ -41,7 +41,7 @@ Talking about the assumptions beforehand doesn't remove the differences. It turn
 
 None of these are impossible later. Couples have them all the time, usually after a stretch of real strain.
 
-What changes before the wedding is that there's no case history attached yet. Five years in, each of these topics arrives carrying specific fights, and disappointments, and remembered injuries. Before that, there's more room for curiosity and less need for defense. It's the same conversation at its highest leverage.
+What changes before the wedding is that there's no case history attached yet. Five years in, each of these topics arrives carrying specific fights, and disappointments, and remembered injuries. Before that, there's more room for curiosity and less need for defense. It's the same conversation, just a much easier one to have.
 
 ## How I work with this
 

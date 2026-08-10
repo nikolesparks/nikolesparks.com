@@ -13,7 +13,7 @@ That pressure rarely comes from grief. It comes from how uncomfortable loss make
 
 ## Grief that gets rushed
 
-Hurried grief doesn't finish faster. It goes underground.
+Grief that gets hurried tends to go underground rather than finish sooner.
 
 It comes back as irritability out of proportion to its occasion, or a flatness that isn't quite depression and isn't vitality either, or anxiety with no content attached to it, or a sudden inability to tolerate a particular song, or season, or smell. Sometimes it returns years later attached to a much smaller loss, and the intensity is bewildering.
 
@@ -37,7 +37,7 @@ People ask, usually carefully, whether it's strange that this is still affecting
 
 The more useful question isn't how much time has passed. It's whether the grief is moving. Grief that moves can still be painful, and it changes shape while it does. Grief that's stuck stays in the same position because something is holding it there: anger that can't be spoken, guilt that never resolved, something that never got said, a relationship that can't be mourned honestly in public.
 
-Some grief does become complicated, and that deserves attention. Time by itself doesn't soften what has never had room to be felt.
+Some grief does become complicated, and that deserves attention. Time by itself doesn't seem to soften what has never had room to be felt.
 
 ## When the loss reaches further
 
@@ -53,7 +53,7 @@ Not a program for moving you along on someone else's schedule.
 
 What it can offer is a place where the timeline is yours, where nobody is quietly waiting for you to be finished, and where the least presentable parts, the anger and the relief and the confusion and the ambivalence, can be said out loud without being hurried past.
 
-That's worth more than people expect. A lot of what makes grief so heavy isn't the loss by itself. It's the loneliness of carrying it while performing recovery for everyone around you.
+For a lot of people that's the part that's been missing. Much of what makes grief so heavy isn't the loss by itself. It's the loneliness of carrying it while performing recovery for everyone around you.
 
 You don't need to have your thoughts organized before you come.
 

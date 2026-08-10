@@ -10,7 +10,7 @@ By the time anxiety brings someone into therapy, they've usually already tried t
 
 When it comes back, most people conclude the failure is theirs. Not consistent enough. Not disciplined enough. Something wrong at the root.
 
-That's rarely what's going on. The anxiety is doing a job, and anything that ignores the job tends to have a short reach.
+I'd want to look at other explanations before that one. The anxiety is usually doing a job, and anything that ignores the job tends to have a short reach.
 
 ## Anxiety is usually about something
 
@@ -46,7 +46,7 @@ Instead of asking only how to make the anxiety stop, we start asking what it's p
 
 That sounds gentle. It usually isn't comfortable, since it means turning toward the thing instead of organizing your life around staying ahead of it. We look at when it spikes, what happened in the ten minutes before, what the body does, and what feeling might come rushing in if the vigilance ever took an afternoon off.
 
-The first shift is usually not disappearance but recognition. You start to catch the anxiety on its way in, instead of discovering it after it's arrived. The gap is small at first, and it's where everything else begins.
+The first shift is usually not disappearance but recognition. You start to catch the anxiety on its way in, instead of discovering it after it's arrived. At first the gap is very small. It's still enough to work with.
 
 ## If you recognize this
 
