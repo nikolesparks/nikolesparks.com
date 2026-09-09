@@ -42,6 +42,16 @@ export const practiceNode = {
   image: shareCard,
   // The two offices are modeled as separate branch entries (below) rather than a
   // single merged address, so each location can rank on its own in local search.
+  // A direct address is still required on the LocalBusiness entity itself; the
+  // Newport Beach office serves as the practice's primary address.
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1300 Quail Street, Suite 206',
+    addressLocality: 'Newport Beach',
+    addressRegion: 'CA',
+    postalCode: '92660',
+    addressCountry: 'US',
+  },
   location: [{ '@id': newportOfficeId }, { '@id': fullertonOfficeId }],
   areaServed: [
     { '@type': 'City', name: 'Newport Beach' },

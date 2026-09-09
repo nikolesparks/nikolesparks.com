@@ -1,5 +1,6 @@
 ---
 title: "What Actually Happens in a Depth Therapy Session"
+metaTitle: "What Actually Happens in a Depth Therapy Session"
 excerpt: "No worksheets, no homework, no agenda set in advance. What a depth-oriented session is actually like, and why it works the way it does."
 category: Self-Awareness
 date: 2026-08-09
