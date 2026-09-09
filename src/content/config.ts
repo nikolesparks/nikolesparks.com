@@ -15,6 +15,9 @@ const blog = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    // Optional <title> override. Defaults to `${title} | Nikole Sparks, AMFT`;
+    // set this on posts whose branded title would run past ~60 characters.
+    metaTitle: z.string().optional(),
     excerpt: z.string(),
     category: z.enum(blogCategories),
     date: z.date(),
