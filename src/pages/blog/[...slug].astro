@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { site } from '../../data/site';
 import { blogPosting } from '../../data/schema';
+import { coverFor } from '../../data/covers';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -12,6 +13,9 @@ export async function getStaticPaths() {
 const { post, all } = Astro.props;
 const { Content } = await render(post);
 
+// Explicit coverImage, else the per-category default card (if the file exists).
+const cover = coverFor(post);
+
 const date = post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
 const postUrl = `${site.url}/blog/${post.slug}/`;
@@ -20,7 +24,7 @@ const articleSchema = blogPosting({
   description: post.data.excerpt,
   url: postUrl,
   datePublished: post.data.date.toISOString(),
-  image: post.data.coverImage,
+  image: cover,
   category: post.data.category,
 });
 
@@ -34,6 +38,7 @@ const keepReading = [...sameCategory, ...others.filter((p) => !sameCategory.incl
   description={post.data.excerpt}
   active="/blog/"
   path={`/blog/${post.slug}/`}
+  ogImage={cover}
   schema={[articleSchema]}
 >
   <!-- Breadcrumb -->
@@ -59,8 +64,8 @@ const keepReading = [...sameCategory, ...others.filter((p) => !sameCategory.incl
     <div style="max-width:1000px; margin:0 auto">
       <div class="article-cover">
         {
-          post.data.coverImage ? (
-            <img src={post.data.coverImage} alt="" loading="lazy" />
+          cover ? (
+            <img src={cover} alt={post.data.coverAlt ?? ''} loading="lazy" />
           ) : (
             <div class="placeholder">Post cover image</div>
           )

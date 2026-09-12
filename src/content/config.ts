@@ -22,9 +22,13 @@ const blog = defineCollection({
     category: z.enum(blogCategories),
     date: z.date(),
     author: z.string().default('Nikole Sparks, AMFT'),
-    // Path under /public, e.g. "/blog/my-post/cover.jpg". Omit to show a
-    // labelled placeholder, same pattern as Portrait.astro elsewhere on the site.
+    // Path under /public, e.g. "/blog/my-post/cover.jpg". Omit to fall back to
+    // the per-category default card (see src/data/covers.ts); if neither exists,
+    // a labelled placeholder shows, same pattern as Portrait.astro.
     coverImage: z.string().optional(),
+    // Alt text for the cover image. Leave unset for a decorative category card
+    // (renders empty alt); set it when coverImage is a meaningful photo.
+    coverAlt: z.string().optional(),
     // Shown large at the top of /blog/ — set on at most one published post.
     featured: z.boolean().default(false),
     // Hidden from /blog/ and returns 404 when true, so drafts can live in the
