@@ -70,14 +70,12 @@ const jsonLd = pageGraph(...schema);
       rel="stylesheet"
     />
 
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FQBKZF6SH"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8FQBKZF6SH');
-    </script>
+    <!-- GoatCounter — privacy-first, cookieless analytics (no personal data, no consent banner needed) -->
+    <script
+      data-goatcounter="https://nikolesparks.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
 
     <slot name="head" />
   </head>
