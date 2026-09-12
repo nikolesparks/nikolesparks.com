@@ -32,7 +32,7 @@ const sameAs = [
 export const practiceNode = {
   '@type': ['MedicalBusiness', 'ProfessionalService'],
   '@id': practiceId,
-  name: 'Nikole Sparks, AMFT',
+  name: 'Nikole Sparks Therapy',
   description:
     'Depth-oriented, attachment-based individual and couples therapy in Newport Beach and Fullerton, CA, and online throughout California.',
   url: site.url,
@@ -66,7 +66,7 @@ export const practiceNode = {
 export const newportOfficeNode = {
   '@type': ['MedicalBusiness', 'LocalBusiness'],
   '@id': newportOfficeId,
-  name: 'Nikole Sparks, AMFT — Newport Beach',
+  name: 'Nikole Sparks Therapy — Newport Beach',
   parentOrganization: { '@id': practiceId },
   url: site.url,
   telephone: '+19499425301',
@@ -93,7 +93,7 @@ export const newportOfficeNode = {
 export const fullertonOfficeNode = {
   '@type': ['MedicalBusiness', 'LocalBusiness'],
   '@id': fullertonOfficeId,
-  name: 'Nikole Sparks, AMFT — Fullerton',
+  name: 'Nikole Sparks Therapy — Fullerton',
   parentOrganization: { '@id': practiceId },
   url: site.url,
   telephone: '+19499425301',

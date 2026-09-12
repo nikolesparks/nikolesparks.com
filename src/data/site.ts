@@ -2,8 +2,8 @@
 // office locations, and licensing. Editing these values updates every page.
 
 export const site = {
-  name: 'Nikole Sparks',
-  title: 'Nikole Sparks, AMFT — Depth Therapy in Orange County',
+  name: 'Nikole Sparks Therapy',
+  title: 'Nikole Sparks Therapy — Newport Beach, Fullerton & Online',
   description:
     'Depth-oriented, psychodynamic, attachment-based psychotherapy for adults, teens, and couples. In-person in Newport Beach & Fullerton, or online throughout California.',
   url: 'https://nikolesparks.com',
