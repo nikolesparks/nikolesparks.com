@@ -6,40 +6,42 @@ category: Self-Awareness
 date: 2026-09-12
 ---
 
-Somewhere along the way, attachment style stopped being a clinical idea and became a personality test. You take a quiz, you get a label, and the label starts explaining everything. I'm anxious, so of course I texted twice. He's avoidant, so of course he went quiet. It is a tidy story, and like most tidy stories, it leaves out the part that actually matters.
+You've probably been given a word for how you are in relationships. Anxious, avoidant, secure, some combination. Maybe it came from a quiz, or a book, or a partner who had read one, and when you heard it, something clicked. It explained the texting. It explained the going quiet.
 
-Your attachment style is not a verdict about who you are. It is closer to a strategy you learned, a long time ago, for staying connected to the people you needed. And strategies can be updated.
+The word is usually pointing at something true. Where it tends to fall short is in what comes next, because a word like that can start to sound like a description of who you are, when it's closer to a description of what you learned.
 
-## What attachment actually is
+## The system underneath
 
-Attachment is the system that manages closeness. As a child, you needed the adults around you, and you learned, without ever deciding to, what worked to keep them near and what you had to do when they were not available. That learning happened before you had words for it, which is why it does not feel like a preference now. It feels like the truth about relationships.
+Attachment is the part of you that handles closeness.
 
-If closeness was mostly reliable, you probably came away trusting that people come back. If it was unpredictable, you may have learned to stay vigilant, to keep one eye on whether the connection is still there. If closeness came with a cost, you may have learned to need less, to handle things yourself, to treat independence as safer than reaching out. None of those were choices. They were the best available solution to the room you grew up in.
+As a child you needed the adults around you, and without ever deciding to, you worked out what kept them near and what to do when they weren't available. That learning happened before you had language, which is why it doesn't feel like a preference now. It feels like how relationships are.
 
-## The labels are real, but they are not you
+If closeness was mostly reliable, you probably came away expecting that people come back. If it was unpredictable, you may have learned to stay alert, to keep one eye on whether the connection is still there. If closeness came at a cost, you may have learned to need less, to handle things yourself, to treat independence as the safer bet. None of that was chosen. It was the best available solution to the room you were in.
 
-There is truth in the categories. The anxious pattern really does tend toward pursuit and reassurance. The avoidant pattern really does tend toward distance and self-reliance. Put those two in a relationship, which happens constantly, and you get the pursue and withdraw loop that shows up in so many couples: one person moving in for connection, the other stepping back for space, each move making the other one worse. I wrote about that loop in [the fight isn't about the dishes](/blog/the-fight-isnt-about-the-dishes/).
+## Where the categories hold up
 
-But a pattern is not a personality. It is what you do under a specific kind of stress, with a specific person, when an old alarm goes off. The same person who is anxious with a distant partner can feel steady with a reliable one. Context is doing more of the work than the label admits.
+There's real substance in them. The anxious pattern does tend toward pursuit and reassurance. The avoidant pattern does tend toward distance and self-reliance. Put those two together, which happens constantly, and you get the pursue-and-withdraw loop that shows up in so many couples: one person moving in for connection, the other stepping back for room, each move making the other worse. I wrote about that loop in [the fight isn't about the dishes](/blog/the-fight-isnt-about-the-dishes/).
 
-## Why it feels permanent
+What the categories can't tell you is how much of it depends on who you're with. The same person who runs anxious with a distant partner can feel steady with a reliable one. That's worth knowing, because it means you've been reading the whole situation and calling it your personality.
 
-If attachment is learnable, why does it feel so fixed?
+## Why it feels fixed
 
-Because it was learned early and rehearsed for years, and because it usually runs below the level of thought. You do not decide to brace when a text goes unanswered. The bracing arrives first, and the explanation comes after. What feels like your character is often just a very old habit firing on schedule.
+If this is learned, why is it so hard to shift?
 
-That is also the good news. Habits that were learned in relationships can be revised in relationships.
+Because it was learned early and rehearsed for years, and because most of it runs below thought. You don't decide to brace when a text goes unanswered. The bracing arrives first, and the explanation catches up afterward. Something that old and that fast is easy to mistake for character.
 
-## How it actually changes
+There's something hopeful in that, though. What gets learned in relationships can be revised in relationships.
 
-The term for it is earned security, and it is one of the more hopeful findings in the research. People are not stuck with the attachment style they started with. Through relationships that reliably disconfirm the old expectation, and through therapy that helps you notice the pattern while it is happening rather than after, the system slowly updates.
+## How it changes
 
-It is not fast, and it is not a matter of insight alone. Knowing you have an anxious pattern does not stop the pattern, any more than knowing you are tired makes you rested. What changes it is repeated experience of something different, felt in the body, until the old prediction stops being the automatic one. [Insight is a start, not the finish](/blog/insight-isnt-the-finish-line/).
+The term for this is earned security, and it describes people whose attachment patterns shifted over time through relationships that kept not going the way they expected. It's one of the more encouraging things we know about how people change.
+
+It isn't fast, and insight alone doesn't do it. Knowing you have an anxious pattern doesn't stop the pattern, any more than knowing you're tired makes you rested. What seems to change it is repeated experience of something different, felt rather than understood, until the old prediction stops being the automatic one. There's more on that gap in [insight isn't the finish line](/blog/insight-isnt-the-finish-line/).
 
 ## How I work with this
 
-Most of my work is attachment based, which simply means we pay close attention to what happens around closeness. When do you reach, when do you retreat, what does the alarm sound like, and where did it learn to go off. We slow the pattern down enough to see it, and we use the relationship in the room as one of the places it gets to be different.
+Most of my work is attachment based, which means we pay close attention to whatever happens around closeness. When you reach and when you retreat. What the alarm sounds like from the inside. Where it learned to go off.
 
-This shows up in [individual therapy](/services/individual-therapy/), where we trace your particular pattern and where it came from, and in [couples therapy](/services/couples-therapy/), where we work with the loop the two of you make together. In Newport Beach and Fullerton, and online throughout California.
+We slow the pattern down enough to see it while it's happening, and the relationship in the room becomes one of the places it gets to go differently. You don't need to have identified your style before you come, and if a label you've been given doesn't fit, that's useful information too.
 
-You are not your attachment style. You are the person who learned it, which means you are also the person who can learn something else.
+This shows up in [individual therapy](/services/individual-therapy/), where we trace your particular pattern and where it came from, and in [couples therapy](/services/couples-therapy/), which I offer in Newport Beach and Fullerton and online throughout California.
