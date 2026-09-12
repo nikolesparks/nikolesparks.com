@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import BlogCard from '../../components/BlogCard.astro';
 import { blogCategories } from '../../content/config';
+import { coverFor } from '../../data/covers';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -10,6 +11,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 
 const featured = posts.find((p) => p.data.featured) ?? posts[0];
 const rest = posts.filter((p) => p.slug !== featured?.slug);
+const featuredCover = featured ? coverFor(featured) : undefined;
 
 // Only show category filters that have at least one published post; empty
 // filters (e.g. Faith & Spirituality before its posts publish) are hidden.
@@ -72,7 +74,11 @@ const activeCategories = blogCategories.filter((c) => usedCategories.has(c));
         <section class="section tight">
           <a class="blog-featured" href={`/blog/${featured.slug}/`} data-category={featured.data.category}>
             <div class="media">
-              <div class="placeholder">Featured post image</div>
+              {featuredCover ? (
+                <img src={featuredCover} alt={featured.data.coverAlt ?? ''} loading="lazy" />
+              ) : (
+                <div class="placeholder">Featured post image</div>
+              )}
             </div>
             <div class="content">
               <div class="meta">Featured · {featured.data.category}</div>
