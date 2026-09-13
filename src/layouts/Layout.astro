@@ -44,6 +44,7 @@ const jsonLd = pageGraph(...schema);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Nikole Sparks Therapy · Field Notes" href="/rss.xml" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -70,7 +71,7 @@ const jsonLd = pageGraph(...schema);
       rel="stylesheet"
     />
 
-    <!-- GoatCounter — privacy-first, cookieless analytics (no personal data, no consent banner needed) -->
+    <!-- GoatCounter: privacy-first, cookieless analytics (no personal data, no consent banner needed) -->
     <script
       data-goatcounter="https://nikolesparks.goatcounter.com/count"
       async

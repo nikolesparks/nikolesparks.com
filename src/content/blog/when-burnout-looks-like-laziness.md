@@ -1,6 +1,6 @@
 ---
 title: "When Burnout Looks Like Laziness"
-excerpt: "For creatives whose worth got tangled up in output, a slower way back to the work."
+excerpt: "For creatives whose worth got tangled up in output, why burnout so often looks like laziness, and a slower, kinder way back to the work."
 category: Creativity
 date: 2026-06-03
 ---
