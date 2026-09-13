@@ -1,6 +1,6 @@
 ---
 title: "Insight Isn't the Finish Line"
-excerpt: "Why the same pattern keeps returning even after you understand exactly where it came from."
+excerpt: "Why the same pattern keeps returning even after you understand exactly where it came from, and what actually shifts it when insight alone isn't enough."
 category: Self-Awareness
 date: 2026-06-10
 ---

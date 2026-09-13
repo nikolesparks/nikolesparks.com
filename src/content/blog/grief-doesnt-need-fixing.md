@@ -1,6 +1,6 @@
 ---
 title: "Grief Doesn't Need Fixing"
-excerpt: "The pressure to move on usually belongs to everyone else. Grief keeps its own time."
+excerpt: "The pressure to move on usually belongs to everyone else. Why grief keeps its own time, and what it asks of you when you stop trying to fix it."
 category: Life Transitions
 date: 2026-05-27
 ---
@@ -54,6 +54,8 @@ Not a program for moving you along on someone else's schedule.
 What it can offer is a place where the timeline is yours, where nobody is quietly waiting for you to be finished, and where the least presentable parts, the anger and the relief and the confusion and the ambivalence, can be said out loud without being hurried past.
 
 For a lot of people that's the part that's been missing. Much of what makes grief so heavy isn't the loss by itself. It's the loneliness of carrying it while performing recovery for everyone around you.
+
+If you're not sure what that kind of space looks like in practice, [what happens in a depth therapy session](/blog/what-happens-in-a-depth-therapy-session/) walks through it.
 
 You don't need to have your thoughts organized before you come.
 

@@ -1,6 +1,6 @@
 ---
 title: "Before You Say \"I Do\""
-excerpt: "Three conversations most premarital couples skip, and end up having later with more at stake."
+excerpt: "Three conversations most engaged couples skip before the wedding, and end up having later with more at stake. What premarital counseling makes room for."
 category: Relationships
 date: 2026-05-20
 ---

@@ -1,6 +1,6 @@
 ---
 title: "High-Functioning and Still Anxious"
-excerpt: "Success can become its own hiding place. What happens when achievement stops working as a shield."
+excerpt: "Success can become its own hiding place. What high-functioning anxiety looks like from the inside, and what happens when achievement stops working as a shield."
 category: Anxiety
 date: 2026-06-24
 ---

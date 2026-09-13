@@ -1,6 +1,6 @@
 ---
 title: "The Fight Isn't About the Dishes"
-excerpt: "The argument you keep having is usually carrying something neither of you has said out loud."
+excerpt: "The argument you keep having is usually carrying something neither of you has said out loud. What the recurring fight is really about, and how it shifts."
 category: Relationships
 date: 2026-06-17
 ---
