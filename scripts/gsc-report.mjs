@@ -16,8 +16,8 @@
 //   GSC_SA_KEY   The service-account JSON key, either as raw JSON or base64.
 //                NEVER commit this — it lives only in the environment's secrets.
 //   GSC_SITE_URL (optional) The Search Console property. Defaults to the
-//                URL-prefix property 'https://nikolesparks.com/'. For a
-//                Domain property use 'sc-domain:nikolesparks.com'.
+//                Domain property 'sc-domain:nikolesparks.com'. For a URL-prefix
+//                property use 'https://nikolesparks.com/'.
 //
 // Usage:
 //   node scripts/gsc-report.mjs            # print the report
@@ -34,7 +34,7 @@ import { dirname, join } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const SNAPSHOT_PATH = join(__dirname, 'gsc-snapshot.json');
 
-const SITE_URL = process.env.GSC_SITE_URL || 'https://nikolesparks.com/';
+const SITE_URL = process.env.GSC_SITE_URL || 'sc-domain:nikolesparks.com';
 const SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly';
 const TOKEN_URL = 'https://oauth2.googleapis.com/token';
 const SAVE = process.argv.includes('--save');
