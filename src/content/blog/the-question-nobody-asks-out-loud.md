@@ -1,9 +1,10 @@
 ---
 title: "The Question Nobody Asks Out Loud When Looking for a Therapist"
+metaTitle: "How to Find a Therapist Who Understands Your Faith"
 excerpt: "Will this therapist understand my faith, or quietly treat it as the problem? How to find out before you book."
 category: Faith & Spirituality
 date: 2026-08-31
-draft: true
+draft: false
 ---
 
 People will ask a prospective therapist about rates, availability, parking, and whether they take insurance.
@@ -71,7 +72,3 @@ If you want a more practical sense of how this looks in the room, [what faith-in
 And if you want to ask the question you have not been asking, the free 15-minute consultation is a good place to bring it directly. It is not a rude question, and I will not be surprised by it.
 
 [Schedule a free consultation →](/contact/)
-
----
-
-*Nikole Sparks · Associate Marriage & Family Therapist Supervised by Dr. Michele Willingham, PSY 15849 AMFT no. 150080*

@@ -1,9 +1,10 @@
 ---
 title: "What Faith-Integrated Therapy Actually Involves"
+metaTitle: "What Faith-Integrated Therapy Actually Involves"
 excerpt: "Faith-integrated therapy does not mean praying in session or avoiding hard questions. Here is what it can look like in depth-oriented work."
 category: Faith & Spirituality
 date: 2026-08-24
-draft: true
+draft: false
 ---
 
 Faith-integrated therapy can mean very different things in different practices.
@@ -77,7 +78,3 @@ I offer [faith-integrated therapy](/services/faith-integrated-therapy/) in Newpo
 The free 15-minute consultation is a good place to ask those questions directly.
 
 [Schedule a free consultation →](/contact/)
-
----
-
-*Nikole Sparks · Associate Marriage & Family Therapist Supervised by Dr. Michele Willingham, PSY 15849 AMFT no. 150080*

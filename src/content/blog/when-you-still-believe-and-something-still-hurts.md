@@ -1,9 +1,10 @@
 ---
 title: "When You Still Believe and Something Still Hurts"
-excerpt: "You have not left your faith and you do not want to. So why does something still feel wrong? A depth therapist on the kind of unease belief alone does not always resolve."
+metaTitle: "When You Still Believe and Something Still Hurts"
+excerpt: "You have not left your faith and you do not want to. So why does something still feel wrong? On the quiet unease that belief alone does not always resolve."
 category: Faith & Spirituality
 date: 2026-08-17
-draft: true
+draft: false
 ---
 
 There is a particular kind of quiet trouble that does not have good language around it.
@@ -69,7 +70,3 @@ I offer [religious trauma therapy](/services/religious-trauma-therapy/) in Newpo
 If you want a fuller sense of how I work, [my approach](/approach/) offers more of the thinking behind it. The free 15-minute consultation is a conversation, not an intake. You can tell me as much or as little of the history as you want to.
 
 [Schedule a free consultation →](/contact/)
-
----
-
-*Nikole Sparks · Associate Marriage & Family Therapist Supervised by Dr. Michele Willingham, PSY 15849 AMFT no. 150080*
