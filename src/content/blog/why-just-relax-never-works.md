@@ -3,7 +3,7 @@ title: "Why \"Just Relax\" Never Works"
 excerpt: "Anxiety is rarely a glitch to override. It's usually a signal, and understanding what it protects is where change starts."
 category: Anxiety
 date: 2026-07-02
-featured: true
+featured: false
 ---
 
 By the time anxiety brings someone into therapy, they've usually already tried to relax. The breathing app is on the phone. The walks happened. There was a stretch of decent sleep, and a morning routine, and a month where things genuinely seemed to be improving.

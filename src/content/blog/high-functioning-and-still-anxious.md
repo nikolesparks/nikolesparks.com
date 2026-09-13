@@ -2,7 +2,8 @@
 title: "High-Functioning and Still Anxious"
 excerpt: "Success can become its own hiding place. What high-functioning anxiety looks like from the inside, and what happens when achievement stops working as a shield."
 category: "Anxiety"
-date: 2026-09-13
+date: 2026-06-24
+featured: true
 ---
 
 You are, by every visible measure, fine. The job holds. The calendar is full, mostly of things you agreed to. You're the one people call when something goes sideways, and you're good at it, and underneath all of it there's a low steady hum that has never once let up.
