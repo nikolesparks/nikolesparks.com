@@ -3,6 +3,7 @@ title: "The Fight Isn't About the Dishes"
 excerpt: "The argument you keep having is usually carrying something neither of you has said out loud. What the recurring fight is really about, and how it shifts."
 category: Relationships
 date: 2026-06-17
+draft: true
 ---
 
 Most couples have one fight they keep having. The dishes. The tone. Being late. How long it takes to answer a text. The subject varies and the shape doesn't: same opening move, same middle, same ending, and you both know how it goes before it starts.

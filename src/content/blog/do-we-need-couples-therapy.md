@@ -35,7 +35,7 @@ We take the thing that keeps happening and slow it down.
 
 That's more of it than people expect. Usually we'll start with one recent example, often something small from the past week, and move through it slowly enough to see what happened inside each of you at every turn. At full speed that's invisible. Slowed down, there's almost always a moment early on where something shifted before anything difficult had actually been said.
 
-From there we get curious about where each of your responses came from, and what they were originally for. Not to assign fault. Knowing that your partner's shutdown is an old protection rather than a verdict on you changes what's possible in the next conversation. [The fight isn't about the dishes](/blog/the-fight-isnt-about-the-dishes/) goes further into what tends to sit underneath a recurring argument.
+From there we get curious about where each of your responses came from, and what they were originally for. Not to assign fault. Knowing that your partner's shutdown is an old protection rather than a verdict on you changes what's possible in the next conversation.
 
 ## A few things worth knowing
 
