@@ -1,247 +1,325 @@
-# Nikole Sparks Therapy — Content Strategy & Hierarchy
-
-The single source of truth for blog and content planning: a pillar-and-cluster
-plan built from the Search Console data, the service pages, and the current
-blog. Use it to decide what to write next, to see how every piece supports a
-page you want ranking, and to brief a drafting session.
-
-Last updated: 2026-09-12
-
+# Nikole Sparks Therapy: Content Strategy
+The plan for what to write, in what order, and why. Rebuilt 2026-09-13 against fresh Opinly keyword research.
+**Companion documents**
+`nikole-sparks-writing-guide.md` is the authority on voice, length, structure, and the pre-delivery self-check. Read it before drafting anything.
+`claude/keyword-reference.md` holds the full keyword research with volumes and difficulty. Read it before briefing a post.
+This document decides what gets written and when.
 ---
-
-## How to use this document
-
-- **Pillars** are your service pages. They are the pages you actually want
-  ranking and converting. Each should be supported by a cluster of blog posts
-  that link up to it.
-- **Clusters** are blog posts that answer the informational questions around a
-  pillar's topic. They build topical authority and pass internal links to the
-  pillar.
-- Work **top-down within a priority tier**: pick a pillar with demand, then write
-  the cluster posts that funnel into it.
-- The **Idea bank** is deliberately larger than you'll need, so you always have
-  something to pull from. Not every idea should be written; pick by priority.
-- To draft a post: pick an item, read the **House rules** at the bottom, and go.
-
-### Status legend
-
-- 🟢 **Live** — published on the site
-- ✍️ **Draft** — written, sitting unpublished in the repo
-- 📋 **Queued** — next up to draft
-- 💡 **Idea** — suggestion from the SEO analysis, not yet briefed
-
-### Priority legend
-
-- **P1** — proven demand in Search Console + supports a page you're close to
-  ranking. Write these first.
-- **P2** — strong topical support / fills a clear gap.
-- **P3** — good long-term depth, lower urgency.
-
+## Where the site actually stands
+Two facts should shape every decision below.
+**Nationally, the site ranks for one keyword.** An Opinly check of organic rankings returns a single term, "soul spark counseling," at position 59. That isn't a failure; it's what an early site looks like. It does mean national head terms are out of reach for now, and any plan built around ranking for "couples therapy" at 246,000 searches a month would waste a year.
+**Locally, the picture is much better.** Search Console shows the therapy-for-creatives page near position 5, the grief post around 3, the burnout post around 7, and half a dozen service pages sitting on page two. Local and long-tail is where this site converts, and where the next twelve weeks should go.
+The strategy that follows is therefore: win the near-zero-difficulty long-tail terms that describe a reader's problem, strengthen the pages already close to page one, and let topical authority accumulate toward the bigger terms rather than attacking them.
 ---
-
-## Search Console snapshot (what's driving the priorities)
-
-**Striking-distance pages (already close, small push = page one):**
-
-| Page | Position | Note |
-|---|---|---|
-| /services/therapy-for-creatives/ | ~5.8 | almost top 5 |
-| /about/ | ~9.8 | |
-| /approach/ | ~11.4 | |
-| /services/couples-therapy/ | ~11.8 | |
-| /faqs/ | ~16 | |
-| /services/premarital-counseling/ | ~17 | + optimized title |
-| /services/therapy-for-anxiety/ | ~17.7 | |
-| blog/grief-doesnt-need-fixing | ~3 | |
-| blog/when-burnout-looks-like-laziness | ~7 | |
-| blog/why-just-relax-never-works | ~12 | |
-
-**Demand keywords you're already appearing for (page 2–4, worth pursuing):**
-
-- premarital counseling newport beach (+ many variants) — pos ~13–28
-- marriage counseling fullerton — pos ~17
-- attachment therapy orange county — pos ~37
-- relationship issues newport beach — pos ~36
-- therapy for fear of driving in fullerton — pos ~21.5
-- nikole sparks (brand) — pos ~2.87 (fix via Google Business Profile)
-
-**Read on the data:** the site is early (low volume), strongest on **mobile**
-and **local/Orange County** intent. The clearest openings are **premarital**,
-**couples/marriage (incl. Fullerton)**, **attachment**, and **anxiety**, plus a
-winnable niche in **driving anxiety**.
-
+## Target audience
+Five segments, in order of current commercial value.
+**Couples and pre-married partners in Orange County.** The largest local demand and the strongest striking-distance pages. They search their situation, not a service: relationship problems, whether counseling works, whether things are bad enough to justify calling.
+**High-functioning adults carrying something private.** Anxiety that doesn't show, self-criticism, people-pleasing, the gap between competence and how they feel. This is the reader the writing guide is built around and the largest untapped keyword pool.
+**Creative professionals.** The site's best-performing page and Nikole's own background. Small keyword volume, high conversion, strong differentiation.
+**Parents of teenagers.** Parents do the searching. Real volume at almost no difficulty, and currently no page to land on.
+**People whose faith is part of the room.** Both those who want it integrated and those carrying spiritual injury. Very low search volume, very high differentiation. This segment earns its place through referral credibility and conversion, not traffic.
 ---
+## Topic hierarchy
+```
+Individual / depth therapy  (pillar: /services/individual-therapy/)
+├── Self-understanding
+│   ├── Self-Esteem vs. Self-Worth              [drafted]
+│   ├── Insight Isn't the Finish Line           [live]
+│   ├── How Do You Know Therapy Is Working?     [drafted]
+│   └── People-Pleasing                          [gap, top priority]
+├── Attachment
+│   ├── Your Attachment Style Isn't Your Destiny [live, expand]
+│   └── Trauma bonding                           [gap]
+└── Starting therapy
+    ├── What Happens in a Depth Therapy Session  [live]
+    └── First-therapy guide                      [gap]
 
-## The content hierarchy (pillar → cluster)
+Couples  (pillar: /services/couples-therapy/)
+├── Do We Need Couples Therapy?                  [rebuilt, republish]
+├── The Fight Isn't About the Dishes             [live]
+├── Marriage Counseling vs. Couples Therapy      [gap, AEO]
+└── Does Marriage Counseling Work?               [gap, AEO]
 
-### Pillar 1 — Individual Therapy  `/services/individual-therapy/`
-Primary keywords: depth therapy, psychodynamic therapy Orange County,
-individual therapy Newport Beach / Fullerton.
+Premarital  (pillar: /services/premarital-counseling/)
+├── Before You Say "I Do"                        [live]
+├── Is Premarital Counseling Worth It?           [live]
+└── Premarital Counseling Questions              [gap, best target]
 
-- 🟢 What Actually Happens in a Depth Therapy Session
-- 🟢 Insight Isn't the Finish Line
-- 🟢 Grief Doesn't Need Fixing *(pos ~3)*
-- 🟢 Your Attachment Style Isn't Your Destiny *(shared with Couples)*
-- 📋 How Do You Know Therapy Is Working? *(P2)*
-- 💡 How Long Does Therapy Take? What Depth Work Actually Looks Like *(P2)*
-- 💡 The Difference Between Talking About It and Working Through It *(P3)*
-- 💡 Why the Same Problem Keeps Coming Back *(P2, pairs with Insight)*
+Anxiety  (pillar: /services/therapy-for-anxiety/)
+├── High-Functioning and Still Anxious           [live, strengthen]
+├── Why "Just Relax" Never Works                 [live]
+└── Anxiety at night                             [gap]
 
-### Pillar 2 — Couples Therapy  `/services/couples-therapy/`
-Primary keywords: couples therapy Newport Beach, marriage counseling Fullerton,
-relationship issues Orange County.
+Creatives  (pillar: /services/therapy-for-creatives/)
+├── When Burnout Looks Like Laziness             [live]
+├── Imposter Syndrome Isn't Humility             [queued, needs re-pull]
+└── Perfectionism                                [gap]
 
-- 🟢 The Fight Isn't About the Dishes
-- 🟢 Your Attachment Style Isn't Your Destiny *(shared)*
-- 📋 Do We Need Couples Therapy? *(P1 — targets "marriage counseling fullerton", "relationship issues newport beach")*
-- 💡 Marriage Counseling vs. Couples Therapy: Is There a Difference? *(P2, definitional/AEO)*
-- 💡 What to Expect in a First Couples Session *(P2)*
-- 💡 Can Couples Therapy Work If Only One of You Wants It? *(P2)*
-- 💡 The Difference Between a Rough Patch and a Pattern *(P3)*
+Teens  (pillar: MISSING, see next steps)
+└── Therapy for Teens: What Parents Need to Know [drafted]
 
-### Pillar 3 — Premarital Counseling  `/services/premarital-counseling/`
-Primary keywords: premarital counseling Newport Beach / Fullerton, Prepare &
-Enrich Orange County.
+Life transitions  (supports individual)
+├── Grief Doesn't Need Fixing                    [live, high ceiling]
+├── Breakups                                     [gap, high volume]
+└── Therapy in Your 20s                          [gap]
 
-- 🟢 Before You Say "I Do"
-- 🟢 Is Premarital Counseling Worth It?
-- 💡 What Is the Prepare & Enrich Assessment? *(P2 — you use it; strong branded/definitional term)*
-- 💡 Premarital Counseling for Second Marriages & Blended Families *(P2, underserved niche)*
-- 💡 Questions to Ask Before Getting Engaged *(P3, high-volume informational)*
-- 💡 Do You Have to Be Religious for Premarital Counseling? *(P3, bridges to faith work)*
-
-### Pillar 4 — Therapy for Anxiety  `/services/therapy-for-anxiety/`
-Primary keywords: anxiety therapy Newport Beach / Fullerton, high-functioning
-anxiety, depth therapy for anxiety.
-
-- 🟢 High-Functioning and Still Anxious
-- 🟢 Why "Just Relax" Never Works *(pos ~12, featured)*
-- 📋 When Anxiety Shows Up Behind the Wheel — driving anxiety *(P1 — hits "therapy for fear of driving in fullerton")*
-- 📋 Anxiety You Can Feel in Your Body — somatic *(P2)*
-- 💡 The Difference Between Stress and Anxiety *(P2, definitional/AEO)*
-- 💡 Health Anxiety: When You Can't Stop Googling Symptoms *(P2, winnable niche)*
-- 💡 Anxiety at Night: Why It Gets Loud When Everything Goes Quiet *(P3)*
-
-### Pillar 5 — Therapy for Creatives  `/services/therapy-for-creatives/`  *(pos ~5.8 — nearly top 5)*
-Primary keywords: therapy for creatives, creative burnout, imposter syndrome
-therapy.
-
-- 🟢 When Burnout Looks Like Laziness *(pos ~7)*
-- 📋 Imposter Syndrome Isn't Humility *(P2)*
-- 💡 When the Work That Defined You Stops Feeling Like Yours *(P3)*
-- 💡 Perfectionism Is a Coping Strategy, Not a Standard *(P2)*
-- 💡 Creative Block Is Usually About Something Else *(P3)*
-
-### Pillar 6 — Faith-Integrated (Christian) Therapy  `/services/faith-integrated-therapy/`
-Primary keywords: Christian therapist Orange County, faith-integrated therapy,
-Christian counseling Newport Beach.
-
-- ✍️ What Faith-Integrated Therapy Actually Involves *(finish & publish — P1 for this pillar)*
-- ✍️ The Question Nobody Asks Out Loud *(finish & publish)*
-- 💡 Can You Be a Christian and Go to Therapy? *(P2, common search + reassurance)*
-- 💡 Faith and Deconstruction: Making Room for the Questions *(P2, ties to your positioning)*
-- 💡 What "Christian Therapy" Does and Doesn't Mean *(P3, definitional)*
-
-### Pillar 7 — Religious Trauma Therapy  `/services/religious-trauma-therapy/`
-Primary keywords: religious trauma therapy, religious trauma therapist California.
-
-- ✍️ When You Still Believe and Something Still Hurts *(finish & publish — P1 for this pillar)*
-- 💡 Signs You Might Be Carrying Religious Trauma *(P2, discovery/AEO)*
-- 💡 Leaving a High-Control Church: The Grief Nobody Warns You About *(P3)*
-
-### Cross-cutting cluster — Life Transitions & Self-Understanding
-Supports Individual Therapy and general topical authority.
-
-- 🟢 Grief Doesn't Need Fixing *(Life Transitions)*
-- 💡 Therapy in Your 20s: Figuring Out Who You Actually Are *(P3, young-adult audience)*
-- 💡 When a Big Life Change Doesn't Feel the Way You Expected *(P3)*
-
-### New audience gap — Teens (parent-facing)
-No content yet; parents are the searchers, and you see teens.
-
-- 📋 Therapy for Teens: What Parents Actually Need to Know *(P1)*
-- 💡 Is My Teen Just Moody, or Is Something Wrong? *(P2)*
-
+Faith & religious trauma  (pillars: faith-integrated, religious-trauma)
+├── Three posts live
+└── Spiritual counseling                         [gap, unique credential]
+```
 ---
-
-## Priority roadmap (suggested writing order)
-
-**Do first (P1):**
-1. Do We Need Couples Therapy? *(couples pillar, strong local demand)*
-2. When Anxiety Shows Up Behind the Wheel *(winnable niche, direct query match)*
-3. Therapy for Teens: What Parents Actually Need to Know *(untapped audience)*
-4. Finish & publish the 3 faith drafts *(cleanup, not new drafting — gives two service pillars their only support)*
-
-**Do next (P2):**
-5. How Do You Know Therapy Is Working?
-6. Imposter Syndrome Isn't Humility
-7. What Is the Prepare & Enrich Assessment?
-8. Anxiety You Can Feel in Your Body
-9. Marriage Counseling vs. Couples Therapy *(definitional/AEO)*
-10. Can You Be a Christian and Go to Therapy?
-
-**Depth over time (P3):** pull from the idea bank per cluster as capacity allows,
-keeping each cluster growing evenly rather than over-investing in one.
-
+## Priority content queue
+Scored on volume, difficulty, business value, and cluster contribution.
+### Quick wins: low competition, high value. Do these first.
+**#**
+**Title**
+**Primary keyword**
+**Vol**
+**KD**
+**Intent**
+**Words**
+1
+The Cost of Being Easy to Be Around
+therapist for people-pleasing
+12,000*
+0
+informational
+2,000
+2
+After a Breakup, When You Can't Explain Why It Hurts This Much
+therapist for breakup
+49,500
+0
+commercial
+2,200
+3
+Expand: Your Attachment Style Isn't Your Destiny
+avoidant attachment treatment
+40,500
+9
+informational
++600
+4
+Teen therapy service page
+psychology near me for teens
+2,000*
+0
+commercial
+900
+5
+Questions to Ask Before You Get Married
+premarital counseling questions
+1,600
+0
+informational
+2,000
+6
+Marriage Counseling vs. Couples Therapy
+couples therapy vs marriage counseling
+320
+0
+informational
+1,800
+7
+Starting Therapy for the First Time
+how to start therapy + what to talk about
+720+
+0-14
+informational
+2,000
+* combined across spelling variants.
+### Big bets: real volume, more competition. Invest in quality.
+**#**
+**Title**
+**Primary keyword**
+**Vol**
+**KD**
+**Words**
+8
+Trauma bonding and why leaving is hard
+therapist for trauma bonding
+18,100
+0-12
+2,200
+9
+Strengthen: High-Functioning and Still Anxious
+high functioning anxiety disorder
+n/a
+19
++500
+10
+Does Marriage Counseling Work?
+does marriage counseling work
+1,300
+10
+1,900
+11
+Imposter Syndrome Isn't Humility
+re-pull needed
+n/a
+n/a
+2,000
+### New from competitor gap analysis
+Added after running Opinly's gap tool against the four competitors now configured. Full tables in `claude/keyword-reference.md`.
+**#**
+**Title**
+**Primary keyword**
+**Vol**
+**KD**
+**CPC**
+**Notes**
+A
+Explaining Your Feelings Instead of Having Them
+intellectualization
+6,600
+0-3
+n/a
+authority play
+B
+The Voice in Your Head That Isn't Yours
+introjection
+5,400
+3-7
+n/a
+pairs with self-esteem post
+C
+When a Friendship Ends Without a Fight
+friendship therapist
+1,200*
+0
+$10-17
+underserved, high intent
+D
+Trying to Save a Marriage
+how to save a marriage
+4,500*
+0-9
+$1.68
+repair language, not infidelity
+A and B are the first two of a possible defense-mechanisms cluster worth roughly 50,000 monthly searches under KD 10. The near-zero CPC says that traffic is students and the curious rather than prospective clients, so treat the cluster as topical authority and answer-engine fuel, not as bookings. It is, however, the single closest match between what people search and what this practice actually knows, and the Burgo defense-mechanisms text in the project is the reference for it.
+C is the opposite shape: small volume, but $10 to $17 per click, which means it converts. Adult friendship rupture has almost no good writing behind it.
+### Fill-ins: low volume, near-zero difficulty, strong fit. Batch these.
+**#**
+**Title**
+**Primary keyword**
+**Vol**
+**KD**
+12
+Therapy in Your 20s
+therapy for quarter-life crisis
+3,600
+0
+13
+What Spiritual Counseling Involves
+spiritual counseling
+1,900
+0
+14
+The Prepare & Enrich Assessment
+prepare and enrich marriage counseling
+70
+7
+15
+Anxiety at Night
+therapist for sleep disorders
+60,500
+5
+Note on #14: at 50 to 70 searches a month this is a conversion asset, not a traffic play. It was previously listed as a P2 priority; it belongs here.
+### Deliberately skipped
+**Infidelity.** The data made a loud case for it: around 60,000 searches a month across two phrasings, both at difficulty zero, and no page on the site addressing it. Nikole has decided not to host that material, so it's off the plan rather than deferred. Couples arriving after an affair are still served by the couples pillar and the rebuilt Do We Need Couples Therapy? post.
+"Imposter syndrome" at 201,000 and KD 48, "burnout" at KD 74, "treatment for anxiety" at KD 49, and the head terms "couples therapy," "relationship therapy," and "self esteem." These are dominated by Wikipedia, Healthline, Psychology Today, and BetterHelp. Revisit when domain authority supports it.
 ---
-
-## Cross-reference: existing content
-
-**Published posts mapped to their pillar (so nothing gets duplicated):**
-
-| Post | Pillar | GSC note |
-|---|---|---|
-| what-happens-in-a-depth-therapy-session | Individual | |
-| insight-isnt-the-finish-line | Individual | |
-| grief-doesnt-need-fixing | Individual / Life Transitions | pos ~3 |
-| your-attachment-style-isnt-your-destiny | Individual + Couples | |
-| the-fight-isnt-about-the-dishes | Couples | |
-| before-you-say-i-do | Premarital | |
-| is-premarital-counseling-worth-it | Premarital | |
-| high-functioning-and-still-anxious | Anxiety | |
-| why-just-relax-never-works | Anxiety (featured) | pos ~12 |
-| when-burnout-looks-like-laziness | Creatives | pos ~7 |
-
-**Drafts (in repo, unpublished):** what-faith-integrated-therapy-actually-involves,
-the-question-nobody-asks-out-loud, when-you-still-believe-and-something-still-hurts.
-
+## Twelve-week calendar
+One post per week is the target. Every two weeks is a perfectly reasonable pace for a solo practice, in which case run this over 24 weeks; the order matters more than the speed.
+**Week 0, before anything new.** Publish the four pieces already written: Self-Esteem vs. Self-Worth, Therapy for Teens, How Do You Know Therapy Is Working?, and the rebuilt Do We Need Couples Therapy? at its existing slug. Four posts of finished work sitting unpublished is the highest-return hour available.
+**Week**
+**Publish**
+**Cluster**
+1
+People-pleasing post
+Individual
+2
+Teen service page (not a post)
+Teens
+3
+Breakup post
+Life transitions
+4
+Attachment post expansion
+Individual
+5
+Premarital counseling questions
+Premarital
+6
+Marriage counseling vs. couples therapy
+Couples
+7
+Starting therapy for the first time
+Individual
+8
+Trauma bonding
+Individual
+9
+High-functioning anxiety strengthening
+Anxiety
+10
+Therapy in your 20s
+Life transitions
+11
+Spiritual counseling
+Faith
+12
+Does marriage counseling work?
+Couples
+Weeks 2, 4 and 9 are page work rather than new posts, which builds a breather into the schedule on purpose.
 ---
-
-## Supporting (non-blog) SEO actions
-
-These move the needle as much as content, and several are already in flight:
-
-- **Google Business Profile** (both offices) — biggest local lever; fixes the
-  brand-name ranking and unlocks the map pack. Name: "Nikole Sparks Therapy".
-- **Citations** — TherapyDen (your one strong backlink, DR 81) and Psychology
-  Today, with identical Name/Address/Phone to the site.
-- **Internal linking** — every new post links up to its pillar; pillars can link
-  down to their best posts. This is the mechanism that makes clusters work.
-- **Keep titles/descriptions local** where intent is local (city + service).
-- **Relocation** — when you move toward Long Beach, follow
-  `docs/relocation-seo-checklist.md` so rankings and citations survive the move.
-
+## Internal linking plan
+The clusters only work if the links exist. Three rules.
+**Every post links up to its pillar service page**, once, in the locality line at the end, with descriptive anchor text that varies each time. Never "click here," never the same sentence twice across the site.
+**Every post links sideways to one or two siblings** in the same cluster. The writing guide caps this at two to three internal links per post total, which is deliberate: a small site with heavy cross-linking reads as manufactured.
+**Each pillar page links down to its two or three best posts.** This is the piece most often skipped, and it's what actually passes authority to the pages you want ranking.
+Specific connections to make as the queue is written:
+People-pleasing links to self-esteem and to the attachment post. It's the natural hub for the individual cluster.
+Breakup links to grief and to attachment. Grief is already at position 3 and can pass real authority.
+The couples pillar links down to the rebuilt couples post, the dishes post, and the definitional comparison piece.
+The teen page links to the teen post and to individual therapy, and both faith posts should link to the new spiritual counseling piece.
 ---
-
-## House rules for drafting (read before writing any post)
-
-- **Voice:** warm, plainspoken, confident, first person ("I work with…"), with
-  concrete vignettes and varied sentence rhythm. Match the existing posts in
-  `src/content/blog/`. No hype, no clinical jargon dumps.
-- **No em dashes or en dashes.** Use commas, periods, or restructure. This is a
-  hard rule; check the draft before saving.
-- **Length:** ~750–900 words.
-- **Structure:** short intro that opens inside the reader's experience, then 4–6
-  `##` H2 sections, ending with a "how I work" close that links the relevant
-  service (pillar) page and names Newport Beach / Fullerton / online in
-  California.
-- **Internal links:** every post links at least one service page and one or two
-  related posts (build the cluster).
-- **Frontmatter:** `title`, `excerpt` (this becomes the meta description, keep it
-  under ~155 characters and make it compelling), `category` (must match the enum
-  in `src/content/config.ts`), `date`. Add an optional `metaTitle` (no brand
-  suffix) when `"<title> | Nikole Sparks Therapy"` would exceed ~60 characters.
-- **Local + honest:** include a natural local mention and, where it fits, an
-  honest "when this is not the right fit / not yet" note. It builds trust and
-  reads like an experienced clinician.
-- **Build check:** `npm run build` must pass and internal links must resolve.
+## Answer-engine visibility
+Increasingly relevant for a practice like this, where people ask assistants rather than search. Three things help, and none of them conflict with the writing guide.
+Definitional posts earn citations. "Marriage counseling vs. couples therapy" and "does marriage counseling work" are the two queued pieces most likely to get quoted by an AI assistant, because they answer a bounded question.
+Answer the title question inside the first 150 words, in plain declarative prose. The guide's opening rules already push toward concrete second-person scene-setting, so the answer usually belongs at the end of the second paragraph rather than the first sentence.
+Consistent facts across the site and every directory listing: license number, supervisor, both addresses, both cities, the telehealth radius. Assistants assemble practitioner facts from whatever is consistent across sources.
+---
+## Next steps beyond content
+Ordered by impact.
+**1. Google Business Profile for Newport Beach.** Fullerton is set up as of September 2026. Newport Beach is the remaining half, and until both exist the practice only appears in the map pack for one of its two cities. This is still the single biggest lever available: it fixes the brand-name ranking, where the site sits around position 2.87 for "nikole sparks," and the map pack outperforms almost any blog post for a local practice.
+Three things to get right on the Newport Beach listing: name it identically to the Fullerton one, "Nikole Sparks Therapy," since a mismatch splits the brand signal; use the suite number exactly as it appears on the site and in the TherapyDen and Psychology Today listings; and pick the same primary category on both. Once it's verified, add the Newport Beach location page as the listing's website link rather than the homepage.
+**2. Publish the backlog.** Four finished pieces are sitting in this session's outputs.
+**3. Build the teen service page.** 2,000 searches a month at KD 0 with nowhere to land, and you already see teens. It also gives the drafted teen post a pillar to link to instead of borrowing the individual therapy page.
+**4. Fix the Opinly configuration.** The account currently tracks one competitor, "forbes ift," which appears to be unrelated to the practice. Replace it with these three, all solo practitioners in Orange County with active blogs, so the comparison is like for like:
+`inwardpsychotherapy.com` (Emily Echeverria, LMFT, Newport Beach). The closest peer on the list: solo, depth psychotherapy, adults and teens, telehealth across California, and a blog. Overlaps the individual and teen clusters almost exactly.
+`therapistnewportbeach.com` (Jennifer De Francisco, LCSW, Newport Beach). Solo, with an articles section, covering couples, premarital, and grief. Overlaps the couples and premarital pillars.
+`drjeannemichele.com` (Dr. Jeanne Michele, Newport Beach). Solo, couples and premarital focus, an active blog and a published book. Use this one as the ceiling: same size practice, further along, which makes her keyword set the most useful roadmap.
+Deliberately not on the list: Keil Psych Group, a seven-clinician practice in Newport Beach whose output a solo practice can't match, and the directories (Psychology Today, TherapyDen, Zencare, Theravive) that dominate these SERPs. Both are worth watching, neither is a fair benchmark.
+No solo Fullerton practice with a blog turned up in the search, which is itself useful: the Fullerton content field is comparatively open. Swap one of the three out if a Fullerton peer appears.
+Adding your priority keywords to tracked keywords would also give you position history over these twelve weeks.
+**4b. Long Beach watchlist, for the eventual move.** Not competitors to track yet, since the OC three are the ones that matter while the offices are in Fullerton and Newport Beach. Add these when the move is roughly six months out, and swap rather than add if Opinly's competitor slots are limited:
+`arielblackpsychotherapy.com` (Ariel Black, LMFT, Long Beach). Solo, and the closest positioning match found anywhere in this research: depth-oriented psychodynamic work for high-functioning adults, trauma and attachment. She has no blog, so there's little keyword data to mine, which is the useful part: the depth-therapy content field in Long Beach is open.
+`healinggenerationscounseling.com` (Connie Hsu, LMFT, Long Beach). Solo, with a blog, covering couples, teens, and life transitions. The best gap-analysis target of the three.
+`downingtherapy.com` (Lori Downing, LMFT, Long Beach). Solo, with a blog, covering faith-based counseling, grief, and life transitions. Overlaps the faith and grief clusters, which are the hardest to benchmark elsewhere.
+Worth knowing but not a peer: Olive Leaf Family Therapy, a multi-location Christian group practice with a blog and a Long Beach office. It's the main faith-integrated competitor in that market.
+Timing note: don't create a Long Beach page or change any listing until there's a real address to put on it. Google Business Profile requires a genuine location, and a premature listing risks the verification standing of the two profiles that matter now. When the move does happen, follow `docs/relocation-seo-checklist.md`, and keep the Orange County pages rather than deleting them, since the practice will still serve those clients by telehealth.
+**5. Add structured data.** LocalBusiness or MedicalBusiness schema on both location pages, Person schema carrying the AMFT number and supervisor, FAQPage on the FAQs page, and Article on posts. This is a build task rather than a writing task, and it directly supports the answer-engine work above.
+**6. Citations with identical name, address and phone.** TherapyDen is your one strong backlink at DR 81. Psychology Today is the other listing that matters. Any mismatch in address formatting between those and the site weakens the local signal.
+**7. Re-pull the creatives cluster before writing imposter syndrome.** Opinly's expansion failed on those seeds and returned physical therapy and unrelated syndromes. Narrower phrasing will fix it.
+### Best practices to keep
+Write to the reader's language, not the clinical term. The whole finding from this round of research is that people search "therapist for people-pleasing," not "attachment-based intervention for compliance." The writing guide's insistence on concrete before abstract is also good SEO.
+Resist the head terms. Every month spent on "self esteem" at KD 59 is a month not spent on four winnable posts.
+Update rather than multiply. Expanding the attachment post to cover a 40,500-volume term is cheaper and more effective than a new post competing with your own page.
+Give each post a season before judging it. New content typically takes three to six months to settle. Check positions quarterly, not weekly.
+---
+## Success metrics
+**Twelve weeks:** ten to twelve new or substantially expanded pages, both Google Business Profiles live, three to five service pages moved from page two to page one, and the map pack live for both locations.
+**Six months:** first-page positions for at least four of the near-zero-difficulty targets, with people-pleasing and breakup the most likely first wins. Grief and creatives, already close, into the top three.
+**Keywords to track in Opinly:** therapist for people-pleasing, therapist for breakup, avoidant attachment treatment, counseling teens, premarital counseling questions, couples therapy vs marriage counseling, plus the local service terms from Search Console.
+**Production KPI:** one published piece per week, or one per fortnight sustained. Consistency beats volume for a site at this stage, and the writing guide's standards are the constraint that makes the content worth ranking.
