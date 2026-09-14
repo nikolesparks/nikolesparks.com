@@ -25,7 +25,7 @@ Every couple has a rhythm of togetherness and separateness, and most never negot
 
 For one of you, a quiet evening in the same house doing separate things is intimacy. For the other it's lonely in a way that's hard to describe without sounding needy. Neither of you is wrong. Left unnamed, the mismatch usually turns into the pursue-and-withdraw pattern that shows up in so many distressed couples.
 
-It's much easier to talk about what closeness means before five years of accumulated misreadings get attached to it. There's more on that loop in [the fight isn't about the dishes](/blog/the-fight-isnt-about-the-dishes/).
+It's much easier to talk about what closeness means before five years of accumulated misreadings get attached to it.
 
 ## Three: what you expect the other to already know
 
