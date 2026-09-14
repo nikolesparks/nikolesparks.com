@@ -1,7 +1,7 @@
 # Nikole Sparks Therapy: Content Strategy
 The plan for what to write, in what order, and why. Rebuilt 2026-09-13 against fresh Opinly keyword research.
 **Companion documents**
-`nikole-sparks-writing-guide.md` is the authority on voice, length, structure, and the pre-delivery self-check. Read it before drafting anything.
+`claude/nikole-sparks-writing-guide.md` is the authority on voice, length, structure, and the pre-delivery self-check. Read it before drafting anything.
 `claude/keyword-reference.md` holds the full keyword research with volumes and difficulty. Read it before briefing a post.
 This document decides what gets written and when.
 ---
